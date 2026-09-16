@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: python:3.12-bookworm
+
+%labels
+    Experiment "MSI Experiment 6"
+    Purpose "Root-preserving mode migration and resource-aware allocation"
+
+%environment
+    export LC_ALL=C.UTF-8
+    export LANG=C.UTF-8
+
+%post
+    python3 --version
+    ldconfig
+
+%runscript
+    exec python3 "$@"

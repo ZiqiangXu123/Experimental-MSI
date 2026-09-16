@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "experiment": "E2",
+  "description": "Fast deployment smoke test; not publication evidence.",
+  "defaults": {
+    "trial_count": 1,
+    "measured_queries": 200,
+    "warmup_queries": 20,
+    "phase_queries": 12,
+    "allocation_queries": 3,
+    "query_pool_size": 32,
+    "plan_seed": 20260624
+  },
+  "sweeps": [
+    {
+      "name": "smoke_modes",
+      "factor_grid": {"epoch_length": [64]},
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "historical_epochs": 100,
+        "block_bytes": 512,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    },
+    {
+      "name": "smoke_padding",
+      "factor_grid": {"epoch_length": [513]},
+      "case_grid": {"scheme": ["B3_leaf"], "ablation": ["safe"]},
+      "fixed": {
+        "historical_epochs": 100,
+        "block_bytes": 512,
+        "layout": "per_block",
+        "codec": "zlib-v1",
+        "version": 1
+      }
+    },
+    {
+      "name": "smoke_history",
+      "factor_grid": {"historical_epochs": [10000]},
+      "case_grid": {"scheme": ["B2_full"], "ablation": ["safe"]},
+      "fixed": {
+        "epoch_length": 64,
+        "block_bytes": 512,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    },
+    {
+      "name": "smoke_ablations",
+      "factor_grid": {},
+      "case_grid": {
+        "scheme": ["B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe", "no_checkresp", "cached_anchor"]
+      },
+      "fixed": {
+        "epoch_length": 64,
+        "historical_epochs": 100,
+        "block_bytes": 512,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    }
+  ]
+}

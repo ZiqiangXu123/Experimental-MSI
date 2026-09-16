@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "experiment": "E5",
+  "plan_seed": 2026062499,
+  "anchor_key_seed": 5052026,
+  "dataset": {
+    "max_prefix": 256,
+    "shard": 1,
+    "statement_seed": 5005005
+  },
+  "anchor_query": {
+    "modes": ["direct", "aggregate"],
+    "prefix_lengths": [64, 256],
+    "launches": 1,
+    "warmup_queries": 5,
+    "measured_queries": 50,
+    "accounting_checkpoint_interval": 10
+  },
+  "checkpoint_update": {
+    "prefix_lengths": [256],
+    "aggregate_intervals": [1, 10],
+    "include_direct": true,
+    "launches": 1,
+    "warmup_updates": 2,
+    "target_statement_operations": 100,
+    "minimum_measured_updates": 5,
+    "maximum_measured_updates": 20
+  },
+  "pruning": {
+    "launches": 1,
+    "total_epochs": 40,
+    "blocks_per_epoch": 4,
+    "block_size": 128,
+    "finality_delay_ms": 10.0,
+    "retry_delay_ms": 20.0,
+    "fault_fraction": 0.1,
+    "timeline_sample_limit": 200,
+    "base_hot_window_epochs": 16,
+    "direct_delay_rate_grid": {
+      "arrival_rates_eps": [100],
+      "certificate_delays_ms": [0]
+    },
+    "aggregate_delay_interval_grid": {
+      "checkpoint_intervals": [1, 10],
+      "certificate_delays_ms": [0],
+      "fixed_arrival_rate_eps": 100
+    },
+    "aggregate_rate_sweep": {
+      "checkpoint_interval": 10,
+      "certificate_delay_ms": 0,
+      "arrival_rates_eps": [100]
+    },
+    "hot_window_sweep": {
+      "anchor_mode": "aggregate",
+      "checkpoint_interval": 10,
+      "certificate_delay_ms": 0,
+      "arrival_rate_eps": 100,
+      "hot_window_epochs": [16]
+    },
+    "fault_sweep": {
+      "arrival_rate_eps": 100,
+      "certificate_delay_ms": 10,
+      "hot_window_epochs": 16,
+      "aggregate_checkpoint_interval": 10,
+      "direct_faults": ["invalid_signature"],
+      "aggregate_faults": ["stale_prefix_root", "uncovered_prefix"]
+    }
+  },
+  "unsafe_counterexample": {
+    "anchor_modes": ["direct", "aggregate"],
+    "launches": 1,
+    "total_epochs": 10,
+    "arrival_rate_eps": 100,
+    "certificate_delay_ms": 20,
+    "aggregate_checkpoint_interval": 5,
+    "hot_window_epochs": 4
+  },
+  "expected": {
+    "configurations": 15,
+    "cases": 15,
+    "cases_by_trial_kind": {
+      "anchor_query": 4,
+      "checkpoint_update": 3,
+      "pruning": 6,
+      "unsafe_counterexample": 2
+    }
+  }
+}

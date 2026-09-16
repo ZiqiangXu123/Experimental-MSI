@@ -1,0 +1,21 @@
+from __future__ import annotations
+SCHEMA_VERSION = 1
+DIGEST_BYTES = 32
+ED25519_PUBLIC_BYTES = 32
+ED25519_SIGNATURE_BYTES = 64
+LEAF_TAG = b'MSI-E2-LEAF\x00'
+INTERNAL_TAG = b'MSI-E2-INTERNAL\x00'
+ROOT_STMT_TAG = b'MSI-E2-ROOT-STMT\x00'
+PAYLOAD_OBJECT_TAG = b'MSI-E2-PAYLOAD\x00'
+AUX_OBJECT_TAG = b'MSI-E2-AUX\x00'
+CANONICAL_MAGIC = b'MSB2'
+CANONICAL_VERSION = 1
+CANONICAL_HEADER_BYTES = 36
+LAYOUTS = ('per_block', 'epoch_packed')
+CODECS = ('raw-v1', 'zlib-v1')
+SCHEMES = ('B0_raw', 'B1_verified', 'B2_full', 'B3_leaf', 'B4_ext')
+SAFE_SCHEMES = ('B1_verified', 'B2_full', 'B3_leaf', 'B4_ext')
+ABLATIONS = ('safe', 'no_checkresp', 'cached_anchor')
+MODE_BY_SCHEME = {'B0_raw': 'raw', 'B1_verified': 'full', 'B2_full': 'full', 'B3_leaf': 'leaf', 'B4_ext': 'ext'}
+PHASES = ('lookup_msi', 'handoff', 'check_resp', 'decode_payload', 'resolve_witness', 'verify_member', 'verify_anchor')
+PRIMARY_PHASES = ('check_resp', 'decode_payload', 'resolve_witness', 'verify_member', 'verify_anchor')

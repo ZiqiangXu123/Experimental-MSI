@@ -1,0 +1,14 @@
+Bootstrap: docker
+From: python:3.12-slim
+
+%labels
+    Author OpenAI reference implementation
+    Experiment MSI-E1-storage-scaling
+    Python 3.12
+
+%environment
+    export PYTHONDONTWRITEBYTECODE=1
+    export PYTHONUNBUFFERED=1
+
+%runscript
+    exec python3 "$@"

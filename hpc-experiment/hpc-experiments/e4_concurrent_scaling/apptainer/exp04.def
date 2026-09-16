@@ -1,0 +1,16 @@
+Bootstrap: docker
+From: python:3.12-bookworm
+
+%labels
+    Author OpenAI
+    Experiment MSI-E4
+
+%post
+    python3 --version
+    python3 - <<'PY'
+import ctypes.util
+assert ctypes.util.find_library('crypto')
+PY
+
+%runscript
+    exec python3 "$@"

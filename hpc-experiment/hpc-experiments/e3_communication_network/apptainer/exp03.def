@@ -1,0 +1,18 @@
+Bootstrap: docker
+From: python:3.12-bookworm
+
+%labels
+    Author OpenAI
+    Experiment "E3 Communication Cost and Edge-Network Sensitivity"
+
+%environment
+    export PYTHONUNBUFFERED=1
+    export PYTHONDONTWRITEBYTECODE=1
+
+%post
+    apt-get update
+    apt-get install -y --no-install-recommends libssl3 ca-certificates
+    rm -rf /var/lib/apt/lists/*
+
+%runscript
+    exec python3 "$@"

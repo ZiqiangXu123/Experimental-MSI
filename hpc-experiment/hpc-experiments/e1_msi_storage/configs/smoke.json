@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "description": "Fast functional validation for Experiment E1.",
+  "defaults": {
+    "max_materialized_bytes": 268435456
+  },
+  "sweeps": [
+    {
+      "name": "T_scale",
+      "shards": [1],
+      "historical_epochs": [1, 4, 16],
+      "epoch_lengths": [32],
+      "block_bytes": [256],
+      "hot_windows": [2],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "hot"],
+      "notes": "Local-state linearity smoke sweep. Historical payload and auxiliary bytes are exact models; hot state is materialized."
+    },
+    {
+      "name": "n_boundary",
+      "shards": [1],
+      "historical_epochs": [2],
+      "epoch_lengths": [1, 3, 4, 5, 7, 8, 9, 31, 32, 33],
+      "block_bytes": [256],
+      "hot_windows": [0],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "payload", "aux"],
+      "notes": "Exact duplicate-last boundary audit."
+    },
+    {
+      "name": "block_scale",
+      "shards": [1],
+      "historical_epochs": [2],
+      "epoch_lengths": [32],
+      "block_bytes": [128, 256, 512],
+      "hot_windows": [0],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "payload", "aux"],
+      "notes": "Controlled block-size invariance smoke sweep."
+    },
+    {
+      "name": "layout_codec",
+      "shards": [1],
+      "historical_epochs": [2],
+      "epoch_lengths": [16],
+      "block_bytes": [256],
+      "hot_windows": [0],
+      "layouts": ["per_block", "epoch_packed"],
+      "codecs": ["raw-v1", "zlib-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "payload", "aux"],
+      "notes": "Exercises both approved layout/codec pairs without using compression as a claimed baseline."
+    }
+  ]
+}

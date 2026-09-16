@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "experiment": "E4",
+  "description": "Reduced end-to-end reference protocol.",
+  "expected": {
+    "configurations": 33,
+    "cases": 66,
+    "datasets": 6
+  },
+  "trial_count": 2,
+  "plan_seed": 44013026,
+  "defaults": {
+    "epoch_length": 512,
+    "block_bytes": 2048,
+    "fixture_seed": 44012026,
+    "hotset_size": 32,
+    "mode": "full",
+    "distribution": "uniform",
+    "concurrent_clients": 8,
+    "verifier_workers": 2,
+    "service_cpus": 4,
+    "target_rtt_ms": 2.0,
+    "bandwidth_mbps": 100.0,
+    "anchor_key_seed": 44022026,
+    "trial_kind": "steady",
+    "rate_multipliers": [
+      0.5,
+      1.1
+    ],
+    "steady_multiplier": 0.7,
+    "calibration_s": 0.25,
+    "warmup_s": 0.1,
+    "measure_s": 0.3,
+    "max_offered_qps": 20000.0,
+    "rtt_probe_count": 3,
+    "sample_interval_s": 0.05,
+    "burst_period_s": 0.15,
+    "pin_workers": false
+  },
+  "base": {
+    "shard_count": 4,
+    "historical_epochs": 1000
+  },
+  "sweeps": {
+    "concurrency_ramp": {
+      "concurrent_clients": [
+        1,
+        8,
+        32
+      ],
+      "distributions": [
+        "uniform",
+        "zipf1.2",
+        "bursty"
+      ]
+    },
+    "core_scaling": {
+      "concurrent_clients": 32,
+      "verifier_workers": [
+        1,
+        2,
+        4
+      ],
+      "distributions": [
+        "uniform"
+      ]
+    },
+    "history_axis": {
+      "historical_epochs": [
+        100,
+        1000,
+        10000
+      ],
+      "distributions": [
+        "uniform",
+        "recency"
+      ]
+    },
+    "shard_axis": {
+      "shard_count": [
+        1,
+        4,
+        16
+      ],
+      "distributions": [
+        "uniform",
+        "zipf1.2"
+      ]
+    },
+    "factorial": {
+      "shard_count": [
+        1,
+        4
+      ],
+      "historical_epochs": [
+        100,
+        1000
+      ],
+      "concurrent_clients": [
+        1,
+        8
+      ],
+      "distributions": [
+        "uniform"
+      ]
+    },
+    "workload": {
+      "distributions": [
+        "uniform",
+        "zipf0.8",
+        "zipf1.2",
+        "recency",
+        "bursty"
+      ]
+    },
+    "mode_sensitivity": {
+      "scales": [
+        {
+          "shard_count": 1,
+          "historical_epochs": 100
+        },
+        {
+          "shard_count": 4,
+          "historical_epochs": 1000
+        }
+      ],
+      "modes": [
+        "full",
+        "leaf",
+        "ext"
+      ],
+      "distributions": [
+        "uniform"
+      ]
+    }
+  }
+}

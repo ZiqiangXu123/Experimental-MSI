@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "label": "E6-E9 smoke",
+  "publication_mode": false,
+  "seed": 606001,
+  "datasets": {
+    "default_layout": "epoch_packed",
+    "default_codec": "raw-v1",
+    "default_block_bytes": 512
+  },
+  "migration": {
+    "performance_n_values": [
+      8,
+      65
+    ],
+    "performance_launches": 1,
+    "backends": [
+      "node_local"
+    ],
+    "compatibility_n_values": [],
+    "compatibility_variants": [],
+    "compatibility_launches": 1,
+    "equivalence_n_values": [
+      9
+    ],
+    "audit_all_variants": false,
+    "audit_backend": "node_local",
+    "fault_n_values": [
+      8
+    ],
+    "fault_backend": "node_local",
+    "exact_sample_limit": 64,
+    "crash_timeout_seconds": 30,
+    "policy_cost_backend": "node_local",
+    "block_size": 4
+  },
+  "policy": {
+    "n_values": [
+      8,
+      65
+    ],
+    "profiles": [
+      "balanced",
+      "availability"
+    ],
+    "trace_replicates": 1,
+    "evaluation_queries": 100,
+    "storage_quantum_bytes": 4096,
+    "component_catalog_requirement": "self-contained-reference-fixture-for-smoke-only",
+    "block_size": 2,
+    "scales": [
+      {
+        "label": "primary",
+        "epoch_count": 8,
+        "shard_count": 2,
+        "budgets": [
+          0.5
+        ],
+        "workloads": [
+          "uniform",
+          "nonstationary"
+        ],
+        "prediction_errors": [
+          0.0,
+          0.25
+        ],
+        "trace_replicates": 1,
+        "evaluation_queries": 100,
+        "run_dp": true
+      }
+    ]
+  }
+}

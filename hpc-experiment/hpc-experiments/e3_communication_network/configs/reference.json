@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "experiment": "E3",
+  "description": "Reduced local reference run used only to validate the artifact pipeline; not publication evidence.",
+  "defaults": {
+    "network_trial_count": 2,
+    "measured_queries": 10,
+    "warmup_queries": 2,
+    "query_pool_size": 16,
+    "calibration_pings": 7,
+    "socket_timeout_s": 180,
+    "plan_seed": 20260624,
+    "deadlines_ms": [50, 100, 250, 500, 1000, 2000]
+  },
+  "variants": [
+    {"scheme": "B2_full", "deployment": "coalesced"},
+    {"scheme": "B3_leaf", "deployment": "coalesced"},
+    {"scheme": "B4_ext", "deployment": "coalesced"},
+    {"scheme": "B4_ext", "deployment": "split"}
+  ],
+  "sweeps": [
+    {
+      "name": "wire_size",
+      "kind": "wire_audit",
+      "trial_count": 1,
+      "factor_grid": {"epoch_length": [64, 513, 4096]},
+      "fixed": {"block_bytes": 2048, "profile": "P0"}
+    },
+    {
+      "name": "n_scaling",
+      "kind": "network_trial",
+      "factor_grid": {
+        "epoch_length": [64, 513, 4096],
+        "profile": ["P0", "P2", "P3"]
+      },
+      "fixed": {"block_bytes": 2048}
+    },
+    {
+      "name": "block_size",
+      "kind": "network_trial",
+      "factor_grid": {
+        "block_bytes": [32768],
+        "profile": ["P1", "P3"]
+      },
+      "fixed": {"epoch_length": 512}
+    }
+  ]
+}
