@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+export PYTHON_BIN=''
+export PYTHON_MODULE=''
+export EXP04_CONTAINER=''
+
+export SBATCH_ACCOUNT=''
+export SBATCH_PARTITION=''
+export SBATCH_QOS=''
+export SBATCH_RESERVATION=''
+
+export RUN_BASE=''
+
+export DATASET_WORKERS=4
+export DATASET_ARRAY_CONCURRENCY=2
+export ARRAY_CONCURRENCY=4
+export DUAL_ARRAY_CONCURRENCY=1
+
+export E4_REQUEST_EXCLUSIVE=0
+
+export E4_DISABLE_PINNING=0

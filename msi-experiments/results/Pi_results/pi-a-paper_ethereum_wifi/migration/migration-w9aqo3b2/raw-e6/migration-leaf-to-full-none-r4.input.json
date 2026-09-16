@@ -1,0 +1,21 @@
+{
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-leaf-to-full-none-r4",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "none",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 4,
+    "seed": 11,
+    "source_mode": "leaf",
+    "target_mode": "full",
+    "transition": "leaf->full",
+    "trial_kind": "equivalence_audit"
+  },
+  "dataset_dir": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi/migration/migration-w9aqo3b2/datasets",
+  "result_path": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi/migration/migration-w9aqo3b2/raw-e6/migration-leaf-to-full-none-r4.json",
+  "work_root": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi/migration/migration-w9aqo3b2/work"
+}

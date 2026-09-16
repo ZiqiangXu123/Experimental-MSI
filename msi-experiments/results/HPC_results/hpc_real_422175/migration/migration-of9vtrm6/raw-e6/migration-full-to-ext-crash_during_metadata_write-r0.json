@@ -1,0 +1,141 @@
+{
+  "active_mode": "full",
+  "all_checks_pass": true,
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "crash_during_metadata_write",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 0,
+    "seed": 11,
+    "source_mode": "full",
+    "target_mode": "ext",
+    "transition": "full->ext",
+    "trial_kind": "fault_injection"
+  },
+  "case_cpu_ns": 91894476,
+  "case_wall_ns": 1626856373,
+  "checks": {
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "anchor_bytes_equal": true,
+    "dataset_matches_case": true,
+    "injected_exit_code_matches": true,
+    "no_partial_metadata": true,
+    "no_pending_journals": true,
+    "post_queries_accept": true,
+    "pre_queries_accept": true,
+    "protected_bytes_equal": true,
+    "recovery_checks_pass": true,
+    "root_equal": true
+  },
+  "child_exit_code": 86,
+  "crash_process_wall_ns": 228247515,
+  "expected_active_mode": "full",
+  "filesystem": {
+    "block_size": 524288,
+    "blocks_available": 1007734,
+    "device": 55,
+    "filesystem_type": "nfs4",
+    "fragment_size": 524288,
+    "mount_point": "/data/group",
+    "path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/work/e6-migration-full-to-ext-crash_during_metadata_write-r0-2329104-1789500241990180999"
+  },
+  "metadata_differences": [],
+  "post_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "full",
+    "positions_checked": 512
+  },
+  "pre_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "full",
+    "positions_checked": 512
+  },
+  "protected_sha256_after": "6d495ea1fd5534990a32f597f4647378ad05d8999cd12525ec4de5c524ed82e5",
+  "protected_sha256_before": "6d495ea1fd5534990a32f597f4647378ad05d8999cd12525ec4de5c524ed82e5",
+  "recovery": {
+    "active_mode": "full",
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "expected_active_mode": "full",
+    "journals_found": 1,
+    "metadata_differences": [],
+    "mixed_state_detected": false,
+    "protected_bytes_equal": true,
+    "recovery_ns": 10396102,
+    "recovery_status": "PASS",
+    "temporary_metadata_files": 1,
+    "unreferenced_target_objects_cleaned": 1
+  },
+  "residual_workspaces_cleaned_after_worker_exit": 0,
+  "retained_workspaces_after_worker_exit": [
+    "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/work/e6-migration-full-to-ext-crash_during_metadata_write-r0-2329104-1789500241990180999"
+  ],
+  "root_hex_after": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "root_hex_before": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "snapshot_after": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 409380275,
+      "read_bytes": 0,
+      "syscr": 1645,
+      "syscw": 29,
+      "wchar": 123903,
+      "write_bytes": 49152
+    },
+    "major_faults": 0,
+    "minor_faults": 3583,
+    "peak_rss_bytes": 149389312,
+    "process_cpu_ns": 160278463,
+    "rss_bytes": 23511040,
+    "temp_C": 51.0,
+    "throttled": null,
+    "timestamp_unix_ns": 1789500243655007187,
+    "timestamp_utc": "2026-09-15T19:24:03.655007+00:00",
+    "utc_ns": 1789500243655007187
+  },
+  "snapshot_before": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 3053373,
+      "read_bytes": 0,
+      "syscr": 275,
+      "syscw": 14,
+      "wchar": 76263,
+      "write_bytes": 36864
+    },
+    "major_faults": 0,
+    "minor_faults": 3353,
+    "peak_rss_bytes": 149389312,
+    "process_cpu_ns": 67745599,
+    "rss_bytes": 22257664,
+    "temp_C": 51.0,
+    "throttled": null,
+    "timestamp_unix_ns": 1789500242027509808,
+    "timestamp_utc": "2026-09-15T19:24:02.027510+00:00",
+    "utc_ns": 1789500242027509808
+  },
+  "worker_exit_code": 0,
+  "worker_including_startup_wall_ns": 1867740643,
+  "worker_resources": {
+    "major_faults": 0,
+    "minor_faults": 223,
+    "peak_rss_kib": 145888,
+    "scope": "case worker; spawned crashing child excluded"
+  },
+  "workspace_cleanup_policy": "retain",
+  "workspace_path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/work/e6-migration-full-to-ext-crash_during_metadata_write-r0-2329104-1789500241990180999"
+}

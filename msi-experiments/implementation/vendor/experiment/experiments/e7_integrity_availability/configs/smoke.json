@@ -1,0 +1,118 @@
+{
+  "label": "smoke",
+  "publication_eligible": false,
+  "e7": {
+    "seed": 700000,
+    "cases_per_block": 1,
+    "deterministic_replicates": 1,
+    "deterministic_trials_per_block": 10,
+    "fuzz_replicates": 1,
+    "fuzz_trials_per_block": 20,
+    "line_coverage_trials_per_block": 2,
+    "ablation_replicates": 1,
+    "ablation_trials_per_block": 10,
+    "contexts": [
+      {
+        "name": "full-direct-raw-64",
+        "epoch_length": 64,
+        "block_bytes": 512,
+        "mode": "full",
+        "anchor_mode": "direct",
+        "layout": "per_block",
+        "codec": "raw-v1",
+        "query_position": 32,
+        "fixture_seed": 701
+      },
+      {
+        "name": "leaf-direct-zlib-64",
+        "epoch_length": 64,
+        "block_bytes": 2048,
+        "mode": "leaf",
+        "anchor_mode": "direct",
+        "layout": "epoch_packed",
+        "codec": "zlib-v1",
+        "query_position": 33,
+        "fixture_seed": 702
+      }
+    ],
+    "fuzz_contexts": [
+      {
+        "name": "full-direct-raw-64",
+        "epoch_length": 64,
+        "block_bytes": 512,
+        "mode": "full",
+        "anchor_mode": "direct",
+        "layout": "per_block",
+        "codec": "raw-v1",
+        "query_position": 32,
+        "fixture_seed": 701
+      }
+    ],
+    "ablation_context_map": {
+      "no_ctx": "full-direct-raw-64",
+      "no_anchor": "full-direct-raw-64",
+      "no_meta": "full-direct-raw-64"
+    }
+  },
+  "e8": {
+    "seed": 800000,
+    "cases_per_block": 5,
+    "epoch_lengths": [
+      64
+    ],
+    "block_bytes": 2048,
+    "variants": [
+      "full_colocated",
+      "full_split",
+      "leaf_colocated",
+      "leaf_split",
+      "ext_split"
+    ],
+    "failure_probabilities": [
+      0.0,
+      0.1
+    ],
+    "outage_models": [
+      "independent",
+      "correlated"
+    ],
+    "deadlines_ms": [
+      100
+    ],
+    "retry_policies": [
+      "no_retry"
+    ],
+    "replicates": 1,
+    "queries_per_case": 200,
+    "anchor_mode": "direct",
+    "layout": "per_block",
+    "codec": "raw-v1",
+    "fixture_seed": 807,
+    "verification_warmups": 1,
+    "verification_audit_queries": 2,
+    "bandwidth_mbps": 100.0,
+    "latency_cv": 0.2,
+    "correlated_fraction": 0.7,
+    "request_bytes_per_service_attempt": 32,
+    "retry_backoff_ms": 5.0,
+    "retry_first_attempt_fraction": 0.45,
+    "service_base_latency_ms": {
+      "payload_aux": 20.0,
+      "payload": 18.0,
+      "aux": 12.0,
+      "witness": 25.0,
+      "anchor": 8.0
+    },
+    "catalog_profile": {
+      "failure_probability": 0.1,
+      "outage_model": "correlated",
+      "deadline_ms": 100,
+      "retry_policy": "no_retry",
+      "variant_by_mode": {
+        "full": "full_colocated",
+        "leaf": "leaf_colocated",
+        "ext": "ext_split"
+      }
+    }
+  }
+}

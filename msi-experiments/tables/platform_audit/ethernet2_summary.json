@@ -1,0 +1,426 @@
+{
+  "comparison_migration_thermal": {
+    "hpc_real_422175": {
+      "flags": {
+        "None": 120
+      },
+      "known_flag_snapshots": 0,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 120,
+      "temperature_max_C": 53.0,
+      "temperature_min_C": 49.0
+    },
+    "pi-a-paper_ethereum_ethernet": {
+      "flags": {
+        "throttled=0xe0006": 120
+      },
+      "known_flag_snapshots": 120,
+      "nonzero_current_low_four_bits": 120,
+      "snapshots": 120,
+      "temperature_max_C": 95.438,
+      "temperature_min_C": 93.003
+    },
+    "pi-a-paper_ethereum_wifi": {
+      "flags": {
+        "throttled=0xe0000": 118,
+        "throttled=0xe0008": 2
+      },
+      "known_flag_snapshots": 120,
+      "nonzero_current_low_four_bits": 2,
+      "snapshots": 120,
+      "temperature_max_C": 82.289,
+      "temperature_min_C": 79.854
+    }
+  },
+  "complete": true,
+  "dataset_comparison": {
+    "hpc_real_422175": {
+      "export_manifest_identical": true,
+      "storage_dataset_signatures_identical": true
+    },
+    "pi-a-paper_ethereum_ethernet": {
+      "export_manifest_identical": true,
+      "storage_dataset_signatures_identical": true
+    },
+    "pi-a-paper_ethereum_wifi": {
+      "export_manifest_identical": true,
+      "storage_dataset_signatures_identical": true
+    }
+  },
+  "disconnect": {
+    "detected_safe_failure": 60,
+    "false_accepts": 0,
+    "faults": {
+      "server closes actual TCP query connection; next request reconnects": 60
+    },
+    "injections": 60,
+    "records": 60,
+    "recovered": 60,
+    "untested": {
+      "RF loss, board outage, physical link disconnection": 60
+    }
+  },
+  "experiment_counts": {
+    "archive_retrieval:ok": 15,
+    "disconnect:ok": 60,
+    "energy:skipped": 1,
+    "energy_workload:ok": 5,
+    "integrity:ok": 75,
+    "local:ok": 75,
+    "memory_pressure:ok": 60,
+    "migration:ok": 60,
+    "native_finality:skipped": 1,
+    "network:ok": 60,
+    "original_e2:ok": 40,
+    "provider:ok": 135,
+    "storage:ok": 75
+  },
+  "integrity": {
+    "failures": 0,
+    "honest": 75,
+    "mutations_rejected": 450,
+    "records": 75,
+    "total_subcases": 525
+  },
+  "manifest_failed_records": 0,
+  "matched_comparison": [
+    {
+      "code_hash_differences": [],
+      "left": "pi_a_paper_ethereum_ethernet2",
+      "original_case_mismatches": [],
+      "position_mismatches": [],
+      "right": "pi-a-paper_ethereum_wifi",
+      "shared_worker_keys": 255,
+      "warning": "Matching workload does not control thermal state, OS, interpreter/OpenSSL, storage, or order effects; each scope is analyzed separately."
+    },
+    {
+      "code_hash_differences": [
+        "msi_supplement/__init__.py",
+        "msi_supplement/__main__.py",
+        "msi_supplement/migration.py",
+        "msi_supplement/runner.py",
+        "msi_supplement/service.py"
+      ],
+      "left": "pi_a_paper_ethereum_ethernet2",
+      "original_case_mismatches": [],
+      "position_mismatches": [],
+      "right": "hpc_real_422175",
+      "shared_worker_keys": 191,
+      "warning": "Matching workload does not control thermal state, OS, interpreter/OpenSSL, storage, or order effects; each scope is analyzed separately."
+    },
+    {
+      "code_hash_differences": [],
+      "left": "pi_a_paper_ethereum_ethernet2",
+      "original_case_mismatches": [],
+      "position_mismatches": [],
+      "right": "pi-a-paper_ethereum_ethernet",
+      "shared_worker_keys": 255,
+      "warning": "Matching workload does not control thermal state, OS, interpreter/OpenSSL, storage, or order effects; each scope is analyzed separately."
+    }
+  ],
+  "migration": {
+    "all_checks_true": true,
+    "postpositions": 30720,
+    "prepositions": 30720,
+    "records": 60,
+    "status": {
+      "ok": 60
+    }
+  },
+  "missing_worker_files": [],
+  "network": {
+    "accepted": 12000,
+    "both_interfaces_up_on_client_and_provider": true,
+    "labels": {
+      "ethernet": 60
+    },
+    "provider_urls": [
+      "http://192.168.1.4:8765"
+    ],
+    "queries": 12000,
+    "records": 60,
+    "route_trace_recorded": false
+  },
+  "new_run": "pi_a_paper_ethereum_ethernet2",
+  "platform": {
+    "architecture": "aarch64",
+    "cpu_count": 4,
+    "hostname": "msi-pi-a",
+    "kernel": "6.12.47+rpt-rpi-v8",
+    "machine_id": "f8c5ed94511a0d7f7b74e6e55a8499bd265b7cfbe00e6c3af4400223a99102c0",
+    "machine_id_source": "device_tree_serial_sha256",
+    "mem_total_bytes": 8200613888,
+    "network": {
+      "available": true,
+      "interfaces": [
+        {
+          "is_wireless": false,
+          "name": "eth0",
+          "operstate": "up"
+        },
+        {
+          "is_wireless": false,
+          "name": "lo",
+          "operstate": "unknown"
+        },
+        {
+          "is_wireless": true,
+          "name": "wlan0",
+          "operstate": "up"
+        }
+      ]
+    },
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+    "os": {
+      "id": "debian",
+      "name": "Debian GNU/Linux",
+      "pretty_name": "Debian GNU/Linux 13 (trixie)",
+      "version": "13 (trixie)",
+      "version_id": "13"
+    },
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.4",
+    "platform": "Linux",
+    "python": "3.13.5",
+    "python_implementation": "CPython",
+    "result_storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 21260427264,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite/outputs/pi_a_paper_ethereum_ethernet2",
+      "total_bytes": 30794059776,
+      "used_bytes": 8203042816
+    },
+    "storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 21260427264,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite",
+      "total_bytes": 30794059776,
+      "used_bytes": 8203042816
+    }
+  },
+  "pressure": {
+    "accepted": 12000,
+    "all_use_256MiB_AS_and_64MiB_touched_buffer": true,
+    "all_use_pre_delivered_pool": true,
+    "queries": 12000,
+    "records": 60
+  },
+  "provider_platform": {
+    "architecture": "aarch64",
+    "cpu_count": 4,
+    "hostname": "msi-pi-b",
+    "kernel": "6.12.47+rpt-rpi-v8",
+    "machine_id": "7e7e6946191efbf0784478e26f1c2325eba3d95d44cbbc419b2cf966290b4c94",
+    "machine_id_source": "device_tree_serial_sha256",
+    "mem_total_bytes": 3981172736,
+    "network": {
+      "available": true,
+      "interfaces": [
+        {
+          "is_wireless": false,
+          "name": "eth0",
+          "operstate": "up"
+        },
+        {
+          "is_wireless": false,
+          "name": "lo",
+          "operstate": "unknown"
+        },
+        {
+          "is_wireless": false,
+          "name": "ovs-system",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "s1",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "s2",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "s3",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": true,
+          "name": "wlan0",
+          "operstate": "up"
+        }
+      ]
+    },
+    "openssl": "OpenSSL 3.0.15 3 Sep 2024",
+    "os": {
+      "id": "debian",
+      "name": "Debian GNU/Linux",
+      "pretty_name": "Debian GNU/Linux 13 (trixie)",
+      "version": "13 (trixie)",
+      "version_id": "13"
+    },
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.4",
+    "platform": "Linux",
+    "provider_storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 9208389632,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite/provider_data",
+      "total_bytes": 30794059776,
+      "used_bytes": 20255080448
+    },
+    "python": "3.12.7",
+    "python_implementation": "CPython",
+    "storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 9208389632,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite",
+      "total_bytes": 30794059776,
+      "used_bytes": 20255080448
+    }
+  },
+  "raw_input_sha256": {
+    "results.jsonl": "7167fab9b43827e50903629d289b7bbff1718b3791990da302119415b9143d5d",
+    "run_manifest.json": "221d39e4e9a615e34ddf7dc9dd923c07cf847480ab8119308d68b96cb57aed3e"
+  },
+  "raw_validation_discrepancies": [],
+  "record_counts": {
+    "ok": 660,
+    "skipped": 2
+  },
+  "remaining_scope_limits": [
+    "No continuous temperature monitoring; flags only at saved boundaries, with historical flags still set.",
+    "No per-query provider thermal evidence or provider source-code hash in health metadata.",
+    "Both network interfaces were up; the recorded Ethernet run targets 192.168.1.4, but actual route was not independently recorded.",
+    "Source runtime and governor differences preclude pure hardware attribution in Pi/HPC comparison.",
+    "Lifetime ru_maxrss already inflated before measurement; report endpoint /proc RSS as sampled, not transient peak.",
+    "No external energy measurement, native finality, physical power-cut, flash-endurance or RF-loss test."
+  ],
+  "synthetic_file_validation": {
+    "all_payload_lengths_2048": true,
+    "file_sha256": "b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef",
+    "file_sha256_matches_manifest": true,
+    "indices_contiguous": true,
+    "payload_bytes": 8388608,
+    "row_count": 4096
+  },
+  "thermal_all_unique_boundary_snapshot_count": 590,
+  "thermal_by_experiment": {
+    "archive_retrieval": {
+      "flags": {
+        "throttled=0xe0000": 30
+      },
+      "known_flag_snapshots": 30,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 30,
+      "temperature_max_C": 77.419,
+      "temperature_min_C": 72.062
+    },
+    "energy_workload": {
+      "flags": {
+        "throttled=0xe0000": 10
+      },
+      "known_flag_snapshots": 10,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 10,
+      "temperature_max_C": 76.932,
+      "temperature_min_C": 73.036
+    },
+    "local": {
+      "flags": {
+        "throttled=0xe0000": 150
+      },
+      "known_flag_snapshots": 150,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 150,
+      "temperature_max_C": 77.419,
+      "temperature_min_C": 71.575
+    },
+    "memory_pressure": {
+      "flags": {
+        "throttled=0xe0000": 120
+      },
+      "known_flag_snapshots": 120,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 120,
+      "temperature_max_C": 77.419,
+      "temperature_min_C": 71.575
+    },
+    "network": {
+      "flags": {
+        "throttled=0xe0000": 120
+      },
+      "known_flag_snapshots": 120,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 120,
+      "temperature_max_C": 77.419,
+      "temperature_min_C": 71.575
+    },
+    "original_e2": {
+      "flags": {
+        "throttled=0xe0000": 40
+      },
+      "known_flag_snapshots": 40,
+      "nonzero_current_low_four_bits": 0,
+      "snapshots": 40,
+      "temperature_max_C": 78.88,
+      "temperature_min_C": 74.497
+    }
+  },
+  "thermal_migration": {
+    "flags": {
+      "throttled=0xe0000": 120
+    },
+    "known_flag_snapshots": 120,
+    "nonzero_current_low_four_bits": 0,
+    "snapshots": 120,
+    "temperature_max_C": 80.341,
+    "temperature_min_C": 76.932
+  },
+  "thermal_worker_and_e2": {
+    "flags": {
+      "throttled=0xe0000": 470
+    },
+    "known_flag_snapshots": 470,
+    "nonzero_current_low_four_bits": 0,
+    "snapshots": 470,
+    "temperature_max_C": 78.88,
+    "temperature_min_C": 71.575
+  }
+}

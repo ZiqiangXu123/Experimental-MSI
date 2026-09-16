@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "description": "Optional exact-capacity projection for cross-products of the manuscript's largest shard and history settings. Run only after publication.json.",
+  "defaults": {
+    "max_materialized_bytes": 268435456
+  },
+  "sweeps": [
+    {
+      "name": "large_capacity",
+      "shards": [16, 64, 128],
+      "historical_epochs": [10000, 100000],
+      "epoch_lengths": [512],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["anchor"],
+      "notes": "Exact deterministic byte projection. Only active anchors are physically materialized to avoid consuming hundreds of GiB of shared storage."
+    }
+  ]
+}

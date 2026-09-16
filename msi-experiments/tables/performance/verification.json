@@ -1,0 +1,104 @@
+{
+  "checks": {
+    "HPC": {
+      "pressure_cases": 60,
+      "pressure_accepted": 12000,
+      "pressure_queries": 12000,
+      "integrity_cases": 525,
+      "integrity_failures": 0,
+      "disconnect_cases": 0,
+      "disconnect_false_accepts": 0,
+      "disconnect_recovered": 0,
+      "telemetry_count": 350,
+      "throttle_counts": {
+        "None": 350
+      },
+      "active_throttle_snapshots": 0,
+      "min_temp_C": 46.0,
+      "max_temp_C": 54.0,
+      "record_counts": {
+        "storage:ok": 75,
+        "provider:ok": 75,
+        "local:ok": 75,
+        "memory_pressure:ok": 60,
+        "integrity:ok": 75,
+        "archive_retrieval:ok": 15,
+        "energy_workload:ok": 5,
+        "original_e2:ok": 40,
+        "migration:ok": 60,
+        "network:skipped": 1,
+        "energy:skipped": 1,
+        "native_finality:skipped": 1
+      }
+    },
+    "Pi_Ethernet": {
+      "pressure_cases": 60,
+      "pressure_accepted": 12000,
+      "pressure_queries": 12000,
+      "integrity_cases": 525,
+      "integrity_failures": 0,
+      "disconnect_cases": 60,
+      "disconnect_false_accepts": 0,
+      "disconnect_recovered": 60,
+      "telemetry_count": 470,
+      "throttle_counts": {
+        "throttled=0xe0000": 470
+      },
+      "active_throttle_snapshots": 0,
+      "min_temp_C": 71.575,
+      "max_temp_C": 78.88,
+      "record_counts": {
+        "storage:ok": 75,
+        "provider:ok": 135,
+        "local:ok": 75,
+        "memory_pressure:ok": 60,
+        "network:ok": 60,
+        "integrity:ok": 75,
+        "disconnect:ok": 60,
+        "archive_retrieval:ok": 15,
+        "energy_workload:ok": 5,
+        "original_e2:ok": 40,
+        "migration:ok": 60,
+        "energy:skipped": 1,
+        "native_finality:skipped": 1
+      }
+    },
+    "Pi_WiFi": {
+      "pressure_cases": 60,
+      "pressure_accepted": 12000,
+      "pressure_queries": 12000,
+      "integrity_cases": 525,
+      "integrity_failures": 0,
+      "disconnect_cases": 60,
+      "disconnect_false_accepts": 0,
+      "disconnect_recovered": 60,
+      "telemetry_count": 470,
+      "throttle_counts": {
+        "throttled=0xe0000": 470
+      },
+      "active_throttle_snapshots": 0,
+      "min_temp_C": 73.036,
+      "max_temp_C": 81.802,
+      "record_counts": {
+        "storage:ok": 75,
+        "provider:ok": 135,
+        "local:ok": 75,
+        "memory_pressure:ok": 60,
+        "network:ok": 60,
+        "integrity:ok": 75,
+        "disconnect:ok": 60,
+        "archive_retrieval:ok": 15,
+        "energy_workload:ok": 5,
+        "original_e2:ok": 40,
+        "migration:ok": 60,
+        "energy:skipped": 1,
+        "native_finality:skipped": 1
+      }
+    }
+  },
+  "raw_summary_mismatches": [],
+  "aggregation": "Each row aggregates exactly five independent process trials; latency uses median of per-trial medians and range of those medians. P95 uses median of within-trial P95 values.",
+  "rss_scope": "Post-query current RSS snapshot; ru_maxrss is not used as a phase peak.",
+  "network_confound": "The new complete Ethereum-inclusive Ethernet rerun replaces both previous Ethernet cohorts as primary evidence. All 470 Pi-A telemetry snapshots in each selected Ethernet/WiFi batch have no active throttle flags; histories persist. Radio/thermal conditions remain independent-session observations, not fully controlled causal estimates.",
+  "ratio_scope": "Same original E2 code/workload; platform deployment ratio, not pure CPU ratio."
+}

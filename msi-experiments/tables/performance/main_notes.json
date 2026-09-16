@@ -1,0 +1,258 @@
+{
+  "pressure_scope": "Ratio of paired trial median acceptance times (accept_ns); post-query RSS includes touched 64 MiB buffer; local pre-delivered-response tests, not network-under-pressure.",
+  "pressure_by_configuration": [
+    {
+      "data_kind": "synthetic",
+      "n": 512,
+      "mode": "full",
+      "paired_ratio_median": 0.9908047230884394,
+      "paired_ratio_min": 0.9781589312302361,
+      "paired_ratio_max": 1.0029478154699547,
+      "paired_ratios": [
+        1.0029478154699547,
+        0.9908047230884394,
+        0.9992472293595679,
+        0.9781589312302361,
+        0.9894543523976453
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 512,
+      "mode": "leaf",
+      "paired_ratio_median": 0.9971889851421709,
+      "paired_ratio_min": 0.9886634920359083,
+      "paired_ratio_max": 1.0152923342472298,
+      "paired_ratios": [
+        0.9912585640964522,
+        1.0152923342472298,
+        0.9886634920359083,
+        1.0062868607883049,
+        0.9971889851421709
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 512,
+      "mode": "ext_cached",
+      "paired_ratio_median": 1.002036802788561,
+      "paired_ratio_min": 0.983604577376788,
+      "paired_ratio_max": 1.0139234753297415,
+      "paired_ratios": [
+        0.9885834740190088,
+        1.002036802788561,
+        0.983604577376788,
+        1.0139234753297415,
+        1.0138431300462378
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 512,
+      "mode": "ext_rebuild",
+      "paired_ratio_median": 1.0023441720595847,
+      "paired_ratio_min": 0.9884073559093134,
+      "paired_ratio_max": 1.0107911049058473,
+      "paired_ratios": [
+        1.0107911049058473,
+        0.9922270888348803,
+        1.0023441720595847,
+        1.0087125117272886,
+        0.9884073559093134
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 4096,
+      "mode": "full",
+      "paired_ratio_median": 1.005893039004979,
+      "paired_ratio_min": 0.9880738526539675,
+      "paired_ratio_max": 1.0172974910133454,
+      "paired_ratios": [
+        1.0081012787976575,
+        1.0172974910133454,
+        0.9880738526539675,
+        1.005893039004979,
+        1.0047953327971866
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 4096,
+      "mode": "leaf",
+      "paired_ratio_median": 1.0176327364020314,
+      "paired_ratio_min": 0.9764512427359139,
+      "paired_ratio_max": 1.0333499945191877,
+      "paired_ratios": [
+        1.0333499945191877,
+        1.0176327364020314,
+        1.0086948791538646,
+        0.9764512427359139,
+        1.019335107432904
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 4096,
+      "mode": "ext_cached",
+      "paired_ratio_median": 1.009244780105784,
+      "paired_ratio_min": 1.0008789229785446,
+      "paired_ratio_max": 1.0125036545175268,
+      "paired_ratios": [
+        1.0059211742539111,
+        1.009244780105784,
+        1.0125036545175268,
+        1.0101931170207854,
+        1.0008789229785446
+      ]
+    },
+    {
+      "data_kind": "synthetic",
+      "n": 4096,
+      "mode": "ext_rebuild",
+      "paired_ratio_median": 0.9943799681891788,
+      "paired_ratio_min": 0.9863728015980058,
+      "paired_ratio_max": 1.009252628751075,
+      "paired_ratios": [
+        0.988439802637757,
+        0.9943799681891788,
+        1.009252628751075,
+        0.9863728015980058,
+        0.9959816535738698
+      ]
+    },
+    {
+      "data_kind": "ethereum_rpc_finalized_json",
+      "n": 69,
+      "mode": "full",
+      "paired_ratio_median": 0.9964634884917695,
+      "paired_ratio_min": 0.9935990604238665,
+      "paired_ratio_max": 1.0130685602429106,
+      "paired_ratios": [
+        0.9935990604238665,
+        1.0130685602429106,
+        0.9964634884917695,
+        1.0033168170980122,
+        0.9936881671559655
+      ]
+    },
+    {
+      "data_kind": "ethereum_rpc_finalized_json",
+      "n": 69,
+      "mode": "leaf",
+      "paired_ratio_median": 1.0015561986380679,
+      "paired_ratio_min": 0.9818515391795171,
+      "paired_ratio_max": 1.0042344738569504,
+      "paired_ratios": [
+        1.002515068074636,
+        1.0042344738569504,
+        0.9976355671404987,
+        0.9818515391795171,
+        1.0015561986380679
+      ]
+    },
+    {
+      "data_kind": "ethereum_rpc_finalized_json",
+      "n": 69,
+      "mode": "ext_cached",
+      "paired_ratio_median": 1.000278182749517,
+      "paired_ratio_min": 0.9962758314148683,
+      "paired_ratio_max": 1.0091286808471251,
+      "paired_ratios": [
+        0.9974608335172307,
+        1.0091286808471251,
+        0.9962758314148683,
+        1.001458506847044,
+        1.000278182749517
+      ]
+    },
+    {
+      "data_kind": "ethereum_rpc_finalized_json",
+      "n": 69,
+      "mode": "ext_rebuild",
+      "paired_ratio_median": 0.998631069526952,
+      "paired_ratio_min": 0.9705801171436299,
+      "paired_ratio_max": 1.003864713768418,
+      "paired_ratios": [
+        1.003864713768418,
+        0.9965482584233442,
+        0.998631069526952,
+        0.9705801171436299,
+        1.0000391306487317
+      ]
+    }
+  ],
+  "pressure_configuration_median_ratio_range": [
+    0.9908047230884394,
+    1.0176327364020314
+  ],
+  "pressure_all60_paired_trial_ratio_range": [
+    0.9705801171436299,
+    1.0333499945191877
+  ],
+  "pressure_query_end_RSS_MiB_range": [
+    88.3203125,
+    93.1015625
+  ],
+  "pressure_accepted_queries": 12000,
+  "real69_ethernet_network_median_within_trial_p95_ms": {
+    "ext_cached": 160.5416655,
+    "ext_rebuild": 422.98523515,
+    "full": 160.78440335,
+    "leaf": 162.07898014999998
+  },
+  "real69_ethernet_full_leaf_cache_p95_range_ms": [
+    160.5416655,
+    162.07898014999998
+  ],
+  "archive_local_retrieval": [
+    {
+      "run": "Pi_Ethernet",
+      "n": 69,
+      "data_kind": "ethereum_rpc_finalized_json",
+      "median_of_trial_medians_ms": 17.401249999999997,
+      "min_trial_median_ms": 16.643864,
+      "max_trial_median_ms": 17.9500755
+    },
+    {
+      "run": "Pi_Ethernet",
+      "n": 512,
+      "data_kind": "synthetic",
+      "median_of_trial_medians_ms": 1.6096215,
+      "min_trial_median_ms": 1.5977234999999999,
+      "max_trial_median_ms": 1.6314635000000002
+    },
+    {
+      "run": "Pi_Ethernet",
+      "n": 4096,
+      "data_kind": "synthetic",
+      "median_of_trial_medians_ms": 1.694003,
+      "min_trial_median_ms": 1.6763240000000001,
+      "max_trial_median_ms": 1.7000635
+    },
+    {
+      "run": "Pi_WiFi",
+      "n": 69,
+      "data_kind": "ethereum_rpc_finalized_json",
+      "median_of_trial_medians_ms": 17.493478,
+      "min_trial_median_ms": 16.615758,
+      "max_trial_median_ms": 17.8819645
+    },
+    {
+      "run": "Pi_WiFi",
+      "n": 512,
+      "data_kind": "synthetic",
+      "median_of_trial_medians_ms": 1.6057510000000002,
+      "min_trial_median_ms": 1.5916875,
+      "max_trial_median_ms": 1.6263725
+    },
+    {
+      "run": "Pi_WiFi",
+      "n": 4096,
+      "data_kind": "synthetic",
+      "median_of_trial_medians_ms": 1.6942490000000001,
+      "min_trial_median_ms": 1.682733,
+      "max_trial_median_ms": 1.6960105
+    }
+  ]
+}

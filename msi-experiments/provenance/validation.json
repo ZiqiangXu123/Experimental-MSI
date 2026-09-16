@@ -1,0 +1,42 @@
+{
+  "recorded_result_files_unchanged": 3618,
+  "table_reconstruction": {
+    "reference_files": 23,
+    "byte_mismatches": 0
+  },
+  "default_supplement_unit_tests": {
+    "run": 113,
+    "passed": 113
+  },
+  "hpc_nfs_unit_tests": {
+    "run": 4,
+    "passed": 4
+  },
+  "original_component_unit_tests": {
+    "E1": {
+      "passed": 6
+    },
+    "E2": {
+      "passed": 8
+    },
+    "E3": {
+      "passed": 9
+    },
+    "E4": {
+      "passed": 9,
+      "blocked": 1,
+      "reason": "Local validation environment denied AF_UNIX forkserver socket creation; end-to-end test could not complete."
+    },
+    "E5": {
+      "passed": 11
+    },
+    "E6": {
+      "passed": 10
+    },
+    "E7_E8": {
+      "passed": 8
+    }
+  },
+  "bash_syntax_files": 146,
+  "scope": "Repository packaging and functional checks; no replacement hardware timing measurements."
+}

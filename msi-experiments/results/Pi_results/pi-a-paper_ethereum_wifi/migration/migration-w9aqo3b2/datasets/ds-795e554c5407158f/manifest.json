@@ -1,0 +1,61 @@
+{
+  "file_sha256": {
+    "aux/full.bin": "3a25662adfbcd1c3ee009ff5586fa5a1e7ea0479ab7221812636a3ca727e7c8a",
+    "aux/leaf.bin": "9c7927d35e9be13bf5f5d6a0f788483f0c055b2cffb077f473a8de9f2e8a5340",
+    "external/registry.json": "770110057d5104ca5920b6fbac26b0441139a2a1754914b7d241417565612759",
+    "external/witness_full.bin": "3a25662adfbcd1c3ee009ff5586fa5a1e7ea0479ab7221812636a3ca727e7c8a",
+    "payload/payload.dat": "f2cf989c271f8930574e21376e9a40f7b3c716db9cdcccc94b9474331fc63ab7",
+    "payload/payload.idx": "18c86f0c589b306d158694ccc52bd2ffe6ac4514309a9d04e027876ec6d05758",
+    "templates/ext.json": "d872036070bcce6c635b20123ff960e712f28eee8e3690f3c1f473ae211ac38d",
+    "templates/full.json": "55131fa45b2106524490da107ee7683caa6bdaa657ebcf23c616eb0d7ffd5969",
+    "templates/leaf.json": "d7e7177505bec0ca1a4e6ee987ddaaa2c9f6c77f77874c1c7145553d4d02adef"
+  },
+  "hash_build_counts": {
+    "internal": 0,
+    "leaf": 512,
+    "total": 512
+  },
+  "objects": {
+    "entry_ext": "templates/ext.json",
+    "entry_full": "templates/full.json",
+    "entry_leaf": "templates/leaf.json",
+    "external_registry": "external/registry.json",
+    "external_support": "external/witness_full.bin",
+    "full_support": "aux/full.bin",
+    "leaf_support": "aux/leaf.bin",
+    "payload_root": "payload"
+  },
+  "payload": {
+    "block_bytes": 2048,
+    "codec": "raw-v1",
+    "encoded_bytes": 1048576,
+    "epoch": 17,
+    "layout": "epoch_packed",
+    "logical_bytes": 1048576,
+    "n": 512,
+    "n_prime": 512,
+    "schema_version": 1,
+    "seed": 20260915,
+    "shard": 3
+  },
+  "root_hex": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "schema_version": 1,
+  "sizes": {
+    "full_formula_bytes": 32768,
+    "full_serialized_bytes": 32768,
+    "leaf_formula_bytes": 16448,
+    "leaf_serialized_bytes": 16448
+  },
+  "spec": {
+    "anchor_key_seed": 1703,
+    "block_bytes": 2048,
+    "codec": "raw-v1",
+    "dataset_id": "ds-795e554c5407158f",
+    "epoch": 17,
+    "layout": "epoch_packed",
+    "n": 512,
+    "n_prime": 512,
+    "payload_seed": 20260915,
+    "shard": 3
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "block_count": 128,
+  "blocks_sha256": "190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60",
+  "chain_id": 1,
+  "data_kind": "ethereum_rpc_finalized_json",
+  "end_block": 25984063,
+  "format_version": 1,
+  "native_finality_verified": false,
+  "provenance": {
+    "acquired_at_utc": "2026-09-15T16:48:54.488349+00:00",
+    "boundary_snapshots_rechecked": true,
+    "chain_id_rechecked": true,
+    "finality_basis": "trusted RPC finalized tag; no native finality verification",
+    "finalized_head_after": {
+      "hash": "0x8abd9d3c538f12de779c556beb7f79370b66653f246ab854d9131be382b9d5ce",
+      "number": 25984095,
+      "parentHash": "0x477bc8b281580a46c3ec9252adeea485e33a4d7db371dc994408edf8fc09c6e8"
+    },
+    "full_transactions": true,
+    "initial_finalized_head": {
+      "hash": "0x9ad743d8c5200440339bfea0156398c1d1aa406635f7fe296c6deee2109cd29e",
+      "number": 25984063,
+      "parentHash": "0xd1d117cf5cc8aab3a9b168ada97339c4dbf6b0df95960f2b927fbec475f407a8"
+    },
+    "payload_encoding": "canonical-json-utf8",
+    "rpc_methods": [
+      "eth_chainId",
+      "eth_getBlockByNumber"
+    ],
+    "source": "user-supplied Ethereum JSON-RPC endpoint; URL omitted"
+  },
+  "start_block": 25983936,
+  "total_payload_bytes": 64208046
+}

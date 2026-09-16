@@ -1,0 +1,145 @@
+[
+  {
+    "name": "hpc_migration_check_422174",
+    "paper_role": "migration_recovery_validation",
+    "run_completed": null,
+    "failed_records": null,
+    "records": 0,
+    "experiment_status_counts": {},
+    "path": "results/HPC_results/hpc_migration_check_422174"
+  },
+  {
+    "name": "hpc_real_422173",
+    "paper_role": "history_partial",
+    "run_completed": false,
+    "failed_records": null,
+    "records": 421,
+    "experiment_status_counts": {
+      "storage:ok": 75,
+      "provider:ok": 75,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "integrity:ok": 75,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "suite:failed": 1
+    },
+    "path": "results/HPC_results/hpc_real_422173"
+  },
+  {
+    "name": "hpc_real_422175",
+    "paper_role": "paper_primary_hpc",
+    "run_completed": true,
+    "failed_records": 0,
+    "records": 483,
+    "experiment_status_counts": {
+      "storage:ok": 75,
+      "provider:ok": 75,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "integrity:ok": 75,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "network:skipped": 1,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "path": "results/HPC_results/hpc_real_422175"
+  },
+  {
+    "name": "pi-a-paper_ethereum_ethernet",
+    "paper_role": "history_superseded_hot_ethernet",
+    "run_completed": true,
+    "failed_records": 0,
+    "records": 662,
+    "experiment_status_counts": {
+      "storage:ok": 75,
+      "provider:ok": 135,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "network:ok": 60,
+      "integrity:ok": 75,
+      "disconnect:ok": 60,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "path": "results/Pi_results/pi-a-paper_ethereum_ethernet"
+  },
+  {
+    "name": "pi-a-paper_ethereum_wifi",
+    "paper_role": "paper_wifi_context",
+    "run_completed": true,
+    "failed_records": 0,
+    "records": 662,
+    "experiment_status_counts": {
+      "storage:ok": 75,
+      "provider:ok": 135,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "network:ok": 60,
+      "integrity:ok": 75,
+      "disconnect:ok": 60,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "path": "results/Pi_results/pi-a-paper_ethereum_wifi"
+  },
+  {
+    "name": "pi-a-paper_synthetic_ethernet",
+    "paper_role": "history_previous_synthetic_ethernet",
+    "run_completed": true,
+    "failed_records": 0,
+    "records": 478,
+    "experiment_status_counts": {
+      "real_dataset:skipped": 1,
+      "storage:ok": 50,
+      "provider:ok": 90,
+      "local:ok": 50,
+      "memory_pressure:ok": 40,
+      "network:ok": 40,
+      "integrity:ok": 50,
+      "disconnect:ok": 40,
+      "archive_retrieval:ok": 10,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "path": "results/Pi_results/pi-a-paper_synthetic_ethernet"
+  },
+  {
+    "name": "pi_a_paper_ethereum_ethernet2",
+    "paper_role": "paper_primary_pi",
+    "run_completed": true,
+    "failed_records": 0,
+    "records": 662,
+    "experiment_status_counts": {
+      "storage:ok": 75,
+      "provider:ok": 135,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "network:ok": 60,
+      "integrity:ok": 75,
+      "disconnect:ok": 60,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "path": "results/ethernet2/pi_a_paper_ethereum_ethernet2"
+  }
+]

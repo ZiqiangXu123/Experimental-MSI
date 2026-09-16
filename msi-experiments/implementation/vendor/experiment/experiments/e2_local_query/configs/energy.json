@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "experiment": "E2",
+  "description": "Dedicated longer batch for package-energy measurement on an exclusive node. Server-class HPC energy must be labelled separately from the required edge-platform result.",
+  "defaults": {
+    "trial_count": 10,
+    "measured_queries": 50000,
+    "warmup_queries": 1000,
+    "phase_queries": 64,
+    "allocation_queries": 4,
+    "query_pool_size": 128,
+    "plan_seed": 20260624
+  },
+  "sweeps": [
+    {
+      "name": "energy",
+      "factor_grid": {"epoch_length": [512, 4096]},
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    }
+  ]
+}

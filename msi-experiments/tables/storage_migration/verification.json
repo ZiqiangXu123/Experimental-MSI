@@ -1,0 +1,2320 @@
+{
+  "Pi_Ethernet2": {
+    "completed": true,
+    "failed_records": 0,
+    "counts": {
+      "storage:ok": 75,
+      "provider:ok": 135,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "network:ok": 60,
+      "integrity:ok": 75,
+      "disconnect:ok": 60,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "storage_errors": [],
+    "provider_raw_errors": [],
+    "migration_raw_errors": [],
+    "provider_raw_rows": 60,
+    "provider_raw_samples": 12000,
+    "migration_checks": {
+      "active_mode_correct:True": 60,
+      "active_state_valid:True": 60,
+      "allowed_metadata_difference_only:True": 60,
+      "anchor_bytes_equal:True": 60,
+      "dataset_matches_case:True": 60,
+      "no_partial_metadata:True": 60,
+      "no_pending_journals:True": 60,
+      "post_queries_accept:True": 60,
+      "pre_queries_accept:True": 60,
+      "protected_bytes_equal:True": 60,
+      "root_equal:True": 60,
+      "injected_exit_code_matches:True": 30,
+      "recovery_checks_pass:True": 30
+    },
+    "migration_snapshots": [
+      {
+        "case_id": "migration-full-to-leaf-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 76.932,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 76.932,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 77.419,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 77.906,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.367,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 78.88,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 78.393,
+        "throttled": "throttled=0xe0000"
+      }
+    ],
+    "memory_errors": [],
+    "migration_cases": 60,
+    "migration_faults": {
+      "none": 30,
+      "crash_after_root_verify": 6,
+      "crash_after_target_create": 6,
+      "crash_before_metadata_swap": 6,
+      "crash_during_metadata_write": 6,
+      "crash_after_metadata_swap": 6
+    }
+  },
+  "Pi_WiFi": {
+    "completed": true,
+    "failed_records": 0,
+    "counts": {
+      "storage:ok": 75,
+      "provider:ok": 135,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "network:ok": 60,
+      "integrity:ok": 75,
+      "disconnect:ok": 60,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "storage_errors": [],
+    "provider_raw_errors": [],
+    "migration_raw_errors": [],
+    "provider_raw_rows": 60,
+    "provider_raw_samples": 12000,
+    "migration_checks": {
+      "active_mode_correct:True": 60,
+      "active_state_valid:True": 60,
+      "allowed_metadata_difference_only:True": 60,
+      "anchor_bytes_equal:True": 60,
+      "dataset_matches_case:True": 60,
+      "no_partial_metadata:True": 60,
+      "no_pending_journals:True": 60,
+      "post_queries_accept:True": 60,
+      "pre_queries_accept:True": 60,
+      "protected_bytes_equal:True": 60,
+      "root_equal:True": 60,
+      "injected_exit_code_matches:True": 30,
+      "recovery_checks_pass:True": 30
+    },
+    "migration_snapshots": [
+      {
+        "case_id": "migration-full-to-leaf-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 82.289,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0008"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 82.289,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 82.289,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 79.854,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0008"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.802,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 80.828,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 80.341,
+        "throttled": "throttled=0xe0000"
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 81.315,
+        "throttled": "throttled=0xe0000"
+      }
+    ],
+    "memory_errors": [],
+    "migration_cases": 60,
+    "migration_faults": {
+      "none": 30,
+      "crash_after_root_verify": 6,
+      "crash_after_target_create": 6,
+      "crash_before_metadata_swap": 6,
+      "crash_during_metadata_write": 6,
+      "crash_after_metadata_swap": 6
+    }
+  },
+  "HPC": {
+    "completed": true,
+    "failed_records": 0,
+    "counts": {
+      "storage:ok": 75,
+      "provider:ok": 75,
+      "local:ok": 75,
+      "memory_pressure:ok": 60,
+      "integrity:ok": 75,
+      "archive_retrieval:ok": 15,
+      "energy_workload:ok": 5,
+      "original_e2:ok": 40,
+      "migration:ok": 60,
+      "network:skipped": 1,
+      "energy:skipped": 1,
+      "native_finality:skipped": 1
+    },
+    "storage_errors": [],
+    "provider_raw_errors": [],
+    "migration_raw_errors": [],
+    "provider_raw_rows": 0,
+    "provider_raw_samples": 0,
+    "migration_checks": {
+      "active_mode_correct:True": 60,
+      "active_state_valid:True": 60,
+      "allowed_metadata_difference_only:True": 60,
+      "anchor_bytes_equal:True": 60,
+      "dataset_matches_case:True": 60,
+      "no_partial_metadata:True": 60,
+      "no_pending_journals:True": 60,
+      "post_queries_accept:True": 60,
+      "pre_queries_accept:True": 60,
+      "protected_bytes_equal:True": 60,
+      "root_equal:True": 60,
+      "injected_exit_code_matches:True": 30,
+      "recovery_checks_pass:True": 30
+    },
+    "migration_snapshots": [
+      {
+        "case_id": "migration-full-to-leaf-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-full-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 53.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r0",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r1",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r1",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r2",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r2",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r3",
+        "phase": "snapshot_before",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r3",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r4",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-none-r4",
+        "phase": "snapshot_after",
+        "temp_C": 52.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_before",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_root_verify-r0",
+        "phase": "snapshot_after",
+        "temp_C": 51.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_target_create-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_before_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_before",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_during_metadata_write-r0",
+        "phase": "snapshot_after",
+        "temp_C": 49.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_before",
+        "temp_C": 50.0,
+        "throttled": null
+      },
+      {
+        "case_id": "migration-ext-to-full-crash_after_metadata_swap-r0",
+        "phase": "snapshot_after",
+        "temp_C": 50.0,
+        "throttled": null
+      }
+    ],
+    "memory_errors": [],
+    "migration_cases": 60,
+    "migration_faults": {
+      "none": 30,
+      "crash_after_root_verify": 6,
+      "crash_after_target_create": 6,
+      "crash_before_metadata_swap": 6,
+      "crash_during_metadata_write": 6,
+      "crash_after_metadata_swap": 6
+    }
+  },
+  "cross_run": {
+    "recorded_selected_dataset_identities_equal": true,
+    "all_original_E6_source_hashes_equal": true,
+    "independent_original_dataset_rehashes": 0,
+    "dataset_limit": "Original payload files omitted; compares recorded identities only."
+  }
+}

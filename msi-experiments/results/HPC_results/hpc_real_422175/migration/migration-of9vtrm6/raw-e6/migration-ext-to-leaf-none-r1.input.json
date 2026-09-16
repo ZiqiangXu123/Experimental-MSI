@@ -1,0 +1,22 @@
+{
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-ext-to-leaf-none-r1",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "none",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 1,
+    "seed": 11,
+    "source_mode": "ext",
+    "target_mode": "leaf",
+    "transition": "ext->leaf",
+    "trial_kind": "equivalence_audit"
+  },
+  "dataset_dir": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/datasets",
+  "keep_workspace": true,
+  "result_path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/raw-e6/migration-ext-to-leaf-none-r1.json",
+  "work_root": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/work"
+}

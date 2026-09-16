@@ -1,0 +1,116 @@
+{
+  "primary_ethernet_run": "ethernet2/pi_a_paper_ethereum_ethernet2",
+  "five_trial_aggregation": "median of five trial medians; min/max of those medians",
+  "headline_metrics": {
+    "synthetic4096_E2_full_local_acceptance_ms": 0.4092445,
+    "ethereum69_ethernet_full_retrieval_acceptance_ms": 80.88458,
+    "ethereum69_wifi_full_retrieval_acceptance_ms": 81.63838150000001
+  },
+  "ethernet_real69_network_query_end_RSS_MiB": {
+    "min": 27.9453125,
+    "max": 30.30859375,
+    "scope": "20 trial-end snapshots across four remote modes; excludes archive and pressure buffer"
+  },
+  "primary_E2_4096": [
+    {
+      "pi_run": "Pi_Ethernet",
+      "n": 4096,
+      "scheme": "B1_verified",
+      "trials": 5,
+      "pi_trial_median_ms": 0.40571650000000004,
+      "hpc_trial_median_ms": 0.1313765,
+      "paired_ratio_median": 3.0881968997499554,
+      "paired_ratio_min": 3.0816177394124162,
+      "paired_ratio_max": 3.0937386663408937
+    },
+    {
+      "pi_run": "Pi_Ethernet",
+      "n": 4096,
+      "scheme": "B2_full",
+      "trials": 5,
+      "pi_trial_median_ms": 0.4092445,
+      "hpc_trial_median_ms": 0.13111850000000003,
+      "paired_ratio_median": 3.108795843262763,
+      "paired_ratio_min": 3.0446286979569055,
+      "paired_ratio_max": 3.1211804588978667
+    },
+    {
+      "pi_run": "Pi_Ethernet",
+      "n": 4096,
+      "scheme": "B3_leaf",
+      "trials": 5,
+      "pi_trial_median_ms": 18.935928,
+      "hpc_trial_median_ms": 4.1356865,
+      "paired_ratio_median": 4.581193510556163,
+      "paired_ratio_min": 4.492937517767308,
+      "paired_ratio_max": 4.605228447413653
+    },
+    {
+      "pi_run": "Pi_Ethernet",
+      "n": 4096,
+      "scheme": "B4_ext",
+      "trials": 5,
+      "pi_trial_median_ms": 0.40713299999999997,
+      "hpc_trial_median_ms": 0.13339600000000001,
+      "paired_ratio_median": 3.0730697437637873,
+      "paired_ratio_min": 3.0196513600077197,
+      "paired_ratio_max": 3.102757656239878
+    }
+  ],
+  "cohort_matches": [
+    {
+      "pair": "Pi_Ethernet vs HPC",
+      "experiment": "local",
+      "matched_trial_cases": 75,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    },
+    {
+      "pair": "Pi_Ethernet vs HPC",
+      "experiment": "memory_pressure",
+      "matched_trial_cases": 60,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    },
+    {
+      "pair": "Pi_Ethernet vs HPC",
+      "experiment": "archive_retrieval",
+      "matched_trial_cases": 15,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    },
+    {
+      "pair": "Pi_Ethernet vs Pi_WiFi",
+      "experiment": "local",
+      "matched_trial_cases": 75,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    },
+    {
+      "pair": "Pi_Ethernet vs Pi_WiFi",
+      "experiment": "memory_pressure",
+      "matched_trial_cases": 60,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    },
+    {
+      "pair": "Pi_Ethernet vs Pi_WiFi",
+      "experiment": "archive_retrieval",
+      "matched_trial_cases": 15,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    },
+    {
+      "pair": "Pi_Ethernet vs Pi_WiFi",
+      "experiment": "network",
+      "matched_trial_cases": 60,
+      "payload_hash_match": true,
+      "positions_warmup_queries_limits_match": true
+    }
+  ],
+  "measurement_check": {
+    "raw_statistic_mismatches": 0,
+    "trial_rows": 690,
+    "five_trial_groups": 138
+  }
+}

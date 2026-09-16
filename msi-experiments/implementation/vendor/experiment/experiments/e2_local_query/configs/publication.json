@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "experiment": "E2",
+  "description": "Publication-scale local verified-query computation experiment. Each configuration has ten independent process launches and at least 10,000 measured queries after warm-up.",
+  "defaults": {
+    "trial_count": 10,
+    "measured_queries": 10000,
+    "warmup_queries": 1000,
+    "phase_queries": 256,
+    "allocation_queries": 32,
+    "query_pool_size": 128,
+    "plan_seed": 20260624
+  },
+  "sweeps": [
+    {
+      "name": "n_scaling",
+      "factor_grid": {
+        "epoch_length": [1, 7, 8, 9, 63, 64, 65, 511, 512, 513, 4095, 4096, 4097, 16383, 16384, 16385]
+      },
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Primary H2a/H2b scaling sweep, including n=1 and 2^d-1, 2^d, 2^d+1 boundaries. Five schemes are paired on the same node and trial."
+    },
+    {
+      "name": "block_size",
+      "factor_grid": {
+        "block_bytes": [512, 2048, 8192, 32768]
+      },
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Canonical block-size sensitivity at 0.5, 2, 8, and 32 KiB."
+    },
+    {
+      "name": "layout_codec",
+      "factor_grid": {
+        "layout": ["per_block", "epoch_packed"],
+        "codec": ["raw-v1", "zlib-v1"]
+      },
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "version": 1
+      },
+      "notes": "All layout and approved codec-version pairs, used to exercise metadata binding and deterministic decoding rather than rank compression methods."
+    },
+    {
+      "name": "history_depth",
+      "factor_grid": {
+        "historical_epochs": [100, 1000, 10000, 100000]
+      },
+      "case_grid": {
+        "scheme": ["B2_full"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Primary H2c sweep. It changes only verifier-resident history depth while timing CheckResp and direct-anchor verification separately."
+    },
+    {
+      "name": "ablations",
+      "factor_grid": {},
+      "case_grid": {
+        "scheme": ["B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe", "no_checkresp", "cached_anchor"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Overhead-only ablations. They are never presented as safe operating configurations."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "active_mode": "ext",
+  "all_checks_pass": true,
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-leaf-to-ext-crash_after_metadata_swap-r0",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "crash_after_metadata_swap",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 0,
+    "seed": 11,
+    "source_mode": "leaf",
+    "target_mode": "ext",
+    "transition": "leaf->ext",
+    "trial_kind": "fault_injection"
+  },
+  "case_cpu_ns": 264525166,
+  "case_wall_ns": 551526639,
+  "checks": {
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "anchor_bytes_equal": true,
+    "dataset_matches_case": true,
+    "injected_exit_code_matches": true,
+    "no_partial_metadata": true,
+    "no_pending_journals": true,
+    "post_queries_accept": true,
+    "pre_queries_accept": true,
+    "protected_bytes_equal": true,
+    "recovery_checks_pass": true,
+    "root_equal": true
+  },
+  "child_exit_code": 87,
+  "crash_process_wall_ns": 297002099,
+  "expected_active_mode": "ext",
+  "filesystem": {
+    "block_size": 4096,
+    "blocks_available": 5055412,
+    "device": 45826,
+    "filesystem_type": "ext4",
+    "fragment_size": 4096,
+    "mount_point": "/",
+    "path": "/home/reza/msi_pi_suite/outputs/pi_a_paper_ethereum_ethernet2/migration/migration-a387lo7f/work/e6-migration-leaf-to-ext-crash_after_metadata_swap-r0-9623-1789526529174802524"
+  },
+  "metadata_differences": [
+    "meta.aux_ref",
+    "meta.mode"
+  ],
+  "post_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "ext",
+    "positions_checked": 512
+  },
+  "pre_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 32,
+    "failures": [],
+    "mode": "leaf",
+    "positions_checked": 512
+  },
+  "protected_sha256_after": "1d62175d10795ca21d437a83b0c0851f613642f8d0485c18f6369fde60924126",
+  "protected_sha256_before": "1d62175d10795ca21d437a83b0c0851f613642f8d0485c18f6369fde60924126",
+  "recovery": {
+    "active_mode": "ext",
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "expected_active_mode": "ext",
+    "journals_found": 1,
+    "metadata_differences": [
+      "meta.aux_ref",
+      "meta.mode"
+    ],
+    "mixed_state_detected": false,
+    "protected_bytes_equal": true,
+    "recovery_ns": 8500764,
+    "recovery_status": "PASS",
+    "temporary_metadata_files": 0,
+    "unreferenced_target_objects_cleaned": 0
+  },
+  "residual_workspaces_cleaned_after_worker_exit": 0,
+  "root_hex_after": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "root_hex_before": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "snapshot_after": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 10108736,
+      "read_bytes": 0,
+      "syscr": 1661,
+      "syscw": 52,
+      "wchar": 202725,
+      "write_bytes": 36864
+    },
+    "major_faults": 0,
+    "minor_faults": 3518,
+    "peak_rss_bytes": 290791424,
+    "process_cpu_ns": 522889685,
+    "rss_bytes": 25153536,
+    "temp_C": 78.88,
+    "throttled": "throttled=0xe0000",
+    "timestamp_unix_ns": 1789526529767116155,
+    "timestamp_utc": "2026-09-16T02:42:09.767116+00:00",
+    "utc_ns": 1789526529767116155
+  },
+  "snapshot_before": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 2766516,
+      "read_bytes": 0,
+      "syscr": 270,
+      "syscw": 25,
+      "wchar": 107442,
+      "write_bytes": 24576
+    },
+    "major_faults": 0,
+    "minor_faults": 3374,
+    "peak_rss_bytes": 290791424,
+    "process_cpu_ns": 255625295,
+    "rss_bytes": 24432640,
+    "temp_C": 77.419,
+    "throttled": "throttled=0xe0000",
+    "timestamp_unix_ns": 1789526529212036569,
+    "timestamp_utc": "2026-09-16T02:42:09.212037+00:00",
+    "utc_ns": 1789526529212036569
+  },
+  "worker_exit_code": 0,
+  "worker_including_startup_wall_ns": 913899593,
+  "worker_resources": {
+    "major_faults": 0,
+    "minor_faults": 140,
+    "peak_rss_kib": 283976,
+    "scope": "case worker; spawned crashing child excluded"
+  }
+}

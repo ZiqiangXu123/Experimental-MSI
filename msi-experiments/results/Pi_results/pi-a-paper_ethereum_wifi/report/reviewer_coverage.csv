@@ -1,0 +1,8 @@
+comment_id,whole_comment_scope,status,available_evidence,missing_evidence,limitation
+R1-1,Storage accounting and provider-side overhead,measured_here,storage_accounting; provider_latency; filesystem,,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.
+R1-2,IoT deployment and blockchain integration scope,partial,real_pi_platform; remote_tcp; memory_pressure; filesystem; service_disconnect,energy; native_finality,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.
+R2-1,Evaluation on constrained hardware,measured_here,real_pi_platform; memory_pressure,,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.
+R2-2,"CPU, RAM and latency measurements",measured_here,cpu; ram; local_latency,,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.
+R2-3,Presentation of experimental evidence,measured_here,presentation,,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.
+R2-4,"Reproducible repository, real data and hardware evidence",partial,repository_metadata; real_data; real_pi_platform,public_repository_availability_unverified,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.
+R2-8,Real-world benchmarking,measured_here,real_pi_platform; real_data,,Evidence coverage in this run only; does not assert reviewer acceptance or manuscript revision.

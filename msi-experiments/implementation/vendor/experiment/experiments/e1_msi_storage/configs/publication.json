@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "description": "Publication-scale Experiment E1 plan aligned with Section 7.2.3 and Section 7.3 of the redesigned evaluation chapter. Each primary sweep changes one factor family while holding the others fixed.",
+  "defaults": {
+    "max_materialized_bytes": 1073741824
+  },
+  "sweeps": [
+    {
+      "name": "T_scale",
+      "shards": [1],
+      "historical_epochs": [100, 1000, 10000, 100000],
+      "epoch_lengths": [512],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "hot"],
+      "notes": "Primary H1a sweep over the manuscript's T_s range. Every MSI descriptor, root-only lower-bound record, active anchor, and bounded hot window is physically materialized; historical payload and auxiliary stores use exact fixed-width serialization models."
+    },
+    {
+      "name": "shard_scale",
+      "shards": [1, 4, 16, 64, 128],
+      "historical_epochs": [1000],
+      "epoch_lengths": [512],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index"],
+      "notes": "Primary N_sh sweep. Fixed-width verifier-resident structures are physically materialized; common payload, auxiliary state, and hot-state capacity are exact serialization models to avoid multi-gigabyte temporary files at 128 shards."
+    },
+    {
+      "name": "n_standard",
+      "shards": [1],
+      "historical_epochs": [100],
+      "epoch_lengths": [1, 8, 64, 512, 4096, 16384],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index"],
+      "notes": "Primary epoch-size sweep at the exact n levels in Section 7.2.3. Auxiliary and payload bytes are deterministic serialization formulas; selected points are independently materialized in serialization_audit."
+    },
+    {
+      "name": "n_boundary",
+      "shards": [1],
+      "historical_epochs": [100],
+      "epoch_lengths": [1, 2, 3, 4, 5, 7, 8, 9, 15, 16, 17, 31, 32, 33, 63, 64, 65, 127, 128, 129, 255, 256, 257, 511, 512, 513, 1023, 1024, 1025, 2047, 2048, 2049, 4095, 4096, 4097, 8191, 8192, 8193, 16383, 16384, 16385],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index"],
+      "notes": "Complete 2^d-1, 2^d, and 2^d+1 padding-boundary sweep through the manuscript's maximum standard epoch length."
+    },
+    {
+      "name": "block_scale",
+      "shards": [1],
+      "historical_epochs": [100],
+      "epoch_lengths": [512],
+      "block_bytes": [512, 2048, 8192, 32768],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index"],
+      "notes": "Primary canonical-block-size sweep at 0.5, 2, 8, and 32 KiB. It tests that verifier-resident historical descriptors are insensitive to payload size."
+    },
+    {
+      "name": "hot_window",
+      "shards": [1],
+      "historical_epochs": [1000],
+      "epoch_lengths": [512],
+      "block_bytes": [2048],
+      "hot_windows": [1, 10, 100],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "hot"],
+      "notes": "Primary W sweep at the exact 1, 10, and 100 epoch levels. It separates bounded hot-state growth from historical MSI growth."
+    },
+    {
+      "name": "layout_codec",
+      "shards": [1],
+      "historical_epochs": [100],
+      "epoch_lengths": [512],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["per_block", "epoch_packed"],
+      "codecs": ["raw-v1", "zlib-v1"],
+      "seeds": [20260624, 20260625, 20260626],
+      "materialize": ["msi", "anchor", "root_index", "payload", "aux"],
+      "notes": "Three-seed metadata-binding and exact serialized-size audit for two layouts and two codec versions. Compression is not treated as a competing scheme."
+    },
+    {
+      "name": "serialization_audit",
+      "shards": [1],
+      "historical_epochs": [100],
+      "epoch_lengths": [1, 8, 64, 512, 513],
+      "block_bytes": [2048],
+      "hot_windows": [10],
+      "layouts": ["epoch_packed"],
+      "codecs": ["raw-v1"],
+      "seeds": [20260624],
+      "materialize": ["msi", "anchor", "root_index", "payload", "aux"],
+      "notes": "Independent physical serialization audit, including the first post-512 padding step. It verifies that exact byte models match files written by the reference encoder."
+    }
+  ]
+}

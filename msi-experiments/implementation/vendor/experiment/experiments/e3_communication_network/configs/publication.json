@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "experiment": "E3",
+  "description": "Publication-scale communication and edge-network sensitivity experiment using calibrated rootless user-space link emulation over persistent TCP.",
+  "defaults": {
+    "network_trial_count": 5,
+    "measured_queries": 200,
+    "warmup_queries": 20,
+    "query_pool_size": 64,
+    "calibration_pings": 15,
+    "socket_timeout_s": 600,
+    "plan_seed": 20260624,
+    "deadlines_ms": [50, 100, 250, 500, 1000, 2000]
+  },
+  "variants": [
+    {"scheme": "B2_full", "deployment": "coalesced"},
+    {"scheme": "B3_leaf", "deployment": "coalesced"},
+    {"scheme": "B4_ext", "deployment": "coalesced"},
+    {"scheme": "B4_ext", "deployment": "split"}
+  ],
+  "sweeps": [
+    {
+      "name": "wire_size",
+      "kind": "wire_audit",
+      "trial_count": 1,
+      "factor_grid": {
+        "epoch_length": [1, 7, 8, 9, 63, 64, 65, 511, 512, 513, 4095, 4096, 4097, 16383, 16384, 16385]
+      },
+      "fixed": {
+        "block_bytes": 2048,
+        "profile": "P0",
+        "historical_epochs": 1000,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Exact request/response byte accounting over all 2^d-1, 2^d, and 2^d+1 boundaries. No network timing is used for H3a."
+    },
+    {
+      "name": "n_scaling",
+      "kind": "network_trial",
+      "factor_grid": {
+        "epoch_length": [64, 512, 4096, 16384],
+        "profile": ["P0", "P1", "P2", "P3"]
+      },
+      "fixed": {
+        "block_bytes": 2048,
+        "historical_epochs": 1000,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Primary mode and link-profile scaling at a fixed 2 KiB canonical block."
+    },
+    {
+      "name": "block_size",
+      "kind": "network_trial",
+      "factor_grid": {
+        "block_bytes": [512, 8192, 32768],
+        "profile": ["P0", "P1", "P2", "P3"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      },
+      "notes": "Canonical payload-size sensitivity; 2 KiB is omitted because it is already covered by n_scaling."
+    }
+  ]
+}

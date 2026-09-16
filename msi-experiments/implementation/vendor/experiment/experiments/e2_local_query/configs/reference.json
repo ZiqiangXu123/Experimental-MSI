@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "experiment": "E2",
+  "description": "Portable validation reference with reduced repetitions. It proves the artifact path but is not a substitute for the 10x10,000 La Trobe publication run.",
+  "defaults": {
+    "trial_count": 2,
+    "measured_queries": 500,
+    "warmup_queries": 50,
+    "phase_queries": 32,
+    "allocation_queries": 4,
+    "query_pool_size": 64,
+    "plan_seed": 20260624
+  },
+  "sweeps": [
+    {
+      "name": "n_scaling",
+      "factor_grid": {"epoch_length": [1, 64, 513, 4096]},
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    },
+    {
+      "name": "block_size",
+      "factor_grid": {"block_bytes": [512, 32768]},
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    },
+    {
+      "name": "layout_codec",
+      "factor_grid": {
+        "layout": ["per_block", "epoch_packed"],
+        "codec": ["raw-v1", "zlib-v1"]
+      },
+      "case_grid": {
+        "scheme": ["B0_raw", "B1_verified", "B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "version": 1
+      }
+    },
+    {
+      "name": "history_depth",
+      "factor_grid": {"historical_epochs": [100, 1000, 10000, 100000]},
+      "case_grid": {"scheme": ["B2_full"], "ablation": ["safe"]},
+      "fixed": {
+        "epoch_length": 512,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    },
+    {
+      "name": "ablations",
+      "factor_grid": {},
+      "case_grid": {
+        "scheme": ["B2_full", "B3_leaf", "B4_ext"],
+        "ablation": ["safe", "no_checkresp", "cached_anchor"]
+      },
+      "fixed": {
+        "epoch_length": 512,
+        "historical_epochs": 1000,
+        "block_bytes": 2048,
+        "layout": "epoch_packed",
+        "codec": "raw-v1",
+        "version": 1
+      }
+    }
+  ]
+}

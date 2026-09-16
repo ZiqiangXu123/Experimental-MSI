@@ -1,0 +1,22 @@
+{
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-leaf-to-full-crash_during_metadata_write-r0",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "crash_during_metadata_write",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 0,
+    "seed": 11,
+    "source_mode": "leaf",
+    "target_mode": "full",
+    "transition": "leaf->full",
+    "trial_kind": "fault_injection"
+  },
+  "dataset_dir": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/datasets",
+  "keep_workspace": true,
+  "result_path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/raw-e6/migration-leaf-to-full-crash_during_metadata_write-r0.json",
+  "work_root": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422175/migration/migration-of9vtrm6/work"
+}

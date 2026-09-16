@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "label": "E6-E9 publication protocol",
+  "publication_mode": true,
+  "seed": 606003,
+  "datasets": {
+    "default_layout": "epoch_packed",
+    "default_codec": "raw-v1",
+    "default_block_bytes": 2048
+  },
+  "migration": {
+    "performance_n_values": [1, 7, 8, 9, 63, 64, 65, 511, 512, 513, 4095, 4096, 4097, 16383, 16384, 16385],
+    "performance_launches": 5,
+    "backends": ["node_local", "shared_scratch"],
+    "compatibility_n_values": [512, 513],
+    "compatibility_variants": [
+      {"label": "per-block-raw", "layout": "per_block", "codec": "raw-v1", "block_bytes": 2048},
+      {"label": "packed-zlib", "layout": "epoch_packed", "codec": "zlib-v1", "block_bytes": 2048},
+      {"label": "per-block-zlib", "layout": "per_block", "codec": "zlib-v1", "block_bytes": 2048}
+    ],
+    "compatibility_launches": 3,
+    "equivalence_n_values": [1, 7, 8, 9, 63, 64, 65, 511, 512, 513, 4095, 4096, 4097, 16383, 16384, 16385],
+    "audit_all_variants": false,
+    "audit_backend": "node_local",
+    "fault_n_values": [64, 513, 4096],
+    "fault_backend": "node_local",
+    "exact_sample_limit": 128,
+    "crash_timeout_seconds": 90,
+    "policy_cost_backend": "node_local",
+    "block_size": 4
+  },
+  "policy": {
+    "n_values": [64, 512, 4096, 16384],
+    "profiles": ["balanced", "storage", "bandwidth", "cpu", "availability"],
+    "trace_replicates": 5,
+    "evaluation_queries": 100000,
+    "storage_quantum_bytes": 4096,
+    "component_catalog_requirement": "publication-eligible-E1-E2-E3-and-availability-inputs-required",
+    "block_size": 5,
+    "scales": [
+      {
+        "label": "primary",
+        "epoch_count": 256,
+        "shard_count": 16,
+        "budgets": [0.1, 0.25, 0.5, 0.75, 1.0],
+        "workloads": ["uniform", "zipf0.8", "zipf1.2", "recency", "nonstationary"],
+        "prediction_errors": [0.0, 0.1, 0.25, 0.5],
+        "trace_replicates": 5,
+        "evaluation_queries": 100000,
+        "run_dp": true
+      },
+      {
+        "label": "scale",
+        "epoch_count": 2048,
+        "shard_count": 64,
+        "budgets": [0.1, 0.5, 1.0],
+        "workloads": ["uniform", "zipf1.2", "nonstationary"],
+        "prediction_errors": [0.0, 0.25],
+        "trace_replicates": 3,
+        "evaluation_queries": 500000,
+        "run_dp": false
+      }
+    ]
+  }
+}

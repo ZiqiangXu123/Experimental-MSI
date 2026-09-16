@@ -1,0 +1,419 @@
+{
+  "code_sha256": {
+    "msi_supplement/__init__.py": "5a5994d2c6404bff188b5faab6ae862670da23ae05e735243089a2019000a84a",
+    "msi_supplement/__main__.py": "b2f4dabe1e19144ee214091a2da59f15abab67bc3f837874cac528cac0b98f90",
+    "msi_supplement/aggregate.py": "f70eb44188f59b8797c799de724b8fde1133023d2eae205783bd3c6d7314e1b8",
+    "msi_supplement/core.py": "b9e4ac287a95367ff8feb72e74f1905bbaa8ac215249619bac9c47010a3cfffc",
+    "msi_supplement/data.py": "f6b5a8c0f8cedf349307174a3ca774c929aec3080214752187aa1de747b1ece0",
+    "msi_supplement/metrics.py": "e32790127ccfa813fbdfe8098e44552dacf25cc4f1b6cdd8de40cbfa7f3c2b2b",
+    "msi_supplement/migration.py": "6cdfc0237b70d310c1e88706ff0cff1c5a575f6ef043bce82bf5fb9e6a11a43b",
+    "msi_supplement/report.py": "5e575fcab2cad4d528cd826d6b440ea4dbf4767cd1dba25342ed35bb4ce50746",
+    "msi_supplement/runner.py": "ec092ed412e1f5dd39baea0714e8de2a8b615c2b20c72ccaf5edad4e5b300f94",
+    "msi_supplement/service.py": "0f713e00e95f2cd5ec965087638e9fc53bdb16bcb337080dc196805f5ccfc6dd",
+    "msi_supplement/worker.py": "7e56e4953ee00510c35502207cc775ebeefca4c52faf23bed0202a36e1a6a444",
+    "vendor/experiment/experiments/e1_msi_storage/scripts/build_zipapp.py": "1ef6fdb7d13b9a719961d2bab3ba2fac1f1e4db260d52a7a2ab505a835a0f058",
+    "vendor/experiment/experiments/e1_msi_storage/scripts/missing_indices.py": "b11adb9a056d2e8d3d2744c4dee7875736f0fffaf4b0c70c2e724becab52c2cc",
+    "vendor/experiment/experiments/e1_msi_storage/src/__main__.py": "c2325bbc830bcb561c1dcbc142143b590a5cf4063bb0c71ca7ea15f3dc4ce38f",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/__init__.py": "6faf968959342e2e4c695dab0671d8975d384eca2e20da234962aa1c36acd23b",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/__main__.py": "28de248c91c00642578a541827361af9b0e5e049e4c61dd6ec1f9dc78580c24e",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/analysis.py": "f0b34a2a1decf3463da4fbb211ea402526fa8cf7bbaced8fa2d967eb7783d36a",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/benchmark.py": "68414ed4fceb96ef16121cbaa7787fd1aba4f5e9bbb865c2dd1e7fbd0774bf16",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/cli.py": "64650f41113c611c8271e4c5adc88a79413756b306776fd5d6d51ff2acd89097",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/config.py": "1befe53b23a551bd9fed8454fe0a91e010f4b9065f9bfd00c60e3d13f89f7817",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/constants.py": "9e958431828d20631303f1b133fe7e21d0fe90a3dd694c1f65c126155ff64705",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/encoding.py": "3599b2257f8a4b265c071256e79a061ee97c7cc79b0282ec16b80278fb743b59",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/stats.py": "e620285d2bb25b0aed02520f49d2d01f999f731e45939023eed79a5fe4821c7a",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/store.py": "2759cf269c0e29cec41bd510a31990592d33e8f623370406fef7d58b29c869ec",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/svg.py": "e20271c03d518d5cd61c9b2a3b086e513c2ad53774cda12472dc0afe8ddffedd",
+    "vendor/experiment/experiments/e1_msi_storage/src/msi_storage_exp/util.py": "4cf0b0e337c41ffa48b04e7ad70c569b61e2cbd92f4151bcdae93148f7b247f2",
+    "vendor/experiment/experiments/e1_msi_storage/tests/test_core.py": "8e04e82c4b25c08d534c028ba9a20fb4378b926488f58776add5561985989ec9",
+    "vendor/experiment/experiments/e2_local_query/scripts/build_zipapp.py": "445199a16374b448196997f1f47fb85bd596210d253604ddf5a8b643cc8d751b",
+    "vendor/experiment/experiments/e2_local_query/scripts/missing_indices.py": "54b81ac2d753a4cd76ae5b151ec438f173764d58849b0da63c93f069c757bab5",
+    "vendor/experiment/experiments/e2_local_query/src/__main__.py": "ada3653aac3a9a23b87c255579b4378536d90cc5a95b028a835d84a77fc4a52d",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/__init__.py": "1e2dbe5548c9310fce2b95c99ca2156186ce44713ebcc012d86a0053db390bc6",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/analysis.py": "ce35cbc11cfdf06cd74f5e06a96f848c779c4003ecef52092f89b5b611e2c30a",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/benchmark.py": "20738606e53f61841ef6349e49109f7ca65fb3bfe7fd5c6a2b2fe638c81ceb30",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/cli.py": "ca32ba397194bf83d1c4ff66b1365187c15f6310ca09fa91a8a29cb82beb9dbb",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/config.py": "57e8e2fe454e5b9a6f751fa11008e5190a0cc1b299166d4e7dbc51b55c0d88cb",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/constants.py": "ef64ebfe756473ebe28fd4811a245c5d2cf17e5ba1d6b9968019ed33c4bd7d54",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/crypto.py": "d02eeff0e269ac0c193b810f8a4d61db2aae7a55f1e1196e35301e75e9422a66",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/encoding.py": "3f874d3a2c6331145df0d6f8bbe9987d78972b49377d16fedf20e3951977c3e1",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/fixture.py": "08bd2ff72597f1d56d5a16ef9632f7d29b6dcc3226612bc271791fe3b6290276",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/merkle.py": "d9e2a40734b3bd0172501852155dcfb1718da86724a8d8a0f37db882f6cf7121",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/models.py": "363972d851c96b848682e9363b6133059f6031fef244d915a9bf125e11c3293e",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/pipeline.py": "3251b26f92670a9d8afb7e3c43c4bf946e76104b76f37969cf67405ff256f7f6",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/svg.py": "05b7b1f7ff7a70ac31302d7e2ae6d2d7bd8e2b6084a852818fe673df77067f4c",
+    "vendor/experiment/experiments/e2_local_query/src/msi_query_exp/util.py": "292731a5040cdb1358c7e3b74dae0f4739bdcf27f1c87f159ab55a090135af2d",
+    "vendor/experiment/experiments/e2_local_query/tests/test_core.py": "c80da64f608d5ab3796d89fbbbe7db77cb122cdbd137dba4dc56d24f090ce607",
+    "vendor/experiment/experiments/e3_communication_network/scripts/build_zipapp.py": "93aafe246506d92cca9383e6ec246e7ae27c30552b1dcbb62ee3f4c7ec5e919a",
+    "vendor/experiment/experiments/e3_communication_network/scripts/case_fields.py": "7d7e0b27cdfd3fcffbf6978cf57ce7c596c5177f810dac1d715b4d4aa6265c88",
+    "vendor/experiment/experiments/e3_communication_network/scripts/missing_indices.py": "9129137b57092edc644b10e239310956de141421888cf8fbc910339d3cf5e14f",
+    "vendor/experiment/experiments/e3_communication_network/scripts/wait_ready.py": "917dae9028ccfeba031de90ea8d1a097e8f098436b99a328a4bd5e78eba96f9e",
+    "vendor/experiment/experiments/e3_communication_network/src/__main__.py": "1b8798b14a1707b52142243584fd3f07d7c3df83d706a12577c15eca7db56a45",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/__init__.py": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/analysis.py": "ffae52dfa6ccf48048f14fc980482efa5667e175542e1e2956264f9714cdc5fa",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/benchmark.py": "ef02b1140688b53a965920e85f2888bee92ed5e4411884673b055f8c531866c5",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/cli.py": "895211d00559bb70869b970f3bcc79b76c63ad2b8ab02f218fae9253e9254493",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/config.py": "f383aeb4ade9b991b9aa7335582a9c9a904dcdafb771f1dc11a338f029fc4eaf",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/constants.py": "6b0de0af14b0ac0d14521b4f693c8fa700115a50fe98f0e6bc484252f22f0189",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/crypto.py": "d02eeff0e269ac0c193b810f8a4d61db2aae7a55f1e1196e35301e75e9422a66",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/encoding.py": "ad85a77b95d83980bdee9d974aff5a5a83d30cf71769cc25e0b850df2ada274d",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/fixture.py": "6896aa6134660624ec76b4857df72864881ba110cafd9585d49ee222bacbb369",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/link.py": "1e41b296540a861271b02e0110e51a2d7e3d3956b459043a20e4f36384309411",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/merkle.py": "d9e2a40734b3bd0172501852155dcfb1718da86724a8d8a0f37db882f6cf7121",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/models.py": "c7bf0a1f00e334e813698e77abee6bb93c85ad5157895a9ffe00c68597810459",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/pipeline.py": "f86885d47ca1464ff4f87ef3ebb3eed40a3a4ec621cd66515c3ecafb676eda77",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/service.py": "f35b73e4bf517ecc3d35e5d031d330da1fa049da6e7256a8b67ec6574ccb86c9",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/svg.py": "05b7b1f7ff7a70ac31302d7e2ae6d2d7bd8e2b6084a852818fe673df77067f4c",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/util.py": "d5341173cd5a90d90b51df5afc7b3ce8aef25e517cbecd5aaa06545a51b91cdf",
+    "vendor/experiment/experiments/e3_communication_network/src/msi_network_exp/wire.py": "49df8545d24a7bc6f0249d9aaa8ee73f1b939bf7386aa8b12e8d1ed200d3711c",
+    "vendor/experiment/experiments/e3_communication_network/tests/test_core.py": "b12eb0a865ffcdf20ac5d9e508fbbcf73686327de6e8a466975c2f4101dab2b9",
+    "vendor/experiment/experiments/e4_concurrent_scaling/scripts/build_zipapp.py": "023fe42fb5706667e2c87f7382180734c00bfc7e9d821d5031a74dd82141a43d",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/__main__.py": "53f6ed45c3366909ed263edd9e995079bc8093ae603d7a0f8465a27400737ce2",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/__init__.py": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/__main__.py": "28de248c91c00642578a541827361af9b0e5e049e4c61dd6ec1f9dc78580c24e",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/analysis.py": "9b95974fcdade56a6bf4502d49168ea6615cd1a6ac09e2b5bd8b4f2ced8f5e7e",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/benchmark.py": "46eeb2329b8c1c0a3f24ebbba7fab09bf8c47301c83a6d1d36df7ed7cf29e656",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/cli.py": "5ecbba603343dd4024a914030550c7507873b8f04779824802dee034c1e50334",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/config.py": "ddbc06042751304f23ca99bf798e266ac5ea610729851b7faa68b5ea13be9211",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/crypto.py": "db2e6db480ac437e353ce5c8dd85258140001a7fce21c37a887e1ea7864fb56d",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/index.py": "a6b9051a39a724479964064a119d03af8a4936aeae36a07f94024685d902cfed",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/merkle.py": "81b52881d9266b10531e40efa9637e00cd714f8e4c78ab6ce35fe7edd5f5e824",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/monitor.py": "e8ce5c98b5a40435a77f20c901541cf41559fdf495699784e7f7c4a19694d8d3",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/service.py": "a5fd513d881d583142cae8e088679a0c8fb683cf897e22ee631c2c09598907dc",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/svg.py": "66dd95ab3867c44a64080b1ae838ee308ad9ee676a8e151a9171714cd174bc26",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/util.py": "2b492515e6e098eca9ac58e842c5f40d70248a829c50c917be2b132fbb6e1486",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/wire.py": "f60e0247a58e5380cedb0de69302d757e81b9fad51c07cb990e59a729e9891bd",
+    "vendor/experiment/experiments/e4_concurrent_scaling/src/msi_scaling_exp/workload.py": "10388189e9520033637f3884ec1bc26fdf72c595cceb2c7fd4a5283a238d4794",
+    "vendor/experiment/experiments/e4_concurrent_scaling/tests/test_core.py": "62ddb71122c53be1939c1b08aac484285124b0a13ca4d42f377423cd87511ff7",
+    "vendor/experiment/experiments/e5_anchor_pruning/scripts/build_zipapp.py": "b1e35c288c00c95e7315033523f82e5852582712ea33c4173c540fe1e86ea57b",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/__main__.py": "e8c9a49504f59e03e6140e6192d858850bd01bd7a3b5565f9e228ac50a78f737",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/__init__.py": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/accumulator.py": "0de2c3503e2b9eef051b8b721b352d3f656a1859aab602ee876f8db203f4cf6e",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/analysis.py": "7c625ae29d882d62d3a3fa855541d7cce5cb456dc306094e2be8ab1f5c5a0760",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/benchmark.py": "24c786320905c87b253bb3d823d4a77fa229a40a988dad46c9e6987081715c4a",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/cli.py": "3111107f53e2e99273802723ab33ce1ad0c62c62592383b5459ecb412f04109a",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/config.py": "6cca0721c07c8366af9b59ca45d5d365e5ff491f582a3205e1ea21e8e6259ddb",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/crypto.py": "718e2df762584bc3dca21a25b783d187d58c06b81b7cd77ac54a6894d451beed",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/dataset.py": "cf061b116fea68bb7da5b00400e9f62f0aabc5c86466306b22909a5e2c7e383c",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/epoch.py": "a9d09fb3141e1764cd565ae4fdaeb2397ce095fd27f0d2c84d0833e3b692d2d0",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/pruning.py": "4ecc188e80f8beac1b09105bed485765f30175e9cdd1d9d13d5f338739998b3b",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/svg.py": "dfd771ab7348bed1415526673f736042763d66f37870ebaa4aafb3b72d66ab3b",
+    "vendor/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/util.py": "af22479ed023b3fbac652d4bdceea176bf8dddb1e35970d01e24a2e625d71325",
+    "vendor/experiment/experiments/e5_anchor_pruning/tests/test_core.py": "950a8037385ce06f1fe3533b9012a4287c9afb27cb72402ac2225368a0902387",
+    "vendor/experiment/experiments/e6_refolding_policy/scripts/build_zipapp.py": "0cb242e4a13a9db67fb600b7b6aa61a34b04d15cb8f86f69f43ed7e9b2d1e058",
+    "vendor/experiment/experiments/e6_refolding_policy/src/__main__.py": "e16b3f19c335e990cc0daeff70c5b4ac757fea0087d2d8f7cba883c0508d8c36",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/__init__.py": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/analysis.py": "0c304372e3b5ff6addedc02b99f336d3f4b6ae4f1682121475f5fc276e0f64ef",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/catalog.py": "037fc88c5d986aeaf4f2f0b54ddf8e91a137d05daa60a8d6f56f0c29e1712246",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/cli.py": "e80b941ef8804dd1aa3a809bb43ed5d420d08b41f6859f2a44168e5d42d3bcb2",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/config.py": "b5150e40f21cb1535140f5530f2b5004e02fdb3b1e3c671561f0c4c55c7ae967",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/crypto.py": "eb389dba8623912bc2d11ada52eebfaed7b8e30f10acdc31d6607258f3094324",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/dataset.py": "e64ac080e9102bad084607583293461099efb5564d5a9306476f3afa33208cc8",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/execution.py": "660ffd5d1217a37607121cd25660880eabfe617a0c325037a3fe54f9d62d45cd",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/merkle.py": "a3c92099bc019e5d3cff1e6e80f6103ea6f3e8849527b1e7a0a923ce10225d82",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/migration.py": "280f503901cadf3a84f4e7cb03d2a3133d80a6949262fe806c06146ee585808d",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/policy.py": "66edfd628319fb18ac1b74eff4d06e2d008e16a7c191a1d68d8ea8753f972ff1",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/state.py": "6d79c38ce82ca4c8063c945ba2a2a5ad3b6da46a178e6c4e158c0b6978bdce90",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/svg_base.py": "dfd771ab7348bed1415526673f736042763d66f37870ebaa4aafb3b72d66ab3b",
+    "vendor/experiment/experiments/e6_refolding_policy/src/msi_refold_policy_exp/util.py": "af22479ed023b3fbac652d4bdceea176bf8dddb1e35970d01e24a2e625d71325",
+    "vendor/experiment/experiments/e6_refolding_policy/tests/test_core.py": "f340c0582c11d00c19e0dfd3d60bcb07064917f7fcaf96252e04b71de5261af3",
+    "vendor/experiment/experiments/e7_integrity_availability/scripts/build_zipapp.py": "df83e31977f060d44fa2d6c3a910e446a43d4a68afa48dec68024730f98cfd4f",
+    "vendor/experiment/experiments/e7_integrity_availability/src/__main__.py": "c07d42ee3065ac39bbb1faf1cd4cf45ba6ca2620dc50afb2e18a4fa0c0abb83d",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/__init__.py": "46c663463329acd7039bdef0a9145293aad32e04d7f0dd06ca2719c99f0eb014",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/__main__.py": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/accumulator.py": "8aea66b86e727738d1e7310b0cc7b8250cb2af0476e10e3c3ee8169319a0e02e",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/analysis.py": "bf60906b43d64a03d3a784c07229a4f6c58078673a8d09f717642e8e83b92e7d",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/attacks.py": "a276706cabf2262d4566e92c6f6d22a60d127bbccc039d7c96447b288afa3ae6",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/availability.py": "eac80a8e01751c09071604abfe930a9c5c30bb5e039063e9d49581d72025a482",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/cli.py": "1608e5b440ac43e9cfe7b298ef3f53d7d75786ffeb7df2c38ba76219b3342f5a",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/config.py": "ba188f267ac14497847a544c98d0d88e1be39d2b6fd78ce686484ca983955e6e",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/constants.py": "eba8e97a5eca7a0d1529e04eaabdcb66ddb4a36ae88ece4968c3ede0875aa930",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/crypto.py": "08f94ba94aeadcdf0dd78aba11d043bd7ae6067113ebc159fb5acddc9294c854",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/e7_runner.py": "7621623e4611fe96cc7b4e89cb63c9ddb51bb9b41d433b528a95bc626c66d0a6",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/encoding.py": "9125d2187f59c3f88980013e79a3ed0815f0bb11abd7f05f98a2d03a2e4dc6c4",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/fixture.py": "6d689a925bbc0ca9f217ec2d6ba4ff05902191050c9c33b660d94b1507751db9",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/fuzz.py": "7e7a3adef0d370299881e9b1dc1f3fa358e3510956766e14d1ceb9676ca9a648",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/merkle.py": "df15531213ae965e88a8f87c3e8c8f2994a8337422325a4aec881d6fb1d8442b",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/models.py": "d863ab008205157994e041a7ff40ff52237b6b42b06c96c464b46cef5ee3b920",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/pipeline.py": "8d1f520d69ca9c04b304b9032e7ff52a75ab96496e6962c309c65a4733228126",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/plan.py": "a4a00593aa5b28a49db190ad275b896d94beaa71181902f06160702052999237",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/protocol.py": "1db51406e9c44a08ce808ad04c9c7f82dcf07287843d9ab052e28e826a4f1dfb",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/svg.py": "2a9b2bd482f758b1aa4be36f72bb978465a41e0299331f9424df62a448482d3b",
+    "vendor/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/util.py": "9510ff609a6d3559fefae3feb24b65ee2aa9fbcb42f73b8ba02d0c87f3370943",
+    "vendor/experiment/experiments/e7_integrity_availability/tests/test_core.py": "0549789d539fc239b6eaa025d8a89a16473291fd08bb14180335393003873e97"
+  },
+  "completed_unix_ns": 1789509147499754992,
+  "config": {
+    "idle_seconds": 3,
+    "memory_limit_mib": 256,
+    "pool": 16,
+    "pressure_mib": 64,
+    "queries": 200,
+    "query_socket_timeout_seconds": 30,
+    "setup_timeout_seconds": 900,
+    "sizes": [
+      512,
+      4096
+    ],
+    "trials": 5,
+    "warmup": 20
+  },
+  "failed_records": 0,
+  "limitations": [
+    "Experiment-generated Ed25519 trust anchor",
+    "No native sharded consensus or committee rotation",
+    "No physical flash power-cut test",
+    "External energy trace and real dataset are optional inputs; missing evidence stays explicit"
+  ],
+  "native_finality_verified": false,
+  "platform": {
+    "architecture": "aarch64",
+    "cpu_count": 4,
+    "hostname": "msi-pi-a",
+    "kernel": "6.12.47+rpt-rpi-v8",
+    "machine_id": "f8c5ed94511a0d7f7b74e6e55a8499bd265b7cfbe00e6c3af4400223a99102c0",
+    "machine_id_source": "device_tree_serial_sha256",
+    "mem_total_bytes": 8200613888,
+    "network": {
+      "available": true,
+      "interfaces": [
+        {
+          "is_wireless": false,
+          "name": "eth0",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "lo",
+          "operstate": "unknown"
+        },
+        {
+          "is_wireless": true,
+          "name": "wlan0",
+          "operstate": "up"
+        }
+      ]
+    },
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+    "os": {
+      "id": "debian",
+      "name": "Debian GNU/Linux",
+      "pretty_name": "Debian GNU/Linux 13 (trixie)",
+      "version": "13 (trixie)",
+      "version_id": "13"
+    },
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.4",
+    "platform": "Linux",
+    "python": "3.13.5",
+    "python_implementation": "CPython",
+    "result_storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 21306880000,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi",
+      "total_bytes": 30794059776,
+      "used_bytes": 8156590080
+    },
+    "storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 21306880000,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite",
+      "total_bytes": 30794059776,
+      "used_bytes": 8156590080
+    }
+  },
+  "profile": "paper",
+  "provider_platform": {
+    "architecture": "aarch64",
+    "cpu_count": 4,
+    "hostname": "msi-pi-b",
+    "kernel": "6.12.47+rpt-rpi-v8",
+    "machine_id": "7e7e6946191efbf0784478e26f1c2325eba3d95d44cbbc419b2cf966290b4c94",
+    "machine_id_source": "device_tree_serial_sha256",
+    "mem_total_bytes": 3981172736,
+    "network": {
+      "available": true,
+      "interfaces": [
+        {
+          "is_wireless": false,
+          "name": "eth0",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "lo",
+          "operstate": "unknown"
+        },
+        {
+          "is_wireless": false,
+          "name": "ovs-system",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "s1",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "s2",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "s3",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": true,
+          "name": "wlan0",
+          "operstate": "up"
+        }
+      ]
+    },
+    "openssl": "OpenSSL 3.0.15 3 Sep 2024",
+    "os": {
+      "id": "debian",
+      "name": "Debian GNU/Linux",
+      "pretty_name": "Debian GNU/Linux 13 (trixie)",
+      "version": "13 (trixie)",
+      "version_id": "13"
+    },
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.4",
+    "platform": "Linux",
+    "provider_storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 11016781824,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite/provider_data",
+      "total_bytes": 30794059776,
+      "used_bytes": 18446688256
+    },
+    "python": "3.12.7",
+    "python_implementation": "CPython",
+    "storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 11016781824,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite",
+      "total_bytes": 30794059776,
+      "used_bytes": 18446688256
+    }
+  },
+  "publication_ready": false,
+  "role": "pi-verifier",
+  "seed": 2026,
+  "started_unix_ns": 1789504510503933618,
+  "suite_version": "1.0.1",
+  "system_info": {
+    "architecture": "aarch64",
+    "cpu_count": 4,
+    "hostname": "msi-pi-a",
+    "kernel": "6.12.47+rpt-rpi-v8",
+    "machine_id": "f8c5ed94511a0d7f7b74e6e55a8499bd265b7cfbe00e6c3af4400223a99102c0",
+    "machine_id_source": "device_tree_serial_sha256",
+    "mem_total_bytes": 8200613888,
+    "network": {
+      "available": true,
+      "interfaces": [
+        {
+          "is_wireless": false,
+          "name": "eth0",
+          "operstate": "down"
+        },
+        {
+          "is_wireless": false,
+          "name": "lo",
+          "operstate": "unknown"
+        },
+        {
+          "is_wireless": true,
+          "name": "wlan0",
+          "operstate": "up"
+        }
+      ]
+    },
+    "openssl": "OpenSSL 3.5.7 9 Jun 2026",
+    "os": {
+      "id": "debian",
+      "name": "Debian GNU/Linux",
+      "pretty_name": "Debian GNU/Linux 13 (trixie)",
+      "version": "13 (trixie)",
+      "version_id": "13"
+    },
+    "pi_model": "Raspberry Pi 4 Model B Rev 1.4",
+    "platform": "Linux",
+    "python": "3.13.5",
+    "python_implementation": "CPython",
+    "result_storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 21306880000,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi",
+      "total_bytes": 30794059776,
+      "used_bytes": 8156590080
+    },
+    "storage": {
+      "block_device": "/dev/mmcblk0p2",
+      "device": {
+        "capacity_bytes": 31914983424,
+        "model": null,
+        "name": "mmcblk0",
+        "rotational": "0",
+        "vendor": null
+      },
+      "filesystem": "ext4",
+      "free_bytes": 21306880000,
+      "mountpoint": "/",
+      "path": "/home/reza/msi_pi_suite",
+      "total_bytes": 30794059776,
+      "used_bytes": 8156590080
+    }
+  }
+}

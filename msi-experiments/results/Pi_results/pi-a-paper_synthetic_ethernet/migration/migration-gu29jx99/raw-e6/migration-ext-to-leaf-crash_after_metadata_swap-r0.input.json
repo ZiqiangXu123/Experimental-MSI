@@ -1,0 +1,21 @@
+{
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-ext-to-leaf-crash_after_metadata_swap-r0",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "crash_after_metadata_swap",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 0,
+    "seed": 11,
+    "source_mode": "ext",
+    "target_mode": "leaf",
+    "transition": "ext->leaf",
+    "trial_kind": "fault_injection"
+  },
+  "dataset_dir": "/home/reza/msi_pi_suite/outputs/pi-a-paper_synthetic_ethernet_retry1/migration/migration-gu29jx99/datasets",
+  "result_path": "/home/reza/msi_pi_suite/outputs/pi-a-paper_synthetic_ethernet_retry1/migration/migration-gu29jx99/raw-e6/migration-ext-to-leaf-crash_after_metadata_swap-r0.json",
+  "work_root": "/home/reza/msi_pi_suite/outputs/pi-a-paper_synthetic_ethernet_retry1/migration/migration-gu29jx99/work"
+}

@@ -1,0 +1,165 @@
+{
+  "active_mode": "ext",
+  "all_checks_pass": true,
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-full-to-ext-none-r1",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "none",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 1,
+    "seed": 11,
+    "source_mode": "full",
+    "target_mode": "ext",
+    "transition": "full->ext",
+    "trial_kind": "equivalence_audit"
+  },
+  "case_cpu_ns": 93050385,
+  "case_wall_ns": 1437607330,
+  "checks": {
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "anchor_bytes_equal": true,
+    "dataset_matches_case": true,
+    "no_partial_metadata": true,
+    "no_pending_journals": true,
+    "post_queries_accept": true,
+    "pre_queries_accept": true,
+    "protected_bytes_equal": true,
+    "root_equal": true
+  },
+  "expected_active_mode": "ext",
+  "filesystem": {
+    "block_size": 524288,
+    "blocks_available": 1011785,
+    "device": 55,
+    "filesystem_type": "nfs4",
+    "fragment_size": 524288,
+    "mount_point": "/data/group",
+    "path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_migration_check_422174/migration-6f1oqcp2/work/e6-migration-full-to-ext-none-r1-2318929-1789498179522138398"
+  },
+  "metadata_differences": [
+    "meta.aux_ref",
+    "meta.mode"
+  ],
+  "migration": {
+    "active_aux_ref": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_migration_check_422174/migration-6f1oqcp2/work/e6-migration-full-to-ext-none-r1-2318929-1789498179522138398/targets/ext-e4efad89551c08fce6f5.json",
+    "active_mode": "ext",
+    "allowed_metadata_difference_only": true,
+    "cpu_ns": 7002748,
+    "energy_joules_observed_nonexclusive": 6.410316,
+    "energy_source": "linux-intel-rapl-node-domain",
+    "hash_calls": {
+      "internal": 1022,
+      "leaf": 0,
+      "total": 1022
+    },
+    "initial_workspace_bytes": 33758,
+    "involuntary_context_switches": 0,
+    "io": {
+      "bytes_read": 65963,
+      "bytes_written": 427
+    },
+    "major_faults": 0,
+    "metadata_bytes_written": 1546,
+    "metadata_differences": [
+      "meta.aux_ref",
+      "meta.mode"
+    ],
+    "minor_faults": 32,
+    "peak_rss_kib": 24216,
+    "peak_workspace_bytes": 34840,
+    "protected_bytes_equal": true,
+    "recovery_source": "full",
+    "root_equal": true,
+    "source_mode": "full",
+    "status": "PASS",
+    "target_mode": "ext",
+    "target_serialized_bytes": 427,
+    "temporary_disk_bytes": 1082,
+    "transition": "full->ext",
+    "voluntary_context_switches": 104,
+    "wall_ns": 42619042,
+    "write_amplification": 4.620608899297424
+  },
+  "post_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "ext",
+    "positions_checked": 512
+  },
+  "pre_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "full",
+    "positions_checked": 512
+  },
+  "protected_sha256_after": "87575b353eb8f1c33805eb1217268481e2082196f3786c6b1830aee44fc34c83",
+  "protected_sha256_before": "87575b353eb8f1c33805eb1217268481e2082196f3786c6b1830aee44fc34c83",
+  "residual_workspaces_cleaned_after_worker_exit": 0,
+  "retained_workspaces_after_worker_exit": [
+    "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_migration_check_422174/migration-6f1oqcp2/work/e6-migration-full-to-ext-none-r1-2318929-1789498179522138398"
+  ],
+  "root_hex_after": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "root_hex_before": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "snapshot_after": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 406486550,
+      "read_bytes": 0,
+      "syscr": 1396,
+      "syscw": 17,
+      "wchar": 78215,
+      "write_bytes": 49152
+    },
+    "major_faults": 0,
+    "minor_faults": 3531,
+    "peak_rss_bytes": 24797184,
+    "process_cpu_ns": 161916780,
+    "rss_bytes": 23224320,
+    "temp_C": 49.0,
+    "throttled": null,
+    "timestamp_unix_ns": 1789498180996619889,
+    "timestamp_utc": "2026-09-15T18:49:40.996620+00:00",
+    "utc_ns": 1789498180996619889
+  },
+  "snapshot_before": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 3053269,
+      "read_bytes": 0,
+      "syscr": 275,
+      "syscw": 14,
+      "wchar": 76242,
+      "write_bytes": 36864
+    },
+    "major_faults": 0,
+    "minor_faults": 3356,
+    "peak_rss_bytes": 24797184,
+    "process_cpu_ns": 68227993,
+    "rss_bytes": 22351872,
+    "temp_C": 49.0,
+    "throttled": null,
+    "timestamp_unix_ns": 1789498179558371719,
+    "timestamp_utc": "2026-09-15T18:49:39.558372+00:00",
+    "utc_ns": 1789498179558371719
+  },
+  "worker_exit_code": 0,
+  "worker_including_startup_wall_ns": 1678840637,
+  "worker_resources": {
+    "major_faults": 0,
+    "minor_faults": 166,
+    "peak_rss_kib": 24216,
+    "scope": "case worker; spawned crashing child excluded"
+  },
+  "workspace_cleanup_policy": "retain",
+  "workspace_path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_migration_check_422174/migration-6f1oqcp2/work/e6-migration-full-to-ext-none-r1-2318929-1789498179522138398"
+}

@@ -1,0 +1,1270 @@
+{
+  "metrics": {
+    "accept_median_ms": 47.830751500000005,
+    "accepted": 200,
+    "baseline_rss_bytes": 25145344,
+    "cpu_ms_per_query": 51.532951600000004,
+    "mean_json_body_bytes": 0,
+    "measured_duration_seconds": 12.899577386,
+    "median_ms": 47.839659499999996,
+    "memory_limit_mib": 0,
+    "p95_ms": 98.4204171,
+    "p99_ms": 98.6678937,
+    "peak_rss_bytes": 281681920,
+    "pressure_buffer_bytes": 0,
+    "queries": 200,
+    "rss_bytes": 28037120
+  },
+  "provider_samples": [],
+  "raw_samples": [
+    {
+      "accept_cpu_ns": 45861333,
+      "accept_ns": 45891945,
+      "elapsed_ns": 45902186,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44493536,
+      "accept_ns": 44762219,
+      "elapsed_ns": 44770867,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73875426,
+      "accept_ns": 73911157,
+      "elapsed_ns": 73919027,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98770981,
+      "accept_ns": 98919792,
+      "elapsed_ns": 98929125,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19497296,
+      "accept_ns": 19523314,
+      "elapsed_ns": 19531888,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53742481,
+      "accept_ns": 53855026,
+      "elapsed_ns": 53863229,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47368796,
+      "accept_ns": 47401179,
+      "elapsed_ns": 47408883,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48904110,
+      "accept_ns": 49129147,
+      "elapsed_ns": 49137795,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45518611,
+      "accept_ns": 45550308,
+      "elapsed_ns": 45558734,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14097685,
+      "accept_ns": 14123048,
+      "elapsed_ns": 14130473,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 42096407,
+      "accept_ns": 42129371,
+      "elapsed_ns": 42138037,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74918037,
+      "accept_ns": 75082272,
+      "elapsed_ns": 75091771,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45892722,
+      "accept_ns": 46002701,
+      "elapsed_ns": 46011776,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48374259,
+      "accept_ns": 48533349,
+      "elapsed_ns": 48541719,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55917685,
+      "accept_ns": 55948279,
+      "elapsed_ns": 55956853,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64201129,
+      "accept_ns": 64235313,
+      "elapsed_ns": 64243980,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45791370,
+      "accept_ns": 45820615,
+      "elapsed_ns": 45828762,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44422092,
+      "accept_ns": 44452525,
+      "elapsed_ns": 44460117,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73999055,
+      "accept_ns": 74032228,
+      "elapsed_ns": 74040580,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98362999,
+      "accept_ns": 98501342,
+      "elapsed_ns": 98509712,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19474222,
+      "accept_ns": 19500278,
+      "elapsed_ns": 19508852,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53706629,
+      "accept_ns": 53816602,
+      "elapsed_ns": 53825601,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47401574,
+      "accept_ns": 47431567,
+      "elapsed_ns": 47440234,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48665278,
+      "accept_ns": 48749121,
+      "elapsed_ns": 48758324,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45515759,
+      "accept_ns": 45547642,
+      "elapsed_ns": 45555993,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14112518,
+      "accept_ns": 14137843,
+      "elapsed_ns": 14145658,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 42090093,
+      "accept_ns": 42120557,
+      "elapsed_ns": 42128705,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74914464,
+      "accept_ns": 75216694,
+      "elapsed_ns": 75225898,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45792425,
+      "accept_ns": 45822263,
+      "elapsed_ns": 45831115,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48382536,
+      "accept_ns": 48521758,
+      "elapsed_ns": 48530869,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55882870,
+      "accept_ns": 55915929,
+      "elapsed_ns": 55923669,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64101129,
+      "accept_ns": 64137965,
+      "elapsed_ns": 64146076,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45865667,
+      "accept_ns": 45894872,
+      "elapsed_ns": 45903946,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44361647,
+      "accept_ns": 44394027,
+      "elapsed_ns": 44402453,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73953036,
+      "accept_ns": 73983712,
+      "elapsed_ns": 73991824,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98370722,
+      "accept_ns": 98488973,
+      "elapsed_ns": 98497546,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19503241,
+      "accept_ns": 19529000,
+      "elapsed_ns": 19538091,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53598314,
+      "accept_ns": 53711661,
+      "elapsed_ns": 53720142,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47355593,
+      "accept_ns": 47385625,
+      "elapsed_ns": 47393495,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48589444,
+      "accept_ns": 48621496,
+      "elapsed_ns": 48629774,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45476444,
+      "accept_ns": 45521328,
+      "elapsed_ns": 45529142,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14078834,
+      "accept_ns": 14103697,
+      "elapsed_ns": 14110548,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 42140371,
+      "accept_ns": 42169056,
+      "elapsed_ns": 42177574,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74887221,
+      "accept_ns": 75048756,
+      "elapsed_ns": 75056608,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45873852,
+      "accept_ns": 46013258,
+      "elapsed_ns": 46021702,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48322611,
+      "accept_ns": 48479815,
+      "elapsed_ns": 48488648,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55929408,
+      "accept_ns": 55962558,
+      "elapsed_ns": 55970613,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64093648,
+      "accept_ns": 64129707,
+      "elapsed_ns": 64138706,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45906259,
+      "accept_ns": 45935112,
+      "elapsed_ns": 45944278,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44325648,
+      "accept_ns": 44358788,
+      "elapsed_ns": 44367121,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 74061315,
+      "accept_ns": 74094524,
+      "elapsed_ns": 74103098,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98364870,
+      "accept_ns": 98396921,
+      "elapsed_ns": 98406698,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19718722,
+      "accept_ns": 19801270,
+      "elapsed_ns": 19809788,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53580240,
+      "accept_ns": 53691977,
+      "elapsed_ns": 53700218,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47370481,
+      "accept_ns": 47401273,
+      "elapsed_ns": 47410921,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48742500,
+      "accept_ns": 48772937,
+      "elapsed_ns": 48781529,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45493760,
+      "accept_ns": 45527069,
+      "elapsed_ns": 45535328,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14048667,
+      "accept_ns": 14073567,
+      "elapsed_ns": 14080993,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 42086778,
+      "accept_ns": 42113873,
+      "elapsed_ns": 42122502,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74906760,
+      "accept_ns": 75181105,
+      "elapsed_ns": 75189271,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45740834,
+      "accept_ns": 45776969,
+      "elapsed_ns": 45785709,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48301981,
+      "accept_ns": 48460798,
+      "elapsed_ns": 48470131,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55877833,
+      "accept_ns": 55911931,
+      "elapsed_ns": 55920467,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64167815,
+      "accept_ns": 64202297,
+      "elapsed_ns": 64210538,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45902296,
+      "accept_ns": 45994092,
+      "elapsed_ns": 46002388,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44414092,
+      "accept_ns": 44447193,
+      "elapsed_ns": 44455823,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 74011722,
+      "accept_ns": 74131931,
+      "elapsed_ns": 74140302,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98399111,
+      "accept_ns": 98433032,
+      "elapsed_ns": 98442421,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19492129,
+      "accept_ns": 19520649,
+      "elapsed_ns": 19529704,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53674796,
+      "accept_ns": 53905712,
+      "elapsed_ns": 53913971,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47389482,
+      "accept_ns": 47418754,
+      "elapsed_ns": 47427681,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48854851,
+      "accept_ns": 48886156,
+      "elapsed_ns": 48894470,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45620667,
+      "accept_ns": 45651585,
+      "elapsed_ns": 45660213,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14096259,
+      "accept_ns": 14123270,
+      "elapsed_ns": 14129641,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 42070407,
+      "accept_ns": 42099967,
+      "elapsed_ns": 42108411,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74844315,
+      "accept_ns": 75009370,
+      "elapsed_ns": 75017888,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45801093,
+      "accept_ns": 45833635,
+      "elapsed_ns": 45842875,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48225425,
+      "accept_ns": 48388707,
+      "elapsed_ns": 48396504,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55786222,
+      "accept_ns": 55817804,
+      "elapsed_ns": 55826322,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64440500,
+      "accept_ns": 64536177,
+      "elapsed_ns": 64544677,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45720888,
+      "accept_ns": 45762748,
+      "elapsed_ns": 45771655,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44410722,
+      "accept_ns": 44444046,
+      "elapsed_ns": 44451712,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73904648,
+      "accept_ns": 74042157,
+      "elapsed_ns": 74050287,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98590870,
+      "accept_ns": 98624935,
+      "elapsed_ns": 98633843,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19485055,
+      "accept_ns": 19509019,
+      "elapsed_ns": 19517111,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53509018,
+      "accept_ns": 53540631,
+      "elapsed_ns": 53549223,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47374111,
+      "accept_ns": 47409089,
+      "elapsed_ns": 47416607,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48547352,
+      "accept_ns": 48581129,
+      "elapsed_ns": 48589258,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45486815,
+      "accept_ns": 45517570,
+      "elapsed_ns": 45525292,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14005907,
+      "accept_ns": 14031125,
+      "elapsed_ns": 14037847,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 41996703,
+      "accept_ns": 42158299,
+      "elapsed_ns": 42166409,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74722611,
+      "accept_ns": 74886300,
+      "elapsed_ns": 74894299,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45814315,
+      "accept_ns": 45843172,
+      "elapsed_ns": 45851616,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48290147,
+      "accept_ns": 48446058,
+      "elapsed_ns": 48454021,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55951277,
+      "accept_ns": 55983281,
+      "elapsed_ns": 55991633,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64287241,
+      "accept_ns": 64322203,
+      "elapsed_ns": 64330295,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45908667,
+      "accept_ns": 45937873,
+      "elapsed_ns": 45947632,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44390796,
+      "accept_ns": 44421565,
+      "elapsed_ns": 44428991,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 74088814,
+      "accept_ns": 74212838,
+      "elapsed_ns": 74221782,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98459907,
+      "accept_ns": 98579956,
+      "elapsed_ns": 98588882,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19444203,
+      "accept_ns": 19472465,
+      "elapsed_ns": 19480853,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53725499,
+      "accept_ns": 53981304,
+      "elapsed_ns": 53989656,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47307333,
+      "accept_ns": 47337239,
+      "elapsed_ns": 47346054,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48688129,
+      "accept_ns": 48716421,
+      "elapsed_ns": 48726106,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45515500,
+      "accept_ns": 45545607,
+      "elapsed_ns": 45554125,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14067537,
+      "accept_ns": 14093549,
+      "elapsed_ns": 14101549,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 42096759,
+      "accept_ns": 42128448,
+      "elapsed_ns": 42136819,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74863667,
+      "accept_ns": 75024056,
+      "elapsed_ns": 75031834,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45858370,
+      "accept_ns": 45890375,
+      "elapsed_ns": 45898207,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48290537,
+      "accept_ns": 48443782,
+      "elapsed_ns": 48451837,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 56039425,
+      "accept_ns": 56068761,
+      "elapsed_ns": 56077057,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64438648,
+      "accept_ns": 64471754,
+      "elapsed_ns": 64479421,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45839741,
+      "accept_ns": 45866746,
+      "elapsed_ns": 45876301,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44506778,
+      "accept_ns": 44668818,
+      "elapsed_ns": 44677151,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73813759,
+      "accept_ns": 73848480,
+      "elapsed_ns": 73856516,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98376481,
+      "accept_ns": 98411352,
+      "elapsed_ns": 98419259,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19508462,
+      "accept_ns": 19616924,
+      "elapsed_ns": 19625831,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53647222,
+      "accept_ns": 53679017,
+      "elapsed_ns": 53687331,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47306722,
+      "accept_ns": 47360758,
+      "elapsed_ns": 47369331,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48641704,
+      "accept_ns": 48674516,
+      "elapsed_ns": 48682848,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45486610,
+      "accept_ns": 45529682,
+      "elapsed_ns": 45538274,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14177352,
+      "accept_ns": 14359245,
+      "elapsed_ns": 14365986,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 41985741,
+      "accept_ns": 42017433,
+      "elapsed_ns": 42025322,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 75008723,
+      "accept_ns": 75161016,
+      "elapsed_ns": 75169922,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45868240,
+      "accept_ns": 45897263,
+      "elapsed_ns": 45906671,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48301500,
+      "accept_ns": 48462892,
+      "elapsed_ns": 48471040,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55965555,
+      "accept_ns": 55999874,
+      "elapsed_ns": 56008245,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64417685,
+      "accept_ns": 64448034,
+      "elapsed_ns": 64457700,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45949445,
+      "accept_ns": 46112998,
+      "elapsed_ns": 46122276,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44553778,
+      "accept_ns": 44583894,
+      "elapsed_ns": 44592043,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73895000,
+      "accept_ns": 73928219,
+      "elapsed_ns": 73937663,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98729092,
+      "accept_ns": 98956096,
+      "elapsed_ns": 98965169,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19455389,
+      "accept_ns": 19582481,
+      "elapsed_ns": 19591017,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53624555,
+      "accept_ns": 53657352,
+      "elapsed_ns": 53665407,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47388018,
+      "accept_ns": 47421682,
+      "elapsed_ns": 47430923,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48686462,
+      "accept_ns": 48719996,
+      "elapsed_ns": 48728663,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45612185,
+      "accept_ns": 45643957,
+      "elapsed_ns": 45651716,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14055481,
+      "accept_ns": 14080013,
+      "elapsed_ns": 14086771,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 41965130,
+      "accept_ns": 41994249,
+      "elapsed_ns": 42003045,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74926963,
+      "accept_ns": 75102648,
+      "elapsed_ns": 75111129,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45799148,
+      "accept_ns": 45828211,
+      "elapsed_ns": 45835840,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48196222,
+      "accept_ns": 48229936,
+      "elapsed_ns": 48239085,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 56016963,
+      "accept_ns": 56050985,
+      "elapsed_ns": 56059800,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64489055,
+      "accept_ns": 64597753,
+      "elapsed_ns": 64606493,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45893703,
+      "accept_ns": 46024094,
+      "elapsed_ns": 46033297,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44431222,
+      "accept_ns": 44461880,
+      "elapsed_ns": 44470510,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 74204722,
+      "accept_ns": 74240303,
+      "elapsed_ns": 74249118,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98349333,
+      "accept_ns": 98387373,
+      "elapsed_ns": 98396428,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19498704,
+      "accept_ns": 19634201,
+      "elapsed_ns": 19641331,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53648111,
+      "accept_ns": 53682740,
+      "elapsed_ns": 53690240,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47390278,
+      "accept_ns": 47419683,
+      "elapsed_ns": 47426665,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48696407,
+      "accept_ns": 48723626,
+      "elapsed_ns": 48732237,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45701444,
+      "accept_ns": 45856785,
+      "elapsed_ns": 45865025,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14037055,
+      "accept_ns": 14072532,
+      "elapsed_ns": 14079513,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 41958740,
+      "accept_ns": 41997583,
+      "elapsed_ns": 42005305,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74912148,
+      "accept_ns": 75078260,
+      "elapsed_ns": 75086538,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45708777,
+      "accept_ns": 45739622,
+      "elapsed_ns": 45748195,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48309870,
+      "accept_ns": 48405932,
+      "elapsed_ns": 48414320,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 56033148,
+      "accept_ns": 56062540,
+      "elapsed_ns": 56070373,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64371518,
+      "accept_ns": 64402925,
+      "elapsed_ns": 64411592,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45683463,
+      "accept_ns": 45714363,
+      "elapsed_ns": 45723844,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44360796,
+      "accept_ns": 44393142,
+      "elapsed_ns": 44400957,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 74106314,
+      "accept_ns": 74138234,
+      "elapsed_ns": 74146103,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98548333,
+      "accept_ns": 98657162,
+      "elapsed_ns": 98665255,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19493944,
+      "accept_ns": 19519872,
+      "elapsed_ns": 19528705,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53556648,
+      "accept_ns": 53591095,
+      "elapsed_ns": 53599725,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47271018,
+      "accept_ns": 47304261,
+      "elapsed_ns": 47312446,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48715111,
+      "accept_ns": 48747866,
+      "elapsed_ns": 48756052,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45569518,
+      "accept_ns": 45602422,
+      "elapsed_ns": 45610773,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14170963,
+      "accept_ns": 14196565,
+      "elapsed_ns": 14202991,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 41981092,
+      "accept_ns": 42011805,
+      "elapsed_ns": 42020379,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74853073,
+      "accept_ns": 74887434,
+      "elapsed_ns": 74896026,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45856611,
+      "accept_ns": 45984522,
+      "elapsed_ns": 45993707,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48251741,
+      "accept_ns": 48287269,
+      "elapsed_ns": 48295213,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55974111,
+      "accept_ns": 56007969,
+      "elapsed_ns": 56015635,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64540166,
+      "accept_ns": 64678418,
+      "elapsed_ns": 64686881,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45857371,
+      "accept_ns": 45896747,
+      "elapsed_ns": 45905376,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44615888,
+      "accept_ns": 44703430,
+      "elapsed_ns": 44710929,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 73867407,
+      "accept_ns": 73904481,
+      "elapsed_ns": 73912111,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98515443,
+      "accept_ns": 98633276,
+      "elapsed_ns": 98641275,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19423499,
+      "accept_ns": 19451300,
+      "elapsed_ns": 19459466,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53590203,
+      "accept_ns": 53621613,
+      "elapsed_ns": 53629113,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47301333,
+      "accept_ns": 47335149,
+      "elapsed_ns": 47343853,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48681575,
+      "accept_ns": 48844068,
+      "elapsed_ns": 48850902,
+      "position": 11
+    },
+    {
+      "accept_cpu_ns": 45580333,
+      "accept_ns": 45610552,
+      "elapsed_ns": 45618014,
+      "position": 54
+    },
+    {
+      "accept_cpu_ns": 14003907,
+      "accept_ns": 14030108,
+      "elapsed_ns": 14036922,
+      "position": 64
+    },
+    {
+      "accept_cpu_ns": 41886037,
+      "accept_ns": 41917864,
+      "elapsed_ns": 41925401,
+      "position": 62
+    },
+    {
+      "accept_cpu_ns": 74781444,
+      "accept_ns": 74816844,
+      "elapsed_ns": 74825344,
+      "position": 10
+    },
+    {
+      "accept_cpu_ns": 45979908,
+      "accept_ns": 46133795,
+      "elapsed_ns": 46142443,
+      "position": 5
+    },
+    {
+      "accept_cpu_ns": 48230815,
+      "accept_ns": 48265659,
+      "elapsed_ns": 48274196,
+      "position": 49
+    },
+    {
+      "accept_cpu_ns": 55969370,
+      "accept_ns": 55999840,
+      "elapsed_ns": 56007543,
+      "position": 18
+    },
+    {
+      "accept_cpu_ns": 64296518,
+      "accept_ns": 64331577,
+      "elapsed_ns": 64340392,
+      "position": 68
+    },
+    {
+      "accept_cpu_ns": 45946537,
+      "accept_ns": 45975412,
+      "elapsed_ns": 45983578,
+      "position": 40
+    },
+    {
+      "accept_cpu_ns": 44512519,
+      "accept_ns": 44542824,
+      "elapsed_ns": 44551250,
+      "position": 31
+    },
+    {
+      "accept_cpu_ns": 74168240,
+      "accept_ns": 74396987,
+      "elapsed_ns": 74405264,
+      "position": 15
+    },
+    {
+      "accept_cpu_ns": 98467555,
+      "accept_ns": 98596037,
+      "elapsed_ns": 98604481,
+      "position": 24
+    },
+    {
+      "accept_cpu_ns": 19480037,
+      "accept_ns": 19508484,
+      "elapsed_ns": 19516651,
+      "position": 16
+    },
+    {
+      "accept_cpu_ns": 53586944,
+      "accept_ns": 53621392,
+      "elapsed_ns": 53630151,
+      "position": 25
+    },
+    {
+      "accept_cpu_ns": 47343092,
+      "accept_ns": 47374760,
+      "elapsed_ns": 47382853,
+      "position": 41
+    },
+    {
+      "accept_cpu_ns": 48686241,
+      "accept_ns": 48713313,
+      "elapsed_ns": 48721331,
+      "position": 11
+    }
+  ],
+  "telemetry_after": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 146147588,
+      "read_bytes": 0,
+      "syscr": 761,
+      "syscw": 23,
+      "wchar": 90010,
+      "write_bytes": 0
+    },
+    "major_faults": 0,
+    "minor_faults": 36845,
+    "peak_rss_bytes": 281681920,
+    "process_cpu_ns": 15244856218,
+    "rss_bytes": 28037120,
+    "temp_C": 93.49,
+    "throttled": "throttled=0xe0006",
+    "timestamp_unix_ns": 1789496084462231476,
+    "timestamp_utc": "2026-09-15T18:14:44.462232+00:00",
+    "utc_ns": 1789496084462231476
+  },
+  "telemetry_before": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 3004082,
+      "read_bytes": 0,
+      "syscr": 303,
+      "syscw": 22,
+      "wchar": 89992,
+      "write_bytes": 0
+    },
+    "major_faults": 0,
+    "minor_faults": 3623,
+    "peak_rss_bytes": 281681920,
+    "process_cpu_ns": 1019935975,
+    "rss_bytes": 25145344,
+    "temp_C": 92.516,
+    "throttled": "throttled=0xe0006",
+    "timestamp_unix_ns": 1789496067225263440,
+    "timestamp_utc": "2026-09-15T18:14:27.225263+00:00",
+    "utc_ns": 1789496067225263440
+  },
+  "window": {
+    "end_unix_ns": 1789496084462209088,
+    "idle_end_unix_ns": 1789496071562625517,
+    "idle_start_unix_ns": 1789496068562443854,
+    "run_id": "0056-ethereum_rpc_finalized_json-n69-archive-t2-local",
+    "start_unix_ns": 1789496071562631702
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "experiment": "E3",
+  "description": "Fast end-to-end smoke test.",
+  "defaults": {
+    "network_trial_count": 1,
+    "measured_queries": 5,
+    "warmup_queries": 2,
+    "query_pool_size": 8,
+    "calibration_pings": 5,
+    "socket_timeout_s": 120,
+    "plan_seed": 20260624,
+    "deadlines_ms": [50, 100, 250, 500, 1000, 2000]
+  },
+  "variants": [
+    {"scheme": "B2_full", "deployment": "coalesced"},
+    {"scheme": "B3_leaf", "deployment": "coalesced"},
+    {"scheme": "B4_ext", "deployment": "coalesced"},
+    {"scheme": "B4_ext", "deployment": "split"}
+  ],
+  "sweeps": [
+    {
+      "name": "wire_size",
+      "kind": "wire_audit",
+      "trial_count": 1,
+      "factor_grid": {"epoch_length": [8, 9]},
+      "fixed": {"block_bytes": 512, "profile": "P0"}
+    },
+    {
+      "name": "n_scaling",
+      "kind": "network_trial",
+      "factor_grid": {"epoch_length": [64], "profile": ["P0", "P3"]},
+      "fixed": {"block_bytes": 512}
+    }
+  ]
+}

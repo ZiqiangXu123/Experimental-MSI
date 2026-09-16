@@ -1,0 +1,160 @@
+{
+  "active_mode": "full",
+  "all_checks_pass": true,
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-ext-to-full-none-r3",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "none",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 3,
+    "seed": 11,
+    "source_mode": "ext",
+    "target_mode": "full",
+    "transition": "ext->full",
+    "trial_kind": "equivalence_audit"
+  },
+  "case_cpu_ns": 248174480,
+  "case_wall_ns": 274571151,
+  "checks": {
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "anchor_bytes_equal": true,
+    "dataset_matches_case": true,
+    "no_partial_metadata": true,
+    "no_pending_journals": true,
+    "post_queries_accept": true,
+    "pre_queries_accept": true,
+    "protected_bytes_equal": true,
+    "root_equal": true
+  },
+  "expected_active_mode": "full",
+  "filesystem": {
+    "block_size": 4096,
+    "blocks_available": 5056518,
+    "device": 45826,
+    "filesystem_type": "ext4",
+    "fragment_size": 4096,
+    "mount_point": "/",
+    "path": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi/migration/migration-w9aqo3b2/work/e6-migration-ext-to-full-none-r3-7962-1789509141977159739"
+  },
+  "metadata_differences": [
+    "meta.aux_ref",
+    "meta.mode"
+  ],
+  "migration": {
+    "active_aux_ref": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_wifi/migration/migration-w9aqo3b2/work/e6-migration-ext-to-full-none-r3-7962-1789509141977159739/targets/full-3a25662adfbcd1c3ee00.bin",
+    "active_mode": "full",
+    "allowed_metadata_difference_only": true,
+    "cpu_ns": 73879443,
+    "energy_joules_observed_nonexclusive": null,
+    "energy_source": null,
+    "hash_calls": {
+      "internal": 1533,
+      "leaf": 512,
+      "total": 2045
+    },
+    "initial_workspace_bytes": 1368,
+    "involuntary_context_switches": 1,
+    "io": {
+      "bytes_read": 1120678,
+      "bytes_written": 32768
+    },
+    "major_faults": 0,
+    "metadata_bytes_written": 1506,
+    "metadata_differences": [
+      "meta.aux_ref",
+      "meta.mode"
+    ],
+    "minor_faults": 35,
+    "peak_rss_kib": 282680,
+    "peak_workspace_bytes": 34769,
+    "protected_bytes_equal": true,
+    "recovery_source": "canonical_payload",
+    "root_equal": true,
+    "source_mode": "ext",
+    "status": "PASS",
+    "target_mode": "full",
+    "target_serialized_bytes": 32768,
+    "temporary_disk_bytes": 33401,
+    "transition": "ext->full",
+    "voluntary_context_switches": 8,
+    "wall_ns": 100282125,
+    "write_amplification": 1.04595947265625
+  },
+  "post_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "full",
+    "positions_checked": 512
+  },
+  "pre_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "ext",
+    "positions_checked": 512
+  },
+  "protected_sha256_after": "726fa14ed87a727a9668db8ac4bf2f9535d5db5b477dabb5ee45ee9dd2e1a3c9",
+  "protected_sha256_before": "726fa14ed87a727a9668db8ac4bf2f9535d5db5b477dabb5ee45ee9dd2e1a3c9",
+  "residual_workspaces_cleaned_after_worker_exit": 0,
+  "root_hex_after": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "root_hex_before": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "snapshot_after": {
+    "io": {
+      "cancelled_write_bytes": 4096,
+      "rchar": 9313598,
+      "read_bytes": 0,
+      "syscr": 1872,
+      "syscw": 29,
+      "wchar": 125652,
+      "write_bytes": 49152
+    },
+    "major_faults": 0,
+    "minor_faults": 3479,
+    "peak_rss_bytes": 289464320,
+    "process_cpu_ns": 506904778,
+    "rss_bytes": 24989696,
+    "temp_C": 80.828,
+    "throttled": "throttled=0xe0000",
+    "timestamp_unix_ns": 1789509142293889897,
+    "timestamp_utc": "2026-09-15T21:52:22.293890+00:00",
+    "utc_ns": 1789509142293889897
+  },
+  "snapshot_before": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 2767043,
+      "read_bytes": 0,
+      "syscr": 272,
+      "syscw": 25,
+      "wchar": 91360,
+      "write_bytes": 8192
+    },
+    "major_faults": 0,
+    "minor_faults": 3379,
+    "peak_rss_bytes": 289464320,
+    "process_cpu_ns": 255986538,
+    "rss_bytes": 24457216,
+    "temp_C": 80.828,
+    "throttled": "throttled=0xe0000",
+    "timestamp_unix_ns": 1789509142015753914,
+    "timestamp_utc": "2026-09-15T21:52:22.015754+00:00",
+    "utc_ns": 1789509142015753914
+  },
+  "worker_exit_code": 0,
+  "worker_including_startup_wall_ns": 609184909,
+  "worker_resources": {
+    "major_faults": 0,
+    "minor_faults": 97,
+    "peak_rss_kib": 282680,
+    "scope": "case worker; spawned crashing child excluded"
+  }
+}

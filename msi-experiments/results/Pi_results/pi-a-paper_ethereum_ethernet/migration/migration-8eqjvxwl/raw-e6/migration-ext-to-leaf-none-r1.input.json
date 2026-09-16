@@ -1,0 +1,21 @@
+{
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-ext-to-leaf-none-r1",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "none",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 1,
+    "seed": 11,
+    "source_mode": "ext",
+    "target_mode": "leaf",
+    "transition": "ext->leaf",
+    "trial_kind": "equivalence_audit"
+  },
+  "dataset_dir": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_ethernet/migration/migration-8eqjvxwl/datasets",
+  "result_path": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_ethernet/migration/migration-8eqjvxwl/raw-e6/migration-ext-to-leaf-none-r1.json",
+  "work_root": "/home/reza/msi_pi_suite/outputs/pi-a-paper_ethereum_ethernet/migration/migration-8eqjvxwl/work"
+}

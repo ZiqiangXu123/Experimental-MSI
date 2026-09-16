@@ -1,0 +1,160 @@
+{
+  "active_mode": "full",
+  "all_checks_pass": true,
+  "case": {
+    "backend": "shared_scratch",
+    "block_bytes": 2048,
+    "case_id": "migration-leaf-to-full-none-r2",
+    "crash_timeout_seconds": 120,
+    "dataset_id": "ds-795e554c5407158f",
+    "fault": "none",
+    "n": 512,
+    "n_prime": 512,
+    "repeat": 2,
+    "seed": 11,
+    "source_mode": "leaf",
+    "target_mode": "full",
+    "transition": "leaf->full",
+    "trial_kind": "equivalence_audit"
+  },
+  "case_cpu_ns": 117328067,
+  "case_wall_ns": 2798705117,
+  "checks": {
+    "active_mode_correct": true,
+    "active_state_valid": true,
+    "allowed_metadata_difference_only": true,
+    "anchor_bytes_equal": true,
+    "dataset_matches_case": true,
+    "no_partial_metadata": true,
+    "no_pending_journals": true,
+    "post_queries_accept": true,
+    "pre_queries_accept": true,
+    "protected_bytes_equal": true,
+    "root_equal": true
+  },
+  "expected_active_mode": "full",
+  "filesystem": {
+    "block_size": 524288,
+    "blocks_available": 1011817,
+    "device": 55,
+    "filesystem_type": "nfs4",
+    "fragment_size": 524288,
+    "mount_point": "/data/group",
+    "path": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422173/migration/migration-dwzlqy60/work/e6-migration-leaf-to-full-none-r2-2313799-1789496984308894321"
+  },
+  "metadata_differences": [
+    "meta.aux_ref",
+    "meta.mode"
+  ],
+  "migration": {
+    "active_aux_ref": "/data/group/xulab/home/zxu/msi_pi_suite/outputs/hpc_real_422173/migration/migration-dwzlqy60/work/e6-migration-leaf-to-full-none-r2-2313799-1789496984308894321/targets/full-3a25662adfbcd1c3ee00.bin",
+    "active_mode": "full",
+    "allowed_metadata_difference_only": true,
+    "cpu_ns": 6594378,
+    "energy_joules_observed_nonexclusive": 21.462863,
+    "energy_source": "linux-intel-rapl-node-domain",
+    "hash_calls": {
+      "internal": 1022,
+      "leaf": 0,
+      "total": 1022
+    },
+    "initial_workspace_bytes": 17437,
+    "involuntary_context_switches": 0,
+    "io": {
+      "bytes_read": 49216,
+      "bytes_written": 32768
+    },
+    "major_faults": 0,
+    "metadata_bytes_written": 1547,
+    "metadata_differences": [
+      "meta.aux_ref",
+      "meta.mode"
+    ],
+    "minor_faults": 3,
+    "peak_rss_kib": 146044,
+    "peak_workspace_bytes": 50861,
+    "protected_bytes_equal": true,
+    "recovery_source": "leaf",
+    "root_equal": true,
+    "source_mode": "leaf",
+    "status": "PASS",
+    "target_mode": "full",
+    "target_serialized_bytes": 32768,
+    "temporary_disk_bytes": 33424,
+    "transition": "leaf->full",
+    "voluntary_context_switches": 99,
+    "wall_ns": 145038170,
+    "write_amplification": 1.047210693359375
+  },
+  "post_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 0,
+    "failures": [],
+    "mode": "full",
+    "positions_checked": 512
+  },
+  "pre_query_audit": {
+    "all_accept": true,
+    "exact_leaf_resolver_failures": [],
+    "exact_leaf_resolver_positions_checked": 32,
+    "failures": [],
+    "mode": "leaf",
+    "positions_checked": 512
+  },
+  "protected_sha256_after": "5395eded07f13ddea3ab1d0f61daec252678e809a8bd2ce05c17c83875737a2f",
+  "protected_sha256_before": "5395eded07f13ddea3ab1d0f61daec252678e809a8bd2ce05c17c83875737a2f",
+  "residual_workspaces_cleaned_after_worker_exit": 0,
+  "root_hex_after": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "root_hex_before": "970a487ef112104995051de63e8c535fd84788fe1c4ee998522d37de948549fd",
+  "snapshot_after": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 420899142,
+      "read_bytes": 0,
+      "syscr": 1420,
+      "syscw": 17,
+      "wchar": 94236,
+      "write_bytes": 65536
+    },
+    "major_faults": 0,
+    "minor_faults": 3649,
+    "peak_rss_bytes": 149549056,
+    "process_cpu_ns": 184840473,
+    "rss_bytes": 23769088,
+    "temp_C": 51.0,
+    "throttled": null,
+    "timestamp_unix_ns": 1789496987144962506,
+    "timestamp_utc": "2026-09-15T18:29:47.144963+00:00",
+    "utc_ns": 1789496987144962506
+  },
+  "snapshot_before": {
+    "io": {
+      "cancelled_write_bytes": 0,
+      "rchar": 3018739,
+      "read_bytes": 0,
+      "syscr": 275,
+      "syscw": 14,
+      "wchar": 59921,
+      "write_bytes": 24576
+    },
+    "major_faults": 0,
+    "minor_faults": 3352,
+    "peak_rss_bytes": 149549056,
+    "process_cpu_ns": 66905550,
+    "rss_bytes": 22355968,
+    "temp_C": 51.0,
+    "throttled": null,
+    "timestamp_unix_ns": 1789496984345644492,
+    "timestamp_utc": "2026-09-15T18:29:44.345644+00:00",
+    "utc_ns": 1789496984345644492
+  },
+  "worker_exit_code": 0,
+  "worker_including_startup_wall_ns": 3055371063,
+  "worker_resources": {
+    "major_faults": 0,
+    "minor_faults": 289,
+    "peak_rss_kib": 146044,
+    "scope": "case worker; spawned crashing child excluded"
+  }
+}
