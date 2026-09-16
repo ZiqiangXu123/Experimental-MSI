@@ -1,0 +1,1092 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="12655" viewBox="0 0 1280 12655" role="img">
+<title>Provider service latency</title>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="sans-serif" fill="#17212b">
+<text x="20" y="27" font-size="18">Provider service latency</text>
+<text x="20" y="49" font-size="12">milliseconds; zero-based bars; individual records; no pooled trials</text>
+<text x="250" y="68" font-size="10">0</text>
+<text x="470.0" y="68" font-size="10">151.1</text>
+<text x="690.0" y="68" font-size="10">302.2</text>
+<text x="910.0" y="68" font-size="10">453.3</text>
+<text x="1130" y="68" font-size="10">604.4</text>
+<text x="20" y="87" font-size="10">0000-synthetic-n512-full-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="101" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 2 | row 2</text>
+<rect x="250" y="115" width="1.983" height="13" fill="#1b6b9b"/>
+<text x="20" y="126" font-size="11">median (median_ms)</text>
+<text x="257.9833574712774" y="126" font-size="11">1.36213</text>
+<rect x="250" y="135" width="3.043" height="13" fill="#c06122"/>
+<text x="20" y="146" font-size="11">p95 (p95_ms)</text>
+<text x="259.0434162956935" y="146" font-size="11">2.09015</text>
+<text x="20" y="180" font-size="10">0000-synthetic-n512-full-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="194" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 2 | row 6</text>
+<rect x="250" y="208" width="1.980" height="13" fill="#1b6b9b"/>
+<text x="20" y="219" font-size="11">median (median_ms)</text>
+<text x="257.98024365968826" y="219" font-size="11">1.35999</text>
+<rect x="250" y="228" width="2.043" height="13" fill="#c06122"/>
+<text x="20" y="239" font-size="11">p95 (p95_ms)</text>
+<text x="258.0429621007676" y="239" font-size="11">1.40306</text>
+<text x="20" y="273" font-size="10">0001-synthetic-n4096-ext_cached-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="287" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 1 | row 10</text>
+<rect x="250" y="301" width="2.069" height="13" fill="#1b6b9b"/>
+<text x="20" y="312" font-size="11">median (median_ms)</text>
+<text x="258.06918349578336" y="312" font-size="11">1.42107</text>
+<rect x="250" y="321" width="2.129" height="13" fill="#c06122"/>
+<text x="20" y="332" font-size="11">p95 (p95_ms)</text>
+<text x="258.12918534192147" y="332" font-size="11">1.46228</text>
+<text x="20" y="366" font-size="10">0001-synthetic-n4096-ext_cached-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="380" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 1 | row 14</text>
+<rect x="250" y="394" width="2.019" height="13" fill="#1b6b9b"/>
+<text x="20" y="405" font-size="11">median (median_ms)</text>
+<text x="258.0192329198814" y="405" font-size="11">1.38677</text>
+<rect x="250" y="414" width="2.092" height="13" fill="#c06122"/>
+<text x="20" y="425" font-size="11">p95 (p95_ms)</text>
+<text x="258.09190077890764" y="425" font-size="11">1.43667</text>
+<text x="20" y="459" font-size="10">0002-ethereum_rpc_finalized_json-n69-full-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="473" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 3 | row 18</text>
+<rect x="250" y="487" width="22.230" height="13" fill="#1b6b9b"/>
+<text x="20" y="498" font-size="11">median (median_ms)</text>
+<text x="278.2303993319427" y="498" font-size="11">15.2674</text>
+<rect x="250" y="507" width="42.028" height="13" fill="#c06122"/>
+<text x="20" y="518" font-size="11">p95 (p95_ms)</text>
+<text x="298.02785142776247" y="518" font-size="11">28.8638</text>
+<text x="20" y="552" font-size="10">0002-ethereum_rpc_finalized_json-n69-full-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="566" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 3 | row 22</text>
+<rect x="250" y="580" width="12.659" height="13" fill="#1b6b9b"/>
+<text x="20" y="591" font-size="11">median (median_ms)</text>
+<text x="268.65889778860065" y="591" font-size="11">8.69386</text>
+<rect x="250" y="600" width="34.695" height="13" fill="#c06122"/>
+<text x="20" y="611" font-size="11">p95 (p95_ms)</text>
+<text x="290.69512632392747" y="611" font-size="11">23.8279</text>
+<text x="20" y="645" font-size="10">0003-synthetic-n4096-full-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="659" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 3 | row 26</text>
+<rect x="250" y="673" width="2.057" height="13" fill="#1b6b9b"/>
+<text x="20" y="684" font-size="11">median (median_ms)</text>
+<text x="258.0568614800839" y="684" font-size="11">1.41261</text>
+<rect x="250" y="693" width="2.163" height="13" fill="#c06122"/>
+<text x="20" y="704" font-size="11">p95 (p95_ms)</text>
+<text x="258.16311911750506" y="704" font-size="11">1.48558</text>
+<text x="20" y="738" font-size="10">0003-synthetic-n4096-full-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="752" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 3 | row 30</text>
+<rect x="250" y="766" width="2.028" height="13" fill="#1b6b9b"/>
+<text x="20" y="777" font-size="11">median (median_ms)</text>
+<text x="258.02826639526097" y="777" font-size="11">1.39297</text>
+<rect x="250" y="786" width="2.100" height="13" fill="#c06122"/>
+<text x="20" y="797" font-size="11">p95 (p95_ms)</text>
+<text x="258.0999024811322" y="797" font-size="11">1.44217</text>
+<text x="20" y="831" font-size="10">0004-ethereum_rpc_finalized_json-n69-ext_cached-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="845" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 3 | row 34</text>
+<rect x="250" y="859" width="19.535" height="13" fill="#1b6b9b"/>
+<text x="20" y="870" font-size="11">median (median_ms)</text>
+<text x="275.53537392444684" y="870" font-size="11">13.4165</text>
+<rect x="250" y="879" width="42.366" height="13" fill="#c06122"/>
+<text x="20" y="890" font-size="11">p95 (p95_ms)</text>
+<text x="298.36550305134665" y="890" font-size="11">29.0957</text>
+<text x="20" y="924" font-size="10">0004-ethereum_rpc_finalized_json-n69-ext_cached-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="938" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 3 | row 38</text>
+<rect x="250" y="952" width="12.363" height="13" fill="#1b6b9b"/>
+<text x="20" y="963" font-size="11">median (median_ms)</text>
+<text x="268.36321455006885" y="963" font-size="11">8.49079</text>
+<rect x="250" y="972" width="27.522" height="13" fill="#c06122"/>
+<text x="20" y="983" font-size="11">p95 (p95_ms)</text>
+<text x="283.5218692162985" y="983" font-size="11">18.9014</text>
+<text x="20" y="1017" font-size="10">0005-ethereum_rpc_finalized_json-n69-ext_cached-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1031" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 2 | row 42</text>
+<rect x="250" y="1045" width="17.828" height="13" fill="#1b6b9b"/>
+<text x="20" y="1056" font-size="11">median (median_ms)</text>
+<text x="273.82812861778496" y="1056" font-size="11">12.244</text>
+<rect x="250" y="1065" width="30.357" height="13" fill="#c06122"/>
+<text x="20" y="1076" font-size="11">p95 (p95_ms)</text>
+<text x="286.3571916748776" y="1076" font-size="11">20.8487</text>
+<text x="20" y="1110" font-size="10">0005-ethereum_rpc_finalized_json-n69-ext_cached-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1124" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 2 | row 46</text>
+<rect x="250" y="1138" width="11.777" height="13" fill="#1b6b9b"/>
+<text x="20" y="1149" font-size="11">median (median_ms)</text>
+<text x="267.7766014225179" y="1149" font-size="11">8.08792</text>
+<rect x="250" y="1158" width="30.901" height="13" fill="#c06122"/>
+<text x="20" y="1169" font-size="11">p95 (p95_ms)</text>
+<text x="286.9011263634966" y="1169" font-size="11">21.2222</text>
+<text x="20" y="1203" font-size="10">0006-ethereum_rpc_finalized_json-n69-ext_rebuild-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1217" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 1 | row 50</text>
+<rect x="250" y="1231" width="392.760" height="13" fill="#1b6b9b"/>
+<text x="20" y="1242" font-size="11">median (median_ms)</text>
+<text x="648.7600008722075" y="1242" font-size="11">269.739</text>
+<rect x="250" y="1251" width="417.991" height="13" fill="#c06122"/>
+<text x="20" y="1262" font-size="11">p95 (p95_ms)</text>
+<text x="673.9910687518485" y="1262" font-size="11">287.067</text>
+<text x="20" y="1296" font-size="10">0006-ethereum_rpc_finalized_json-n69-ext_rebuild-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1310" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 1 | row 54</text>
+<rect x="250" y="1324" width="393.177" height="13" fill="#1b6b9b"/>
+<text x="20" y="1335" font-size="11">median (median_ms)</text>
+<text x="649.1773404455937" y="1335" font-size="11">270.026</text>
+<rect x="250" y="1344" width="401.515" height="13" fill="#c06122"/>
+<text x="20" y="1355" font-size="11">p95 (p95_ms)</text>
+<text x="657.5145096021175" y="1355" font-size="11">275.752</text>
+<text x="20" y="1389" font-size="10">0007-ethereum_rpc_finalized_json-n69-ext_cached-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1403" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 1 | row 58</text>
+<rect x="250" y="1417" width="24.429" height="13" fill="#1b6b9b"/>
+<text x="20" y="1428" font-size="11">median (median_ms)</text>
+<text x="280.42921188895724" y="1428" font-size="11">16.7775</text>
+<rect x="250" y="1437" width="40.506" height="13" fill="#c06122"/>
+<text x="20" y="1448" font-size="11">p95 (p95_ms)</text>
+<text x="296.50628633906405" y="1448" font-size="11">27.8189</text>
+<text x="20" y="1482" font-size="10">0007-ethereum_rpc_finalized_json-n69-ext_cached-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1496" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 1 | row 62</text>
+<rect x="250" y="1510" width="13.221" height="13" fill="#1b6b9b"/>
+<text x="20" y="1521" font-size="11">median (median_ms)</text>
+<text x="269.2210488938471" y="1521" font-size="11">9.07994</text>
+<rect x="250" y="1530" width="30.437" height="13" fill="#c06122"/>
+<text x="20" y="1541" font-size="11">p95 (p95_ms)</text>
+<text x="286.43657268454274" y="1541" font-size="11">20.9032</text>
+<text x="20" y="1575" font-size="10">0008-ethereum_rpc_finalized_json-n69-ext_rebuild-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1589" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 0 | row 66</text>
+<rect x="250" y="1603" width="394.565" height="13" fill="#1b6b9b"/>
+<text x="20" y="1614" font-size="11">median (median_ms)</text>
+<text x="650.5646705509149" y="1614" font-size="11">270.979</text>
+<rect x="250" y="1623" width="417.932" height="13" fill="#c06122"/>
+<text x="20" y="1634" font-size="11">p95 (p95_ms)</text>
+<text x="673.9319350890912" y="1634" font-size="11">287.027</text>
+<text x="20" y="1668" font-size="10">0008-ethereum_rpc_finalized_json-n69-ext_rebuild-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1682" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 0 | row 70</text>
+<rect x="250" y="1696" width="396.113" height="13" fill="#1b6b9b"/>
+<text x="20" y="1707" font-size="11">median (median_ms)</text>
+<text x="652.1130801609652" y="1707" font-size="11">272.042</text>
+<rect x="250" y="1716" width="403.142" height="13" fill="#c06122"/>
+<text x="20" y="1727" font-size="11">p95 (p95_ms)</text>
+<text x="659.142298984171" y="1727" font-size="11">276.87</text>
+<text x="20" y="1761" font-size="10">0009-ethereum_rpc_finalized_json-n69-full-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1775" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 4 | row 74</text>
+<rect x="250" y="1789" width="21.090" height="13" fill="#1b6b9b"/>
+<text x="20" y="1800" font-size="11">median (median_ms)</text>
+<text x="277.08993544189207" y="1800" font-size="11">14.4841</text>
+<rect x="250" y="1809" width="35.861" height="13" fill="#c06122"/>
+<text x="20" y="1820" font-size="11">p95 (p95_ms)</text>
+<text x="291.86109536680505" y="1820" font-size="11">24.6286</text>
+<text x="20" y="1854" font-size="10">0009-ethereum_rpc_finalized_json-n69-full-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1868" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 4 | row 78</text>
+<rect x="250" y="1882" width="11.662" height="13" fill="#1b6b9b"/>
+<text x="20" y="1893" font-size="11">median (median_ms)</text>
+<text x="267.6624416782488" y="1893" font-size="11">8.00952</text>
+<rect x="250" y="1902" width="22.921" height="13" fill="#c06122"/>
+<text x="20" y="1913" font-size="11">p95 (p95_ms)</text>
+<text x="278.9214609265152" y="1913" font-size="11">15.742</text>
+<text x="20" y="1947" font-size="10">0010-ethereum_rpc_finalized_json-n69-leaf-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1961" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 1 | row 82</text>
+<rect x="250" y="1975" width="10.937" height="13" fill="#1b6b9b"/>
+<text x="20" y="1986" font-size="11">median (median_ms)</text>
+<text x="266.93673356047856" y="1986" font-size="11">7.51112</text>
+<rect x="250" y="1995" width="26.435" height="13" fill="#c06122"/>
+<text x="20" y="2006" font-size="11">p95 (p95_ms)</text>
+<text x="282.43485564582306" y="2006" font-size="11">18.1549</text>
+<text x="20" y="2040" font-size="10">0010-ethereum_rpc_finalized_json-n69-leaf-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2054" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 1 | row 86</text>
+<rect x="250" y="2068" width="15.583" height="13" fill="#1b6b9b"/>
+<text x="20" y="2079" font-size="11">median (median_ms)</text>
+<text x="271.58268824289814" y="2079" font-size="11">10.7019</text>
+<rect x="250" y="2088" width="31.479" height="13" fill="#c06122"/>
+<text x="20" y="2099" font-size="11">p95 (p95_ms)</text>
+<text x="287.47916729951714" y="2099" font-size="11">21.6192</text>
+<text x="20" y="2133" font-size="10">0011-synthetic-n4096-full-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2147" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 0 | row 90</text>
+<rect x="250" y="2161" width="2.078" height="13" fill="#1b6b9b"/>
+<text x="20" y="2172" font-size="11">median (median_ms)</text>
+<text x="258.0779221164298" y="2172" font-size="11">1.42707</text>
+<rect x="250" y="2181" width="2.206" height="13" fill="#c06122"/>
+<text x="20" y="2192" font-size="11">p95 (p95_ms)</text>
+<text x="258.20605506290394" y="2192" font-size="11">1.51507</text>
+<text x="20" y="2226" font-size="10">0011-synthetic-n4096-full-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2240" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 0 | row 94</text>
+<rect x="250" y="2254" width="2.029" height="13" fill="#1b6b9b"/>
+<text x="20" y="2265" font-size="11">median (median_ms)</text>
+<text x="258.02865880686875" y="2265" font-size="11">1.39324</text>
+<rect x="250" y="2274" width="2.103" height="13" fill="#c06122"/>
+<text x="20" y="2285" font-size="11">p95 (p95_ms)</text>
+<text x="258.10313343377453" y="2285" font-size="11">1.44439</text>
+<text x="20" y="2319" font-size="10">0012-ethereum_rpc_finalized_json-n69-archive-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2333" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 0 | row 98</text>
+<rect x="250" y="2347" width="10.001" height="13" fill="#1b6b9b"/>
+<text x="20" y="2358" font-size="11">median (median_ms)</text>
+<text x="266.00070738165516" y="2358" font-size="11">6.86827</text>
+<rect x="250" y="2367" width="16.072" height="13" fill="#c06122"/>
+<text x="20" y="2378" font-size="11">p95 (p95_ms)</text>
+<text x="272.0718759063489" y="2378" font-size="11">11.0378</text>
+<text x="20" y="2412" font-size="10">0013-ethereum_rpc_finalized_json-n69-leaf-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2426" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 3 | row 103</text>
+<rect x="250" y="2440" width="13.200" height="13" fill="#1b6b9b"/>
+<text x="20" y="2451" font-size="11">median (median_ms)</text>
+<text x="269.2000610611391" y="2451" font-size="11">9.06552</text>
+<rect x="250" y="2460" width="28.245" height="13" fill="#c06122"/>
+<text x="20" y="2471" font-size="11">p95 (p95_ms)</text>
+<text x="284.2454799340671" y="2471" font-size="11">19.3984</text>
+<text x="20" y="2505" font-size="10">0013-ethereum_rpc_finalized_json-n69-leaf-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2519" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 3 | row 107</text>
+<rect x="250" y="2533" width="12.006" height="13" fill="#1b6b9b"/>
+<text x="20" y="2544" font-size="11">median (median_ms)</text>
+<text x="268.00569335765334" y="2544" font-size="11">8.24526</text>
+<rect x="250" y="2553" width="23.614" height="13" fill="#c06122"/>
+<text x="20" y="2564" font-size="11">p95 (p95_ms)</text>
+<text x="279.6137585812504" y="2564" font-size="11">16.2174</text>
+<text x="20" y="2598" font-size="10">0014-synthetic-n4096-ext_rebuild-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2612" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 3 | row 111</text>
+<rect x="250" y="2626" width="873.731" height="13" fill="#1b6b9b"/>
+<text x="20" y="2637" font-size="11">median (median_ms)</text>
+<text x="1129.7307013984553" y="2637" font-size="11">600.06</text>
+<rect x="250" y="2646" width="877.749" height="13" fill="#c06122"/>
+<text x="20" y="2657" font-size="11">p95 (p95_ms)</text>
+<text x="1133.7486602735378" y="2657" font-size="11">602.819</text>
+<text x="20" y="2691" font-size="10">0014-synthetic-n4096-ext_rebuild-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2705" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 3 | row 115</text>
+<rect x="250" y="2719" width="869.974" height="13" fill="#1b6b9b"/>
+<text x="20" y="2730" font-size="11">median (median_ms)</text>
+<text x="1125.973621618831" y="2730" font-size="11">597.479</text>
+<rect x="250" y="2739" width="874.007" height="13" fill="#c06122"/>
+<text x="20" y="2750" font-size="11">p95 (p95_ms)</text>
+<text x="1130.0065559109967" y="2750" font-size="11">600.249</text>
+<text x="20" y="2784" font-size="10">0015-synthetic-n4096-leaf-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2798" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 4 | row 119</text>
+<rect x="250" y="2812" width="6.586" height="13" fill="#1b6b9b"/>
+<text x="20" y="2823" font-size="11">median (median_ms)</text>
+<text x="262.58626627480504" y="2823" font-size="11">4.52331</text>
+<rect x="250" y="2832" width="6.647" height="13" fill="#c06122"/>
+<text x="20" y="2843" font-size="11">p95 (p95_ms)</text>
+<text x="262.6466117541136" y="2843" font-size="11">4.56475</text>
+<text x="20" y="2877" font-size="10">0015-synthetic-n4096-leaf-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2891" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 4 | row 123</text>
+<rect x="250" y="2905" width="12.127" height="13" fill="#1b6b9b"/>
+<text x="20" y="2916" font-size="11">median (median_ms)</text>
+<text x="268.12689830995345" y="2916" font-size="11">8.3285</text>
+<rect x="250" y="2925" width="13.713" height="13" fill="#c06122"/>
+<text x="20" y="2936" font-size="11">p95 (p95_ms)</text>
+<text x="269.71332000977014" y="2936" font-size="11">9.41802</text>
+<text x="20" y="2970" font-size="10">0016-synthetic-n512-ext_cached-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="2984" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 1 | row 127</text>
+<rect x="250" y="2998" width="2.006" height="13" fill="#1b6b9b"/>
+<text x="20" y="3009" font-size="11">median (median_ms)</text>
+<text x="258.0056317442656" y="3009" font-size="11">1.37743</text>
+<rect x="250" y="3018" width="2.893" height="13" fill="#c06122"/>
+<text x="20" y="3029" font-size="11">p95 (p95_ms)</text>
+<text x="258.893305387037" y="3029" font-size="11">1.98706</text>
+<text x="20" y="3063" font-size="10">0016-synthetic-n512-ext_cached-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3077" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 1 | row 131</text>
+<rect x="250" y="3091" width="1.959" height="13" fill="#1b6b9b"/>
+<text x="20" y="3102" font-size="11">median (median_ms)</text>
+<text x="257.9589303947191" y="3102" font-size="11">1.34535</text>
+<rect x="250" y="3111" width="2.031" height="13" fill="#c06122"/>
+<text x="20" y="3122" font-size="11">p95 (p95_ms)</text>
+<text x="258.03138792403576" y="3122" font-size="11">1.39511</text>
+<text x="20" y="3156" font-size="10">0017-synthetic-n4096-leaf-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3170" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 3 | row 135</text>
+<rect x="250" y="3184" width="6.621" height="13" fill="#1b6b9b"/>
+<text x="20" y="3195" font-size="11">median (median_ms)</text>
+<text x="262.6207125879988" y="3195" font-size="11">4.54697</text>
+<rect x="250" y="3204" width="6.726" height="13" fill="#c06122"/>
+<text x="20" y="3215" font-size="11">p95 (p95_ms)</text>
+<text x="262.72608893738425" y="3215" font-size="11">4.61934</text>
+<text x="20" y="3249" font-size="10">0017-synthetic-n4096-leaf-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3263" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 3 | row 139</text>
+<rect x="250" y="3277" width="12.275" height="13" fill="#1b6b9b"/>
+<text x="20" y="3288" font-size="11">median (median_ms)</text>
+<text x="268.27451278186936" y="3288" font-size="11">8.42988</text>
+<rect x="250" y="3297" width="13.808" height="13" fill="#c06122"/>
+<text x="20" y="3308" font-size="11">p95 (p95_ms)</text>
+<text x="269.80771393039186" y="3308" font-size="11">9.48285</text>
+<text x="20" y="3342" font-size="10">0018-synthetic-n4096-leaf-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3356" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 0 | row 143</text>
+<rect x="250" y="3370" width="6.681" height="13" fill="#1b6b9b"/>
+<text x="20" y="3381" font-size="11">median (median_ms)</text>
+<text x="262.6808149031571" y="3381" font-size="11">4.58824</text>
+<rect x="250" y="3390" width="6.859" height="13" fill="#c06122"/>
+<text x="20" y="3401" font-size="11">p95 (p95_ms)</text>
+<text x="262.85897377729833" y="3401" font-size="11">4.7106</text>
+<text x="20" y="3435" font-size="10">0018-synthetic-n4096-leaf-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3449" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 0 | row 147</text>
+<rect x="250" y="3463" width="12.194" height="13" fill="#1b6b9b"/>
+<text x="20" y="3474" font-size="11">median (median_ms)</text>
+<text x="268.1941870722" y="3474" font-size="11">8.37471</text>
+<rect x="250" y="3483" width="13.739" height="13" fill="#c06122"/>
+<text x="20" y="3494" font-size="11">p95 (p95_ms)</text>
+<text x="269.7393109812722" y="3494" font-size="11">9.43587</text>
+<text x="20" y="3528" font-size="10">0019-synthetic-n4096-full-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3542" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 4 | row 151</text>
+<rect x="250" y="3556" width="2.101" height="13" fill="#1b6b9b"/>
+<text x="20" y="3567" font-size="11">median (median_ms)</text>
+<text x="258.1008013876482" y="3567" font-size="11">1.44279</text>
+<rect x="250" y="3576" width="2.160" height="13" fill="#c06122"/>
+<text x="20" y="3587" font-size="11">p95 (p95_ms)</text>
+<text x="258.15972391985576" y="3587" font-size="11">1.48325</text>
+<text x="20" y="3621" font-size="10">0019-synthetic-n4096-full-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3635" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 4 | row 155</text>
+<rect x="250" y="3649" width="2.040" height="13" fill="#1b6b9b"/>
+<text x="20" y="3660" font-size="11">median (median_ms)</text>
+<text x="258.0402273049169" y="3660" font-size="11">1.40118</text>
+<rect x="250" y="3669" width="2.121" height="13" fill="#c06122"/>
+<text x="20" y="3680" font-size="11">p95 (p95_ms)</text>
+<text x="258.1205758749285" y="3680" font-size="11">1.45637</text>
+<text x="20" y="3714" font-size="10">0020-synthetic-n4096-ext_rebuild-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3728" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 2 | row 159</text>
+<rect x="250" y="3742" width="874.868" height="13" fill="#1b6b9b"/>
+<text x="20" y="3753" font-size="11">median (median_ms)</text>
+<text x="1130.867682362473" y="3753" font-size="11">600.841</text>
+<rect x="250" y="3762" width="879.104" height="13" fill="#c06122"/>
+<text x="20" y="3773" font-size="11">p95 (p95_ms)</text>
+<text x="1135.1038941670936" y="3773" font-size="11">603.75</text>
+<text x="20" y="3807" font-size="10">0020-synthetic-n4096-ext_rebuild-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3821" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 2 | row 163</text>
+<rect x="250" y="3835" width="874.322" height="13" fill="#1b6b9b"/>
+<text x="20" y="3846" font-size="11">median (median_ms)</text>
+<text x="1130.3217242423484" y="3846" font-size="11">600.466</text>
+<rect x="250" y="3855" width="878.271" height="13" fill="#c06122"/>
+<text x="20" y="3866" font-size="11">p95 (p95_ms)</text>
+<text x="1134.2708895767944" y="3866" font-size="11">603.178</text>
+<text x="20" y="3900" font-size="10">0021-synthetic-n4096-ext_rebuild-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="3914" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 4 | row 167</text>
+<rect x="250" y="3928" width="870.840" height="13" fill="#1b6b9b"/>
+<text x="20" y="3939" font-size="11">median (median_ms)</text>
+<text x="1126.8400788254717" y="3939" font-size="11">598.075</text>
+<rect x="250" y="3948" width="879.712" height="13" fill="#c06122"/>
+<text x="20" y="3959" font-size="11">p95 (p95_ms)</text>
+<text x="1135.7119243047978" y="3959" font-size="11">604.168</text>
+<text x="20" y="3993" font-size="10">0021-synthetic-n4096-ext_rebuild-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4007" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 4 | row 171</text>
+<rect x="250" y="4021" width="870.576" height="13" fill="#1b6b9b"/>
+<text x="20" y="4032" font-size="11">median (median_ms)</text>
+<text x="1126.5761772869896" y="4032" font-size="11">597.893</text>
+<rect x="250" y="4041" width="873.570" height="13" fill="#c06122"/>
+<text x="20" y="4052" font-size="11">p95 (p95_ms)</text>
+<text x="1129.5703066847436" y="4052" font-size="11">599.95</text>
+<text x="20" y="4086" font-size="10">0022-synthetic-n4096-full-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4100" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 2 | row 175</text>
+<rect x="250" y="4114" width="2.074" height="13" fill="#1b6b9b"/>
+<text x="20" y="4125" font-size="11">median (median_ms)</text>
+<text x="258.0744981613435" y="4125" font-size="11">1.42472</text>
+<rect x="250" y="4134" width="2.195" height="13" fill="#c06122"/>
+<text x="20" y="4145" font-size="11">p95 (p95_ms)</text>
+<text x="258.1952153292703" y="4145" font-size="11">1.50763</text>
+<text x="20" y="4179" font-size="10">0022-synthetic-n4096-full-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4193" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 2 | row 179</text>
+<rect x="250" y="4207" width="2.059" height="13" fill="#1b6b9b"/>
+<text x="20" y="4218" font-size="11">median (median_ms)</text>
+<text x="258.05902083598136" y="4218" font-size="11">1.41409</text>
+<rect x="250" y="4227" width="2.131" height="13" fill="#c06122"/>
+<text x="20" y="4238" font-size="11">p95 (p95_ms)</text>
+<text x="258.13081643462294" y="4238" font-size="11">1.4634</text>
+<text x="20" y="4272" font-size="10">0023-synthetic-n512-ext_cached-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4286" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 0 | row 183</text>
+<rect x="250" y="4300" width="1.989" height="13" fill="#1b6b9b"/>
+<text x="20" y="4311" font-size="11">median (median_ms)</text>
+<text x="257.9894948179449" y="4311" font-size="11">1.36634</text>
+<rect x="250" y="4320" width="2.505" height="13" fill="#c06122"/>
+<text x="20" y="4331" font-size="11">p95 (p95_ms)</text>
+<text x="258.5053821235082" y="4331" font-size="11">1.72064</text>
+<text x="20" y="4365" font-size="10">0023-synthetic-n512-ext_cached-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4379" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 0 | row 187</text>
+<rect x="250" y="4393" width="2.011" height="13" fill="#1b6b9b"/>
+<text x="20" y="4404" font-size="11">median (median_ms)</text>
+<text x="258.0112944112145" y="4404" font-size="11">1.38131</text>
+<rect x="250" y="4413" width="4.174" height="13" fill="#c06122"/>
+<text x="20" y="4424" font-size="11">p95 (p95_ms)</text>
+<text x="260.1738607306977" y="4424" font-size="11">2.86652</text>
+<text x="20" y="4458" font-size="10">0024-ethereum_rpc_finalized_json-n69-ext_rebuild-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="4472" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 4 | row 192</text>
+<rect x="250" y="4486" width="397.295" height="13" fill="#1b6b9b"/>
+<text x="20" y="4497" font-size="11">median (median_ms)</text>
+<text x="653.2952882008638" y="4497" font-size="11">272.854</text>
+<rect x="250" y="4506" width="422.341" height="13" fill="#c06122"/>
+<text x="20" y="4517" font-size="11">p95 (p95_ms)</text>
+<text x="678.3407439339426" y="4517" font-size="11">290.055</text>
+<text x="20" y="4551" font-size="10">0024-ethereum_rpc_finalized_json-n69-ext_rebuild-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="4565" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 4 | row 196</text>
+<rect x="250" y="4579" width="396.716" height="13" fill="#1b6b9b"/>
+<text x="20" y="4590" font-size="11">median (median_ms)</text>
+<text x="652.7159554370938" y="4590" font-size="11">272.456</text>
+<rect x="250" y="4599" width="405.593" height="13" fill="#c06122"/>
+<text x="20" y="4610" font-size="11">p95 (p95_ms)</text>
+<text x="661.5930903919214" y="4610" font-size="11">278.553</text>
+<text x="20" y="4644" font-size="10">0025-synthetic-n512-leaf-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4658" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 3 | row 200</text>
+<rect x="250" y="4672" width="2.536" height="13" fill="#1b6b9b"/>
+<text x="20" y="4683" font-size="11">median (median_ms)</text>
+<text x="258.5363076527774" y="4683" font-size="11">1.74188</text>
+<rect x="250" y="4692" width="3.023" height="13" fill="#c06122"/>
+<text x="20" y="4703" font-size="11">p95 (p95_ms)</text>
+<text x="259.0228117741385" y="4703" font-size="11">2.076</text>
+<text x="20" y="4737" font-size="10">0025-synthetic-n512-leaf-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4751" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 3 | row 204</text>
+<rect x="250" y="4765" width="2.530" height="13" fill="#1b6b9b"/>
+<text x="20" y="4776" font-size="11">median (median_ms)</text>
+<text x="258.5296206386445" y="4776" font-size="11">1.73729</text>
+<rect x="250" y="4785" width="3.905" height="13" fill="#c06122"/>
+<text x="20" y="4796" font-size="11">p95 (p95_ms)</text>
+<text x="259.90521530717604" y="4796" font-size="11">2.68202</text>
+<text x="20" y="4830" font-size="10">0026-synthetic-n4096-leaf-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4844" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 2 | row 208</text>
+<rect x="250" y="4858" width="6.963" height="13" fill="#1b6b9b"/>
+<text x="20" y="4869" font-size="11">median (median_ms)</text>
+<text x="262.96274771861556" y="4869" font-size="11">4.78187</text>
+<rect x="250" y="4878" width="7.095" height="13" fill="#c06122"/>
+<text x="20" y="4889" font-size="11">p95 (p95_ms)</text>
+<text x="263.0946540776375" y="4889" font-size="11">4.87246</text>
+<text x="20" y="4923" font-size="10">0026-synthetic-n4096-leaf-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="4937" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 2 | row 212</text>
+<rect x="250" y="4951" width="12.386" height="13" fill="#1b6b9b"/>
+<text x="20" y="4962" font-size="11">median (median_ms)</text>
+<text x="268.3863537302742" y="4962" font-size="11">8.50669</text>
+<rect x="250" y="4971" width="13.917" height="13" fill="#c06122"/>
+<text x="20" y="4982" font-size="11">p95 (p95_ms)</text>
+<text x="269.9170298302265" y="4982" font-size="11">9.55792</text>
+<text x="20" y="5016" font-size="10">0027-synthetic-n512-leaf-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5030" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 2 | row 216</text>
+<rect x="250" y="5044" width="2.531" height="13" fill="#1b6b9b"/>
+<text x="20" y="5055" font-size="11">median (median_ms)</text>
+<text x="258.53101046009033" y="5055" font-size="11">1.73824</text>
+<rect x="250" y="5064" width="2.720" height="13" fill="#c06122"/>
+<text x="20" y="5075" font-size="11">p95 (p95_ms)</text>
+<text x="258.71958899087497" y="5075" font-size="11">1.86776</text>
+<text x="20" y="5109" font-size="10">0027-synthetic-n512-leaf-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5123" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 2 | row 220</text>
+<rect x="250" y="5137" width="3.866" height="13" fill="#1b6b9b"/>
+<text x="20" y="5148" font-size="11">median (median_ms)</text>
+<text x="259.8656838782921" y="5148" font-size="11">2.65487</text>
+<rect x="250" y="5157" width="4.161" height="13" fill="#c06122"/>
+<text x="20" y="5168" font-size="11">p95 (p95_ms)</text>
+<text x="260.16103600587917" y="5168" font-size="11">2.85771</text>
+<text x="20" y="5202" font-size="10">0028-synthetic-n512-leaf-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5216" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 0 | row 224</text>
+<rect x="250" y="5230" width="2.516" height="13" fill="#1b6b9b"/>
+<text x="20" y="5241" font-size="11">median (median_ms)</text>
+<text x="258.51595029957275" y="5241" font-size="11">1.7279</text>
+<rect x="250" y="5250" width="4.231" height="13" fill="#c06122"/>
+<text x="20" y="5261" font-size="11">p95 (p95_ms)</text>
+<text x="260.23149704103605" y="5261" font-size="11">2.9061</text>
+<text x="20" y="5295" font-size="10">0028-synthetic-n512-leaf-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5309" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 0 | row 228</text>
+<rect x="250" y="5323" width="2.480" height="13" fill="#1b6b9b"/>
+<text x="20" y="5334" font-size="11">median (median_ms)</text>
+<text x="258.480425764503" y="5334" font-size="11">1.7035</text>
+<rect x="250" y="5343" width="2.572" height="13" fill="#c06122"/>
+<text x="20" y="5354" font-size="11">p95 (p95_ms)</text>
+<text x="258.5720661787391" y="5354" font-size="11">1.76644</text>
+<text x="20" y="5388" font-size="10">0029-ethereum_rpc_finalized_json-n69-full-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5402" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 0 | row 233</text>
+<rect x="250" y="5416" width="21.864" height="13" fill="#1b6b9b"/>
+<text x="20" y="5427" font-size="11">median (median_ms)</text>
+<text x="277.8636779438171" y="5427" font-size="11">15.0155</text>
+<rect x="250" y="5436" width="34.311" height="13" fill="#c06122"/>
+<text x="20" y="5447" font-size="11">p95 (p95_ms)</text>
+<text x="290.3109162643379" y="5447" font-size="11">23.564</text>
+<text x="20" y="5481" font-size="10">0029-ethereum_rpc_finalized_json-n69-full-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5495" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 0 | row 237</text>
+<rect x="250" y="5509" width="11.732" height="13" fill="#1b6b9b"/>
+<text x="20" y="5520" font-size="11">median (median_ms)</text>
+<text x="267.7320885503241" y="5520" font-size="11">8.05735</text>
+<rect x="250" y="5529" width="22.784" height="13" fill="#c06122"/>
+<text x="20" y="5540" font-size="11">p95 (p95_ms)</text>
+<text x="278.78373318861395" y="5540" font-size="11">15.6474</text>
+<text x="20" y="5574" font-size="10">0030-synthetic-n512-ext_rebuild-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5588" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 2 | row 241</text>
+<rect x="250" y="5602" width="110.317" height="13" fill="#1b6b9b"/>
+<text x="20" y="5613" font-size="11">median (median_ms)</text>
+<text x="366.31724325323034" y="5613" font-size="11">75.7636</text>
+<rect x="250" y="5622" width="111.188" height="13" fill="#c06122"/>
+<text x="20" y="5633" font-size="11">p95 (p95_ms)</text>
+<text x="367.1875241069288" y="5633" font-size="11">76.3612</text>
+<text x="20" y="5667" font-size="10">0030-synthetic-n512-ext_rebuild-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5681" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 2 | row 245</text>
+<rect x="250" y="5695" width="110.362" height="13" fill="#1b6b9b"/>
+<text x="20" y="5706" font-size="11">median (median_ms)</text>
+<text x="366.36195051113714" y="5706" font-size="11">75.7943</text>
+<rect x="250" y="5715" width="111.128" height="13" fill="#c06122"/>
+<text x="20" y="5726" font-size="11">p95 (p95_ms)</text>
+<text x="367.12846514070395" y="5726" font-size="11">76.3207</text>
+<text x="20" y="5760" font-size="10">0031-synthetic-n4096-archive-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5774" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 4 | row 249</text>
+<rect x="250" y="5788" width="1.900" height="13" fill="#1b6b9b"/>
+<text x="20" y="5799" font-size="11">median (median_ms)</text>
+<text x="257.9004253913745" y="5799" font-size="11">1.30517</text>
+<rect x="250" y="5808" width="2.062" height="13" fill="#c06122"/>
+<text x="20" y="5819" font-size="11">p95 (p95_ms)</text>
+<text x="258.0624844690502" y="5819" font-size="11">1.41647</text>
+<text x="20" y="5853" font-size="10">0032-synthetic-n512-ext_cached-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5867" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 4 | row 254</text>
+<rect x="250" y="5881" width="1.980" height="13" fill="#1b6b9b"/>
+<text x="20" y="5892" font-size="11">median (median_ms)</text>
+<text x="257.9800427216479" y="5892" font-size="11">1.35985</text>
+<rect x="250" y="5901" width="2.065" height="13" fill="#c06122"/>
+<text x="20" y="5912" font-size="11">p95 (p95_ms)</text>
+<text x="258.06515345041237" y="5912" font-size="11">1.4183</text>
+<text x="20" y="5946" font-size="10">0032-synthetic-n512-ext_cached-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="5960" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 4 | row 258</text>
+<rect x="250" y="5974" width="2.000" height="13" fill="#1b6b9b"/>
+<text x="20" y="5985" font-size="11">median (median_ms)</text>
+<text x="258.00042701219854" y="5985" font-size="11">1.37385</text>
+<rect x="250" y="5994" width="2.031" height="13" fill="#c06122"/>
+<text x="20" y="6005" font-size="11">p95 (p95_ms)</text>
+<text x="258.03055009977186" y="6005" font-size="11">1.39454</text>
+<text x="20" y="6039" font-size="10">0033-synthetic-n512-full-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6053" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 0 | row 262</text>
+<rect x="250" y="6067" width="1.975" height="13" fill="#1b6b9b"/>
+<text x="20" y="6078" font-size="11">median (median_ms)</text>
+<text x="257.97502727903907" y="6078" font-size="11">1.35641</text>
+<rect x="250" y="6087" width="2.068" height="13" fill="#c06122"/>
+<text x="20" y="6098" font-size="11">p95 (p95_ms)</text>
+<text x="258.06762076569777" y="6098" font-size="11">1.42</text>
+<text x="20" y="6132" font-size="10">0033-synthetic-n512-full-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6146" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 0 | row 266</text>
+<rect x="250" y="6160" width="1.996" height="13" fill="#1b6b9b"/>
+<text x="20" y="6171" font-size="11">median (median_ms)</text>
+<text x="257.99605952196623" y="6171" font-size="11">1.37085</text>
+<rect x="250" y="6180" width="2.030" height="13" fill="#c06122"/>
+<text x="20" y="6191" font-size="11">p95 (p95_ms)</text>
+<text x="258.0301674438515" y="6191" font-size="11">1.39428</text>
+<text x="20" y="6225" font-size="10">0034-synthetic-n512-ext_rebuild-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6239" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 3 | row 271</text>
+<rect x="250" y="6253" width="110.061" height="13" fill="#1b6b9b"/>
+<text x="20" y="6264" font-size="11">median (median_ms)</text>
+<text x="366.0614207344363" y="6264" font-size="11">75.5879</text>
+<rect x="250" y="6273" width="110.664" height="13" fill="#c06122"/>
+<text x="20" y="6284" font-size="11">p95 (p95_ms)</text>
+<text x="366.66413183836175" y="6284" font-size="11">76.0018</text>
+<text x="20" y="6318" font-size="10">0034-synthetic-n512-ext_rebuild-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6332" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 3 | row 275</text>
+<rect x="250" y="6346" width="110.793" height="13" fill="#1b6b9b"/>
+<text x="20" y="6357" font-size="11">median (median_ms)</text>
+<text x="366.7926713931531" y="6357" font-size="11">76.0901</text>
+<rect x="250" y="6366" width="111.790" height="13" fill="#c06122"/>
+<text x="20" y="6377" font-size="11">p95 (p95_ms)</text>
+<text x="367.78975943908114" y="6377" font-size="11">76.7748</text>
+<text x="20" y="6411" font-size="10">0035-synthetic-n512-ext_rebuild-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6425" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 1 | row 279</text>
+<rect x="250" y="6439" width="110.691" height="13" fill="#1b6b9b"/>
+<text x="20" y="6450" font-size="11">median (median_ms)</text>
+<text x="366.6906676722892" y="6450" font-size="11">76.02</text>
+<rect x="250" y="6459" width="115.860" height="13" fill="#c06122"/>
+<text x="20" y="6470" font-size="11">p95 (p95_ms)</text>
+<text x="371.8595392155209" y="6470" font-size="11">79.5699</text>
+<text x="20" y="6504" font-size="10">0035-synthetic-n512-ext_rebuild-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6518" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 1 | row 283</text>
+<rect x="250" y="6532" width="110.691" height="13" fill="#1b6b9b"/>
+<text x="20" y="6543" font-size="11">median (median_ms)</text>
+<text x="366.69101858582343" y="6543" font-size="11">76.0203</text>
+<rect x="250" y="6552" width="111.447" height="13" fill="#c06122"/>
+<text x="20" y="6563" font-size="11">p95 (p95_ms)</text>
+<text x="367.4469630736274" y="6563" font-size="11">76.5394</text>
+<text x="20" y="6597" font-size="10">0036-synthetic-n4096-ext_rebuild-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6611" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 0 | row 287</text>
+<rect x="250" y="6625" width="870.864" height="13" fill="#1b6b9b"/>
+<text x="20" y="6636" font-size="11">median (median_ms)</text>
+<text x="1126.863841932853" y="6636" font-size="11">598.091</text>
+<rect x="250" y="6645" width="874.376" height="13" fill="#c06122"/>
+<text x="20" y="6656" font-size="11">p95 (p95_ms)</text>
+<text x="1130.3758934250432" y="6656" font-size="11">600.503</text>
+<text x="20" y="6690" font-size="10">0036-synthetic-n4096-ext_rebuild-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6704" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 0 | row 291</text>
+<rect x="250" y="6718" width="872.918" height="13" fill="#1b6b9b"/>
+<text x="20" y="6729" font-size="11">median (median_ms)</text>
+<text x="1128.9184530524922" y="6729" font-size="11">599.502</text>
+<rect x="250" y="6738" width="875.816" height="13" fill="#c06122"/>
+<text x="20" y="6749" font-size="11">p95 (p95_ms)</text>
+<text x="1131.815744948325" y="6749" font-size="11">601.492</text>
+<text x="20" y="6783" font-size="10">0037-synthetic-n4096-ext_cached-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6797" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 2 | row 295</text>
+<rect x="250" y="6811" width="2.083" height="13" fill="#1b6b9b"/>
+<text x="20" y="6822" font-size="11">median (median_ms)</text>
+<text x="258.0832200371533" y="6822" font-size="11">1.43071</text>
+<rect x="250" y="6831" width="2.159" height="13" fill="#c06122"/>
+<text x="20" y="6842" font-size="11">p95 (p95_ms)</text>
+<text x="258.1588943224029" y="6842" font-size="11">1.48268</text>
+<text x="20" y="6876" font-size="10">0037-synthetic-n4096-ext_cached-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="6890" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 2 | row 299</text>
+<rect x="250" y="6904" width="2.054" height="13" fill="#1b6b9b"/>
+<text x="20" y="6915" font-size="11">median (median_ms)</text>
+<text x="258.0539515186806" y="6915" font-size="11">1.41061</text>
+<rect x="250" y="6924" width="5.691" height="13" fill="#c06122"/>
+<text x="20" y="6935" font-size="11">p95 (p95_ms)</text>
+<text x="261.69069096200747" y="6935" font-size="11">3.90825</text>
+<text x="20" y="6969" font-size="10">0038-ethereum_rpc_finalized_json-n69-full-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6983" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 2 | row 303</text>
+<rect x="250" y="6997" width="11.604" height="13" fill="#1b6b9b"/>
+<text x="20" y="7008" font-size="11">median (median_ms)</text>
+<text x="267.60409393076174" y="7008" font-size="11">7.96945</text>
+<rect x="250" y="7017" width="17.972" height="13" fill="#c06122"/>
+<text x="20" y="7028" font-size="11">p95 (p95_ms)</text>
+<text x="273.97174981016695" y="7028" font-size="11">12.3426</text>
+<text x="20" y="7062" font-size="10">0038-ethereum_rpc_finalized_json-n69-full-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="7076" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 2 | row 307</text>
+<rect x="250" y="7090" width="11.669" height="13" fill="#1b6b9b"/>
+<text x="20" y="7101" font-size="11">median (median_ms)</text>
+<text x="267.6690223990705" y="7101" font-size="11">8.01404</text>
+<rect x="250" y="7110" width="26.112" height="13" fill="#c06122"/>
+<text x="20" y="7121" font-size="11">p95 (p95_ms)</text>
+<text x="282.11169740643606" y="7121" font-size="11">17.933</text>
+<text x="20" y="7155" font-size="10">0039-synthetic-n4096-ext_rebuild-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="7169" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 1 | row 311</text>
+<rect x="250" y="7183" width="873.785" height="13" fill="#1b6b9b"/>
+<text x="20" y="7194" font-size="11">median (median_ms)</text>
+<text x="1129.78522841103" y="7194" font-size="11">600.097</text>
+<rect x="250" y="7203" width="876.285" height="13" fill="#c06122"/>
+<text x="20" y="7214" font-size="11">p95 (p95_ms)</text>
+<text x="1132.285290044687" y="7214" font-size="11">601.814</text>
+<text x="20" y="7248" font-size="10">0039-synthetic-n4096-ext_rebuild-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="7262" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 1 | row 315</text>
+<rect x="250" y="7276" width="876.943" height="13" fill="#1b6b9b"/>
+<text x="20" y="7287" font-size="11">median (median_ms)</text>
+<text x="1132.9430272301242" y="7287" font-size="11">602.266</text>
+<rect x="250" y="7296" width="880.000" height="13" fill="#c06122"/>
+<text x="20" y="7307" font-size="11">p95 (p95_ms)</text>
+<text x="1136.0" y="7307" font-size="11">604.365</text>
+<text x="20" y="7341" font-size="10">0040-synthetic-n4096-archive-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="7355" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 2 | row 319</text>
+<rect x="250" y="7369" width="1.901" height="13" fill="#1b6b9b"/>
+<text x="20" y="7380" font-size="11">median (median_ms)</text>
+<text x="257.900992531713" y="7380" font-size="11">1.30556</text>
+<rect x="250" y="7389" width="2.108" height="13" fill="#c06122"/>
+<text x="20" y="7400" font-size="11">p95 (p95_ms)</text>
+<text x="258.10842574861795" y="7400" font-size="11">1.44802</text>
+<text x="20" y="7434" font-size="10">0041-synthetic-n512-archive-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="7448" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 1 | row 324</text>
+<rect x="250" y="7462" width="1.805" height="13" fill="#1b6b9b"/>
+<text x="20" y="7473" font-size="11">median (median_ms)</text>
+<text x="257.80549964017854" y="7473" font-size="11">1.23998</text>
+<rect x="250" y="7482" width="1.900" height="13" fill="#c06122"/>
+<text x="20" y="7493" font-size="11">p95 (p95_ms)</text>
+<text x="257.8999747368564" y="7493" font-size="11">1.30486</text>
+<text x="20" y="7527" font-size="10">0042-synthetic-n512-full-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="7541" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 4 | row 329</text>
+<rect x="250" y="7555" width="2.008" height="13" fill="#1b6b9b"/>
+<text x="20" y="7566" font-size="11">median (median_ms)</text>
+<text x="258.00782895805474" y="7566" font-size="11">1.37893</text>
+<rect x="250" y="7575" width="2.067" height="13" fill="#c06122"/>
+<text x="20" y="7586" font-size="11">p95 (p95_ms)</text>
+<text x="258.0668130093362" y="7586" font-size="11">1.41944</text>
+<text x="20" y="7620" font-size="10">0042-synthetic-n512-full-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="7634" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 4 | row 333</text>
+<rect x="250" y="7648" width="1.998" height="13" fill="#1b6b9b"/>
+<text x="20" y="7659" font-size="11">median (median_ms)</text>
+<text x="257.9979072782939" y="7659" font-size="11">1.37212</text>
+<rect x="250" y="7668" width="2.061" height="13" fill="#c06122"/>
+<text x="20" y="7679" font-size="11">p95 (p95_ms)</text>
+<text x="258.06124280300736" y="7679" font-size="11">1.41562</text>
+<text x="20" y="7713" font-size="10">0043-synthetic-n512-ext_rebuild-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="7727" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 0 | row 337</text>
+<rect x="250" y="7741" width="110.205" height="13" fill="#1b6b9b"/>
+<text x="20" y="7752" font-size="11">median (median_ms)</text>
+<text x="366.2050149894723" y="7752" font-size="11">75.6865</text>
+<rect x="250" y="7761" width="119.121" height="13" fill="#c06122"/>
+<text x="20" y="7772" font-size="11">p95 (p95_ms)</text>
+<text x="375.1210209713852" y="7772" font-size="11">81.8098</text>
+<text x="20" y="7806" font-size="10">0043-synthetic-n512-ext_rebuild-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="7820" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 0 | row 341</text>
+<rect x="250" y="7834" width="110.558" height="13" fill="#1b6b9b"/>
+<text x="20" y="7845" font-size="11">median (median_ms)</text>
+<text x="366.5580543899442" y="7845" font-size="11">75.9289</text>
+<rect x="250" y="7854" width="111.776" height="13" fill="#c06122"/>
+<text x="20" y="7865" font-size="11">p95 (p95_ms)</text>
+<text x="367.7756465994988" y="7865" font-size="11">76.7652</text>
+<text x="20" y="7899" font-size="10">0044-ethereum_rpc_finalized_json-n69-ext_cached-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="7913" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 4 | row 346</text>
+<rect x="250" y="7927" width="13.910" height="13" fill="#1b6b9b"/>
+<text x="20" y="7938" font-size="11">median (median_ms)</text>
+<text x="269.9096730226257" y="7938" font-size="11">9.55287</text>
+<rect x="250" y="7947" width="21.734" height="13" fill="#c06122"/>
+<text x="20" y="7958" font-size="11">p95 (p95_ms)</text>
+<text x="277.73386687349137" y="7958" font-size="11">14.9264</text>
+<text x="20" y="7992" font-size="10">0044-ethereum_rpc_finalized_json-n69-ext_cached-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="8006" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 4 | row 350</text>
+<rect x="250" y="8020" width="11.686" height="13" fill="#1b6b9b"/>
+<text x="20" y="8031" font-size="11">median (median_ms)</text>
+<text x="267.6856332770734" y="8031" font-size="11">8.02545</text>
+<rect x="250" y="8040" width="24.533" height="13" fill="#c06122"/>
+<text x="20" y="8051" font-size="11">p95 (p95_ms)</text>
+<text x="280.5333634627438" y="8051" font-size="11">16.849</text>
+<text x="20" y="8085" font-size="10">0045-synthetic-n4096-leaf-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8099" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 1 | row 354</text>
+<rect x="250" y="8113" width="7.079" height="13" fill="#1b6b9b"/>
+<text x="20" y="8124" font-size="11">median (median_ms)</text>
+<text x="263.0793289118783" y="8124" font-size="11">4.86193</text>
+<rect x="250" y="8133" width="7.237" height="13" fill="#c06122"/>
+<text x="20" y="8144" font-size="11">p95 (p95_ms)</text>
+<text x="263.2365905938405" y="8144" font-size="11">4.96994</text>
+<text x="20" y="8178" font-size="10">0045-synthetic-n4096-leaf-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8192" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 1 | row 358</text>
+<rect x="250" y="8206" width="12.671" height="13" fill="#1b6b9b"/>
+<text x="20" y="8217" font-size="11">median (median_ms)</text>
+<text x="268.67077570210944" y="8217" font-size="11">8.70202</text>
+<rect x="250" y="8226" width="14.332" height="13" fill="#c06122"/>
+<text x="20" y="8237" font-size="11">p95 (p95_ms)</text>
+<text x="270.3324088744502" y="8237" font-size="11">9.8432</text>
+<text x="20" y="8271" font-size="10">0046-synthetic-n512-ext_rebuild-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8285" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 4 | row 362</text>
+<rect x="250" y="8299" width="110.428" height="13" fill="#1b6b9b"/>
+<text x="20" y="8310" font-size="11">median (median_ms)</text>
+<text x="366.4279695779403" y="8310" font-size="11">75.8396</text>
+<rect x="250" y="8319" width="114.657" height="13" fill="#c06122"/>
+<text x="20" y="8330" font-size="11">p95 (p95_ms)</text>
+<text x="370.65687371741575" y="8330" font-size="11">78.7439</text>
+<text x="20" y="8364" font-size="10">0046-synthetic-n512-ext_rebuild-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8378" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 4 | row 366</text>
+<rect x="250" y="8392" width="110.783" height="13" fill="#1b6b9b"/>
+<text x="20" y="8403" font-size="11">median (median_ms)</text>
+<text x="366.7834493563516" y="8403" font-size="11">76.0837</text>
+<rect x="250" y="8412" width="111.889" height="13" fill="#c06122"/>
+<text x="20" y="8423" font-size="11">p95 (p95_ms)</text>
+<text x="367.88942703681494" y="8423" font-size="11">76.8433</text>
+<text x="20" y="8457" font-size="10">0047-synthetic-n4096-ext_cached-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8471" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 4 | row 370</text>
+<rect x="250" y="8485" width="2.047" height="13" fill="#1b6b9b"/>
+<text x="20" y="8496" font-size="11">median (median_ms)</text>
+<text x="258.04669736420914" y="8496" font-size="11">1.40563</text>
+<rect x="250" y="8505" width="2.124" height="13" fill="#c06122"/>
+<text x="20" y="8516" font-size="11">p95 (p95_ms)</text>
+<text x="258.1235452441002" y="8516" font-size="11">1.45841</text>
+<text x="20" y="8550" font-size="10">0047-synthetic-n4096-ext_cached-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8564" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 4 | row 374</text>
+<rect x="250" y="8578" width="2.055" height="13" fill="#1b6b9b"/>
+<text x="20" y="8589" font-size="11">median (median_ms)</text>
+<text x="258.0550166359018" y="8589" font-size="11">1.41134</text>
+<rect x="250" y="8598" width="2.129" height="13" fill="#c06122"/>
+<text x="20" y="8609" font-size="11">p95 (p95_ms)</text>
+<text x="258.1294929372912" y="8609" font-size="11">1.46249</text>
+<text x="20" y="8643" font-size="10">0048-synthetic-n512-leaf-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8657" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 4 | row 378</text>
+<rect x="250" y="8671" width="2.569" height="13" fill="#1b6b9b"/>
+<text x="20" y="8682" font-size="11">median (median_ms)</text>
+<text x="258.56867979032995" y="8682" font-size="11">1.76411</text>
+<rect x="250" y="8691" width="2.610" height="13" fill="#c06122"/>
+<text x="20" y="8702" font-size="11">p95 (p95_ms)</text>
+<text x="258.61004900144314" y="8702" font-size="11">1.79253</text>
+<text x="20" y="8736" font-size="10">0048-synthetic-n512-leaf-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8750" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 4 | row 382</text>
+<rect x="250" y="8764" width="2.538" height="13" fill="#1b6b9b"/>
+<text x="20" y="8775" font-size="11">median (median_ms)</text>
+<text x="258.53772441156923" y="8775" font-size="11">1.74286</text>
+<rect x="250" y="8784" width="3.914" height="13" fill="#c06122"/>
+<text x="20" y="8795" font-size="11">p95 (p95_ms)</text>
+<text x="259.91398996562316" y="8795" font-size="11">2.68805</text>
+<text x="20" y="8829" font-size="10">0049-synthetic-n512-full-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8843" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 3 | row 386</text>
+<rect x="250" y="8857" width="2.002" height="13" fill="#1b6b9b"/>
+<text x="20" y="8868" font-size="11">median (median_ms)</text>
+<text x="258.002260935835" y="8868" font-size="11">1.37511</text>
+<rect x="250" y="8877" width="3.562" height="13" fill="#c06122"/>
+<text x="20" y="8888" font-size="11">p95 (p95_ms)</text>
+<text x="259.5622124706055" y="8888" font-size="11">2.44645</text>
+<text x="20" y="8922" font-size="10">0049-synthetic-n512-full-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="8936" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 3 | row 390</text>
+<rect x="250" y="8950" width="1.971" height="13" fill="#1b6b9b"/>
+<text x="20" y="8961" font-size="11">median (median_ms)</text>
+<text x="257.9713463271114" y="8961" font-size="11">1.35388</text>
+<rect x="250" y="8970" width="2.039" height="13" fill="#c06122"/>
+<text x="20" y="8981" font-size="11">p95 (p95_ms)</text>
+<text x="258.03915840190655" y="8981" font-size="11">1.40045</text>
+<text x="20" y="9015" font-size="10">0050-synthetic-n4096-archive-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="9029" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 0 | row 394</text>
+<rect x="250" y="9043" width="1.859" height="13" fill="#1b6b9b"/>
+<text x="20" y="9054" font-size="11">median (median_ms)</text>
+<text x="257.859117335317" y="9054" font-size="11">1.2768</text>
+<rect x="250" y="9063" width="1.985" height="13" fill="#c06122"/>
+<text x="20" y="9074" font-size="11">p95 (p95_ms)</text>
+<text x="257.98538250446313" y="9074" font-size="11">1.36352</text>
+<text x="20" y="9108" font-size="10">0051-ethereum_rpc_finalized_json-n69-archive-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="9122" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 4 | row 399</text>
+<rect x="250" y="9136" width="9.951" height="13" fill="#1b6b9b"/>
+<text x="20" y="9147" font-size="11">median (median_ms)</text>
+<text x="265.9509468232479" y="9147" font-size="11">6.8341</text>
+<rect x="250" y="9156" width="18.967" height="13" fill="#c06122"/>
+<text x="20" y="9167" font-size="11">p95 (p95_ms)</text>
+<text x="274.9672383601723" y="9167" font-size="11">13.0263</text>
+<text x="20" y="9201" font-size="10">0052-synthetic-n512-archive-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="9215" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 4 | row 404</text>
+<rect x="250" y="9229" width="1.814" height="13" fill="#1b6b9b"/>
+<text x="20" y="9240" font-size="11">median (median_ms)</text>
+<text x="257.8142906794442" y="9240" font-size="11">1.24602</text>
+<rect x="250" y="9249" width="1.903" height="13" fill="#c06122"/>
+<text x="20" y="9260" font-size="11">p95 (p95_ms)</text>
+<text x="257.90283264365866" y="9260" font-size="11">1.30683</text>
+<text x="20" y="9294" font-size="10">0053-ethereum_rpc_finalized_json-n69-archive-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="9308" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 1 | row 409</text>
+<rect x="250" y="9322" width="9.359" height="13" fill="#1b6b9b"/>
+<text x="20" y="9333" font-size="11">median (median_ms)</text>
+<text x="265.35934664650694" y="9333" font-size="11">6.4278</text>
+<rect x="250" y="9342" width="15.413" height="13" fill="#c06122"/>
+<text x="20" y="9353" font-size="11">p95 (p95_ms)</text>
+<text x="271.41340122006056" y="9353" font-size="11">10.5856</text>
+<text x="20" y="9387" font-size="10">0054-synthetic-n4096-full-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="9401" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 1 | row 414</text>
+<rect x="250" y="9415" width="2.063" height="13" fill="#1b6b9b"/>
+<text x="20" y="9426" font-size="11">median (median_ms)</text>
+<text x="258.0629434959866" y="9426" font-size="11">1.41679</text>
+<rect x="250" y="9435" width="2.194" height="13" fill="#c06122"/>
+<text x="20" y="9446" font-size="11">p95 (p95_ms)</text>
+<text x="258.1937603485686" y="9446" font-size="11">1.50663</text>
+<text x="20" y="9480" font-size="10">0054-synthetic-n4096-full-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="9494" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 1 | row 418</text>
+<rect x="250" y="9508" width="2.047" height="13" fill="#1b6b9b"/>
+<text x="20" y="9519" font-size="11">median (median_ms)</text>
+<text x="258.0467657996287" y="9519" font-size="11">1.40568</text>
+<rect x="250" y="9528" width="2.119" height="13" fill="#c06122"/>
+<text x="20" y="9539" font-size="11">p95 (p95_ms)</text>
+<text x="258.11867934016357" y="9539" font-size="11">1.45506</text>
+<text x="20" y="9573" font-size="10">0055-synthetic-n4096-ext_cached-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="9587" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 3 | row 422</text>
+<rect x="250" y="9601" width="2.080" height="13" fill="#1b6b9b"/>
+<text x="20" y="9612" font-size="11">median (median_ms)</text>
+<text x="258.0801054975277" y="9612" font-size="11">1.42857</text>
+<rect x="250" y="9621" width="2.153" height="13" fill="#c06122"/>
+<text x="20" y="9632" font-size="11">p95 (p95_ms)</text>
+<text x="258.15316467610717" y="9632" font-size="11">1.47875</text>
+<text x="20" y="9666" font-size="10">0055-synthetic-n4096-ext_cached-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="9680" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 3 | row 426</text>
+<rect x="250" y="9694" width="2.053" height="13" fill="#1b6b9b"/>
+<text x="20" y="9705" font-size="11">median (median_ms)</text>
+<text x="258.0526439653455" y="9705" font-size="11">1.40971</text>
+<rect x="250" y="9714" width="5.670" height="13" fill="#c06122"/>
+<text x="20" y="9725" font-size="11">p95 (p95_ms)</text>
+<text x="261.66994607503875" y="9725" font-size="11">3.894</text>
+<text x="20" y="9759" font-size="10">0056-ethereum_rpc_finalized_json-n69-archive-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="9773" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 2 | row 430</text>
+<rect x="250" y="9787" width="10.019" height="13" fill="#1b6b9b"/>
+<text x="20" y="9798" font-size="11">median (median_ms)</text>
+<text x="266.0188959144894" y="9798" font-size="11">6.88077</text>
+<rect x="250" y="9807" width="15.390" height="13" fill="#c06122"/>
+<text x="20" y="9818" font-size="11">p95 (p95_ms)</text>
+<text x="271.39022563803627" y="9818" font-size="11">10.5697</text>
+<text x="20" y="9852" font-size="10">0057-ethereum_rpc_finalized_json-n69-leaf-t4-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="9866" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 4 | row 435</text>
+<rect x="250" y="9880" width="11.519" height="13" fill="#1b6b9b"/>
+<text x="20" y="9891" font-size="11">median (median_ms)</text>
+<text x="267.5190097753251" y="9891" font-size="11">7.91101</text>
+<rect x="250" y="9900" width="27.915" height="13" fill="#c06122"/>
+<text x="20" y="9911" font-size="11">p95 (p95_ms)</text>
+<text x="283.9152451810849" y="9911" font-size="11">19.1716</text>
+<text x="20" y="9945" font-size="10">0057-ethereum_rpc_finalized_json-n69-leaf-t4-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="9959" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 4 | row 439</text>
+<rect x="250" y="9973" width="13.241" height="13" fill="#1b6b9b"/>
+<text x="20" y="9984" font-size="11">median (median_ms)</text>
+<text x="269.2406978676559" y="9984" font-size="11">9.09343</text>
+<rect x="250" y="9993" width="28.019" height="13" fill="#c06122"/>
+<text x="20" y="10004" font-size="11">p95 (p95_ms)</text>
+<text x="284.01882582874373" y="10004" font-size="11">19.2427</text>
+<text x="20" y="10038" font-size="10">0058-ethereum_rpc_finalized_json-n69-ext_rebuild-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="10052" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 3 | row 443</text>
+<rect x="250" y="10066" width="393.778" height="13" fill="#1b6b9b"/>
+<text x="20" y="10077" font-size="11">median (median_ms)</text>
+<text x="649.7777127326545" y="10077" font-size="11">270.438</text>
+<rect x="250" y="10086" width="420.028" height="13" fill="#c06122"/>
+<text x="20" y="10097" font-size="11">p95 (p95_ms)</text>
+<text x="676.0277996620596" y="10097" font-size="11">288.466</text>
+<text x="20" y="10131" font-size="10">0058-ethereum_rpc_finalized_json-n69-ext_rebuild-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="10145" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 3 | row 447</text>
+<rect x="250" y="10159" width="395.757" height="13" fill="#1b6b9b"/>
+<text x="20" y="10170" font-size="11">median (median_ms)</text>
+<text x="651.7566655838444" y="10170" font-size="11">271.797</text>
+<rect x="250" y="10179" width="405.900" height="13" fill="#c06122"/>
+<text x="20" y="10190" font-size="11">p95 (p95_ms)</text>
+<text x="661.8998634445827" y="10190" font-size="11">278.763</text>
+<text x="20" y="10224" font-size="10">0059-synthetic-n512-full-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="10238" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 1 | row 451</text>
+<rect x="250" y="10252" width="2.014" height="13" fill="#1b6b9b"/>
+<text x="20" y="10263" font-size="11">median (median_ms)</text>
+<text x="258.0138287058467" y="10263" font-size="11">1.38306</text>
+<rect x="250" y="10272" width="2.102" height="13" fill="#c06122"/>
+<text x="20" y="10283" font-size="11">p95 (p95_ms)</text>
+<text x="258.10247223113595" y="10283" font-size="11">1.44393</text>
+<text x="20" y="10317" font-size="10">0059-synthetic-n512-full-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="10331" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 1 | row 455</text>
+<rect x="250" y="10345" width="1.981" height="13" fill="#1b6b9b"/>
+<text x="20" y="10356" font-size="11">median (median_ms)</text>
+<text x="257.98062223860484" y="10356" font-size="11">1.36025</text>
+<rect x="250" y="10365" width="5.461" height="13" fill="#c06122"/>
+<text x="20" y="10376" font-size="11">p95 (p95_ms)</text>
+<text x="261.4605052250175" y="10376" font-size="11">3.75016</text>
+<text x="20" y="10410" font-size="10">0060-ethereum_rpc_finalized_json-n69-leaf-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="10424" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 0 | row 459</text>
+<rect x="250" y="10438" width="13.204" height="13" fill="#1b6b9b"/>
+<text x="20" y="10449" font-size="11">median (median_ms)</text>
+<text x="269.20406890140055" y="10449" font-size="11">9.06828</text>
+<rect x="250" y="10458" width="28.093" height="13" fill="#c06122"/>
+<text x="20" y="10469" font-size="11">p95 (p95_ms)</text>
+<text x="284.0933625571526" y="10469" font-size="11">19.2939</text>
+<text x="20" y="10503" font-size="10">0060-ethereum_rpc_finalized_json-n69-leaf-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="10517" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 0 | row 463</text>
+<rect x="250" y="10531" width="11.952" height="13" fill="#1b6b9b"/>
+<text x="20" y="10542" font-size="11">median (median_ms)</text>
+<text x="267.95191695058446" y="10542" font-size="11">8.20832</text>
+<rect x="250" y="10551" width="24.636" height="13" fill="#c06122"/>
+<text x="20" y="10562" font-size="11">p95 (p95_ms)</text>
+<text x="280.63560226655414" y="10562" font-size="11">16.9192</text>
+<text x="20" y="10596" font-size="10">0061-synthetic-n512-ext_cached-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="10610" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 3 | row 467</text>
+<rect x="250" y="10624" width="2.004" height="13" fill="#1b6b9b"/>
+<text x="20" y="10635" font-size="11">median (median_ms)</text>
+<text x="258.0042033368918" y="10635" font-size="11">1.37644</text>
+<rect x="250" y="10644" width="2.083" height="13" fill="#c06122"/>
+<text x="20" y="10655" font-size="11">p95 (p95_ms)</text>
+<text x="258.0833558159378" y="10655" font-size="11">1.4308</text>
+<text x="20" y="10689" font-size="10">0061-synthetic-n512-ext_cached-t3-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="10703" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 3 | row 471</text>
+<rect x="250" y="10717" width="1.973" height="13" fill="#1b6b9b"/>
+<text x="20" y="10728" font-size="11">median (median_ms)</text>
+<text x="257.97315404143825" y="10728" font-size="11">1.35512</text>
+<rect x="250" y="10737" width="2.047" height="13" fill="#c06122"/>
+<text x="20" y="10748" font-size="11">p95 (p95_ms)</text>
+<text x="258.0469356505157" y="10748" font-size="11">1.40579</text>
+<text x="20" y="10782" font-size="10">0062-synthetic-n512-leaf-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="10796" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 1 | row 475</text>
+<rect x="250" y="10810" width="2.496" height="13" fill="#1b6b9b"/>
+<text x="20" y="10821" font-size="11">median (median_ms)</text>
+<text x="258.4962277940898" y="10821" font-size="11">1.71436</text>
+<rect x="250" y="10830" width="2.534" height="13" fill="#c06122"/>
+<text x="20" y="10841" font-size="11">p95 (p95_ms)</text>
+<text x="258.53354621079524" y="10841" font-size="11">1.73999</text>
+<text x="20" y="10875" font-size="10">0062-synthetic-n512-leaf-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="10889" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 1 | row 479</text>
+<rect x="250" y="10903" width="2.475" height="13" fill="#1b6b9b"/>
+<text x="20" y="10914" font-size="11">median (median_ms)</text>
+<text x="258.4750069897408" y="10914" font-size="11">1.69978</text>
+<rect x="250" y="10923" width="2.570" height="13" fill="#c06122"/>
+<text x="20" y="10934" font-size="11">p95 (p95_ms)</text>
+<text x="258.569584521137" y="10934" font-size="11">1.76474</text>
+<text x="20" y="10968" font-size="10">0063-synthetic-n512-archive-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="10982" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 2 | row 483</text>
+<rect x="250" y="10996" width="1.813" height="13" fill="#1b6b9b"/>
+<text x="20" y="11007" font-size="11">median (median_ms)</text>
+<text x="257.8125244631909" y="11007" font-size="11">1.2448</text>
+<rect x="250" y="11016" width="1.890" height="13" fill="#c06122"/>
+<text x="20" y="11027" font-size="11">p95 (p95_ms)</text>
+<text x="257.88956782084955" y="11027" font-size="11">1.29772</text>
+<text x="20" y="11061" font-size="10">0064-synthetic-n512-archive-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="11075" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 0 | row 488</text>
+<rect x="250" y="11089" width="1.801" height="13" fill="#1b6b9b"/>
+<text x="20" y="11100" font-size="11">median (median_ms)</text>
+<text x="257.80113287798264" y="11100" font-size="11">1.23698</text>
+<rect x="250" y="11109" width="1.907" height="13" fill="#c06122"/>
+<text x="20" y="11120" font-size="11">p95 (p95_ms)</text>
+<text x="257.90680990639225" y="11120" font-size="11">1.30956</text>
+<text x="20" y="11154" font-size="10">0065-synthetic-n4096-archive-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="11168" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 1 | row 494</text>
+<rect x="250" y="11182" width="1.879" height="13" fill="#1b6b9b"/>
+<text x="20" y="11193" font-size="11">median (median_ms)</text>
+<text x="257.8794492072484" y="11193" font-size="11">1.29077</text>
+<rect x="250" y="11202" width="1.954" height="13" fill="#c06122"/>
+<text x="20" y="11213" font-size="11">p95 (p95_ms)</text>
+<text x="257.95385488910915" y="11213" font-size="11">1.34187</text>
+<text x="20" y="11247" font-size="10">0066-ethereum_rpc_finalized_json-n69-full-t1-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="11261" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 1 | row 499</text>
+<rect x="250" y="11275" width="10.864" height="13" fill="#1b6b9b"/>
+<text x="20" y="11286" font-size="11">median (median_ms)</text>
+<text x="266.8637268005183" y="11286" font-size="11">7.46098</text>
+<rect x="250" y="11295" width="26.541" height="13" fill="#c06122"/>
+<text x="20" y="11306" font-size="11">p95 (p95_ms)</text>
+<text x="282.54060110965224" y="11306" font-size="11">18.2275</text>
+<text x="20" y="11340" font-size="10">0066-ethereum_rpc_finalized_json-n69-full-t1-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="11354" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 1 | row 503</text>
+<rect x="250" y="11368" width="13.298" height="13" fill="#1b6b9b"/>
+<text x="20" y="11379" font-size="11">median (median_ms)</text>
+<text x="269.2980977117786" y="11379" font-size="11">9.13285</text>
+<rect x="250" y="11388" width="31.143" height="13" fill="#c06122"/>
+<text x="20" y="11399" font-size="11">p95 (p95_ms)</text>
+<text x="287.143465866979" y="11399" font-size="11">21.3887</text>
+<text x="20" y="11433" font-size="10">0067-ethereum_rpc_finalized_json-n69-leaf-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="11447" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 2 | row 507</text>
+<rect x="250" y="11461" width="16.968" height="13" fill="#1b6b9b"/>
+<text x="20" y="11472" font-size="11">median (median_ms)</text>
+<text x="272.9683205673856" y="11472" font-size="11">11.6535</text>
+<rect x="250" y="11481" width="39.901" height="13" fill="#c06122"/>
+<text x="20" y="11492" font-size="11">p95 (p95_ms)</text>
+<text x="295.90114905390857" y="11492" font-size="11">27.4033</text>
+<text x="20" y="11526" font-size="10">0067-ethereum_rpc_finalized_json-n69-leaf-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="11540" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 2 | row 511</text>
+<rect x="250" y="11554" width="11.839" height="13" fill="#1b6b9b"/>
+<text x="20" y="11565" font-size="11">median (median_ms)</text>
+<text x="267.8386890928793" y="11565" font-size="11">8.13056</text>
+<rect x="250" y="11574" width="28.404" height="13" fill="#c06122"/>
+<text x="20" y="11585" font-size="11">p95 (p95_ms)</text>
+<text x="284.4036713912878" y="11585" font-size="11">19.507</text>
+<text x="20" y="11619" font-size="10">0068-ethereum_rpc_finalized_json-n69-ext_cached-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="11633" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 0 | row 515</text>
+<rect x="250" y="11647" width="21.950" height="13" fill="#1b6b9b"/>
+<text x="20" y="11658" font-size="11">median (median_ms)</text>
+<text x="277.94971873905456" y="11658" font-size="11">15.0746</text>
+<rect x="250" y="11667" width="36.048" height="13" fill="#c06122"/>
+<text x="20" y="11678" font-size="11">p95 (p95_ms)</text>
+<text x="292.0478974888272" y="11678" font-size="11">24.7569</text>
+<text x="20" y="11712" font-size="10">0068-ethereum_rpc_finalized_json-n69-ext_cached-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="11726" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 0 | row 519</text>
+<rect x="250" y="11740" width="17.137" height="13" fill="#1b6b9b"/>
+<text x="20" y="11751" font-size="11">median (median_ms)</text>
+<text x="273.13738517510967" y="11751" font-size="11">11.7696</text>
+<rect x="250" y="11760" width="32.822" height="13" fill="#c06122"/>
+<text x="20" y="11771" font-size="11">p95 (p95_ms)</text>
+<text x="288.82197062714954" y="11771" font-size="11">22.5414</text>
+<text x="20" y="11805" font-size="10">0069-synthetic-n4096-ext_cached-t0-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="11819" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 0 | row 523</text>
+<rect x="250" y="11833" width="2.091" height="13" fill="#1b6b9b"/>
+<text x="20" y="11844" font-size="11">median (median_ms)</text>
+<text x="258.0908243771226" y="11844" font-size="11">1.43593</text>
+<rect x="250" y="11853" width="2.181" height="13" fill="#c06122"/>
+<text x="20" y="11864" font-size="11">p95 (p95_ms)</text>
+<text x="258.1813007339937" y="11864" font-size="11">1.49807</text>
+<text x="20" y="11898" font-size="10">0069-synthetic-n4096-ext_cached-t0-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="11912" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 0 | row 527</text>
+<rect x="250" y="11926" width="2.053" height="13" fill="#1b6b9b"/>
+<text x="20" y="11937" font-size="11">median (median_ms)</text>
+<text x="258.0530196321166" y="11937" font-size="11">1.40997</text>
+<rect x="250" y="11946" width="2.121" height="13" fill="#c06122"/>
+<text x="20" y="11957" font-size="11">p95 (p95_ms)</text>
+<text x="258.12140758368685" y="11957" font-size="11">1.45694</text>
+<text x="20" y="11991" font-size="10">0070-synthetic-n512-ext_cached-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="12005" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 2 | row 531</text>
+<rect x="250" y="12019" width="2.010" height="13" fill="#1b6b9b"/>
+<text x="20" y="12030" font-size="11">median (median_ms)</text>
+<text x="258.0101877959198" y="12030" font-size="11">1.38055</text>
+<rect x="250" y="12039" width="2.062" height="13" fill="#c06122"/>
+<text x="20" y="12050" font-size="11">p95 (p95_ms)</text>
+<text x="258.0622620539367" y="12050" font-size="11">1.41632</text>
+<text x="20" y="12084" font-size="10">0070-synthetic-n512-ext_cached-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | synthetic | dataset</text>
+<text x="20" y="12098" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 2 | row 535</text>
+<rect x="250" y="12112" width="1.973" height="13" fill="#1b6b9b"/>
+<text x="20" y="12123" font-size="11">median (median_ms)</text>
+<text x="257.9727900232492" y="12123" font-size="11">1.35487</text>
+<rect x="250" y="12132" width="2.049" height="13" fill="#c06122"/>
+<text x="20" y="12143" font-size="11">p95 (p95_ms)</text>
+<text x="258.04944053247823" y="12143" font-size="11">1.40751</text>
+<text x="20" y="12177" font-size="10">0071-ethereum_rpc_finalized_json-n69-archive-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="12191" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 3 | row 539</text>
+<rect x="250" y="12205" width="9.982" height="13" fill="#1b6b9b"/>
+<text x="20" y="12216" font-size="11">median (median_ms)</text>
+<text x="265.9824809909292" y="12216" font-size="11">6.85576</text>
+<rect x="250" y="12225" width="18.573" height="13" fill="#c06122"/>
+<text x="20" y="12236" font-size="11">p95 (p95_ms)</text>
+<text x="274.57342783047187" y="12236" font-size="11">12.7558</text>
+<text x="20" y="12270" font-size="10">0072-ethereum_rpc_finalized_json-n69-ext_rebuild-t2-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="12284" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 2 | row 544</text>
+<rect x="250" y="12298" width="395.487" height="13" fill="#1b6b9b"/>
+<text x="20" y="12309" font-size="11">median (median_ms)</text>
+<text x="651.4872302408526" y="12309" font-size="11">271.612</text>
+<rect x="250" y="12318" width="425.113" height="13" fill="#c06122"/>
+<text x="20" y="12329" font-size="11">p95 (p95_ms)</text>
+<text x="681.1133467137805" y="12329" font-size="11">291.959</text>
+<text x="20" y="12363" font-size="10">0072-ethereum_rpc_finalized_json-n69-ext_rebuild-t2-network-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-b | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="12377" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 2 | row 548</text>
+<rect x="250" y="12391" width="394.425" height="13" fill="#1b6b9b"/>
+<text x="20" y="12402" font-size="11">median (median_ms)</text>
+<text x="650.4254052001831" y="12402" font-size="11">270.883</text>
+<rect x="250" y="12411" width="401.660" height="13" fill="#c06122"/>
+<text x="20" y="12422" font-size="11">p95 (p95_ms)</text>
+<text x="657.659788023707" y="12422" font-size="11">275.851</text>
+<text x="20" y="12456" font-size="10">0073-synthetic-n4096-archive-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="12470" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 3 | row 552</text>
+<rect x="250" y="12484" width="1.878" height="13" fill="#1b6b9b"/>
+<text x="20" y="12495" font-size="11">median (median_ms)</text>
+<text x="257.87845543759227" y="12495" font-size="11">1.29008</text>
+<rect x="250" y="12504" width="1.982" height="13" fill="#c06122"/>
+<text x="20" y="12515" font-size="11">p95 (p95_ms)</text>
+<text x="257.9815381083685" y="12515" font-size="11">1.36088</text>
+<text x="20" y="12549" font-size="10">0074-synthetic-n512-archive-t3-provider | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="12563" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 3 | row 557</text>
+<rect x="250" y="12577" width="1.808" height="13" fill="#1b6b9b"/>
+<text x="20" y="12588" font-size="11">median (median_ms)</text>
+<text x="257.8079443863362" y="12588" font-size="11">1.24166</text>
+<rect x="250" y="12597" width="1.939" height="13" fill="#c06122"/>
+<text x="20" y="12608" font-size="11">p95 (p95_ms)</text>
+<text x="257.93943430854983" y="12608" font-size="11">1.33196</text>
+</g></svg>

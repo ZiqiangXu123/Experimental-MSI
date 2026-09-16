@@ -1,0 +1,612 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="7075" viewBox="0 0 1280 7075" role="img">
+<title>Local query latency</title>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="sans-serif" fill="#17212b">
+<text x="20" y="27" font-size="18">Local query latency</text>
+<text x="20" y="49" font-size="12">milliseconds; zero-based bars; individual records; no pooled trials</text>
+<text x="250" y="68" font-size="10">0</text>
+<text x="470.0" y="68" font-size="10">1.939</text>
+<text x="690.0" y="68" font-size="10">3.879</text>
+<text x="910.0" y="68" font-size="10">5.818</text>
+<text x="1130" y="68" font-size="10">7.758</text>
+<text x="20" y="87" font-size="10">0000-synthetic-n512-full-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="101" font-size="10">trial 2 | row 3</text>
+<rect x="250" y="115" width="19.460" height="13" fill="#1b6b9b"/>
+<text x="20" y="126" font-size="11">median (median_ms)</text>
+<text x="275.45950643717583" y="126" font-size="11">0.171544</text>
+<rect x="250" y="135" width="19.982" height="13" fill="#c06122"/>
+<text x="20" y="146" font-size="11">p95 (p95_ms)</text>
+<text x="275.9820233413484" y="146" font-size="11">0.17615</text>
+<text x="20" y="180" font-size="10">0001-synthetic-n4096-ext_cached-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="194" font-size="10">ext_cached | trial 1 | row 8</text>
+<rect x="250" y="208" width="19.973" height="13" fill="#1b6b9b"/>
+<text x="20" y="219" font-size="11">median (median_ms)</text>
+<text x="275.97315251031495" y="219" font-size="11">0.176071</text>
+<rect x="250" y="228" width="20.450" height="13" fill="#c06122"/>
+<text x="20" y="239" font-size="11">p95 (p95_ms)</text>
+<text x="276.4495229430756" y="239" font-size="11">0.180271</text>
+<text x="20" y="273" font-size="10">0002-ethereum_rpc_finalized_json-n69-full-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="287" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 3 | row 13</text>
+<rect x="250" y="301" width="404.815" height="13" fill="#1b6b9b"/>
+<text x="20" y="312" font-size="11">median (median_ms)</text>
+<text x="660.8154963889385" y="312" font-size="11">3.56861</text>
+<rect x="250" y="321" width="834.721" height="13" fill="#c06122"/>
+<text x="20" y="332" font-size="11">p95 (p95_ms)</text>
+<text x="1090.7213272761792" y="332" font-size="11">7.35841</text>
+<text x="20" y="366" font-size="10">0003-synthetic-n4096-full-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="380" font-size="10">trial 3 | row 18</text>
+<rect x="250" y="394" width="20.096" height="13" fill="#1b6b9b"/>
+<text x="20" y="405" font-size="11">median (median_ms)</text>
+<text x="276.09572198514417" y="405" font-size="11">0.177152</text>
+<rect x="250" y="414" width="20.686" height="13" fill="#c06122"/>
+<text x="20" y="425" font-size="11">p95 (p95_ms)</text>
+<text x="276.6857229990584" y="425" font-size="11">0.182353</text>
+<text x="20" y="459" font-size="10">0004-ethereum_rpc_finalized_json-n69-ext_cached-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="473" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 3 | row 23</text>
+<rect x="250" y="487" width="412.800" height="13" fill="#1b6b9b"/>
+<text x="20" y="498" font-size="11">median (median_ms)</text>
+<text x="668.7996980699943" y="498" font-size="11">3.639</text>
+<rect x="250" y="507" width="845.403" height="13" fill="#c06122"/>
+<text x="20" y="518" font-size="11">p95 (p95_ms)</text>
+<text x="1101.4030329680165" y="518" font-size="11">7.45257</text>
+<text x="20" y="552" font-size="10">0005-ethereum_rpc_finalized_json-n69-ext_cached-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="566" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 2 | row 28</text>
+<rect x="250" y="580" width="402.620" height="13" fill="#1b6b9b"/>
+<text x="20" y="591" font-size="11">median (median_ms)</text>
+<text x="658.6196253949479" y="591" font-size="11">3.54926</text>
+<rect x="250" y="600" width="804.286" height="13" fill="#c06122"/>
+<text x="20" y="611" font-size="11">p95 (p95_ms)</text>
+<text x="1060.2858690011603" y="611" font-size="11">7.09011</text>
+<text x="20" y="645" font-size="10">0006-ethereum_rpc_finalized_json-n69-ext_rebuild-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="659" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 1 | row 33</text>
+<rect x="250" y="673" width="369.076" height="13" fill="#1b6b9b"/>
+<text x="20" y="684" font-size="11">median (median_ms)</text>
+<text x="625.0763701581898" y="684" font-size="11">3.25356</text>
+<rect x="250" y="693" width="755.822" height="13" fill="#c06122"/>
+<text x="20" y="704" font-size="11">p95 (p95_ms)</text>
+<text x="1011.8220688102872" y="704" font-size="11">6.66288</text>
+<text x="20" y="738" font-size="10">0007-ethereum_rpc_finalized_json-n69-ext_cached-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="752" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 1 | row 38</text>
+<rect x="250" y="766" width="370.892" height="13" fill="#1b6b9b"/>
+<text x="20" y="777" font-size="11">median (median_ms)</text>
+<text x="626.8922814520967" y="777" font-size="11">3.26957</text>
+<rect x="250" y="786" width="761.536" height="13" fill="#c06122"/>
+<text x="20" y="797" font-size="11">p95 (p95_ms)</text>
+<text x="1017.5360070294273" y="797" font-size="11">6.71325</text>
+<text x="20" y="831" font-size="10">0008-ethereum_rpc_finalized_json-n69-ext_rebuild-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="845" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 0 | row 43</text>
+<rect x="250" y="859" width="405.960" height="13" fill="#1b6b9b"/>
+<text x="20" y="870" font-size="11">median (median_ms)</text>
+<text x="661.960480187355" y="870" font-size="11">3.57871</text>
+<rect x="250" y="879" width="846.461" height="13" fill="#c06122"/>
+<text x="20" y="890" font-size="11">p95 (p95_ms)</text>
+<text x="1102.4614864606488" y="890" font-size="11">7.4619</text>
+<text x="20" y="924" font-size="10">0009-ethereum_rpc_finalized_json-n69-full-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="938" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 4 | row 48</text>
+<rect x="250" y="952" width="398.253" height="13" fill="#1b6b9b"/>
+<text x="20" y="963" font-size="11">median (median_ms)</text>
+<text x="654.2532934600547" y="963" font-size="11">3.51077</text>
+<rect x="250" y="972" width="838.288" height="13" fill="#c06122"/>
+<text x="20" y="983" font-size="11">p95 (p95_ms)</text>
+<text x="1094.2883939318262" y="983" font-size="11">7.38985</text>
+<text x="20" y="1017" font-size="10">0010-ethereum_rpc_finalized_json-n69-leaf-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1031" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 1 | row 53</text>
+<rect x="250" y="1045" width="387.571" height="13" fill="#1b6b9b"/>
+<text x="20" y="1056" font-size="11">median (median_ms)</text>
+<text x="643.5711453610434" y="1056" font-size="11">3.4166</text>
+<rect x="250" y="1065" width="814.990" height="13" fill="#c06122"/>
+<text x="20" y="1076" font-size="11">p95 (p95_ms)</text>
+<text x="1070.9903700062478" y="1076" font-size="11">7.18447</text>
+<text x="20" y="1110" font-size="10">0011-synthetic-n4096-full-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="1124" font-size="10">trial 0 | row 58</text>
+<rect x="250" y="1138" width="20.028" height="13" fill="#1b6b9b"/>
+<text x="20" y="1149" font-size="11">median (median_ms)</text>
+<text x="276.02811309389176" y="1149" font-size="11">0.176556</text>
+<rect x="250" y="1158" width="20.557" height="13" fill="#c06122"/>
+<text x="20" y="1169" font-size="11">p95 (p95_ms)</text>
+<text x="276.55655711982257" y="1169" font-size="11">0.181214</text>
+<text x="20" y="1203" font-size="10">0012-ethereum_rpc_finalized_json-n69-archive-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1217" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 0 | row 63</text>
+<rect x="250" y="1231" width="407.059" height="13" fill="#1b6b9b"/>
+<text x="20" y="1242" font-size="11">median (median_ms)</text>
+<text x="663.0593515456803" y="1242" font-size="11">3.58839</text>
+<rect x="250" y="1251" width="842.342" height="13" fill="#c06122"/>
+<text x="20" y="1262" font-size="11">p95 (p95_ms)</text>
+<text x="1098.3423183390196" y="1262" font-size="11">7.42559</text>
+<text x="20" y="1296" font-size="10">0013-ethereum_rpc_finalized_json-n69-leaf-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1310" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 3 | row 68</text>
+<rect x="250" y="1324" width="424.748" height="13" fill="#1b6b9b"/>
+<text x="20" y="1335" font-size="11">median (median_ms)</text>
+<text x="680.7484352214867" y="1335" font-size="11">3.74433</text>
+<rect x="250" y="1344" width="863.515" height="13" fill="#c06122"/>
+<text x="20" y="1355" font-size="11">p95 (p95_ms)</text>
+<text x="1119.514609823395" y="1355" font-size="11">7.61223</text>
+<text x="20" y="1389" font-size="10">0014-synthetic-n4096-ext_rebuild-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="1403" font-size="10">ext_rebuild | trial 3 | row 73</text>
+<rect x="250" y="1417" width="20.122" height="13" fill="#1b6b9b"/>
+<text x="20" y="1428" font-size="11">median (median_ms)</text>
+<text x="276.12232313447083" y="1428" font-size="11">0.177387</text>
+<rect x="250" y="1437" width="20.577" height="13" fill="#c06122"/>
+<text x="20" y="1448" font-size="11">p95 (p95_ms)</text>
+<text x="276.57686247474567" y="1448" font-size="11">0.181393</text>
+<text x="20" y="1482" font-size="10">0015-synthetic-n4096-leaf-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="1496" font-size="10">trial 4 | row 78</text>
+<rect x="250" y="1510" width="595.146" height="13" fill="#1b6b9b"/>
+<text x="20" y="1521" font-size="11">median (median_ms)</text>
+<text x="851.1459824758934" y="1521" font-size="11">5.24645</text>
+<rect x="250" y="1530" width="606.707" height="13" fill="#c06122"/>
+<text x="20" y="1541" font-size="11">p95 (p95_ms)</text>
+<text x="862.7070234736389" y="1541" font-size="11">5.34837</text>
+<text x="20" y="1575" font-size="10">0016-synthetic-n512-ext_cached-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="1589" font-size="10">ext_cached | trial 1 | row 83</text>
+<rect x="250" y="1603" width="19.570" height="13" fill="#1b6b9b"/>
+<text x="20" y="1614" font-size="11">median (median_ms)</text>
+<text x="275.5698813552775" y="1614" font-size="11">0.172517</text>
+<rect x="250" y="1623" width="20.041" height="13" fill="#c06122"/>
+<text x="20" y="1634" font-size="11">p95 (p95_ms)</text>
+<text x="276.0412548557233" y="1634" font-size="11">0.176672</text>
+<text x="20" y="1668" font-size="10">0017-synthetic-n4096-leaf-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="1682" font-size="10">trial 3 | row 88</text>
+<rect x="250" y="1696" width="596.521" height="13" fill="#1b6b9b"/>
+<text x="20" y="1707" font-size="11">median (median_ms)</text>
+<text x="852.5213015992897" y="1707" font-size="11">5.25858</text>
+<rect x="250" y="1716" width="598.224" height="13" fill="#c06122"/>
+<text x="20" y="1727" font-size="11">p95 (p95_ms)</text>
+<text x="854.2244274231837" y="1727" font-size="11">5.27359</text>
+<text x="20" y="1761" font-size="10">0018-synthetic-n4096-leaf-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="1775" font-size="10">trial 0 | row 93</text>
+<rect x="250" y="1789" width="594.726" height="13" fill="#1b6b9b"/>
+<text x="20" y="1800" font-size="11">median (median_ms)</text>
+<text x="850.7255255037005" y="1800" font-size="11">5.24275</text>
+<rect x="250" y="1809" width="602.088" height="13" fill="#c06122"/>
+<text x="20" y="1820" font-size="11">p95 (p95_ms)</text>
+<text x="858.0879182293871" y="1820" font-size="11">5.30765</text>
+<text x="20" y="1854" font-size="10">0019-synthetic-n4096-full-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="1868" font-size="10">trial 4 | row 98</text>
+<rect x="250" y="1882" width="20.036" height="13" fill="#1b6b9b"/>
+<text x="20" y="1893" font-size="11">median (median_ms)</text>
+<text x="276.0357134222708" y="1893" font-size="11">0.176623</text>
+<rect x="250" y="1902" width="20.584" height="13" fill="#c06122"/>
+<text x="20" y="1913" font-size="11">p95 (p95_ms)</text>
+<text x="276.5842586151981" y="1913" font-size="11">0.181459</text>
+<text x="20" y="1947" font-size="10">0020-synthetic-n4096-ext_rebuild-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="1961" font-size="10">ext_rebuild | trial 2 | row 103</text>
+<rect x="250" y="1975" width="20.089" height="13" fill="#1b6b9b"/>
+<text x="20" y="1986" font-size="11">median (median_ms)</text>
+<text x="276.0891993152666" y="1986" font-size="11">0.177094</text>
+<rect x="250" y="1995" width="20.616" height="13" fill="#c06122"/>
+<text x="20" y="2006" font-size="11">p95 (p95_ms)</text>
+<text x="276.61619701005066" y="2006" font-size="11">0.18174</text>
+<text x="20" y="2040" font-size="10">0021-synthetic-n4096-ext_rebuild-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="2054" font-size="10">ext_rebuild | trial 4 | row 108</text>
+<rect x="250" y="2068" width="20.051" height="13" fill="#1b6b9b"/>
+<text x="20" y="2079" font-size="11">median (median_ms)</text>
+<text x="276.0512543922399" y="2079" font-size="11">0.17676</text>
+<rect x="250" y="2088" width="20.606" height="13" fill="#c06122"/>
+<text x="20" y="2099" font-size="11">p95 (p95_ms)</text>
+<text x="276.60631091127107" y="2099" font-size="11">0.181653</text>
+<text x="20" y="2133" font-size="10">0022-synthetic-n4096-full-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="2147" font-size="10">trial 2 | row 113</text>
+<rect x="250" y="2161" width="20.294" height="13" fill="#1b6b9b"/>
+<text x="20" y="2172" font-size="11">median (median_ms)</text>
+<text x="276.2937275550788" y="2172" font-size="11">0.178897</text>
+<rect x="250" y="2181" width="22.705" height="13" fill="#c06122"/>
+<text x="20" y="2192" font-size="11">p95 (p95_ms)</text>
+<text x="278.7051926401261" y="2192" font-size="11">0.200156</text>
+<text x="20" y="2226" font-size="10">0023-synthetic-n512-ext_cached-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="2240" font-size="10">ext_cached | trial 0 | row 118</text>
+<rect x="250" y="2254" width="19.635" height="13" fill="#1b6b9b"/>
+<text x="20" y="2265" font-size="11">median (median_ms)</text>
+<text x="275.63471102197343" y="2265" font-size="11">0.173088</text>
+<rect x="250" y="2274" width="20.717" height="13" fill="#c06122"/>
+<text x="20" y="2285" font-size="11">p95 (p95_ms)</text>
+<text x="276.71711689277333" y="2285" font-size="11">0.18263</text>
+<text x="20" y="2319" font-size="10">0024-ethereum_rpc_finalized_json-n69-ext_rebuild-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2333" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 4 | row 124</text>
+<rect x="250" y="2347" width="405.324" height="13" fill="#1b6b9b"/>
+<text x="20" y="2358" font-size="11">median (median_ms)</text>
+<text x="661.3238676073071" y="2358" font-size="11">3.5731</text>
+<rect x="250" y="2367" width="849.534" height="13" fill="#c06122"/>
+<text x="20" y="2378" font-size="11">p95 (p95_ms)</text>
+<text x="1105.5336639729696" y="2378" font-size="11">7.48899</text>
+<text x="20" y="2412" font-size="10">0025-synthetic-n512-leaf-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="2426" font-size="10">trial 3 | row 129</text>
+<rect x="250" y="2440" width="92.604" height="13" fill="#1b6b9b"/>
+<text x="20" y="2451" font-size="11">median (median_ms)</text>
+<text x="348.6035353476597" y="2451" font-size="11">0.816338</text>
+<rect x="250" y="2460" width="93.231" height="13" fill="#c06122"/>
+<text x="20" y="2471" font-size="11">p95 (p95_ms)</text>
+<text x="349.2314018781848" y="2471" font-size="11">0.821873</text>
+<text x="20" y="2505" font-size="10">0026-synthetic-n4096-leaf-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="2519" font-size="10">trial 2 | row 134</text>
+<rect x="250" y="2533" width="596.355" height="13" fill="#1b6b9b"/>
+<text x="20" y="2544" font-size="11">median (median_ms)</text>
+<text x="852.3549451579782" y="2544" font-size="11">5.25711</text>
+<rect x="250" y="2553" width="599.328" height="13" fill="#c06122"/>
+<text x="20" y="2564" font-size="11">p95 (p95_ms)</text>
+<text x="855.328414823448" y="2564" font-size="11">5.28332</text>
+<text x="20" y="2598" font-size="10">0027-synthetic-n512-leaf-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="2612" font-size="10">trial 2 | row 139</text>
+<rect x="250" y="2626" width="93.372" height="13" fill="#1b6b9b"/>
+<text x="20" y="2637" font-size="11">median (median_ms)</text>
+<text x="349.3720192969708" y="2637" font-size="11">0.823113</text>
+<rect x="250" y="2646" width="94.391" height="13" fill="#c06122"/>
+<text x="20" y="2657" font-size="11">p95 (p95_ms)</text>
+<text x="350.3907865973133" y="2657" font-size="11">0.832093</text>
+<text x="20" y="2691" font-size="10">0028-synthetic-n512-leaf-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="2705" font-size="10">trial 0 | row 144</text>
+<rect x="250" y="2719" width="92.507" height="13" fill="#1b6b9b"/>
+<text x="20" y="2730" font-size="11">median (median_ms)</text>
+<text x="348.5070565523406" y="2730" font-size="11">0.815488</text>
+<rect x="250" y="2739" width="93.017" height="13" fill="#c06122"/>
+<text x="20" y="2750" font-size="11">p95 (p95_ms)</text>
+<text x="349.0169138050639" y="2750" font-size="11">0.819982</text>
+<text x="20" y="2784" font-size="10">0029-ethereum_rpc_finalized_json-n69-full-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2798" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 0 | row 150</text>
+<rect x="250" y="2812" width="406.870" height="13" fill="#1b6b9b"/>
+<text x="20" y="2823" font-size="11">median (median_ms)</text>
+<text x="662.8701374003633" y="2823" font-size="11">3.58673</text>
+<rect x="250" y="2832" width="842.841" height="13" fill="#c06122"/>
+<text x="20" y="2843" font-size="11">p95 (p95_ms)</text>
+<text x="1098.8409282401192" y="2843" font-size="11">7.42999</text>
+<text x="20" y="2877" font-size="10">0030-synthetic-n512-ext_rebuild-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="2891" font-size="10">ext_rebuild | trial 2 | row 155</text>
+<rect x="250" y="2905" width="19.706" height="13" fill="#1b6b9b"/>
+<text x="20" y="2916" font-size="11">median (median_ms)</text>
+<text x="275.70612007741533" y="2916" font-size="11">0.173717</text>
+<rect x="250" y="2925" width="20.551" height="13" fill="#c06122"/>
+<text x="20" y="2936" font-size="11">p95 (p95_ms)</text>
+<text x="276.55118017108873" y="2936" font-size="11">0.181167</text>
+<text x="20" y="2970" font-size="10">0031-synthetic-n4096-archive-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="2984" font-size="10">archive | trial 4 | row 160</text>
+<rect x="250" y="2998" width="20.014" height="13" fill="#1b6b9b"/>
+<text x="20" y="3009" font-size="11">median (median_ms)</text>
+<text x="276.0141035333722" y="3009" font-size="11">0.176432</text>
+<rect x="250" y="3018" width="20.566" height="13" fill="#c06122"/>
+<text x="20" y="3029" font-size="11">p95 (p95_ms)</text>
+<text x="276.565921405012" y="3029" font-size="11">0.181297</text>
+<text x="20" y="3063" font-size="10">0032-synthetic-n512-ext_cached-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3077" font-size="10">ext_cached | trial 4 | row 165</text>
+<rect x="250" y="3091" width="19.880" height="13" fill="#1b6b9b"/>
+<text x="20" y="3102" font-size="11">median (median_ms)</text>
+<text x="275.8804171603169" y="3102" font-size="11">0.175254</text>
+<rect x="250" y="3111" width="21.515" height="13" fill="#c06122"/>
+<text x="20" y="3122" font-size="11">p95 (p95_ms)</text>
+<text x="277.51473732483305" y="3122" font-size="11">0.189661</text>
+<text x="20" y="3156" font-size="10">0033-synthetic-n512-full-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="3170" font-size="10">trial 0 | row 170</text>
+<rect x="250" y="3184" width="19.817" height="13" fill="#1b6b9b"/>
+<text x="20" y="3195" font-size="11">median (median_ms)</text>
+<text x="275.8166651521225" y="3195" font-size="11">0.174692</text>
+<rect x="250" y="3204" width="21.051" height="13" fill="#c06122"/>
+<text x="20" y="3215" font-size="11">p95 (p95_ms)</text>
+<text x="277.0512137157877" y="3215" font-size="11">0.185575</text>
+<text x="20" y="3249" font-size="10">0034-synthetic-n512-ext_rebuild-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3263" font-size="10">ext_rebuild | trial 3 | row 176</text>
+<rect x="250" y="3277" width="19.633" height="13" fill="#1b6b9b"/>
+<text x="20" y="3288" font-size="11">median (median_ms)</text>
+<text x="275.63278258044437" y="3288" font-size="11">0.173071</text>
+<rect x="250" y="3297" width="20.101" height="13" fill="#c06122"/>
+<text x="20" y="3308" font-size="11">p95 (p95_ms)</text>
+<text x="276.10094012104616" y="3308" font-size="11">0.177198</text>
+<text x="20" y="3342" font-size="10">0035-synthetic-n512-ext_rebuild-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3356" font-size="10">ext_rebuild | trial 1 | row 181</text>
+<rect x="250" y="3370" width="19.476" height="13" fill="#1b6b9b"/>
+<text x="20" y="3381" font-size="11">median (median_ms)</text>
+<text x="275.47623850338346" y="3381" font-size="11">0.171691</text>
+<rect x="250" y="3390" width="19.928" height="13" fill="#c06122"/>
+<text x="20" y="3401" font-size="11">p95 (p95_ms)</text>
+<text x="275.9276356183434" y="3401" font-size="11">0.17567</text>
+<text x="20" y="3435" font-size="10">0036-synthetic-n4096-ext_rebuild-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3449" font-size="10">ext_rebuild | trial 0 | row 186</text>
+<rect x="250" y="3463" width="19.887" height="13" fill="#1b6b9b"/>
+<text x="20" y="3474" font-size="11">median (median_ms)</text>
+<text x="275.8873368622739" y="3474" font-size="11">0.175315</text>
+<rect x="250" y="3483" width="20.412" height="13" fill="#c06122"/>
+<text x="20" y="3494" font-size="11">p95 (p95_ms)</text>
+<text x="276.4124231311895" y="3494" font-size="11">0.179944</text>
+<text x="20" y="3528" font-size="10">0037-synthetic-n4096-ext_cached-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3542" font-size="10">ext_cached | trial 2 | row 191</text>
+<rect x="250" y="3556" width="20.134" height="13" fill="#1b6b9b"/>
+<text x="20" y="3567" font-size="11">median (median_ms)</text>
+<text x="276.1341773779874" y="3567" font-size="11">0.177491</text>
+<rect x="250" y="3576" width="20.607" height="13" fill="#c06122"/>
+<text x="20" y="3587" font-size="11">p95 (p95_ms)</text>
+<text x="276.60716169429855" y="3587" font-size="11">0.181661</text>
+<text x="20" y="3621" font-size="10">0038-ethereum_rpc_finalized_json-n69-full-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="3635" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 2 | row 196</text>
+<rect x="250" y="3649" width="403.700" height="13" fill="#1b6b9b"/>
+<text x="20" y="3660" font-size="11">median (median_ms)</text>
+<text x="659.7003467153534" y="3660" font-size="11">3.55878</text>
+<rect x="250" y="3669" width="803.734" height="13" fill="#c06122"/>
+<text x="20" y="3680" font-size="11">p95 (p95_ms)</text>
+<text x="1059.7336881287622" y="3680" font-size="11">7.08524</text>
+<text x="20" y="3714" font-size="10">0039-synthetic-n4096-ext_rebuild-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3728" font-size="10">ext_rebuild | trial 1 | row 201</text>
+<rect x="250" y="3742" width="20.073" height="13" fill="#1b6b9b"/>
+<text x="20" y="3753" font-size="11">median (median_ms)</text>
+<text x="276.07275084340154" y="3753" font-size="11">0.176949</text>
+<rect x="250" y="3762" width="20.723" height="13" fill="#c06122"/>
+<text x="20" y="3773" font-size="11">p95 (p95_ms)</text>
+<text x="276.7225505603757" y="3773" font-size="11">0.182678</text>
+<text x="20" y="3807" font-size="10">0040-synthetic-n4096-archive-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3821" font-size="10">archive | trial 2 | row 206</text>
+<rect x="250" y="3835" width="20.480" height="13" fill="#1b6b9b"/>
+<text x="20" y="3846" font-size="11">median (median_ms)</text>
+<text x="276.47982216262847" y="3846" font-size="11">0.180538</text>
+<rect x="250" y="3855" width="21.713" height="13" fill="#c06122"/>
+<text x="20" y="3866" font-size="11">p95 (p95_ms)</text>
+<text x="277.71281095740994" y="3866" font-size="11">0.191407</text>
+<text x="20" y="3900" font-size="10">0041-synthetic-n512-archive-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="3914" font-size="10">archive | trial 1 | row 211</text>
+<rect x="250" y="3928" width="19.551" height="13" fill="#1b6b9b"/>
+<text x="20" y="3939" font-size="11">median (median_ms)</text>
+<text x="275.5511074098039" y="3939" font-size="11">0.172351</text>
+<rect x="250" y="3948" width="19.895" height="13" fill="#c06122"/>
+<text x="20" y="3959" font-size="11">p95 (p95_ms)</text>
+<text x="275.8950222689557" y="3959" font-size="11">0.175383</text>
+<text x="20" y="3993" font-size="10">0042-synthetic-n512-full-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="4007" font-size="10">trial 4 | row 216</text>
+<rect x="250" y="4021" width="19.291" height="13" fill="#1b6b9b"/>
+<text x="20" y="4032" font-size="11">median (median_ms)</text>
+<text x="275.29139171094084" y="4032" font-size="11">0.170062</text>
+<rect x="250" y="4041" width="19.788" height="13" fill="#c06122"/>
+<text x="20" y="4052" font-size="11">p95 (p95_ms)</text>
+<text x="275.7880561548509" y="4052" font-size="11">0.17444</text>
+<text x="20" y="4086" font-size="10">0043-synthetic-n512-ext_rebuild-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="4100" font-size="10">ext_rebuild | trial 0 | row 221</text>
+<rect x="250" y="4114" width="19.476" height="13" fill="#1b6b9b"/>
+<text x="20" y="4125" font-size="11">median (median_ms)</text>
+<text x="275.47612506564644" y="4125" font-size="11">0.17169</text>
+<rect x="250" y="4134" width="19.923" height="13" fill="#c06122"/>
+<text x="20" y="4145" font-size="11">p95 (p95_ms)</text>
+<text x="275.92313781207133" y="4145" font-size="11">0.175631</text>
+<text x="20" y="4179" font-size="10">0044-ethereum_rpc_finalized_json-n69-ext_cached-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="4193" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 4 | row 227</text>
+<rect x="250" y="4207" width="405.226" height="13" fill="#1b6b9b"/>
+<text x="20" y="4218" font-size="11">median (median_ms)</text>
+<text x="661.2263111534864" y="4218" font-size="11">3.57224</text>
+<rect x="250" y="4227" width="854.948" height="13" fill="#c06122"/>
+<text x="20" y="4238" font-size="11">p95 (p95_ms)</text>
+<text x="1110.9484158326572" y="4238" font-size="11">7.53672</text>
+<text x="20" y="4272" font-size="10">0045-synthetic-n4096-leaf-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="4286" font-size="10">trial 1 | row 232</text>
+<rect x="250" y="4300" width="593.194" height="13" fill="#1b6b9b"/>
+<text x="20" y="4311" font-size="11">median (median_ms)</text>
+<text x="849.1940593353229" y="4311" font-size="11">5.22925</text>
+<rect x="250" y="4320" width="597.309" height="13" fill="#c06122"/>
+<text x="20" y="4331" font-size="11">p95 (p95_ms)</text>
+<text x="853.3094159489889" y="4331" font-size="11">5.26553</text>
+<text x="20" y="4365" font-size="10">0046-synthetic-n512-ext_rebuild-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="4379" font-size="10">ext_rebuild | trial 4 | row 237</text>
+<rect x="250" y="4393" width="19.786" height="13" fill="#1b6b9b"/>
+<text x="20" y="4404" font-size="11">median (median_ms)</text>
+<text x="275.7862638386063" y="4404" font-size="11">0.174424</text>
+<rect x="250" y="4413" width="22.027" height="13" fill="#c06122"/>
+<text x="20" y="4424" font-size="11">p95 (p95_ms)</text>
+<text x="278.0267498945593" y="4424" font-size="11">0.194175</text>
+<text x="20" y="4458" font-size="10">0047-synthetic-n4096-ext_cached-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="4472" font-size="10">ext_cached | trial 4 | row 242</text>
+<rect x="250" y="4486" width="20.001" height="13" fill="#1b6b9b"/>
+<text x="20" y="4497" font-size="11">median (median_ms)</text>
+<text x="276.0006611615376" y="4497" font-size="11">0.176314</text>
+<rect x="250" y="4506" width="20.471" height="13" fill="#c06122"/>
+<text x="20" y="4517" font-size="11">p95 (p95_ms)</text>
+<text x="276.47103640989775" y="4517" font-size="11">0.180461</text>
+<text x="20" y="4551" font-size="10">0048-synthetic-n512-leaf-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="4565" font-size="10">trial 4 | row 247</text>
+<rect x="250" y="4579" width="92.708" height="13" fill="#1b6b9b"/>
+<text x="20" y="4590" font-size="11">median (median_ms)</text>
+<text x="348.7080115034373" y="4590" font-size="11">0.817259</text>
+<rect x="250" y="4599" width="93.445" height="13" fill="#c06122"/>
+<text x="20" y="4610" font-size="11">p95 (p95_ms)</text>
+<text x="349.44451735468795" y="4610" font-size="11">0.823752</text>
+<text x="20" y="4644" font-size="10">0049-synthetic-n512-full-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="4658" font-size="10">trial 3 | row 252</text>
+<rect x="250" y="4672" width="19.571" height="13" fill="#1b6b9b"/>
+<text x="20" y="4683" font-size="11">median (median_ms)</text>
+<text x="275.570845576042" y="4683" font-size="11">0.172525</text>
+<rect x="250" y="4692" width="20.305" height="13" fill="#c06122"/>
+<text x="20" y="4703" font-size="11">p95 (p95_ms)</text>
+<text x="276.304651609152" y="4703" font-size="11">0.178994</text>
+<text x="20" y="4737" font-size="10">0050-synthetic-n4096-archive-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="4751" font-size="10">archive | trial 0 | row 257</text>
+<rect x="250" y="4765" width="20.157" height="13" fill="#1b6b9b"/>
+<text x="20" y="4776" font-size="11">median (median_ms)</text>
+<text x="276.1570918008615" y="4776" font-size="11">0.177693</text>
+<rect x="250" y="4785" width="20.836" height="13" fill="#c06122"/>
+<text x="20" y="4796" font-size="11">p95 (p95_ms)</text>
+<text x="276.8361414383213" y="4796" font-size="11">0.183679</text>
+<text x="20" y="4830" font-size="10">0051-ethereum_rpc_finalized_json-n69-archive-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="4844" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 4 | row 262</text>
+<rect x="250" y="4858" width="403.422" height="13" fill="#1b6b9b"/>
+<text x="20" y="4869" font-size="11">median (median_ms)</text>
+<text x="659.4215167578056" y="4869" font-size="11">3.55633</text>
+<rect x="250" y="4878" width="854.472" height="13" fill="#c06122"/>
+<text x="20" y="4889" font-size="11">p95 (p95_ms)</text>
+<text x="1110.472482135184" y="4889" font-size="11">7.53252</text>
+<text x="20" y="4923" font-size="10">0052-synthetic-n512-archive-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="4937" font-size="10">archive | trial 4 | row 267</text>
+<rect x="250" y="4951" width="19.997" height="13" fill="#1b6b9b"/>
+<text x="20" y="4962" font-size="11">median (median_ms)</text>
+<text x="275.99703115395357" y="4962" font-size="11">0.176282</text>
+<rect x="250" y="4971" width="22.232" height="13" fill="#c06122"/>
+<text x="20" y="4982" font-size="11">p95 (p95_ms)</text>
+<text x="278.2321572768333" y="4982" font-size="11">0.195986</text>
+<text x="20" y="5016" font-size="10">0053-ethereum_rpc_finalized_json-n69-archive-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5030" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 1 | row 272</text>
+<rect x="250" y="5044" width="369.241" height="13" fill="#1b6b9b"/>
+<text x="20" y="5055" font-size="11">median (median_ms)</text>
+<text x="625.2406847202353" y="5055" font-size="11">3.25501</text>
+<rect x="250" y="5064" width="758.291" height="13" fill="#c06122"/>
+<text x="20" y="5075" font-size="11">p95 (p95_ms)</text>
+<text x="1014.2913190785627" y="5075" font-size="11">6.68465</text>
+<text x="20" y="5109" font-size="10">0054-synthetic-n4096-full-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="5123" font-size="10">trial 1 | row 277</text>
+<rect x="250" y="5137" width="20.470" height="13" fill="#1b6b9b"/>
+<text x="20" y="5148" font-size="11">median (median_ms)</text>
+<text x="276.4701232361149" y="5148" font-size="11">0.180453</text>
+<rect x="250" y="5157" width="22.489" height="13" fill="#c06122"/>
+<text x="20" y="5168" font-size="11">p95 (p95_ms)</text>
+<text x="278.4889689696291" y="5168" font-size="11">0.198249</text>
+<text x="20" y="5202" font-size="10">0055-synthetic-n4096-ext_cached-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="5216" font-size="10">ext_cached | trial 3 | row 282</text>
+<rect x="250" y="5230" width="19.975" height="13" fill="#1b6b9b"/>
+<text x="20" y="5241" font-size="11">median (median_ms)</text>
+<text x="275.97502423297544" y="5241" font-size="11">0.176088</text>
+<rect x="250" y="5250" width="20.494" height="13" fill="#c06122"/>
+<text x="20" y="5261" font-size="11">p95 (p95_ms)</text>
+<text x="276.49427413032237" y="5261" font-size="11">0.180665</text>
+<text x="20" y="5295" font-size="10">0056-ethereum_rpc_finalized_json-n69-archive-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5309" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 2 | row 287</text>
+<rect x="250" y="5323" width="401.850" height="13" fill="#1b6b9b"/>
+<text x="20" y="5334" font-size="11">median (median_ms)</text>
+<text x="657.8504041003464" y="5334" font-size="11">3.54248</text>
+<rect x="250" y="5343" width="798.866" height="13" fill="#c06122"/>
+<text x="20" y="5354" font-size="11">p95 (p95_ms)</text>
+<text x="1054.8658422867024" y="5354" font-size="11">7.04233</text>
+<text x="20" y="5388" font-size="10">0057-ethereum_rpc_finalized_json-n69-leaf-t4-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5402" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 4 | row 292</text>
+<rect x="250" y="5416" width="417.153" height="13" fill="#1b6b9b"/>
+<text x="20" y="5427" font-size="11">median (median_ms)</text>
+<text x="673.1531548217379" y="5427" font-size="11">3.67738</text>
+<rect x="250" y="5436" width="880.000" height="13" fill="#c06122"/>
+<text x="20" y="5447" font-size="11">p95 (p95_ms)</text>
+<text x="1136.0" y="5447" font-size="11">7.75756</text>
+<text x="20" y="5481" font-size="10">0058-ethereum_rpc_finalized_json-n69-ext_rebuild-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5495" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 3 | row 297</text>
+<rect x="250" y="5509" width="413.282" height="13" fill="#1b6b9b"/>
+<text x="20" y="5520" font-size="11">median (median_ms)</text>
+<text x="669.2822622031952" y="5520" font-size="11">3.64325</text>
+<rect x="250" y="5529" width="824.303" height="13" fill="#c06122"/>
+<text x="20" y="5540" font-size="11">p95 (p95_ms)</text>
+<text x="1080.3031034160738" y="5540" font-size="11">7.26657</text>
+<text x="20" y="5574" font-size="10">0059-synthetic-n512-full-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full |</text>
+<text x="20" y="5588" font-size="10">trial 1 | row 302</text>
+<rect x="250" y="5602" width="19.372" height="13" fill="#1b6b9b"/>
+<text x="20" y="5613" font-size="11">median (median_ms)</text>
+<text x="275.3724996928963" y="5613" font-size="11">0.170776</text>
+<rect x="250" y="5622" width="19.813" height="13" fill="#c06122"/>
+<text x="20" y="5633" font-size="11">p95 (p95_ms)</text>
+<text x="275.8129557381226" y="5633" font-size="11">0.174659</text>
+<text x="20" y="5667" font-size="10">0060-ethereum_rpc_finalized_json-n69-leaf-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5681" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 0 | row 307</text>
+<rect x="250" y="5695" width="424.413" height="13" fill="#1b6b9b"/>
+<text x="20" y="5706" font-size="11">median (median_ms)</text>
+<text x="680.4132267086497" y="5706" font-size="11">3.74138</text>
+<rect x="250" y="5715" width="810.677" height="13" fill="#c06122"/>
+<text x="20" y="5726" font-size="11">p95 (p95_ms)</text>
+<text x="1066.6768830411363" y="5726" font-size="11">7.14645</text>
+<text x="20" y="5760" font-size="10">0061-synthetic-n512-ext_cached-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="5774" font-size="10">ext_cached | trial 3 | row 312</text>
+<rect x="250" y="5788" width="19.423" height="13" fill="#1b6b9b"/>
+<text x="20" y="5799" font-size="11">median (median_ms)</text>
+<text x="275.4229794858616" y="5799" font-size="11">0.171221</text>
+<rect x="250" y="5808" width="19.909" height="13" fill="#c06122"/>
+<text x="20" y="5819" font-size="11">p95 (p95_ms)</text>
+<text x="275.90912825155175" y="5819" font-size="11">0.175507</text>
+<text x="20" y="5853" font-size="10">0062-synthetic-n512-leaf-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf |</text>
+<text x="20" y="5867" font-size="10">trial 1 | row 317</text>
+<rect x="250" y="5881" width="94.242" height="13" fill="#1b6b9b"/>
+<text x="20" y="5892" font-size="11">median (median_ms)</text>
+<text x="350.2415762699495" y="5892" font-size="11">0.830778</text>
+<rect x="250" y="5901" width="95.084" height="13" fill="#c06122"/>
+<text x="20" y="5912" font-size="11">p95 (p95_ms)</text>
+<text x="351.08397624869025" y="5912" font-size="11">0.838204</text>
+<text x="20" y="5946" font-size="10">0063-synthetic-n512-archive-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="5960" font-size="10">archive | trial 2 | row 322</text>
+<rect x="250" y="5974" width="19.552" height="13" fill="#1b6b9b"/>
+<text x="20" y="5985" font-size="11">median (median_ms)</text>
+<text x="275.5522417871739" y="5985" font-size="11">0.172361</text>
+<rect x="250" y="5994" width="22.268" height="13" fill="#c06122"/>
+<text x="20" y="6005" font-size="11">p95 (p95_ms)</text>
+<text x="278.267946882857" y="6005" font-size="11">0.196301</text>
+<text x="20" y="6039" font-size="10">0064-synthetic-n512-archive-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="6053" font-size="10">archive | trial 0 | row 327</text>
+<rect x="250" y="6067" width="19.539" height="13" fill="#1b6b9b"/>
+<text x="20" y="6078" font-size="11">median (median_ms)</text>
+<text x="275.53896957194485" y="6078" font-size="11">0.172244</text>
+<rect x="250" y="6087" width="21.100" height="13" fill="#c06122"/>
+<text x="20" y="6098" font-size="11">p95 (p95_ms)</text>
+<text x="277.1004173342118" y="6098" font-size="11">0.186009</text>
+<text x="20" y="6132" font-size="10">0065-synthetic-n4096-archive-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="6146" font-size="10">archive | trial 1 | row 333</text>
+<rect x="250" y="6160" width="20.205" height="13" fill="#1b6b9b"/>
+<text x="20" y="6171" font-size="11">median (median_ms)</text>
+<text x="276.2051326824813" y="6171" font-size="11">0.178117</text>
+<rect x="250" y="6180" width="20.739" height="13" fill="#c06122"/>
+<text x="20" y="6191" font-size="11">p95 (p95_ms)</text>
+<text x="276.73856796884013" y="6191" font-size="11">0.182819</text>
+<text x="20" y="6225" font-size="10">0066-ethereum_rpc_finalized_json-n69-full-t1-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6239" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 1 | row 338</text>
+<rect x="250" y="6253" width="368.784" height="13" fill="#1b6b9b"/>
+<text x="20" y="6264" font-size="11">median (median_ms)</text>
+<text x="624.7844948608871" y="6264" font-size="11">3.25099</text>
+<rect x="250" y="6273" width="756.560" height="13" fill="#c06122"/>
+<text x="20" y="6284" font-size="11">p95 (p95_ms)</text>
+<text x="1012.5595275385286" y="6284" font-size="11">6.66938</text>
+<text x="20" y="6318" font-size="10">0067-ethereum_rpc_finalized_json-n69-leaf-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6332" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 2 | row 343</text>
+<rect x="250" y="6346" width="426.953" height="13" fill="#1b6b9b"/>
+<text x="20" y="6357" font-size="11">median (median_ms)</text>
+<text x="682.9530976400949" y="6357" font-size="11">3.76377</text>
+<rect x="250" y="6366" width="829.907" height="13" fill="#c06122"/>
+<text x="20" y="6377" font-size="11">p95 (p95_ms)</text>
+<text x="1085.9072962965527" y="6377" font-size="11">7.31597</text>
+<text x="20" y="6411" font-size="10">0068-ethereum_rpc_finalized_json-n69-ext_cached-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6425" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 0 | row 348</text>
+<rect x="250" y="6439" width="406.889" height="13" fill="#1b6b9b"/>
+<text x="20" y="6450" font-size="11">median (median_ms)</text>
+<text x="662.889138221311" y="6450" font-size="11">3.58689</text>
+<rect x="250" y="6459" width="831.827" height="13" fill="#c06122"/>
+<text x="20" y="6470" font-size="11">p95 (p95_ms)</text>
+<text x="1087.8267308692461" y="6470" font-size="11">7.33289</text>
+<text x="20" y="6504" font-size="10">0069-synthetic-n4096-ext_cached-t0-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="6518" font-size="10">ext_cached | trial 0 | row 353</text>
+<rect x="250" y="6532" width="20.061" height="13" fill="#1b6b9b"/>
+<text x="20" y="6543" font-size="11">median (median_ms)</text>
+<text x="276.06146378856994" y="6543" font-size="11">0.17685</text>
+<rect x="250" y="6552" width="22.748" height="13" fill="#c06122"/>
+<text x="20" y="6563" font-size="11">p95 (p95_ms)</text>
+<text x="278.7475219316879" y="6563" font-size="11">0.200529</text>
+<text x="20" y="6597" font-size="10">0070-synthetic-n512-ext_cached-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="6611" font-size="10">ext_cached | trial 2 | row 358</text>
+<rect x="250" y="6625" width="20.988" height="13" fill="#1b6b9b"/>
+<text x="20" y="6636" font-size="11">median (median_ms)</text>
+<text x="276.987512754575" y="6636" font-size="11">0.185013</text>
+<rect x="250" y="6645" width="23.043" height="13" fill="#c06122"/>
+<text x="20" y="6656" font-size="11">p95 (p95_ms)</text>
+<text x="279.04319172129334" y="6656" font-size="11">0.203135</text>
+<text x="20" y="6690" font-size="10">0071-ethereum_rpc_finalized_json-n69-archive-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6704" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 3 | row 363</text>
+<rect x="250" y="6718" width="411.002" height="13" fill="#1b6b9b"/>
+<text x="20" y="6729" font-size="11">median (median_ms)</text>
+<text x="667.0019368140074" y="6729" font-size="11">3.62315</text>
+<rect x="250" y="6738" width="830.990" height="13" fill="#c06122"/>
+<text x="20" y="6749" font-size="11">p95 (p95_ms)</text>
+<text x="1086.9900311367899" y="6749" font-size="11">7.32552</text>
+<text x="20" y="6783" font-size="10">0072-ethereum_rpc_finalized_json-n69-ext_rebuild-t2-local | x86_64/ltu-hpc-2.latrobe.edu.au | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6797" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 2 | row 368</text>
+<rect x="250" y="6811" width="406.591" height="13" fill="#1b6b9b"/>
+<text x="20" y="6822" font-size="11">median (median_ms)</text>
+<text x="662.5909671296047" y="6822" font-size="11">3.58427</text>
+<rect x="250" y="6831" width="804.565" height="13" fill="#c06122"/>
+<text x="20" y="6842" font-size="11">p95 (p95_ms)</text>
+<text x="1060.5653568975827" y="6842" font-size="11">7.09257</text>
+<text x="20" y="6876" font-size="10">0073-synthetic-n4096-archive-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="6890" font-size="10">archive | trial 3 | row 373</text>
+<rect x="250" y="6904" width="20.233" height="13" fill="#1b6b9b"/>
+<text x="20" y="6915" font-size="11">median (median_ms)</text>
+<text x="276.233435397863" y="6915" font-size="11">0.178366</text>
+<rect x="250" y="6924" width="21.802" height="13" fill="#c06122"/>
+<text x="20" y="6935" font-size="11">p95 (p95_ms)</text>
+<text x="277.8020127219004" y="6935" font-size="11">0.192194</text>
+<text x="20" y="6969" font-size="10">0074-synthetic-n512-archive-t3-local | x86_64/ltu-hpc-2.latrobe.edu.au | synthetic | dataset b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef |</text>
+<text x="20" y="6983" font-size="10">archive | trial 3 | row 378</text>
+<rect x="250" y="6997" width="19.678" height="13" fill="#1b6b9b"/>
+<text x="20" y="7008" font-size="11">median (median_ms)</text>
+<text x="275.67844126958715" y="7008" font-size="11">0.173474</text>
+<rect x="250" y="7017" width="20.323" height="13" fill="#c06122"/>
+<text x="20" y="7028" font-size="11">p95 (p95_ms)</text>
+<text x="276.3230909133015" y="7028" font-size="11">0.179156</text>
+</g></svg>

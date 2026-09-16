@@ -1,0 +1,14 @@
+{"case_id": "migration-leaf-to-full-crash_after_root_verify-r0", "status": "failed", "case_wall_ns": null, "child_exit_code": null}
+Traceback (most recent call last):
+  File "/data/group/xulab/home/zxu/msi_pi_suite/msi_supplement/migration.py", line 410, in _main
+    result = _execute_case(request["case"], Path(request["dataset_dir"]), Path(request["work_root"]))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/group/xulab/home/zxu/msi_pi_suite/msi_supplement/migration.py", line 194, in _execute_case
+    shutil.rmtree(workspace)
+  File "/usr/local/easybuild/4.6.0/software/Python/3.11.5-GCCcore-13.2.0/lib/python3.11/shutil.py", line 732, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/usr/local/easybuild/4.6.0/software/Python/3.11.5-GCCcore-13.2.0/lib/python3.11/shutil.py", line 666, in _rmtree_safe_fd
+    onerror(os.rmdir, fullname, sys.exc_info())
+  File "/usr/local/easybuild/4.6.0/software/Python/3.11.5-GCCcore-13.2.0/lib/python3.11/shutil.py", line 664, in _rmtree_safe_fd
+    os.rmdir(entry.name, dir_fd=topfd)
+OSError: [Errno 39] Directory not empty: 'msi'

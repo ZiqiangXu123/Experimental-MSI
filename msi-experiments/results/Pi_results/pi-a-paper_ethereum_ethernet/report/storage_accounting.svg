@@ -1,0 +1,612 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="7075" viewBox="0 0 1280 7075" role="img">
+<title>Verifier and provider storage</title>
+<rect width="100%" height="100%" fill="white"/>
+<g font-family="sans-serif" fill="#17212b">
+<text x="20" y="27" font-size="18">Verifier and provider storage</text>
+<text x="20" y="49" font-size="12">bytes; zero-based bars; individual records; no pooled trials</text>
+<text x="250" y="68" font-size="10">0</text>
+<text x="470.0" y="68" font-size="10">8.387e+06</text>
+<text x="690.0" y="68" font-size="10">1.677e+07</text>
+<text x="910.0" y="68" font-size="10">2.516e+07</text>
+<text x="1130" y="68" font-size="10">3.355e+07</text>
+<text x="20" y="87" font-size="10">0000-synthetic-n512-full-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="101" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 2 | row 1</text>
+<rect x="250" y="115" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="126" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="126" font-size="11">909</text>
+<rect x="250" y="135" width="28.865" height="13" fill="#c06122"/>
+<text x="20" y="146" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.86548485223506" y="146" font-size="11">1.10049e+06</text>
+<text x="20" y="180" font-size="10">0001-synthetic-n4096-ext_cached-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="194" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 1 | row 9</text>
+<rect x="250" y="208" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="219" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0241313144103" y="219" font-size="11">920</text>
+<rect x="250" y="228" width="230.794" height="13" fill="#c06122"/>
+<text x="20" y="239" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79356972006485" y="239" font-size="11">8.79894e+06</text>
+<text x="20" y="273" font-size="10">0002-ethereum_rpc_finalized_json-n69-full-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="287" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 3 | row 17</text>
+<rect x="250" y="301" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="312" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="312" font-size="11">912</text>
+<rect x="250" y="321" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="332" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9758949152792" y="332" font-size="11">3.35488e+07</text>
+<text x="20" y="366" font-size="10">0003-synthetic-n4096-full-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="380" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 3 | row 25</text>
+<rect x="250" y="394" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="405" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="405" font-size="11">914</text>
+<rect x="250" y="414" width="230.793" height="13" fill="#c06122"/>
+<text x="20" y="425" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79341234192736" y="425" font-size="11">8.79894e+06</text>
+<text x="20" y="459" font-size="10">0004-ethereum_rpc_finalized_json-n69-ext_cached-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="473" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 3 | row 33</text>
+<rect x="250" y="487" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="498" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0240788550311" y="498" font-size="11">918</text>
+<rect x="250" y="507" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="518" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9760522934166" y="518" font-size="11">3.35489e+07</text>
+<text x="20" y="552" font-size="10">0005-ethereum_rpc_finalized_json-n69-ext_cached-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="566" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 2 | row 41</text>
+<rect x="250" y="580" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="591" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0240788550311" y="591" font-size="11">918</text>
+<rect x="250" y="600" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="611" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9760522934166" y="611" font-size="11">3.35489e+07</text>
+<text x="20" y="645" font-size="10">0006-ethereum_rpc_finalized_json-n69-ext_rebuild-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="659" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 1 | row 49</text>
+<rect x="250" y="673" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="684" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="684" font-size="11">912</text>
+<rect x="250" y="693" width="879.758" height="13" fill="#c06122"/>
+<text x="20" y="704" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.7575065198662" y="704" font-size="11">3.35405e+07</text>
+<text x="20" y="738" font-size="10">0007-ethereum_rpc_finalized_json-n69-ext_cached-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="752" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 1 | row 57</text>
+<rect x="250" y="766" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="777" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0240788550311" y="777" font-size="11">918</text>
+<rect x="250" y="786" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="797" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9760522934166" y="797" font-size="11">3.35489e+07</text>
+<text x="20" y="831" font-size="10">0008-ethereum_rpc_finalized_json-n69-ext_rebuild-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="845" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 0 | row 65</text>
+<rect x="250" y="859" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="870" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="870" font-size="11">912</text>
+<rect x="250" y="879" width="879.758" height="13" fill="#c06122"/>
+<text x="20" y="890" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.7575065198662" y="890" font-size="11">3.35405e+07</text>
+<text x="20" y="924" font-size="10">0009-ethereum_rpc_finalized_json-n69-full-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="938" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 4 | row 73</text>
+<rect x="250" y="952" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="963" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="963" font-size="11">912</text>
+<rect x="250" y="972" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="983" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9758949152792" y="983" font-size="11">3.35488e+07</text>
+<text x="20" y="1017" font-size="10">0010-ethereum_rpc_finalized_json-n69-leaf-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1031" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 1 | row 81</text>
+<rect x="250" y="1045" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1056" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="1056" font-size="11">914</text>
+<rect x="250" y="1065" width="879.868" height="13" fill="#c06122"/>
+<text x="20" y="1076" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.8681958098787" y="1076" font-size="11">3.35447e+07</text>
+<text x="20" y="1110" font-size="10">0011-synthetic-n4096-full-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1124" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 0 | row 89</text>
+<rect x="250" y="1138" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1149" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="1149" font-size="11">914</text>
+<rect x="250" y="1158" width="230.793" height="13" fill="#c06122"/>
+<text x="20" y="1169" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79341234192736" y="1169" font-size="11">8.79894e+06</text>
+<text x="20" y="1203" font-size="10">0012-ethereum_rpc_finalized_json-n69-archive-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1217" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 0 | row 97</text>
+<rect x="250" y="1231" width="880.000" height="13" fill="#1b6b9b"/>
+<text x="20" y="1242" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="1135.9999737703104" y="1242" font-size="11">3.35498e+07</text>
+<rect x="250" y="1251" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="1262" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="1262" font-size="11">0</text>
+<text x="20" y="1296" font-size="10">0013-ethereum_rpc_finalized_json-n69-leaf-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="1310" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 3 | row 102</text>
+<rect x="250" y="1324" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1335" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="1335" font-size="11">914</text>
+<rect x="250" y="1344" width="879.868" height="13" fill="#c06122"/>
+<text x="20" y="1355" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.8681958098787" y="1355" font-size="11">3.35447e+07</text>
+<text x="20" y="1389" font-size="10">0014-synthetic-n4096-ext_rebuild-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1403" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 3 | row 110</text>
+<rect x="250" y="1417" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1428" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="1428" font-size="11">914</text>
+<rect x="250" y="1437" width="223.913" height="13" fill="#c06122"/>
+<text x="20" y="1448" font-size="11">provider (provider_total_bytes)</text>
+<text x="479.9133385363499" y="1448" font-size="11">8.53664e+06</text>
+<text x="20" y="1482" font-size="10">0015-synthetic-n4096-leaf-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1496" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 4 | row 118</text>
+<rect x="250" y="1510" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1521" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02402639565196" y="1521" font-size="11">916</text>
+<rect x="250" y="1530" width="227.355" height="13" fill="#c06122"/>
+<text x="20" y="1541" font-size="11">provider (provider_total_bytes)</text>
+<text x="483.35459511970396" y="1541" font-size="11">8.66783e+06</text>
+<text x="20" y="1575" font-size="10">0016-synthetic-n512-ext_cached-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1589" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 1 | row 126</text>
+<rect x="250" y="1603" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1614" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02400016596243" y="1614" font-size="11">915</text>
+<rect x="250" y="1623" width="28.866" height="13" fill="#c06122"/>
+<text x="20" y="1634" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.8656422303725" y="1634" font-size="11">1.1005e+06</text>
+<text x="20" y="1668" font-size="10">0017-synthetic-n4096-leaf-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1682" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 3 | row 134</text>
+<rect x="250" y="1696" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1707" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02402639565196" y="1707" font-size="11">916</text>
+<rect x="250" y="1716" width="227.355" height="13" fill="#c06122"/>
+<text x="20" y="1727" font-size="11">provider (provider_total_bytes)</text>
+<text x="483.35459511970396" y="1727" font-size="11">8.66783e+06</text>
+<text x="20" y="1761" font-size="10">0018-synthetic-n4096-leaf-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1775" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 0 | row 142</text>
+<rect x="250" y="1789" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1800" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02402639565196" y="1800" font-size="11">916</text>
+<rect x="250" y="1809" width="227.355" height="13" fill="#c06122"/>
+<text x="20" y="1820" font-size="11">provider (provider_total_bytes)</text>
+<text x="483.35459511970396" y="1820" font-size="11">8.66783e+06</text>
+<text x="20" y="1854" font-size="10">0019-synthetic-n4096-full-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1868" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 4 | row 150</text>
+<rect x="250" y="1882" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1893" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="1893" font-size="11">914</text>
+<rect x="250" y="1902" width="230.793" height="13" fill="#c06122"/>
+<text x="20" y="1913" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79341234192736" y="1913" font-size="11">8.79894e+06</text>
+<text x="20" y="1947" font-size="10">0020-synthetic-n4096-ext_rebuild-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="1961" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 2 | row 158</text>
+<rect x="250" y="1975" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="1986" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="1986" font-size="11">914</text>
+<rect x="250" y="1995" width="223.913" height="13" fill="#c06122"/>
+<text x="20" y="2006" font-size="11">provider (provider_total_bytes)</text>
+<text x="479.9133385363499" y="2006" font-size="11">8.53664e+06</text>
+<text x="20" y="2040" font-size="10">0021-synthetic-n4096-ext_rebuild-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2054" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 4 | row 166</text>
+<rect x="250" y="2068" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2079" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="2079" font-size="11">914</text>
+<rect x="250" y="2088" width="223.913" height="13" fill="#c06122"/>
+<text x="20" y="2099" font-size="11">provider (provider_total_bytes)</text>
+<text x="479.9133385363499" y="2099" font-size="11">8.53664e+06</text>
+<text x="20" y="2133" font-size="10">0022-synthetic-n4096-full-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2147" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 2 | row 174</text>
+<rect x="250" y="2161" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2172" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="2172" font-size="11">914</text>
+<rect x="250" y="2181" width="230.793" height="13" fill="#c06122"/>
+<text x="20" y="2192" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79341234192736" y="2192" font-size="11">8.79894e+06</text>
+<text x="20" y="2226" font-size="10">0023-synthetic-n512-ext_cached-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2240" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 0 | row 182</text>
+<rect x="250" y="2254" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2265" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02400016596243" y="2265" font-size="11">915</text>
+<rect x="250" y="2274" width="28.866" height="13" fill="#c06122"/>
+<text x="20" y="2285" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.8656422303725" y="2285" font-size="11">1.1005e+06</text>
+<text x="20" y="2319" font-size="10">0024-ethereum_rpc_finalized_json-n69-ext_rebuild-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2333" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 4 | row 191</text>
+<rect x="250" y="2347" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2358" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="2358" font-size="11">912</text>
+<rect x="250" y="2367" width="879.758" height="13" fill="#c06122"/>
+<text x="20" y="2378" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.7575065198662" y="2378" font-size="11">3.35405e+07</text>
+<text x="20" y="2412" font-size="10">0025-synthetic-n512-leaf-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2426" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 3 | row 199</text>
+<rect x="250" y="2440" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2451" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0238952472041" y="2451" font-size="11">911</text>
+<rect x="250" y="2460" width="28.435" height="13" fill="#c06122"/>
+<text x="20" y="2471" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.43526548380305" y="2471" font-size="11">1.08409e+06</text>
+<text x="20" y="2505" font-size="10">0026-synthetic-n4096-leaf-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2519" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 2 | row 207</text>
+<rect x="250" y="2533" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2544" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02402639565196" y="2544" font-size="11">916</text>
+<rect x="250" y="2553" width="227.355" height="13" fill="#c06122"/>
+<text x="20" y="2564" font-size="11">provider (provider_total_bytes)</text>
+<text x="483.35459511970396" y="2564" font-size="11">8.66783e+06</text>
+<text x="20" y="2598" font-size="10">0027-synthetic-n512-leaf-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2612" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 2 | row 215</text>
+<rect x="250" y="2626" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2637" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0238952472041" y="2637" font-size="11">911</text>
+<rect x="250" y="2646" width="28.435" height="13" fill="#c06122"/>
+<text x="20" y="2657" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.43526548380305" y="2657" font-size="11">1.08409e+06</text>
+<text x="20" y="2691" font-size="10">0028-synthetic-n512-leaf-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2705" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 0 | row 223</text>
+<rect x="250" y="2719" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2730" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0238952472041" y="2730" font-size="11">911</text>
+<rect x="250" y="2739" width="28.435" height="13" fill="#c06122"/>
+<text x="20" y="2750" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.43526548380305" y="2750" font-size="11">1.08409e+06</text>
+<text x="20" y="2784" font-size="10">0029-ethereum_rpc_finalized_json-n69-full-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="2798" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 0 | row 232</text>
+<rect x="250" y="2812" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2823" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="2823" font-size="11">912</text>
+<rect x="250" y="2832" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="2843" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9758949152792" y="2843" font-size="11">3.35488e+07</text>
+<text x="20" y="2877" font-size="10">0030-synthetic-n512-ext_rebuild-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2891" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 2 | row 240</text>
+<rect x="250" y="2905" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="2916" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="2916" font-size="11">909</text>
+<rect x="250" y="2925" width="28.002" height="13" fill="#c06122"/>
+<text x="20" y="2936" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.00226576827595" y="2936" font-size="11">1.06758e+06</text>
+<text x="20" y="2970" font-size="10">0031-synthetic-n4096-archive-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="2984" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 4 | row 248</text>
+<rect x="250" y="2998" width="230.818" height="13" fill="#1b6b9b"/>
+<text x="20" y="3009" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="486.81754365633765" y="3009" font-size="11">8.79986e+06</text>
+<rect x="250" y="3018" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="3029" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="3029" font-size="11">0</text>
+<text x="20" y="3063" font-size="10">0032-synthetic-n512-ext_cached-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3077" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 4 | row 253</text>
+<rect x="250" y="3091" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3102" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02400016596243" y="3102" font-size="11">915</text>
+<rect x="250" y="3111" width="28.866" height="13" fill="#c06122"/>
+<text x="20" y="3122" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.8656422303725" y="3122" font-size="11">1.1005e+06</text>
+<text x="20" y="3156" font-size="10">0033-synthetic-n512-full-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3170" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 0 | row 261</text>
+<rect x="250" y="3184" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3195" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="3195" font-size="11">909</text>
+<rect x="250" y="3204" width="28.865" height="13" fill="#c06122"/>
+<text x="20" y="3215" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.86548485223506" y="3215" font-size="11">1.10049e+06</text>
+<text x="20" y="3249" font-size="10">0034-synthetic-n512-ext_rebuild-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3263" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 3 | row 270</text>
+<rect x="250" y="3277" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3288" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="3288" font-size="11">909</text>
+<rect x="250" y="3297" width="28.002" height="13" fill="#c06122"/>
+<text x="20" y="3308" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.00226576827595" y="3308" font-size="11">1.06758e+06</text>
+<text x="20" y="3342" font-size="10">0035-synthetic-n512-ext_rebuild-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3356" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 1 | row 278</text>
+<rect x="250" y="3370" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3381" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="3381" font-size="11">909</text>
+<rect x="250" y="3390" width="28.002" height="13" fill="#c06122"/>
+<text x="20" y="3401" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.00226576827595" y="3401" font-size="11">1.06758e+06</text>
+<text x="20" y="3435" font-size="10">0036-synthetic-n4096-ext_rebuild-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3449" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 0 | row 286</text>
+<rect x="250" y="3463" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3474" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="3474" font-size="11">914</text>
+<rect x="250" y="3483" width="223.913" height="13" fill="#c06122"/>
+<text x="20" y="3494" font-size="11">provider (provider_total_bytes)</text>
+<text x="479.9133385363499" y="3494" font-size="11">8.53664e+06</text>
+<text x="20" y="3528" font-size="10">0037-synthetic-n4096-ext_cached-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3542" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 2 | row 294</text>
+<rect x="250" y="3556" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3567" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0241313144103" y="3567" font-size="11">920</text>
+<rect x="250" y="3576" width="230.794" height="13" fill="#c06122"/>
+<text x="20" y="3587" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79356972006485" y="3587" font-size="11">8.79894e+06</text>
+<text x="20" y="3621" font-size="10">0038-ethereum_rpc_finalized_json-n69-full-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="3635" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 2 | row 302</text>
+<rect x="250" y="3649" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3660" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="3660" font-size="11">912</text>
+<rect x="250" y="3669" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="3680" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9758949152792" y="3680" font-size="11">3.35488e+07</text>
+<text x="20" y="3714" font-size="10">0039-synthetic-n4096-ext_rebuild-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3728" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 1 | row 310</text>
+<rect x="250" y="3742" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="3753" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="3753" font-size="11">914</text>
+<rect x="250" y="3762" width="223.913" height="13" fill="#c06122"/>
+<text x="20" y="3773" font-size="11">provider (provider_total_bytes)</text>
+<text x="479.9133385363499" y="3773" font-size="11">8.53664e+06</text>
+<text x="20" y="3807" font-size="10">0040-synthetic-n4096-archive-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3821" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 2 | row 318</text>
+<rect x="250" y="3835" width="230.818" height="13" fill="#1b6b9b"/>
+<text x="20" y="3846" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="486.81754365633765" y="3846" font-size="11">8.79986e+06</text>
+<rect x="250" y="3855" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="3866" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="3866" font-size="11">0</text>
+<text x="20" y="3900" font-size="10">0041-synthetic-n512-archive-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="3914" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 1 | row 323</text>
+<rect x="250" y="3928" width="28.890" height="13" fill="#1b6b9b"/>
+<text x="20" y="3939" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="284.8895637072662" y="3939" font-size="11">1.10141e+06</text>
+<rect x="250" y="3948" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="3959" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="3959" font-size="11">0</text>
+<text x="20" y="3993" font-size="10">0042-synthetic-n512-full-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4007" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 4 | row 328</text>
+<rect x="250" y="4021" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4032" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="4032" font-size="11">909</text>
+<rect x="250" y="4041" width="28.865" height="13" fill="#c06122"/>
+<text x="20" y="4052" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.86548485223506" y="4052" font-size="11">1.10049e+06</text>
+<text x="20" y="4086" font-size="10">0043-synthetic-n512-ext_rebuild-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4100" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 0 | row 336</text>
+<rect x="250" y="4114" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4125" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="4125" font-size="11">909</text>
+<rect x="250" y="4134" width="28.002" height="13" fill="#c06122"/>
+<text x="20" y="4145" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.00226576827595" y="4145" font-size="11">1.06758e+06</text>
+<text x="20" y="4179" font-size="10">0044-ethereum_rpc_finalized_json-n69-ext_cached-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="4193" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 4 | row 345</text>
+<rect x="250" y="4207" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4218" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0240788550311" y="4218" font-size="11">918</text>
+<rect x="250" y="4227" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="4238" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9760522934166" y="4238" font-size="11">3.35489e+07</text>
+<text x="20" y="4272" font-size="10">0045-synthetic-n4096-leaf-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4286" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 1 | row 353</text>
+<rect x="250" y="4300" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4311" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02402639565196" y="4311" font-size="11">916</text>
+<rect x="250" y="4320" width="227.355" height="13" fill="#c06122"/>
+<text x="20" y="4331" font-size="11">provider (provider_total_bytes)</text>
+<text x="483.35459511970396" y="4331" font-size="11">8.66783e+06</text>
+<text x="20" y="4365" font-size="10">0046-synthetic-n512-ext_rebuild-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4379" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_rebuild | trial 4 | row 361</text>
+<rect x="250" y="4393" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4404" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="4404" font-size="11">909</text>
+<rect x="250" y="4413" width="28.002" height="13" fill="#c06122"/>
+<text x="20" y="4424" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.00226576827595" y="4424" font-size="11">1.06758e+06</text>
+<text x="20" y="4458" font-size="10">0047-synthetic-n4096-ext_cached-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4472" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 4 | row 369</text>
+<rect x="250" y="4486" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4497" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0241313144103" y="4497" font-size="11">920</text>
+<rect x="250" y="4506" width="230.794" height="13" fill="#c06122"/>
+<text x="20" y="4517" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79356972006485" y="4517" font-size="11">8.79894e+06</text>
+<text x="20" y="4551" font-size="10">0048-synthetic-n512-leaf-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4565" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 4 | row 377</text>
+<rect x="250" y="4579" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4590" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0238952472041" y="4590" font-size="11">911</text>
+<rect x="250" y="4599" width="28.435" height="13" fill="#c06122"/>
+<text x="20" y="4610" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.43526548380305" y="4610" font-size="11">1.08409e+06</text>
+<text x="20" y="4644" font-size="10">0049-synthetic-n512-full-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4658" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 3 | row 385</text>
+<rect x="250" y="4672" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="4683" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="4683" font-size="11">909</text>
+<rect x="250" y="4692" width="28.865" height="13" fill="#c06122"/>
+<text x="20" y="4703" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.86548485223506" y="4703" font-size="11">1.10049e+06</text>
+<text x="20" y="4737" font-size="10">0050-synthetic-n4096-archive-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4751" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 0 | row 393</text>
+<rect x="250" y="4765" width="230.818" height="13" fill="#1b6b9b"/>
+<text x="20" y="4776" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="486.81754365633765" y="4776" font-size="11">8.79986e+06</text>
+<rect x="250" y="4785" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="4796" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="4796" font-size="11">0</text>
+<text x="20" y="4830" font-size="10">0051-ethereum_rpc_finalized_json-n69-archive-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="4844" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 4 | row 398</text>
+<rect x="250" y="4858" width="880.000" height="13" fill="#1b6b9b"/>
+<text x="20" y="4869" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="1136.0" y="4869" font-size="11">3.35498e+07</text>
+<rect x="250" y="4878" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="4889" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="4889" font-size="11">0</text>
+<text x="20" y="4923" font-size="10">0052-synthetic-n512-archive-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="4937" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 4 | row 403</text>
+<rect x="250" y="4951" width="28.890" height="13" fill="#1b6b9b"/>
+<text x="20" y="4962" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="284.889511247887" y="4962" font-size="11">1.1014e+06</text>
+<rect x="250" y="4971" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="4982" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="4982" font-size="11">0</text>
+<text x="20" y="5016" font-size="10">0053-ethereum_rpc_finalized_json-n69-archive-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5030" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 1 | row 408</text>
+<rect x="250" y="5044" width="880.000" height="13" fill="#1b6b9b"/>
+<text x="20" y="5055" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="1136.0" y="5055" font-size="11">3.35498e+07</text>
+<rect x="250" y="5064" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="5075" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="5075" font-size="11">0</text>
+<text x="20" y="5109" font-size="10">0054-synthetic-n4096-full-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5123" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 1 | row 413</text>
+<rect x="250" y="5137" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5148" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="5148" font-size="11">914</text>
+<rect x="250" y="5157" width="230.793" height="13" fill="#c06122"/>
+<text x="20" y="5168" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79341234192736" y="5168" font-size="11">8.79894e+06</text>
+<text x="20" y="5202" font-size="10">0055-synthetic-n4096-ext_cached-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5216" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 3 | row 421</text>
+<rect x="250" y="5230" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5241" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0241313144103" y="5241" font-size="11">920</text>
+<rect x="250" y="5250" width="230.794" height="13" fill="#c06122"/>
+<text x="20" y="5261" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79356972006485" y="5261" font-size="11">8.79894e+06</text>
+<text x="20" y="5295" font-size="10">0056-ethereum_rpc_finalized_json-n69-archive-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5309" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 2 | row 429</text>
+<rect x="250" y="5323" width="880.000" height="13" fill="#1b6b9b"/>
+<text x="20" y="5334" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="1136.0" y="5334" font-size="11">3.35498e+07</text>
+<rect x="250" y="5343" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="5354" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="5354" font-size="11">0</text>
+<text x="20" y="5388" font-size="10">0057-ethereum_rpc_finalized_json-n69-leaf-t4-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5402" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 4 | row 434</text>
+<rect x="250" y="5416" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5427" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="5427" font-size="11">914</text>
+<rect x="250" y="5436" width="879.868" height="13" fill="#c06122"/>
+<text x="20" y="5447" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.8681958098787" y="5447" font-size="11">3.35447e+07</text>
+<text x="20" y="5481" font-size="10">0058-ethereum_rpc_finalized_json-n69-ext_rebuild-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5495" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 3 | row 442</text>
+<rect x="250" y="5509" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5520" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="5520" font-size="11">912</text>
+<rect x="250" y="5529" width="879.758" height="13" fill="#c06122"/>
+<text x="20" y="5540" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.7575065198662" y="5540" font-size="11">3.35405e+07</text>
+<text x="20" y="5574" font-size="10">0059-synthetic-n512-full-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5588" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | full | trial 1 | row 450</text>
+<rect x="250" y="5602" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5613" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02384278782495" y="5613" font-size="11">909</text>
+<rect x="250" y="5622" width="28.865" height="13" fill="#c06122"/>
+<text x="20" y="5633" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.86548485223506" y="5633" font-size="11">1.10049e+06</text>
+<text x="20" y="5667" font-size="10">0060-ethereum_rpc_finalized_json-n69-leaf-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="5681" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 0 | row 458</text>
+<rect x="250" y="5695" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5706" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="5706" font-size="11">914</text>
+<rect x="250" y="5715" width="879.868" height="13" fill="#c06122"/>
+<text x="20" y="5726" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.8681958098787" y="5726" font-size="11">3.35447e+07</text>
+<text x="20" y="5760" font-size="10">0061-synthetic-n512-ext_cached-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5774" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 3 | row 466</text>
+<rect x="250" y="5788" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5799" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02400016596243" y="5799" font-size="11">915</text>
+<rect x="250" y="5808" width="28.866" height="13" fill="#c06122"/>
+<text x="20" y="5819" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.8656422303725" y="5819" font-size="11">1.1005e+06</text>
+<text x="20" y="5853" font-size="10">0062-synthetic-n512-leaf-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5867" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | leaf | trial 1 | row 474</text>
+<rect x="250" y="5881" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="5892" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0238952472041" y="5892" font-size="11">911</text>
+<rect x="250" y="5901" width="28.435" height="13" fill="#c06122"/>
+<text x="20" y="5912" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.43526548380305" y="5912" font-size="11">1.08409e+06</text>
+<text x="20" y="5946" font-size="10">0063-synthetic-n512-archive-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="5960" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 2 | row 482</text>
+<rect x="250" y="5974" width="28.890" height="13" fill="#1b6b9b"/>
+<text x="20" y="5985" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="284.889511247887" y="5985" font-size="11">1.1014e+06</text>
+<rect x="250" y="5994" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="6005" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="6005" font-size="11">0</text>
+<text x="20" y="6039" font-size="10">0064-synthetic-n512-archive-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="6053" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 0 | row 487</text>
+<rect x="250" y="6067" width="28.890" height="13" fill="#1b6b9b"/>
+<text x="20" y="6078" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="284.889511247887" y="6078" font-size="11">1.1014e+06</text>
+<rect x="250" y="6087" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="6098" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="6098" font-size="11">0</text>
+<text x="20" y="6132" font-size="10">0065-synthetic-n4096-archive-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="6146" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 1 | row 493</text>
+<rect x="250" y="6160" width="230.818" height="13" fill="#1b6b9b"/>
+<text x="20" y="6171" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="486.81754365633765" y="6171" font-size="11">8.79986e+06</text>
+<rect x="250" y="6180" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="6191" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="6191" font-size="11">0</text>
+<text x="20" y="6225" font-size="10">0066-ethereum_rpc_finalized_json-n69-full-t1-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6239" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | full | trial 1 | row 498</text>
+<rect x="250" y="6253" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="6264" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="6264" font-size="11">912</text>
+<rect x="250" y="6273" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="6284" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9758949152792" y="6284" font-size="11">3.35488e+07</text>
+<text x="20" y="6318" font-size="10">0067-ethereum_rpc_finalized_json-n69-leaf-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6332" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | leaf | trial 2 | row 506</text>
+<rect x="250" y="6346" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="6357" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0239739362728" y="6357" font-size="11">914</text>
+<rect x="250" y="6366" width="879.868" height="13" fill="#c06122"/>
+<text x="20" y="6377" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.8681958098787" y="6377" font-size="11">3.35447e+07</text>
+<text x="20" y="6411" font-size="10">0068-ethereum_rpc_finalized_json-n69-ext_cached-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6425" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_cached | trial 0 | row 514</text>
+<rect x="250" y="6439" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="6450" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0240788550311" y="6450" font-size="11">918</text>
+<rect x="250" y="6459" width="879.976" height="13" fill="#c06122"/>
+<text x="20" y="6470" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.9760522934166" y="6470" font-size="11">3.35489e+07</text>
+<text x="20" y="6504" font-size="10">0069-synthetic-n4096-ext_cached-t0-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="6518" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 0 | row 522</text>
+<rect x="250" y="6532" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="6543" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.0241313144103" y="6543" font-size="11">920</text>
+<rect x="250" y="6552" width="230.794" height="13" fill="#c06122"/>
+<text x="20" y="6563" font-size="11">provider (provider_total_bytes)</text>
+<text x="486.79356972006485" y="6563" font-size="11">8.79894e+06</text>
+<text x="20" y="6597" font-size="10">0070-synthetic-n512-ext_cached-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="6611" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | ext_cached | trial 2 | row 530</text>
+<rect x="250" y="6625" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="6636" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02400016596243" y="6636" font-size="11">915</text>
+<rect x="250" y="6645" width="28.866" height="13" fill="#c06122"/>
+<text x="20" y="6656" font-size="11">provider (provider_total_bytes)</text>
+<text x="284.8656422303725" y="6656" font-size="11">1.1005e+06</text>
+<text x="20" y="6690" font-size="10">0071-ethereum_rpc_finalized_json-n69-archive-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6704" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | archive | trial 3 | row 538</text>
+<rect x="250" y="6718" width="880.000" height="13" fill="#1b6b9b"/>
+<text x="20" y="6729" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="1136.0" y="6729" font-size="11">3.35498e+07</text>
+<rect x="250" y="6738" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="6749" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="6749" font-size="11">0</text>
+<text x="20" y="6783" font-size="10">0072-ethereum_rpc_finalized_json-n69-ext_rebuild-t2-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | ethereum_rpc_finalized_json | dataset</text>
+<text x="20" y="6797" font-size="10">190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60 | ext_rebuild | trial 2 | row 543</text>
+<rect x="250" y="6811" width="0.024" height="13" fill="#1b6b9b"/>
+<text x="20" y="6822" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="256.02392147689363" y="6822" font-size="11">912</text>
+<rect x="250" y="6831" width="879.758" height="13" fill="#c06122"/>
+<text x="20" y="6842" font-size="11">provider (provider_total_bytes)</text>
+<text x="1135.7575065198662" y="6842" font-size="11">3.35405e+07</text>
+<text x="20" y="6876" font-size="10">0073-synthetic-n4096-archive-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="6890" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 3 | row 551</text>
+<rect x="250" y="6904" width="230.818" height="13" fill="#1b6b9b"/>
+<text x="20" y="6915" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="486.81754365633765" y="6915" font-size="11">8.79986e+06</text>
+<rect x="250" y="6924" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="6935" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="6935" font-size="11">0</text>
+<text x="20" y="6969" font-size="10">0074-synthetic-n512-archive-t3-storage | Raspberry Pi 4 Model B Rev 1.4/aarch64/msi-pi-a | synthetic | dataset</text>
+<text x="20" y="6983" font-size="10">b016c29f4de90f5b1cf3a216da5a605c33b87f5b41cbb2b6bd5568949c797cef | archive | trial 3 | row 556</text>
+<rect x="250" y="6997" width="28.890" height="13" fill="#1b6b9b"/>
+<text x="20" y="7008" font-size="11">verifier (verifier_total_bytes)</text>
+<text x="284.8895637072662" y="7008" font-size="11">1.10141e+06</text>
+<rect x="250" y="7017" width="0.000" height="13" fill="#c06122"/>
+<text x="20" y="7028" font-size="11">provider (provider_total_bytes)</text>
+<text x="256.0" y="7028" font-size="11">0</text>
+</g></svg>
