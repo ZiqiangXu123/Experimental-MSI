@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "experiment": "E5",
+  "plan_seed": 2026062405,
+  "anchor_key_seed": 5052026,
+  "dataset": {
+    "max_prefix": 1048576,
+    "shard": 1,
+    "statement_seed": 5005005
+  },
+  "anchor_query": {
+    "modes": ["direct", "aggregate"],
+    "prefix_lengths": [1024, 4096, 16384, 65536, 262144, 1048576],
+    "launches": 10,
+    "warmup_queries": 1000,
+    "measured_queries": 10000,
+    "accounting_checkpoint_interval": 100
+  },
+  "checkpoint_update": {
+    "prefix_lengths": [1024, 16384, 262144, 1048576],
+    "aggregate_intervals": [1, 10, 100, 1000],
+    "include_direct": true,
+    "launches": 10,
+    "warmup_updates": 20,
+    "target_statement_operations": 100000,
+    "minimum_measured_updates": 100,
+    "maximum_measured_updates": 10000
+  },
+  "pruning": {
+    "launches": 5,
+    "total_epochs": 2000,
+    "blocks_per_epoch": 16,
+    "block_size": 1024,
+    "finality_delay_ms": 20.0,
+    "retry_delay_ms": 100.0,
+    "fault_fraction": 0.05,
+    "timeline_sample_limit": 2000,
+    "base_hot_window_epochs": 128,
+    "direct_delay_rate_grid": {
+      "arrival_rates_eps": [10, 100, 1000],
+      "certificate_delays_ms": [0, 50, 500, 5000]
+    },
+    "aggregate_delay_interval_grid": {
+      "checkpoint_intervals": [1, 10, 100, 1000],
+      "certificate_delays_ms": [0, 50, 500, 5000],
+      "fixed_arrival_rate_eps": 100
+    },
+    "aggregate_rate_sweep": {
+      "checkpoint_interval": 100,
+      "certificate_delay_ms": 500,
+      "arrival_rates_eps": [10, 100, 1000]
+    },
+    "hot_window_sweep": {
+      "anchor_mode": "aggregate",
+      "checkpoint_interval": 100,
+      "certificate_delay_ms": 500,
+      "arrival_rate_eps": 100,
+      "hot_window_epochs": [32, 64, 128, 256, 1024]
+    },
+    "fault_sweep": {
+      "arrival_rate_eps": 100,
+      "certificate_delay_ms": 50,
+      "hot_window_epochs": 128,
+      "aggregate_checkpoint_interval": 100,
+      "direct_faults": [
+        "not_final",
+        "local_root_mismatch",
+        "missing_certificate",
+        "wrong_position",
+        "invalid_signature"
+      ],
+      "aggregate_faults": [
+        "not_final",
+        "local_root_mismatch",
+        "missing_certificate",
+        "wrong_position",
+        "stale_prefix_root",
+        "invalid_signature",
+        "uncovered_prefix"
+      ]
+    }
+  },
+  "unsafe_counterexample": {
+    "anchor_modes": ["direct", "aggregate"],
+    "launches": 1,
+    "total_epochs": 200,
+    "arrival_rate_eps": 100,
+    "certificate_delay_ms": 500,
+    "aggregate_checkpoint_interval": 100,
+    "hot_window_epochs": 32
+  },
+  "expected": {
+    "configurations": 80,
+    "cases": 552,
+    "cases_by_trial_kind": {
+      "anchor_query": 120,
+      "checkpoint_update": 200,
+      "pruning": 230,
+      "unsafe_counterexample": 2
+    }
+  }
+}

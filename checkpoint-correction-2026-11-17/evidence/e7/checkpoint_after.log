@@ -1,0 +1,15 @@
+test_authentic_old_covering_checkpoint_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_authentic_old_covering_checkpoint_rejected) ... ok
+test_current_checkpoint_cannot_be_bypassed_by_direct_certificate (test_checkpoint_policy.CheckpointPolicyTests.test_current_checkpoint_cannot_be_bypassed_by_direct_certificate) ... ok
+test_current_valid_checkpoint_accepts (test_checkpoint_policy.CheckpointPolicyTests.test_current_valid_checkpoint_accepts) ... ok
+test_honest_modes_accept (test_checkpoint_policy.CheckpointPolicyTests.test_honest_modes_accept) ... ok
+test_invalid_signature_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_invalid_signature_rejected) ... ok
+test_noncovering_prefix_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_noncovering_prefix_rejected) ... ok
+test_signed_alternative_root_at_current_prefix_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_signed_alternative_root_at_current_prefix_rejected) ... ok
+test_wrong_key_even_with_valid_signature_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_wrong_key_even_with_valid_signature_rejected) ... ok
+test_wrong_position_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_wrong_position_rejected) ... ok
+test_wrong_statement_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_wrong_statement_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.007s
+
+OK

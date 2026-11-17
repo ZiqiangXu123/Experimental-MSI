@@ -1,0 +1,25 @@
+test_aggregate_proof_is_position_bound (test_core.E5CoreTests.test_aggregate_proof_is_position_bound) ... ok
+test_direct_evidence_accepts_valid_and_rejects_tamper (test_core.E5CoreTests.test_direct_evidence_accepts_valid_and_rejects_tamper) ... ok
+test_end_to_end_anchor_query_and_update_cases (test_core.E5CoreTests.test_end_to_end_anchor_query_and_update_cases) ... ok
+test_epoch_commitment_is_deterministic_and_counts_padding (test_core.E5CoreTests.test_epoch_commitment_is_deterministic_and_counts_padding) ... ok
+test_invalid_signature_fails_closed_and_recovers (test_core.E5CoreTests.test_invalid_signature_fails_closed_and_recovers) ... ok
+test_missing_certificate_retains_hot_copy (test_core.E5CoreTests.test_missing_certificate_retains_hot_copy) ... ok
+test_mmap_dataset_matches_dynamic_accumulator (test_core.E5CoreTests.test_mmap_dataset_matches_dynamic_accumulator) ... ok
+test_plan_counts_are_frozen (test_core.E5CoreTests.test_plan_counts_are_frozen) ... ok
+test_root_statement_round_trip_and_binding (test_core.E5CoreTests.test_root_statement_round_trip_and_binding) ... ok
+test_safe_pruning_has_zero_gate_violations (test_core.E5CoreTests.test_safe_pruning_has_zero_gate_violations) ... ok
+test_unsafe_counterexample_exhibits_gate_violation (test_core.E5CoreTests.test_unsafe_counterexample_exhibits_gate_violation) ... ok
+test_authentic_old_checkpoint_still_covering_query_is_rejected (test_current_checkpoint.CurrentCheckpointTests.test_authentic_old_checkpoint_still_covering_query_is_rejected) ... ok
+test_authentic_same_height_fork_cannot_replace_checkpoint (test_current_checkpoint.CurrentCheckpointTests.test_authentic_same_height_fork_cannot_replace_checkpoint) ... ok
+test_authenticated_checkpoint_can_advance_and_delayed_delivery_cannot_rollback (test_current_checkpoint.CurrentCheckpointTests.test_authenticated_checkpoint_can_advance_and_delayed_delivery_cannot_rollback) ... ok
+test_current_valid_proof_accepts_without_changing_checkpoint (test_current_checkpoint.CurrentCheckpointTests.test_current_valid_proof_accepts_without_changing_checkpoint) ... ok
+test_missing_checkpoint_rejects_proof_without_installing_it (test_current_checkpoint.CurrentCheckpointTests.test_missing_checkpoint_rejects_proof_without_installing_it) ... ok
+test_noncovering_checkpoint_is_rejected (test_current_checkpoint.CurrentCheckpointTests.test_noncovering_checkpoint_is_rejected) ... ok
+test_rejected_checkpoint_evidence_does_not_prune_before_valid_recovery (test_current_checkpoint.CurrentCheckpointTests.test_rejected_checkpoint_evidence_does_not_prune_before_valid_recovery) ... ok
+test_wrong_anchor_root_key_shard_or_signature_is_rejected (test_current_checkpoint.CurrentCheckpointTests.test_wrong_anchor_root_key_shard_or_signature_is_rejected) ... ok
+test_wrong_statement_position_or_root_is_rejected (test_current_checkpoint.CurrentCheckpointTests.test_wrong_statement_position_or_root_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.061s
+
+OK

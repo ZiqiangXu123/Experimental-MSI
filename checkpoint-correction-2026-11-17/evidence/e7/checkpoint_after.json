@@ -1,0 +1,37 @@
+{
+  "query": [
+    11,
+    17,
+    1
+  ],
+  "statement_position": 1,
+  "protected_prefix": 4,
+  "protected_root_hex": "fe9b359be2abff111618a24b52906fc559d2b35560e059aaf65afa7dc23cd8ab",
+  "crypto": {
+    "library": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/working/e7/lib/libcrypto.dylib",
+    "version": "OpenSSL 3.6.2 7 Apr 2026",
+    "available": true
+  },
+  "cases": [
+    {
+      "case": "current_prefix_4",
+      "candidate_prefix": 4,
+      "candidate_root_hex": "fe9b359be2abff111618a24b52906fc559d2b35560e059aaf65afa7dc23cd8ab",
+      "candidate_checkpoint_signature_valid": true,
+      "accepted": true,
+      "stage": "Accept",
+      "reason": "accepted",
+      "protected_checkpoint_unchanged": true
+    },
+    {
+      "case": "old_authentic_prefix_2_still_covers_position_1",
+      "candidate_prefix": 2,
+      "candidate_root_hex": "6e6c4f075b56df45842cd61a520e30e21e54463309bf326a99e97fefcc3daf68",
+      "candidate_checkpoint_signature_valid": true,
+      "accepted": false,
+      "stage": "VerifyAnchor",
+      "reason": "anchor_invalid",
+      "protected_checkpoint_unchanged": true
+    }
+  ]
+}

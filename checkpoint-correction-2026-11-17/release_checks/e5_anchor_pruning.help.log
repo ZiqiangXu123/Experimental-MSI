@@ -1,0 +1,28 @@
+usage: exp05_anchor [-h]
+                    {info,make-plan,count-plan,dataset-spec,prepare-dataset,validate-dataset,get-case,run-case,run-index,run-plan,inspect-raw,missing-indices,analyze,validate}
+                    ...
+
+Experiment E5: certified root anchoring and safe pruning.
+
+positional arguments:
+  {info,make-plan,count-plan,dataset-spec,prepare-dataset,validate-dataset,get-case,run-case,run-index,run-plan,inspect-raw,missing-indices,analyze,validate}
+    info                Report runtime and cryptographic support.
+    make-plan           Generate a deterministic JSONL plan.
+    count-plan          Count cases or work units in a plan.
+    dataset-spec        Write the accumulator dataset specification.
+    prepare-dataset     Build the read-only accumulator dataset.
+    validate-dataset    Validate the prepared accumulator dataset.
+    get-case            Extract one zero-based plan entry.
+    run-case            Execute one case JSON file.
+    run-index           Execute one zero-based plan entry.
+    run-plan            Run all cases sequentially; intended for
+                        smoke/reference only.
+    inspect-raw         Audit raw result completeness and checks.
+    missing-indices     Print comma-separated Slurm indices that need
+                        recovery.
+    analyze             Generate tables, figures, hypothesis checks, and
+                        manifest.
+    validate            Validate an analyzed result directory.
+
+options:
+  -h, --help            show this help message and exit

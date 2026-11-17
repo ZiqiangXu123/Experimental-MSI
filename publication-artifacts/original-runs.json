@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "purpose": "Index of unchanged historical publication-run archives recovered from experiment.zip",
+  "audit_date": "2026-11-17",
+  "source_bundle": "experiment.zip",
+  "archive_policy": "Original tar.gz bytes are retained unchanged. The Release SHA256SUMS.txt uses portable basenames; the original E4 checksum sidecar used an HPC absolute path.",
+  "validation_scope": "Archive identity, retained run structure, selected source/result mappings and saved checksums were checked. No full performance or integrity experiment was rerun.",
+  "historical_code_asset": "original-code-20260625.zip",
+  "runs": [
+    {
+      "paper_experiment": "E1",
+      "release_asset": "e1-publication-20260624-230646.tar.gz",
+      "sha256": "0fa9ca96efc47d4eaaa1dc3719cbfe3b8bacc62a8872ea68f2ff32f771b2bbfb",
+      "archive_bytes": 69269,
+      "regular_file_count": 257,
+      "tar_top_level": [
+        "e1-publication-20260624-230646"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e1-runs/e1-publication-20260624-230646",
+      "historical_source_directory_in_user_bundle": "experiment/exp01_msi_storage_hpc",
+      "key_counts": {
+        "raw_points": 80,
+        "materialised_storage_audits": 17
+      },
+      "notes": [
+        "Formal storage-accounting run; sample_results and results_example are not the publication-run source."
+      ]
+    },
+    {
+      "paper_experiment": "E2",
+      "release_asset": "e2-publication-20260625-001128.tar.gz",
+      "sha256": "2e333ac73cba29dcfead02a0bfdbc72513851ba2900121ffa28164c5d799372b",
+      "archive_bytes": 64895572,
+      "regular_file_count": 1931,
+      "tar_top_level": [
+        "e2-publication-20260625-001128"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e2-runs/e2-publication-20260625-001128",
+      "historical_source_directory_in_user_bundle": "experiment/exp02_local_query_hpc",
+      "key_counts": {
+        "plan_blocks": 290,
+        "process_launch_cases": 1330,
+        "configuration_groups": 133,
+        "measured_queries": 13300000
+      },
+      "notes": [
+        "Use the plan inside this tar archive as authoritative: its SHA-256 is 881ce0fed1ea884cc8c3617f685ec47b84c434f119e7ecedd45ccdacbd0c0abf and matches results/summary.json.",
+        "The expanded folder in the original upload contains a later four-block E3 smoke plan and 16 additional E3 raw files. Those later additions are not part of this E2 publication archive.",
+        "No resource group has publication-valid energy measurements."
+      ]
+    },
+    {
+      "paper_experiment": "E3",
+      "release_asset": "e3-publication-dual-20260625-015428.tar.gz",
+      "sha256": "37b309aa90d5a049199131b557a16ad9405d0196449277bda6fa870d9b72aa8f",
+      "archive_bytes": 20081552,
+      "regular_file_count": 1727,
+      "tar_top_level": [
+        "e3-publication-dual-20260625-015428"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e3-runs/e3-publication-dual-20260625-015428",
+      "historical_source_directory_in_user_bundle": "experiment/exp03_network_hpc",
+      "key_counts": {
+        "planned_cases": 624,
+        "wire_size_audits": 64,
+        "network_launches": 560,
+        "measured_queries": 112000
+      },
+      "notes": [
+        "The provenance directory records a Slurm service-launch compatibility fix and recovery of missing blocks. The final retained run is complete.",
+        "Link delay and loss are controlled emulations; these records do not establish physical radio-outage behaviour."
+      ]
+    },
+    {
+      "paper_experiment": "E4",
+      "release_asset": "e4-publication-2n-20260625-062038.tar.gz",
+      "sha256": "6ba51655682f6403d038b91b800a51622254211d2d2219b73aec51adb77044ac",
+      "archive_bytes": 372040277,
+      "regular_file_count": 2893,
+      "tar_top_level": [
+        "e4-publication-2n-20260625-062038"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e4-runs/e4-publication-2n-20260625-062038",
+      "historical_source_directory_in_user_bundle": "experiment/exp04_e4_final_hpc",
+      "key_counts": {
+        "planned_cases": 400,
+        "accepted_measured_queries": 2239301
+      },
+      "notes": [
+        "H4a and H4c failed their stated thresholds. These negative results are retained in the archive and reported in the paper. A complete run does not mean every hypothesis passed.",
+        "The archive includes its generated MSI index datasets."
+      ]
+    },
+    {
+      "paper_experiment": "E5",
+      "release_asset": "e5-publication-20260625-113440.tar.gz",
+      "sha256": "ba1d21d0826aee0ac0f74218c8583a429ee42e4d2e24352422545a5f145a6433",
+      "archive_bytes": 15631018,
+      "regular_file_count": 2246,
+      "tar_top_level": [
+        "e5-publication-20260625-113440"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e5-runs/e5-publication-20260625-113440",
+      "historical_source_directory_in_user_bundle": "experiment/exp05_anchor_pruning_hpc",
+      "key_counts": {
+        "planned_cases": 552,
+        "anchor_query_cases": 120,
+        "checkpoint_update_cases": 200,
+        "safe_pruning_cases": 230,
+        "unsafe_counterexample_cases": 2,
+        "safe_gate_violations": 0,
+        "unsafe_counterexample_gate_violations": 1200
+      },
+      "notes": [
+        "The 552 cases cover all four groups, not 552 pruning-only cases.",
+        "This is the historical June implementation. It predates the later active-checkpoint-binding correction; these results must not be described as a full rerun of the corrected implementation.",
+        "The original tar omits 22 files from the generated accumulator dataset present in the expanded upload. Preserve this archive as the original result snapshot; regenerate the dataset using the historical source/configuration when needed."
+      ]
+    },
+    {
+      "paper_experiment": "E6 and mode assignment (code label E9)",
+      "release_asset": "e6-migration-publication-20260625-123230-E6-E9-final.tar.gz",
+      "sha256": "6f400b79ff076d79c3967dce2988150bdbd819ba8a512591a028fd6c3707420f",
+      "archive_bytes": 10552636,
+      "regular_file_count": 3061,
+      "tar_top_level": [
+        "e6-migration-publication-20260625-123230"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e6-runs/e6-migration-publication-20260625-123230",
+      "historical_source_directory_in_user_bundle": "experiment/exp06_refolding_policy_hpc",
+      "key_counts": {
+        "migration_cases": 1410,
+        "migration_performance_cases": 1176,
+        "equivalence_audit_cases": 96,
+        "fault_injection_cases": 138,
+        "policy_cases": 590,
+        "policy_observations": 19120,
+        "component_catalogue_rows": 12,
+        "migration_catalogue_rows": 96
+      },
+      "notes": [
+        "The final combined archive is used; the older E6-only archive is intentionally not duplicated.",
+        "Code label E9 denotes the mode-assignment policy study reported after the migration study in the paper, not an extra independent experiment claim.",
+        "The original final tar omits 2284 generated dataset files from the expanded upload, while retaining the final run records and results. Recreating a complete persisted store requires dataset generation; saved results alone do not establish full store replay.",
+        "These process-crash records do not establish sudden-power-loss durability."
+      ]
+    },
+    {
+      "paper_experiment": "E7 and E8",
+      "release_asset": "e7-publication-20260625-134900-E7-E8-final.tar.gz",
+      "sha256": "e97daec38c24b36759af30f01802fcd2e7fcf182f0551b9ef2651049f250709a",
+      "archive_bytes": 9339224,
+      "regular_file_count": 1886,
+      "tar_top_level": [
+        "e7-publication-20260625-134900"
+      ],
+      "original_run_directory_in_user_bundle": "experiment/msi-e7-runs/e7-publication-20260625-134900",
+      "historical_source_directory_in_user_bundle": "experiment/exp07_integrity_availability_hpc",
+      "key_counts": {
+        "integrity_cases": 247,
+        "deterministic_attack_cases": 200,
+        "fuzz_cases": 32,
+        "unsafe_ablation_cases": 15,
+        "deterministic_attack_scenarios": 1000000,
+        "deterministic_responses": 1100000,
+        "fuzz_inputs": 64000,
+        "primary_attack_response_and_fuzz_inputs": 1164000,
+        "separate_unsafe_ablation_inputs": 15000,
+        "availability_cases": 7200,
+        "availability_raw_blocks": 360,
+        "virtual_time_queries": 72000000
+      },
+      "notes": [
+        "software_and_plan.sha256 records the original June pyz. The provenance directory preserves the before-fix pyz, final/patch pyz, checksums, and rerun records for blocks 65 and 69.",
+        "The June repair changes compressed-payload mutations that decoded to the unchanged payload; it is distinct from the later active-checkpoint-binding correction.",
+        "The original top-level software checksum matches the preserved before-fix pyz, not the final June pyz. Consult provenance/SHA256SUMS and FINAL_RUN_NOTES.txt for the final chain.",
+        "The 1164000 primary count excludes 15000 deliberately unsafe ablation inputs. Fuzz inputs can include benign mutations; accepted mutations are not automatically false acceptances.",
+        "Original reports retain their historical wording. Interpret false acceptance and the combined no_anchor ablation using the current manuscript and the release notes; do not treat a historical zero-event bound as a new security guarantee.",
+        "E8 uses virtual time and does not establish physical radio-outage behaviour."
+      ]
+    }
+  ]
+}

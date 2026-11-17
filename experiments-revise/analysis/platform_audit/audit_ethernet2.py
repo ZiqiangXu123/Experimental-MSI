@@ -69,7 +69,13 @@ all_audits = {}
 all_records = {}
 raw_by_run = {}
 errors = []
-for mp in sorted(INPUT.rglob('run_manifest.json')):
+# Use the declared cohorts, excluding the zero-record migration-only check.
+cohorts = load(Path(__file__).resolve().parents[2] / 'provenance' / 'cohorts.json')
+run_manifests = [
+    INPUT / Path(cohort['path']).relative_to('results') / 'run_manifest.json'
+    for cohort in cohorts if cohort['records'] > 0
+]
+for mp in sorted(run_manifests):
     base, name = (mp.parent, mp.parent.name)
     manifest = load(mp)
     records = rows(base / 'results.jsonl')

@@ -12,7 +12,7 @@ This repository contains the original E1–E8 experiment implementation, Raspber
 | `analysis/` | Performance, storage/migration and platform analysis scripts |
 | `tables/` | Reference CSV and JSON summaries |
 | `results/` | Recorded measurements, inputs, plans and environment metadata |
-| `datasets/ethereum/` | Ethereum snapshot manifest; payload restoration status below |
+| `datasets/ethereum/` | Ethereum export and snapshot manifest |
 | `provenance/` | Cohort selection, missing inputs and source-file provenance |
 | `tools/` | Package verification, HPC preparation and table reconstruction |
 
@@ -22,7 +22,7 @@ Ordinary source comments and docstrings have been removed. Interpreter and Slurm
 
 Use Linux, Bash and Python 3.10 or newer. The implementation and analysis use the Python standard library. Experiment execution also requires system OpenSSL/libcrypto with Ed25519 support. Slurm is required only for batch submission. Pi thermal telemetry uses `vcgencmd` when available.
 
-From the repository root:
+From the `experiments-revise/` directory:
 
 ```bash
 python3 tools/verify_package.py
@@ -47,13 +47,15 @@ Paths below are relative to `results/`. Preserve these as separate runs; histori
 
 `provenance/cohorts.json` records the selection. Skipped and failed records remain part of the evidence. The successful HPC and Pi runs contain five trials per configuration. A `paper` run with the Ethereum dataset also executes synthetic workloads with 512 and 4096 blocks.
 
-## Inputs still required for exact replay
+## Available inputs and replay status
 
-`provenance/pending_inputs.json` lists the outstanding inputs. Existing measurements can be reanalysed, but the following omissions prevent a claim of complete replay of all recorded experiments:
+The Ethereum export and saved case/proof fixtures for the primary HPC, cooled Pi Ethernet and Wi-Fi cohorts are present. `provenance/pending_inputs.json` distinguishes available local inputs, the historical synthetic-only cohort with missing fixtures, and original HPC runs distributed as release attachments.
 
-- Restore each recorded suite run's `cases/` and `proof_fixtures/` directories under that run's existing directory in `results/`. Keep the original case identifiers and relative layout. Recorded input JSON may also contain machine-specific absolute paths that must be mapped when replaying an individual worker.
-- Restore the original Ethereum `blocks.jsonl` to `datasets/ethereum/`. The included `manifest.json` is the snapshot manifest retained with the measurements.
-- The complete original E1–E8 publication raw outputs and the measured E6 component-cost catalogue are not included. The retained `original_e2` and migration records are subsequent remeasurements of selected configurations.
+The [17 November 2026 release](https://github.com/ZiqiangXu123/Experimental-MSI/releases/tag/publication-artifacts-2026-11-17) restores the original E1–E8 publication-run archives and the measured E6 costs. See [the run index](../publication-artifacts/original-runs.json) and [the E6 input bundle](../publication-artifacts/inputs/e6/README.txt). Download the run archives separately; the small input bundle is included in the repository. The original runs and their source versions are separate from the [November checkpoint correction](../checkpoint-correction-2026-11-17/README.txt).
+
+The older `pi-a-paper_synthetic_ethernet` cohort still lacks its case/proof directories; it is not a primary performance cohort. Directory presence and hash checks are not a full persisted-store replay. No new timed benchmark is claimed by this release.
+
+`SHA256SUMS.txt` covers tracked source, analysis inputs, measurements, reports, proof fixtures and case descriptors. Generated case-store payload/support files are excluded to keep the checksum index manageable; the scope is recorded in `provenance/checksum_scope.json`. The checker reports release downloads separately from missing local replay inputs.
 
 The Ethereum export contains 128 blocks, heights **25,983,936–25,984,063**, with 64,208,046 payload bytes. The expected SHA-256 of `blocks.jsonl` is:
 
@@ -61,7 +63,7 @@ The Ethereum export contains 128 blocks, heights **25,983,936–25,984,063**, wi
 190ca4433f979dfd137e27c9ee04c0c9edd85b97027e9e1ff5322ba67f38fc60
 ```
 
-The measured dataset was the first 69 records admitted by the 32 MiB payload limit. Once the original file is restored, validate it from the repository root:
+The measured dataset was the first 69 records admitted by the 32 MiB payload limit. Validate the included export from `experiments-revise/`:
 
 ```bash
 PYTHONPATH=implementation python3 - <<'PY'
@@ -85,7 +87,7 @@ Check the exported `blocks.jsonl` hash against the expected hash before treating
 
 ## Raspberry Pi experiments
 
-Pi B runs the external storage/witness provider. Pi A runs the verifier. Install the repository on both devices. From the repository root on each Pi:
+Pi B runs the external storage/witness provider. Pi A runs the verifier. Install the repository on both devices. From the `experiments-revise/` directory on each Pi:
 
 ```bash
 bash implementation/run.sh doctor
@@ -100,7 +102,7 @@ bash run.sh token --out secrets/provider.token
 bash run.sh serve --data-root provider_data --token-file secrets/provider.token --host 0.0.0.0 --port 8765
 ```
 
-Copy the same token privately to `implementation/secrets/provider.token` on Pi A. The service must remain running. On Pi A, from the repository root, select the provider's address on the tested interface and run Ethernet:
+Copy the same token privately to `implementation/secrets/provider.token` on Pi A. The service must remain running. On Pi A, from the `experiments-revise/` directory, select the provider's address on the tested interface and run Ethernet:
 
 ```bash
 read -r -p "Pi B Ethernet IP address: " MSI_PROVIDER_IP
@@ -114,13 +116,13 @@ read -r -p "Pi B Wi-Fi IP address: " MSI_PROVIDER_IP
 bash implementation/run.sh run --role pi-verifier --profile paper --out "$PWD/work/pi-wifi" --provider "http://${MSI_PROVIDER_IP}:8765" --token-file "$PWD/implementation/secrets/provider.token" --network-kind wifi --setup-timeout 900 --dataset "$PWD/datasets/ethereum"
 ```
 
-`--network-kind` records a label; it does not select or change the operating-system route. Use active cooling and retain thermal/throttling records. `run.sh` changes its working directory to `implementation/`; the absolute paths above keep datasets and outputs at repository level. Output directories must be new. To run the synthetic workloads without Ethereum input, omit `--dataset` and use a different output directory. Keep provider tokens and generated signing seeds outside published results.
+`--network-kind` records a label; it does not select or change the operating-system route. Use active cooling and retain thermal/throttling records. `run.sh` changes its working directory to `implementation/`; the absolute paths above keep datasets and outputs inside `experiments-revise/`. Output directories must be new. To run the synthetic workloads without Ethereum input, omit `--dataset` and use a different output directory. Keep provider tokens and generated signing seeds outside published results.
 
 ## HPC experiments
 
 The recorded HPC runs used suite 1.0.0; the Pi runs used 1.0.1. Prepare an independent HPC working copy so that the two driver versions are not mixed. The successful HPC copy includes the `nfs-retain-1` adapter, which retains experiment workspaces while preserving the measured migration, source reclamation, atomic metadata swap and recovery operations.
 
-For the LTU module environment, from the repository root:
+For the LTU module environment, from the `experiments-revise/` directory:
 
 ```bash
 module load Python/3.11.5-GCCcore-13.2.0
@@ -157,7 +159,7 @@ Results are written under the prepared suite's `outputs/`; Slurm output reports 
 | `e6_refolding_policy` | Migration/recovery and mode-allocation policy; policy code uses the internal label E9 |
 | `e7_integrity_availability` | E7 adversarial integrity and E8 outage/availability experiments |
 
-From the repository root:
+From the `experiments-revise/` directory:
 
 ```bash
 cd implementation/vendor/experiment
@@ -187,7 +189,7 @@ MSI_E2_RUN=$(cat experiments/e2_local_query/LAST_RUN_DIR)
 MSI_E3_RUN=$(cat experiments/e3_communication_network/LAST_RUN_DIR)
 MSI_E7_RUN=$(cat experiments/e7_integrity_availability/LAST_RUN_DIR)
 mkdir -p runs/catalogues
-python3 experiments/e6_refolding_policy/exp06_refolding_policy.pyz build-component-catalog --e1-results "$MSI_E1_RUN/results" --e2-results "$MSI_E2_RUN/results" --e3-results "$MSI_E3_RUN/results" --availability-csv "$MSI_E7_RUN/results/availability_catalog.csv" --output runs/catalogues/component_costs.csv --source-revision "$(sha256sum ../../../SHA256SUMS.txt | cut -d ' ' -f 1)"
+python3 experiments/e6_refolding_policy/exp06_refolding_policy.pyz build-component-catalog --e1-results "$MSI_E1_RUN/results" --e2-results "$MSI_E2_RUN/results" --e3-results "$MSI_E3_RUN/results" --availability-csv "$MSI_E7_RUN/results/availability_catalog.csv" --output runs/catalogues/component_costs.csv --source-revision "local-rerun-record-the-input-checksums"
 export E6_COMPONENT_COST_CATALOG="$PWD/runs/catalogues/component_costs.csv"
 bash scripts/submit_component_publication.sh e6
 ```

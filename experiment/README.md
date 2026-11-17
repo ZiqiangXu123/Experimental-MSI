@@ -2,6 +2,12 @@
 
 This artefact integrates the seven uploaded La Trobe HPC experiment packages into one runnable experiment suite. It keeps the executable source, deterministic configurations, Slurm launch files, tests, Apptainer definitions, and the E6 component-cost template. Old separate readmes, Chinese notes, reference-output folders, stale manifests, and pre-built zipapps have been removed.
 
+## Original data and later correction
+
+The [November 2026 release](https://github.com/ZiqiangXu123/Experimental-MSI/releases/tag/publication-artifacts-2026-11-17) provides original June publication-run archives and their source snapshots. The [run index](../publication-artifacts/original-runs.json) maps these to the paper. Measured E6 costs and all five upstream inputs are available in [the E6 bundle](../publication-artifacts/inputs/e6/README.txt).
+
+This integrated source remains the earlier baseline. The [checkpoint correction](../checkpoint-correction-2026-11-17/README.txt) is packaged separately with tests and rebuilt zipapps. Original performance and integrity results were not rerun with that correction. The June E7 mutation patch is recorded in the original-run provenance and is distinct from the November checkpoint correction.
+
 ## Experiment scope
 
 | Component | Folder | Purpose |
@@ -35,11 +41,10 @@ Use a Linux login node or compute node with Python 3.10 or newer. E1 can run on 
 
 ## First deployment
 
-Unpack the suite and enter the root directory:
+From a clone of this repository, enter the integrated suite:
 
 ```bash
-unzip unified_latrobe_hpc_experiment.zip
-cd unified_latrobe_hpc_experiment
+cd experiment
 ```
 
 Create a site configuration file when the cluster requires an account, partition, QoS, reservation, a particular Python module, or an uploaded container:
@@ -70,7 +75,7 @@ bash scripts/preflight_all.sh
 
 ## Local smoke execution
 
-Run one local smoke test from the root directory:
+Run one local smoke test from the `experiment/` directory:
 
 ```bash
 bash scripts/run_component_local_smoke.sh e1

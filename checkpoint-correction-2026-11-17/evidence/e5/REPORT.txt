@@ -1,0 +1,19 @@
+E5 targeted implementation consistency fix (17 November 2026)
+
+Scope: source and targeted tests only. No manuscript edits, publication benchmark reruns, remote commit or publication.
+Baseline: local pruning.py matches the public file at commit 4789284b0c40d524c397a3093ca5747e932cb36a (Git blob 3e4f7124b309b5d2bdb81a95805c4c1f91529a0b, confirmed by parent).
+
+Changed files relative to code_original:
+- experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/pruning.py
+- experiment/experiments/e5_anchor_pruning/tests/test_current_checkpoint.py (new)
+
+Change: Introduce protected AggregateCheckpointState. Checkpoint delivery installs only an authority-key-matching, correctly signed candidate with a nondecreasing prefix; equal-prefix different-root delivery is rejected. Proof verification is read-only and requires the supplied checkpoint to equal the protected checkpoint, then calls the existing verifier against that protected state. Neither a proof nor a delayed older delivery can roll back the checkpoint. Existing signature checks and recovery remain active.
+The simulation's checkpoint-delivery event is distinct from the proof-response check. It represents authenticated checkpoint delivery using a fixed configured signing key; it is not a new consensus, key rotation or network installation protocol.
+
+Validation: 20 unit tests passed: 11 original tests and 9 new tests. New tests cover a valid current proof, an authentic older covering prefix (old 2, current 4, query position 1), a noncovering prefix, wrong statement/position/root, wrong checkpoint root/shard/key/signature, a same-prefix signed fork, missing protected state, monotonically increasing installation, delayed rollback, and no pruning before valid recovery. Rejected proof checks leave protected state unchanged. The E5 simulator does not implement representation migration or metadata activation, so this is not an end-to-end migration crash/persistence test.
+
+Actual caller regression: original simulator with protected prefix 4 and candidate prefix 1 prunes covered position 1 at 60 ms; other positions prune at valid recovery 1060 ms. Revised simulator prunes all four only at 1060 ms. Raw results are regression_before.json and regression_after.json. This is an old-authentic-checkpoint policy mismatch, not a forged block or signature.
+
+Environment: actual repository ctypes/Ed25519 implementation with bundled OpenSSL 3.6.2 (7 Apr 2026), Python 3.12.14. No cryptography replacement or mocking. Default /usr/lib/libcrypto on this Mac aborts; DYLD_LIBRARY_PATH selects the bundled real libcrypto. Reproduction commands: commands.sh.
+
+Evidence boundary: the 20-test result is a new small correctness regression only. Historical E5 query/update/pruning costs and full publication plans were not rerun; installation now performs an additional signature validation, so old timing numbers must not be presented as rerun results for this source. Existing .pyz and ARTIFACT_MANIFEST.sha256 files copied in code_revised are baseline generated artifacts and are NOT rebuilt by this task; deliver the source patch/tests, or rebuild release artifacts before any public release.

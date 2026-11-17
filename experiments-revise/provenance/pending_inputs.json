@@ -2,71 +2,90 @@
   {
     "path": "results/HPC_results/hpc_real_422173/cases",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/HPC_results/hpc_real_422173/proof_fixtures",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/HPC_results/hpc_real_422175/cases",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/HPC_results/hpc_real_422175/proof_fixtures",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/Pi_results/pi-a-paper_ethereum_ethernet/cases",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/Pi_results/pi-a-paper_ethereum_ethernet/proof_fixtures",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/Pi_results/pi-a-paper_ethereum_wifi/cases",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/Pi_results/pi-a-paper_ethereum_wifi/proof_fixtures",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/Pi_results/pi-a-paper_synthetic_ethernet/cases",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": false,
+    "availability": "missing_historical_cohort",
+    "note": "Earlier synthetic-only Ethernet cohort; not a primary performance cohort. No new replay evidence is claimed."
   },
   {
     "path": "results/Pi_results/pi-a-paper_synthetic_ethernet/proof_fixtures",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": false,
+    "availability": "missing_historical_cohort",
+    "note": "Earlier synthetic-only Ethernet cohort; not a primary performance cohort. No new replay evidence is claimed."
   },
   {
     "path": "results/ethernet2/pi_a_paper_ethereum_ethernet2/cases",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/ethernet2/pi_a_paper_ethereum_ethernet2/proof_fixtures",
     "kind": "saved_experiment_fixture",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "datasets/ethereum/blocks.jsonl",
     "kind": "original_128_block_ethereum_export",
-    "present": false
+    "present": true,
+    "availability": "local"
   },
   {
     "path": "results/original",
     "kind": "complete_original_publication_raw_runs_and_component_cost_catalogue",
-    "present": false
+    "present": false,
+    "availability": "release_assets",
+    "release_url": "https://github.com/ZiqiangXu123/Experimental-MSI/releases/tag/publication-artifacts-2026-11-17",
+    "index": "../publication-artifacts/original-runs.json",
+    "note": "Recovered original runs are release attachments; download separately. E6 input CSVs are included in publication-artifacts/inputs/e6."
   }
 ]

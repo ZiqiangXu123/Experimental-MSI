@@ -1,0 +1,45 @@
+test_authentic_old_covering_checkpoint_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_authentic_old_covering_checkpoint_rejected) ... FAIL
+test_current_checkpoint_cannot_be_bypassed_by_direct_certificate (test_checkpoint_policy.CheckpointPolicyTests.test_current_checkpoint_cannot_be_bypassed_by_direct_certificate) ... FAIL
+test_current_valid_checkpoint_accepts (test_checkpoint_policy.CheckpointPolicyTests.test_current_valid_checkpoint_accepts) ... ok
+test_honest_modes_accept (test_checkpoint_policy.CheckpointPolicyTests.test_honest_modes_accept) ... ok
+test_invalid_signature_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_invalid_signature_rejected) ... ok
+test_noncovering_prefix_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_noncovering_prefix_rejected) ... ok
+test_signed_alternative_root_at_current_prefix_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_signed_alternative_root_at_current_prefix_rejected) ... FAIL
+test_wrong_key_even_with_valid_signature_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_wrong_key_even_with_valid_signature_rejected) ... ok
+test_wrong_position_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_wrong_position_rejected) ... ok
+test_wrong_statement_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_wrong_statement_rejected) ... ok
+
+======================================================================
+FAIL: test_authentic_old_covering_checkpoint_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_authentic_old_covering_checkpoint_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py", line 67, in test_authentic_old_covering_checkpoint_rejected
+    self.assert_rejected_without_state_change(old)
+  File "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py", line 36, in assert_rejected_without_state_change
+    self.assertFalse(decision.accepted)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_current_checkpoint_cannot_be_bypassed_by_direct_certificate (test_checkpoint_policy.CheckpointPolicyTests.test_current_checkpoint_cannot_be_bypassed_by_direct_certificate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py", line 131, in test_current_checkpoint_cannot_be_bypassed_by_direct_certificate
+    self.assert_rejected_without_state_change(direct)
+  File "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py", line 36, in assert_rejected_without_state_change
+    self.assertFalse(decision.accepted)
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_signed_alternative_root_at_current_prefix_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_signed_alternative_root_at_current_prefix_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py", line 112, in test_signed_alternative_root_at_current_prefix_rejected
+    self.assert_rejected_without_state_change(certificate)
+  File "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py", line 36, in assert_rejected_without_state_change
+    self.assertFalse(decision.accepted)
+AssertionError: True is not false
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.015s
+
+FAILED (failures=3)

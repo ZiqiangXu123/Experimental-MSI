@@ -1,0 +1,20 @@
+usage: exp07_security_availability [-h]
+                                   {info,plan,run-e7-block,run-e8-block,analyze,validate,inspect,missing-blocks,run-local}
+                                   ...
+
+Experiment 7 integrity and availability benchmark
+
+positional arguments:
+  {info,plan,run-e7-block,run-e8-block,analyze,validate,inspect,missing-blocks,run-local}
+    info                probe Python and Ed25519 support
+    plan                materialize deterministic E7 and E8 plans
+    run-e7-block        execute one E7 Slurm block
+    run-e8-block        execute one E8 Slurm block
+    analyze             validate raw blocks and produce CSV/SVG results
+    validate            verify result structure and SHA-256 manifest
+    inspect             inspect E7 or E8 block completeness
+    missing-blocks      print missing/corrupt array indices as a Slurm list
+    run-local           execute a complete smoke/reference plan sequentially
+
+options:
+  -h, --help            show this help message and exit

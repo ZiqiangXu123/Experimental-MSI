@@ -1,0 +1,674 @@
+--- a/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/pruning.py
++++ b/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/pruning.py
+@@ -4,11 +4,41 @@
+ import time
+ from dataclasses import dataclass, field
+ from typing import Any
+-from .accumulator import AggregateAnchor, DirectAnchor, DynamicAccumulator, HashCounter, RootStatement, aggregate_anchor_bytes, checkpoint_object_bytes, direct_anchor_bytes, make_aggregate_evidence, make_checkpoint_anchor, make_direct_evidence, verify_aggregate_evidence, verify_direct_evidence
++from .accumulator import AggregateAnchor, DirectAnchor, DynamicAccumulator, HashCounter, RootStatement, aggregate_anchor_bytes, checkpoint_cert_message, checkpoint_object_bytes, direct_anchor_bytes, make_aggregate_evidence, make_checkpoint_anchor, make_direct_evidence, verify_aggregate_evidence, verify_direct_evidence
+ from .crypto import Ed25519Signer, Ed25519Verifier, deterministic_seed
+ from .epoch import commit_epoch
+ from .util import stable_seed, summarise
+ SAFE_FAULTS = {'none', 'not_final', 'local_root_mismatch', 'missing_certificate', 'wrong_position', 'stale_prefix_root', 'invalid_signature', 'uncovered_prefix'}
++
++@dataclass
++class AggregateCheckpointState:
++    """Protected checkpoint; proof verification never changes this state."""
++    shard: int
++    public_key: bytes
++    current: AggregateAnchor | None = None
++
++    def install(self, candidate: AggregateAnchor, verifier: Ed25519Verifier) -> bool:
++        """Process a checkpoint delivery using the configured authority, without rollback."""
++        if candidate.shard != self.shard or candidate.public_key != self.public_key:
++            return False
++        if not verifier.verify(checkpoint_cert_message(candidate.shard, candidate.prefix_count,
++                                                       candidate.accumulator_root), candidate.signature):
++            return False
++        if self.current is not None:
++            if candidate.prefix_count < self.current.prefix_count:
++                return False
++            if (candidate.prefix_count == self.current.prefix_count and
++                    candidate.accumulator_root != self.current.accumulator_root):
++                return False
++        self.current = candidate
++        return True
++
++    def verify(self, expected: RootStatement, evidence: bytes, candidate: AggregateAnchor,
++               verifier: Ed25519Verifier, counter: HashCounter | None = None) -> bool:
++        # A response cannot select an older authentic anchor or replace the protected one.
++        if self.current is None or candidate != self.current:
++            return False
++        return verify_aggregate_evidence(expected, evidence, self.current, verifier, counter)
+ 
+ @dataclass
+ class EpochState:
+@@ -107,8 +137,7 @@
+         schedule(arrival_ms, 'upload', epoch=epoch)
+         schedule(arrival_ms + finality_delay_ms, 'finalise', epoch=epoch)
+     states: dict[int, EpochState] = {}
+-    active_aggregate_anchor: AggregateAnchor | None = None
+-    previous_valid_anchor: AggregateAnchor | None = None
++    checkpoint_state = AggregateCheckpointState(shard, signer.public_key)
+     checkpoint_index = 0
+     retained_count = 0
+     max_retained_count = 0
+@@ -205,12 +234,10 @@
+         return anchor
+ 
+     def verify_aggregate_pending(now: float, anchor: AggregateAnchor, *, recovery: bool, event_fault: str, valid_current_anchor: AggregateAnchor, old_anchor: AggregateAnchor | None) -> None:
+-        nonlocal active_aggregate_anchor, previous_valid_anchor
+         nonlocal anchor_attempts, anchor_accepts, anchor_rejects, fault_rejections
+         nonlocal fault_injections
+-        if recovery or event_fault in {'none', 'wrong_position', 'uncovered_prefix'}:
+-            previous_valid_anchor = active_aggregate_anchor
+-            active_aggregate_anchor = valid_current_anchor
++        # Checkpoint delivery is separate from the candidate proof being checked below.
++        checkpoint_state.install(anchor, verifier)
+         for epoch in sorted(states):
+             state = states[epoch]
+             if not state.retained or state.statement is None:
+@@ -248,7 +275,7 @@
+             state.anchor_attempts += 1
+             anchor_attempts += 1
+             started = time.perf_counter_ns()
+-            valid = verify_aggregate_evidence(state.statement, evidence, used_anchor, verifier, counter)
++            valid = checkpoint_state.verify(state.statement, evidence, used_anchor, verifier, counter)
+             verify_anchor_ns.append(time.perf_counter_ns() - started)
+             if selected_fault:
+                 state.fault_attempted = True
+@@ -377,7 +404,7 @@
+     pending_epochs = total_epochs - pruned_epochs
+     selected_epochs = sum((1 for state in states.values() if state.fault_selected))
+     rejected_selected_epochs = sum((1 for state in states.values() if state.fault_selected and state.anchor_rejections > 0))
+-    final_anchor_bytes = direct_anchor_bytes() if anchor_mode == 'direct' else aggregate_anchor_bytes() if active_aggregate_anchor is not None else 0
++    final_anchor_bytes = direct_anchor_bytes() if anchor_mode == 'direct' else aggregate_anchor_bytes() if checkpoint_state.current is not None else 0
+     safety_violations = pruned_without_finality + pruned_without_root_match + pruned_without_valid_anchor
+     result = {'schema_version': 1, 'experiment': 'E5', 'trial_kind': 'pruning', 'case': case, 'policy': policy, 'anchor_mode': anchor_mode, 'fault': fault, 'logical_time': {'end_time_ms': end_time_ms, 'arrival_rate_eps': arrival_rate, 'finality_delay_ms': finality_delay_ms, 'certificate_delay_ms': certificate_delay_ms, 'retry_delay_ms': retry_delay_ms}, 'counts': {'total_epochs': total_epochs, 'pruned_epochs': pruned_epochs, 'pending_epochs': pending_epochs, 'selected_fault_epochs': selected_epochs, 'rejected_selected_epochs': rejected_selected_epochs, 'fault_injections': fault_injections, 'fault_rejections': fault_rejections, 'anchor_attempts': anchor_attempts, 'anchor_accepts': anchor_accepts, 'anchor_rejects': anchor_rejects, 'checkpoint_count': checkpoint_count, 'checkpoint_dropped': checkpoint_dropped, 'unsafe_prunes': unsafe_prunes}, 'safety': {'pruned_before_finality': pruned_without_finality, 'pruned_without_local_root_match': pruned_without_root_match, 'pruned_without_valid_anchor': pruned_without_valid_anchor, 'total_gate_violations': safety_violations}, 'backlog': {'hot_window_epochs': hot_window, 'max_retained_epochs': max_retained_count, 'final_retained_epochs': retained_count, 'max_retained_payload_bytes': max_retained_bytes, 'final_retained_payload_bytes': retained_count * payload_bytes_per_epoch, 'max_hot_window_overflow_epochs': max_overflow, 'backlog_area_epoch_ms': backlog_area_epoch_ms}, 'storage': {'payload_bytes_per_epoch': payload_bytes_per_epoch, 'verifier_resident_anchor_bytes': final_anchor_bytes, 'direct_certificate_bytes': direct_cert_bytes, 'aggregate_checkpoint_bytes': checkpoint_bytes, 'proof_bytes': summarise(proof_bytes)}, 'latency': {'root_recompute_ns': summarise(root_recompute_ns), 'append_or_root_update_ns': summarise(append_update_ns), 'checkpoint_sign_ns': summarise(checkpoint_sign_ns), 'verify_anchor_ns': summarise(verify_anchor_ns), 'time_to_prune_from_arrival_ms': summarise(time_to_prune_from_arrival_ms), 'time_to_prune_from_finality_ms': summarise(time_to_prune_from_finality_ms), 'pending_duration_ms': summarise(pending_durations_ms)}, 'root_recomputation': {'hash_calls': root_recompute_hashes, 'canonical_bytes': root_recompute_bytes}, 'timeline': _downsample(timeline, timeline_limit), 'samples': {'verify_anchor_ns': verify_anchor_ns, 'time_to_prune_from_finality_ms': time_to_prune_from_finality_ms, 'pending_duration_ms': pending_durations_ms}}
+     safe_policy = policy == 'safe'
+--- /dev/null
++++ b/experiment/experiments/e5_anchor_pruning/tests/test_current_checkpoint.py
+@@ -0,0 +1,129 @@
++from __future__ import annotations
++
++import unittest
++from dataclasses import replace
++
++from msi_anchor_exp.accumulator import (
++    DynamicAccumulator, HashCounter, deterministic_statement, make_aggregate_evidence,
++    make_checkpoint_anchor, verify_aggregate_evidence,
++)
++from msi_anchor_exp.crypto import Ed25519Signer, Ed25519Verifier, deterministic_seed
++from msi_anchor_exp.pruning import AggregateCheckpointState, simulate_pruning
++
++
++def flipped(value: bytes) -> bytes:
++    return value[:-1] + bytes([value[-1] ^ 1])
++
++
++class CurrentCheckpointTests(unittest.TestCase):
++    def setUp(self):
++        self.signer = Ed25519Signer(deterministic_seed('current-checkpoint', 1))
++        self.verifier = Ed25519Verifier(self.signer.public_key)
++        self.other_signer = Ed25519Signer(deterministic_seed('current-checkpoint', 2))
++        self.acc = DynamicAccumulator()
++        self.statements = [deterministic_statement(19, 3, i) for i in range(1, 5)]
++        for statement in self.statements:
++            self.acc.append_statement(statement)
++        self.old = make_checkpoint_anchor(3, 2, self.acc.root(2), self.signer)
++        self.current = make_checkpoint_anchor(3, 4, self.acc.root(4), self.signer)
++        self.state = AggregateCheckpointState(3, self.signer.public_key)
++        self.assertTrue(self.state.install(self.current, self.verifier))
++        self.query = self.statements[0]
++        self.evidence = make_aggregate_evidence(self.query, self.acc.proof(1, 4))
++        self.old_evidence = make_aggregate_evidence(self.query, self.acc.proof(1, 2))
++
++    def tearDown(self):
++        self.signer.close()
++        self.verifier.close()
++        self.other_signer.close()
++
++    def assert_rejected_without_state_change(self, evidence, candidate, expected=None):
++        before = self.state.current
++        self.assertFalse(self.state.verify(expected or self.query, evidence, candidate,
++                                           self.verifier, HashCounter()))
++        self.assertIs(self.state.current, before)
++
++    def test_current_valid_proof_accepts_without_changing_checkpoint(self):
++        before = self.state.current
++        self.assertTrue(self.state.verify(self.query, self.evidence, self.current,
++                                          self.verifier, HashCounter()))
++        self.assertIs(self.state.current, before)
++
++    def test_authentic_old_checkpoint_still_covering_query_is_rejected(self):
++        # The old proof is authentic and covers position 1; it is not malformed.
++        self.assertTrue(verify_aggregate_evidence(self.query, self.old_evidence,
++                                                  self.old, self.verifier))
++        self.assert_rejected_without_state_change(self.old_evidence, self.old)
++        self.assert_rejected_without_state_change(self.old_evidence, self.current)
++        self.assertFalse(self.state.install(self.old, self.verifier))
++        self.assertEqual(self.state.current, self.current)
++
++    def test_noncovering_checkpoint_is_rejected(self):
++        query = self.statements[2]
++        evidence = make_aggregate_evidence(query, self.acc.proof(3, 4))
++        self.assert_rejected_without_state_change(evidence, self.old, query)
++
++    def test_wrong_statement_position_or_root_is_rejected(self):
++        wrong_statement = replace(self.query, epoch=99)
++        wrong_position = self.statements[1]
++        wrong_root = replace(self.query, root=flipped(self.query.root))
++        for expected in (wrong_statement, wrong_position, wrong_root):
++            with self.subTest(expected=expected):
++                self.assert_rejected_without_state_change(self.evidence, self.current, expected)
++
++    def test_wrong_anchor_root_key_shard_or_signature_is_rejected(self):
++        candidates = (
++            replace(self.current, accumulator_root=flipped(self.current.accumulator_root)),
++            replace(self.current, public_key=self.other_signer.public_key),
++            replace(self.current, shard=4),
++            replace(self.current, signature=flipped(self.current.signature)),
++            make_checkpoint_anchor(3, 4, self.current.accumulator_root, self.other_signer),
++        )
++        for candidate in candidates:
++            with self.subTest(candidate=candidate):
++                self.assert_rejected_without_state_change(self.evidence, candidate)
++                self.assertFalse(self.state.install(candidate, self.verifier))
++                self.assertEqual(self.state.current, self.current)
++
++    def test_authentic_same_height_fork_cannot_replace_checkpoint(self):
++        fork = make_checkpoint_anchor(3, 4, flipped(self.current.accumulator_root), self.signer)
++        self.assertFalse(self.state.install(fork, self.verifier))
++        self.assertEqual(self.state.current, self.current)
++        self.assert_rejected_without_state_change(self.evidence, fork)
++
++    def test_missing_checkpoint_rejects_proof_without_installing_it(self):
++        empty = AggregateCheckpointState(3, self.signer.public_key)
++        self.assertFalse(empty.verify(self.query, self.evidence, self.current, self.verifier))
++        self.assertIsNone(empty.current)
++
++    def test_authenticated_checkpoint_can_advance_and_delayed_delivery_cannot_rollback(self):
++        state = AggregateCheckpointState(3, self.signer.public_key)
++        self.assertTrue(state.install(self.old, self.verifier))
++        self.assertTrue(state.install(self.current, self.verifier))
++        self.assertFalse(state.install(self.old, self.verifier))
++        self.assertEqual(state.current, self.current)
++
++    def test_rejected_checkpoint_evidence_does_not_prune_before_valid_recovery(self):
++        case = {'case_id': 'active-checkpoint-regression', 'config_id': 'regression',
++                'trial': 0, 'trial_kind': 'pruning', 'policy': 'safe',
++                'anchor_mode': 'aggregate', 'checkpoint_interval': 4, 'seed': 1234,
++                'shard': 3, 'anchor_key_seed': 5052026, 'total_epochs': 4,
++                'blocks_per_epoch': 4, 'block_size': 128, 'arrival_rate_eps': 100,
++                'finality_delay_ms': 10.0, 'certificate_delay_ms': 20.0,
++                'retry_delay_ms': 1000.0, 'hot_window_epochs': 16,
++                'fault': 'uncovered_prefix', 'fault_fraction': 1.0,
++                'timeline_sample_limit': 100}
++        # First delivery: protected prefix 4, candidate prefix 1. Epoch 1 is
++        # covered by both, so the old caller pruned it immediately at 60 ms.
++        # Recovery supplies current evidence at 1060 ms.
++        result = simulate_pruning(case)
++        prune_times = [row['time_ms'] for row in result['timeline'] if row['reason_code'] == 6]
++        self.assertEqual(len(prune_times), 4)
++        self.assertTrue(all(t >= 1060.0 for t in prune_times), prune_times)
++        self.assertEqual(result['safety']['total_gate_violations'], 0)
++        self.assertEqual(result['counts']['pending_epochs'], 0)
++        self.assertEqual(result['counts']['anchor_rejects'], 4)
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- a/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/analysis.py
++++ b/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/analysis.py
+@@ -89,7 +89,7 @@
+         all_false_rejects += int(row['false_rejects'])
+         all_crashes += int(row['crashes'])
+         all_stage_mismatches += int(row['stage_mismatches'])
+-        case_rows.append({'case_id': row['case_id'], 'kind': row['kind'], 'family': family, 'surface': '', 'ablation': '', 'context': row['context']['name'], 'mode': row['context']['mode'], 'anchor_mode': row['context']['anchor_mode'], 'replicate': row['replicate'], 'attack_scenarios': row['attack_scenarios'], 'malicious_responses': row['malicious_responses'], 'honest_controls': row['honest_controls'], 'false_accepts': row['false_accepts'], 'false_rejects': row['false_rejects'], 'crashes': row['crashes'], 'stage_mismatches': row['stage_mismatches'], 'rejection_p50_ms': percentile(row['malicious_latencies_ns'], 0.5) / 1000000.0, 'rejection_p99_ms': percentile(row['malicious_latencies_ns'], 0.99) / 1000000.0, 'runtime_s': row['runtime_ns'] / 1000000000.0})
++        case_rows.append({'case_id': row['case_id'], 'kind': row['kind'], 'family': family, 'surface': '', 'ablation': '', 'context': row['context']['name'], 'mode': row['context']['mode'], 'anchor_mode': row['context']['anchor_mode'], 'replicate': row['replicate'], 'attack_scenarios': row['attack_scenarios'], 'tested_inputs': row.get('tested_inputs', row.get('malicious_responses')), 'honest_controls': row['honest_controls'], 'false_accepts': row['false_accepts'], 'false_rejects': row['false_rejects'], 'crashes': row['crashes'], 'stage_mismatches': row['stage_mismatches'], 'rejection_p50_ms': percentile(row['malicious_latencies_ns'], 0.5) / 1000000.0, 'rejection_p99_ms': percentile(row['malicious_latencies_ns'], 0.99) / 1000000.0, 'runtime_s': row['runtime_ns'] / 1000000000.0})
+     family_rows: list[dict[str, Any]] = []
+     gate_rows: list[dict[str, Any]] = []
+     latency_rows: list[dict[str, Any]] = []
+@@ -124,7 +124,7 @@
+         fuzz_false_accepts += int(row['false_accepts'])
+         fuzz_false_rejects += int(row['false_rejects'])
+         fuzz_crashes += int(row['crashes'])
+-        case_rows.append({'case_id': row['case_id'], 'kind': row['kind'], 'family': '', 'surface': surface, 'ablation': '', 'context': row['context']['name'], 'mode': row['context']['mode'], 'anchor_mode': row['context']['anchor_mode'], 'replicate': row['replicate'], 'attack_scenarios': row['attack_scenarios'], 'malicious_responses': row['malicious_responses'], 'honest_controls': row['honest_controls'], 'false_accepts': row['false_accepts'], 'false_rejects': row['false_rejects'], 'crashes': row['crashes'], 'stage_mismatches': '', 'rejection_p50_ms': '', 'rejection_p99_ms': '', 'runtime_s': row['runtime_ns'] / 1000000000.0})
++        case_rows.append({'case_id': row['case_id'], 'kind': row['kind'], 'family': '', 'surface': surface, 'ablation': '', 'context': row['context']['name'], 'mode': row['context']['mode'], 'anchor_mode': row['context']['anchor_mode'], 'replicate': row['replicate'], 'attack_scenarios': row['attack_scenarios'], 'tested_inputs': row.get('tested_inputs', row.get('malicious_responses')), 'honest_controls': row['honest_controls'], 'false_accepts': row['false_accepts'], 'false_rejects': row['false_rejects'], 'crashes': row['crashes'], 'stage_mismatches': '', 'rejection_p50_ms': '', 'rejection_p99_ms': '', 'runtime_s': row['runtime_ns'] / 1000000000.0})
+     coverage_rows: list[dict[str, Any]] = []
+     for surface, acc in sorted(fuzz_by_surface.items()):
+         coverage_rows.append({'surface': surface, 'executions': acc['executions'], 'semantic_guards_covered': len(acc['guards']), 'semantic_guards_total': len(GUARD_IDS), 'semantic_guard_coverage': len(acc['guards']) / len(GUARD_IDS), 'sampled_lines_covered': len(acc['lines']), 'sampled_line_universe': len(acc['universe']), 'sampled_line_coverage': len(acc['lines']) / len(acc['universe']) if acc['universe'] else 0.0, 'maximum_corpus_size': acc['corpus'], 'coverage_signatures': acc['signatures'], 'false_accepts': acc['false_accepts'], 'false_rejects': acc['false_rejects'], 'crashes': acc['crashes']})
+@@ -138,15 +138,19 @@
+         acc['unsafe_accepts'] += int(row['unsafe_accepts'])
+         acc['honest_false_rejects'] += int(row['honest_false_rejects'])
+         acc['crashes'] += int(row['crashes'])
+-        case_rows.append({'case_id': row['case_id'], 'kind': row['kind'], 'family': '', 'surface': '', 'ablation': ablation, 'context': row['context']['name'], 'mode': row['context']['mode'], 'anchor_mode': row['context']['anchor_mode'], 'replicate': row['replicate'], 'attack_scenarios': row['attack_scenarios'], 'malicious_responses': row['malicious_responses'], 'honest_controls': row['honest_controls'], 'false_accepts': row['safe_accepts'], 'false_rejects': row['honest_false_rejects'], 'crashes': row['crashes'], 'stage_mismatches': '', 'rejection_p50_ms': percentile(row['safe_latencies_ns'], 0.5) / 1000000.0, 'rejection_p99_ms': percentile(row['safe_latencies_ns'], 0.99) / 1000000.0, 'runtime_s': row['runtime_ns'] / 1000000000.0})
+-    ablation_rows = [{'ablation': name, **values, 'unsafe_accept_rate': values['unsafe_accepts'] / values['malicious'] if values['malicious'] else 0.0, 'safe_accept_rate': values['safe_accepts'] / values['malicious'] if values['malicious'] else 0.0} for name, values in sorted(ablation_acc.items())]
++        case_rows.append({'case_id': row['case_id'], 'kind': row['kind'], 'family': '', 'surface': '', 'ablation': ablation, 'context': row['context']['name'], 'mode': row['context']['mode'], 'anchor_mode': row['context']['anchor_mode'], 'replicate': row['replicate'], 'attack_scenarios': row['attack_scenarios'], 'tested_inputs': row.get('tested_inputs', row.get('malicious_responses')), 'honest_controls': row['honest_controls'], 'false_accepts': row['safe_accepts'], 'false_rejects': row['honest_false_rejects'], 'crashes': row['crashes'], 'stage_mismatches': '', 'rejection_p50_ms': percentile(row['safe_latencies_ns'], 0.5) / 1000000.0, 'rejection_p99_ms': percentile(row['safe_latencies_ns'], 0.99) / 1000000.0, 'runtime_s': row['runtime_ns'] / 1000000000.0})
++    ablation_rows = [{'ablation': name, 'ablation_label': 'no_root_binding_or_anchor' if name == 'no_anchor' else name, **values, 'unsafe_accept_rate': values['unsafe_accepts'] / values['malicious'] if values['malicious'] else 0.0, 'safe_accept_rate': values['safe_accepts'] / values['malicious'] if values['malicious'] else 0.0} for name, values in sorted(ablation_acc.items())]
++    for summary_row in ablation_rows:
++        source_rows = [row for row in ablations if row['ablation'] == summary_row['ablation']]
++        for key in ('unsafe_noncanonical_data_accepts', 'unsafe_policy_only_accepts'):
++            summary_row[key] = sum(int(row[key]) for row in source_rows) if all(key in row for row in source_rows) else None
+     all_false_accepts += fuzz_false_accepts
+     all_false_rejects += fuzz_false_rejects
+     all_crashes += fuzz_crashes
+     h7a = all_false_accepts == 0 and all_false_rejects == 0 and (all_crashes == 0)
+     h7b = all_stage_mismatches == 0 and all((int(row['malicious_responses']) > 0 for row in family_rows))
+     h7c = len(ablation_rows) == 3 and all((int(row['safe_accepts']) == 0 and int(row['unsafe_accepts']) == int(row['malicious']) and (int(row['crashes']) == 0) for row in ablation_rows))
+-    hypothesis_rows = [{'hypothesis': 'H7a', 'status': 'PASS' if h7a else 'FAIL', 'criterion': 'zero false accepts, false rejects, and crashes', 'value': f'FA={all_false_accepts};FR={all_false_rejects};Crash={all_crashes}', 'threshold': 'all zero'}, {'hypothesis': 'H7b', 'status': 'PASS' if h7b else 'FAIL', 'criterion': 'all deterministic attacks rejected at the preregistered earliest gate', 'value': all_stage_mismatches, 'threshold': 0}, {'hypothesis': 'H7c', 'status': 'PASS' if h7c else 'FAIL', 'criterion': 'NoCtx, NoAnchor, and NoMeta accept their causal exploit while safe verification rejects it', 'value': _json(ablation_rows), 'threshold': 'safe=0; unsafe=100%'}]
++    hypothesis_rows = [{'hypothesis': 'H7a', 'status': 'PASS' if h7a else 'FAIL', 'criterion': 'zero expected-reject acceptances or fuzz block/root/metadata violations, honest-control rejections, and crashes', 'value': f'FA={all_false_accepts};FR={all_false_rejects};Crash={all_crashes}', 'threshold': 'all zero'}, {'hypothesis': 'H7b', 'status': 'PASS' if h7b else 'FAIL', 'criterion': 'all deterministic attacks rejected at the preregistered earliest gate', 'value': all_stage_mismatches, 'threshold': 0}, {'hypothesis': 'H7c', 'status': 'PASS' if h7c else 'FAIL', 'criterion': 'NoCtx, joint NoRootBindingOrAnchor, and NoMeta accept their constructed response while safe verification rejects it', 'value': _json(ablation_rows), 'threshold': 'safe=0; unsafe=100%'}]
+     write_csv(output / 'e7_case_summary.csv', case_rows)
+     write_csv(output / 'e7_attack_family_summary.csv', family_rows)
+     write_csv(output / 'e7_attack_by_gate.csv', gate_rows)
+@@ -159,7 +163,15 @@
+     bar_chart(output / 'fig_E7_rejection_latency.svg', title='E7 Rejection-Latency Distribution by Attack Family', categories=categories, series=[('p50', [float(row['rejection_p50_ms']) for row in family_rows]), ('p99', [float(row['rejection_p99_ms']) for row in family_rows])], y_label='Latency (ms)')
+     cov_categories = [row['surface'] for row in coverage_rows]
+     bar_chart(output / 'fig_E7_fuzz_coverage.svg', title='E7 Greybox Coverage by Mutation Surface', categories=cov_categories, series=[('semantic guards', [float(row['semantic_guard_coverage']) for row in coverage_rows]), ('sampled lines', [float(row['sampled_line_coverage']) for row in coverage_rows])], y_label='Coverage', percent=True)
+-    e7_summary = {'deterministic_cases': len(deterministic), 'fuzz_cases': len(fuzz), 'ablation_cases': len(ablations), 'attack_scenarios': sum((int(row['attack_scenarios']) for row in deterministic)), 'malicious_responses': sum((int(row['malicious_responses']) for row in deterministic)) + sum((int(row['malicious_responses']) for row in fuzz)), 'paired_honest_controls': sum((int(row['honest_controls']) for row in deterministic + fuzz + ablations)), 'false_accepts': all_false_accepts, 'false_rejects': all_false_rejects, 'crashes': all_crashes, 'stage_mismatches': all_stage_mismatches, 'zero_event_95pct_upper_bound': upper_zero_event_bound(sum((int(row['malicious_responses']) for row in deterministic + fuzz))) if all_false_accepts == 0 else None, 'semantic_guards_covered': len(guard_union), 'semantic_guards_total': len(GUARD_IDS), 'sampled_lines_covered': len(line_union), 'sampled_line_universe': len(line_universe), 'H7a': 'PASS' if h7a else 'FAIL', 'H7b': 'PASS' if h7b else 'FAIL', 'H7c': 'PASS' if h7c else 'FAIL', 'publication_protocol': {'each_family_at_least_100k_scenarios': all((int(plan_summary['e7_scenarios_by_family'].get(family, 0)) >= 100000 for family in ATTACK_FAMILIES)), 'at_least_one_million_deterministic_attack_scenarios': int(plan_summary['e7_attack_scenarios']) >= 1000000, 'every_malicious_response_has_honest_control': all((int(row['paired_honest_controls']) == int(row['malicious_responses']) for row in family_rows))}}
++    e7_summary = {'deterministic_cases': len(deterministic), 'fuzz_cases': len(fuzz), 'ablation_cases': len(ablations), 'attack_scenarios': sum((int(row['attack_scenarios']) for row in deterministic)), 'tested_inputs': sum((int(row['malicious_responses']) for row in deterministic)) + sum((int(row['attack_scenarios']) for row in fuzz)), 'deterministic_expected_reject_frames': sum((int(row['malicious_responses']) for row in deterministic)), 'fuzz_executions': sum((int(row['attack_scenarios']) for row in fuzz)), 'paired_honest_controls': sum((int(row['honest_controls']) for row in deterministic + fuzz + ablations)), 'false_accepts': all_false_accepts, 'false_rejects': all_false_rejects, 'crashes': all_crashes, 'stage_mismatches': all_stage_mismatches, 'zero_event_95pct_upper_bound': None, 'pooled_bound_note': 'Not reported: expected-reject tests and adaptive fuzz executions have different acceptance oracles and the latter include benign mutations', 'semantic_guards_covered': len(guard_union), 'semantic_guards_total': len(GUARD_IDS), 'sampled_lines_covered': len(line_union), 'sampled_line_universe': len(line_universe), 'H7a': 'PASS' if h7a else 'FAIL', 'H7b': 'PASS' if h7b else 'FAIL', 'H7c': 'PASS' if h7c else 'FAIL', 'publication_protocol': {'each_family_at_least_100k_scenarios': all((int(plan_summary['e7_scenarios_by_family'].get(family, 0)) >= 100000 for family in ATTACK_FAMILIES)), 'at_least_one_million_deterministic_attack_scenarios': int(plan_summary['e7_attack_scenarios']) >= 1000000, 'every_malicious_response_has_honest_control': all((int(row['paired_honest_controls']) == int(row['malicious_responses']) for row in family_rows))}}
++    for key in ('noncanonical_data_accepts',):
++        e7_summary[key] = sum(int(row[key]) for row in deterministic + fuzz) if all(key in row for row in deterministic + fuzz) else None
++    e7_summary['deterministic_policy_only_accepts'] = sum(int(row['policy_only_accepts']) for row in deterministic) if all('policy_only_accepts' in row for row in deterministic) else None
++    e7_summary['fuzz_metadata_only_accepts'] = sum(int(row['metadata_only_accepts']) for row in fuzz) if all('metadata_only_accepts' in row for row in fuzz) else None
++    e7_summary['fuzz_accepted_canonical_metadata_valid_mutations'] = sum(int(row['accepted_canonical_metadata_valid_mutations']) for row in fuzz) if all('accepted_canonical_metadata_valid_mutations' in row for row in fuzz) else None
++    e7_summary['deterministic_expected_reject_accepts'] = sum(int(row['false_accepts']) for row in deterministic)
++    e7_summary['fuzz_detected_violations'] = sum(int(row['false_accepts']) for row in fuzz)
++    e7_summary['metric_definition'] = 'false_accepts is a legacy sum of expected-reject acceptance counts and fuzz block/root/metadata violations, not the formal cryptographic forgery event'
+     return (e7_summary, hypothesis_rows)
+ 
+ def _e8_analysis(results: list[dict[str, Any]], output: Path, config: dict[str, Any], plan_summary: dict[str, Any], complete: bool) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+@@ -297,9 +309,9 @@
+     internal_pass = complete and len(e7_results) == int(plan_summary['e7_cases']) and (len(e8_results) == int(plan_summary['e8_cases']))
+     all_hyp = all((row['status'] == 'PASS' for row in hypothesis_rows))
+     publication_protocol = {'publication_eligible_configuration': bool(plan_summary['publication_eligible']), 'e7_each_family_at_least_100k_scenarios': bool(e7_summary['publication_protocol']['each_family_at_least_100k_scenarios']), 'e7_at_least_one_million_scenarios': bool(e7_summary['publication_protocol']['at_least_one_million_deterministic_attack_scenarios']), 'e7_paired_controls': bool(e7_summary['publication_protocol']['every_malicious_response_has_honest_control']), 'e8_failure_probability_set_complete': set(e8_summary['publication_protocol']['failure_probabilities']) >= {0.0, 0.01, 0.05, 0.1, 0.25, 0.5}, 'e8_deadline_set_complete': set(e8_summary['publication_protocol']['deadlines_ms']) >= {100.0, 500.0, 2000.0}, 'e8_independent_and_correlated': set(e8_summary['publication_protocol']['outage_models']) >= {'independent', 'correlated'}, 'e8_no_retry_and_one_retry': set(e8_summary['publication_protocol']['retry_policies']) >= {'no_retry', 'one_retry'}}
+-    summary = {'schema_version': 1, 'experiment': 'E7+E8', 'label': plan_summary['label'], 'status': 'PASS' if internal_pass else 'FAIL', 'plan_audit': plan_audit, 'all_case_integrity_checks_pass': internal_pass, 'all_primary_hypotheses_pass': all_hyp, 'hypotheses': {row['hypothesis']: row['status'] for row in hypothesis_rows}, 'e7': e7_summary, 'e8': e8_summary, 'publication_protocol': publication_protocol, 'notes': ['E7 contains only malformed, tampered, stale, replayed, or equivocated responses; withholding is isolated in E8.', 'E8 returns either the exact correct object or bottom; it never corrupts objects.', 'E8 uses deterministic virtual time for outage/deadline trials and audits every fixture with the real cryptographic verifier.', 'Hypothesis failure is a scientific result and does not by itself invalidate a complete run.']}
++    summary = {'schema_version': 2, 'experiment': 'E7+E8', 'label': plan_summary['label'], 'status': 'PASS' if internal_pass else 'FAIL', 'plan_audit': plan_audit, 'all_case_integrity_checks_pass': internal_pass, 'all_primary_hypotheses_pass': all_hyp, 'hypotheses': {row['hypothesis']: row['status'] for row in hypothesis_rows}, 'e7': e7_summary, 'e8': e8_summary, 'publication_protocol': publication_protocol, 'notes': ['E7 combines expected-reject attack frames with adaptive fuzz executions that can include benign mutations; withholding is isolated in E8.', 'E8 returns either the exact correct object or bottom; it never corrupts objects.', 'E8 uses deterministic virtual time for outage/deadline trials and audits every fixture with the real cryptographic verifier.', 'Hypothesis failure is a scientific result and does not by itself invalidate a complete run.']}
+     atomic_write_json(results_dir / 'summary.json', summary)
+-    report_lines = ['# Experiment 7 — Adversarial Integrity and Availability Results', '', f"Run label: `{plan_summary['label']}`  ", f"Execution status: **{summary['status']}**  ", f"Primary hypotheses: **{('PASS' if all_hyp else 'ONE OR MORE FAILED')}**", '', '## E7 adversarial integrity', '', f"The run evaluated {e7_summary['attack_scenarios']:,} deterministic attack scenarios and {e7_summary['malicious_responses']:,} malicious responses including greybox mutations. It observed {e7_summary['false_accepts']} false accepts, {e7_summary['false_rejects']} false rejects, {e7_summary['crashes']} crashes, and {e7_summary['stage_mismatches']} preregistered-gate mismatches.", '', f"With zero false accepts, the one-sided 95% upper bound on the malicious-response acceptance probability is {e7_summary['zero_event_95pct_upper_bound']:.3e}." if e7_summary['zero_event_95pct_upper_bound'] is not None else 'False accepts were observed; no zero-event upper bound is reported.', '', f"H7a: **{e7_summary['H7a']}**; H7b: **{e7_summary['H7b']}**; H7c: **{e7_summary['H7c']}**.", '', '## E8 availability and withholding', '', f"The run evaluated {e8_summary['cases']:,} availability configurations and {e8_summary['simulated_queries']:,} virtual-time queries. Every successful fixture was audited by the real SHA-256/Ed25519 verifier. The fail-closed state machine observed {e8_summary['false_accepts']} false accepts under withholding.", '', f"H8a: **{e8_summary['H8a']}**; H8b: **{e8_summary['H8b']}**; H8c: **{e8_summary['H8c']}**.", '', f"The E9-compatible availability catalogue contains {e8_summary['availability_catalog_rows']} rows (expected {e8_summary['availability_catalog_expected_rows']}).", '', '## Interpretation rule', '', '`status=PASS` means that the plan was complete, all result files were structurally valid, and all internal invariants held. A hypothesis marked `FAIL` must remain in the paper as an empirical result; it must not be removed by changing thresholds after observing the data.']
++    report_lines = ['# Experiment 7 — Adversarial Integrity and Availability Results', '', f"Run label: `{plan_summary['label']}`  ", f"Execution status: **{summary['status']}**  ", f"Primary hypotheses: **{('PASS' if all_hyp else 'ONE OR MORE FAILED')}**", '', '## E7 adversarial integrity', '', f"The run evaluated {e7_summary['attack_scenarios']:,} deterministic attack scenarios and {e7_summary['tested_inputs']:,} test inputs, comprising expected-reject frames and greybox executions. It observed {e7_summary['deterministic_expected_reject_accepts']} expected-reject acceptances and {e7_summary['fuzz_detected_violations']} fuzz block/root/metadata violations, {e7_summary['false_rejects']} false rejects, {e7_summary['crashes']} crashes, and {e7_summary['stage_mismatches']} preregistered-gate mismatches.", '', f"With zero false accepts, the one-sided 95% upper bound on the malicious-response acceptance probability is {e7_summary['zero_event_95pct_upper_bound']:.3e}." if e7_summary['zero_event_95pct_upper_bound'] is not None else 'No pooled zero-event bound is reported because deterministic and adaptive fuzz inputs have different oracles and fuzz mutations need not be malicious.', '', f"H7a: **{e7_summary['H7a']}**; H7b: **{e7_summary['H7b']}**; H7c: **{e7_summary['H7c']}**.", '', '## E8 availability and withholding', '', f"The run evaluated {e8_summary['cases']:,} availability configurations and {e8_summary['simulated_queries']:,} virtual-time queries. Every successful fixture was audited by the real SHA-256/Ed25519 verifier. The fail-closed state machine observed {e8_summary['false_accepts']} false accepts under withholding.", '', f"H8a: **{e8_summary['H8a']}**; H8b: **{e8_summary['H8b']}**; H8c: **{e8_summary['H8c']}**.", '', f"The E9-compatible availability catalogue contains {e8_summary['availability_catalog_rows']} rows (expected {e8_summary['availability_catalog_expected_rows']}).", '', '## Interpretation rule', '', '`status=PASS` means that the plan was complete, all result files were structurally valid, and all internal invariants held. A hypothesis marked `FAIL` must remain in the paper as an empirical result; it must not be removed by changing thresholds after observing the data.']
+     atomic_write_text(results_dir / 'report.md', '\n'.join(report_lines) + '\n')
+     write_manifest(results_dir)
+     return summary
+--- a/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/attacks.py
++++ b/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/attacks.py
+@@ -320,12 +320,12 @@
+     if ablation == 'no_ctx':
+         frame = _replay_frame(env.noctx_source, env.noctx_target, env.position)
+         return AttackMutation((frame,), (env.noctx_target.shard, env.noctx_target.epoch, env.position), (None,), 'cross_context_replay_no_ctx', (env.noctx_source.blocks[env.position],), unsafe_fixture=env.noctx_target, unsafe_ablation='no_ctx')
+-    if ablation == 'no_anchor':
++    if ablation in {'no_anchor', 'no_root_binding_or_anchor'}:
+         attack_parsed = decode_response(honest_frame(env.attacker, env.position))
+         safe_meta = target.entry.meta
+         response = Response(q=q, root=attack_parsed.root, meta=safe_meta, payload=replace(attack_parsed.payload, payload_ref=safe_meta.payload_ref), witness=attack_parsed.witness, certificate=attack_parsed.certificate)
+         frame = encode_response(response)
+-        return AttackMutation((frame,), q, (None,), 'attacker_chosen_root_no_anchor', (env.attacker.blocks[env.position],), unsafe_fixture=target, unsafe_ablation='no_anchor')
++        return AttackMutation((frame,), q, (None,), 'attacker_chosen_root_no_root_binding_or_anchor', (env.attacker.blocks[env.position],), unsafe_fixture=target, unsafe_ablation='no_root_binding_or_anchor')
+     if ablation == 'no_meta':
+         parsed = decode_response(honest_frame(target, env.position))
+         stale_meta = replace(parsed.meta, aux_ref=_flip(parsed.meta.aux_ref, 0), version=99)
+--- a/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/constants.py
++++ b/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/constants.py
+@@ -62,4 +62,4 @@
+ VARIANT_SERVICES = {'full_colocated': ('payload_aux', 'anchor'), 'full_split': ('payload', 'aux', 'anchor'), 'leaf_colocated': ('payload_aux', 'anchor'), 'leaf_split': ('payload', 'aux', 'anchor'), 'ext_split': ('payload', 'witness', 'anchor')}
+ SERVICE_IDS = {'payload_aux': 1, 'payload': 2, 'aux': 3, 'witness': 4, 'anchor': 5, 'shutdown': 255}
+ SERVICE_NAMES = {v: k for k, v in SERVICE_IDS.items()}
+-GUARD_IDS = ('frame.size', 'frame.header', 'frame.magic', 'frame.version', 'frame.body_length', 'frame.field_count', 'frame.field_order', 'frame.field_unique', 'frame.field_known', 'frame.required_fields', 'query.decode', 'meta.decode', 'payload.decode', 'witness.decode', 'anchor.decode', 'range.valid', 'query.context', 'meta.root_width', 'meta.equal', 'meta.version_registry', 'payload.ref', 'payload.meta', 'payload.envelope', 'witness.mode', 'witness.shape', 'anchor.shape', 'payload.decompress', 'payload.canonical', 'leaf.target_entry', 'leaf.rebuild', 'member.depth', 'member.digest_width', 'member.direction', 'member.root', 'anchor.statement', 'anchor.public_key', 'anchor.signature', 'anchor.prefix', 'anchor.inclusion', 'accept.complete')
++GUARD_IDS = ('frame.size', 'frame.header', 'frame.magic', 'frame.version', 'frame.body_length', 'frame.field_count', 'frame.field_order', 'frame.field_unique', 'frame.field_known', 'frame.required_fields', 'query.decode', 'meta.decode', 'payload.decode', 'witness.decode', 'anchor.decode', 'range.valid', 'query.context', 'meta.root_width', 'meta.equal', 'meta.version_registry', 'payload.ref', 'payload.meta', 'payload.envelope', 'witness.mode', 'witness.shape', 'anchor.shape', 'payload.decompress', 'payload.canonical', 'leaf.target_entry', 'leaf.rebuild', 'member.depth', 'member.digest_width', 'member.direction', 'member.root', 'anchor.statement', 'anchor.mode', 'anchor.current_checkpoint', 'anchor.public_key', 'anchor.signature', 'anchor.prefix', 'anchor.inclusion', 'accept.complete')
+--- a/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/e7_runner.py
++++ b/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/e7_runner.py
+@@ -48,6 +48,7 @@
+     false_accepts = false_rejects = crashes = stage_mismatches = 0
+     malicious_responses = 0
+     metadata_violation_accepts = 0
++    noncanonical_data_accepts = policy_only_accepts = 0
+     for trial in range(trials):
+         mutation = make_attack(env, family, trial + int(case['seed']))
+         _counter_add(operators, mutation.mutation_name)
+@@ -71,12 +72,15 @@
+                     stage_mismatches += 1
+             if decision.accepted:
+                 false_accepts += 1
++                noncanonical = mutation.query[2] not in env.target.blocks or decision.block != env.target.blocks.get(mutation.query[2]) or decision.root_used != env.target.entry.root
++                noncanonical_data_accepts += int(noncanonical)
++                policy_only_accepts += int(not noncanonical)
+                 if decision.metadata_violation:
+                     metadata_violation_accepts += 1
+             if decision.stage == 'Crash':
+                 crashes += 1
+     after = _usage()
+-    return {'case_id': case['case_id'], 'kind': case['kind'], 'family': family, 'context': context, 'replicate': case['replicate'], 'seed': case['seed'], 'attack_scenarios': trials, 'malicious_responses': malicious_responses, 'honest_controls': malicious_responses, 'false_accepts': false_accepts, 'false_rejects': false_rejects, 'crashes': crashes, 'stage_mismatches': stage_mismatches, 'metadata_violation_accepts': metadata_violation_accepts, 'stage_counts': stages, 'expected_stage_counts': expected, 'reason_counts': reasons, 'operator_counts': operators, 'guard_coverage': sorted(guard_coverage), 'malicious_latencies_ns': malicious_latencies, 'honest_latencies_ns': honest_latencies, 'resource_delta': _delta(before, after), 'runtime_ns': time.perf_counter_ns() - start, 'checks': {'all_honest_accepted': false_rejects == 0, 'no_false_accept': false_accepts == 0, 'no_crash': crashes == 0, 'earliest_gate_exact': stage_mismatches == 0}}
++    return {'case_id': case['case_id'], 'kind': case['kind'], 'family': family, 'context': context, 'replicate': case['replicate'], 'seed': case['seed'], 'attack_scenarios': trials, 'malicious_responses': malicious_responses, 'honest_controls': malicious_responses, 'false_accepts': false_accepts, 'expected_reject_accepts': false_accepts, 'noncanonical_data_accepts': noncanonical_data_accepts, 'policy_only_accepts': policy_only_accepts, 'metric_definition': 'false_accepts counts acceptance of expected-reject frames; policy_only_accepts retains canonical block and root', 'false_rejects': false_rejects, 'crashes': crashes, 'stage_mismatches': stage_mismatches, 'metadata_violation_accepts': metadata_violation_accepts, 'stage_counts': stages, 'expected_stage_counts': expected, 'reason_counts': reasons, 'operator_counts': operators, 'guard_coverage': sorted(guard_coverage), 'malicious_latencies_ns': malicious_latencies, 'honest_latencies_ns': honest_latencies, 'resource_delta': _delta(before, after), 'runtime_ns': time.perf_counter_ns() - start, 'checks': {'all_honest_accepted': false_rejects == 0, 'no_false_accept': false_accepts == 0, 'no_crash': crashes == 0, 'earliest_gate_exact': stage_mismatches == 0}}
+ 
+ def _run_fuzz(case: dict[str, Any]) -> dict[str, Any]:
+     start = time.perf_counter_ns()
+@@ -88,7 +92,7 @@
+     result = run_fuzz_case(fuzz_case)
+     metrics = result['metrics']
+     after = _usage()
+-    return {'case_id': case['case_id'], 'kind': case['kind'], 'surface': case['surface'], 'context': context, 'replicate': case['replicate'], 'seed': case['seed'], 'attack_scenarios': int(metrics['fuzz_executions']), 'malicious_responses': int(metrics['fuzz_executions']), 'honest_controls': int(metrics['paired_honest_controls']), 'false_accepts': int(metrics['false_accepts']), 'false_rejects': int(metrics['false_rejects']), 'crashes': int(metrics['crashes']), 'accepted_mutations': int(metrics['accepted_mutations']), 'stage_counts': result['stage_counts'], 'reason_counts': result['reason_counts'], 'guard_coverage': result['covered_guards'], 'coverage_signatures': int(metrics['new_coverage_events']), 'corpus_size': int(metrics['corpus_size']), 'line_points_covered': int(metrics['line_points_covered']), 'line_points_total': int(metrics['line_points_total']), 'sampled_line_coverage': float(metrics['sampled_line_coverage']), 'semantic_guard_coverage': float(metrics['semantic_guard_coverage']), 'covered_line_points': result['covered_line_points'], 'line_universe': result['line_universe'], 'interesting_inputs': result['interesting_inputs'], 'resource_delta': _delta(before, after), 'runtime_ns': time.perf_counter_ns() - start, 'checks': {'all_honest_accepted': int(metrics['false_rejects']) == 0, 'no_false_accept': int(metrics['false_accepts']) == 0, 'no_crash': int(metrics['crashes']) == 0, 'budget_complete': bool(result['checks']['budget_complete'])}}
++    return {'case_id': case['case_id'], 'kind': case['kind'], 'surface': case['surface'], 'context': context, 'replicate': case['replicate'], 'seed': case['seed'], 'attack_scenarios': int(metrics['fuzz_executions']), 'tested_inputs': int(metrics['fuzz_executions']), 'fuzz_executions': int(metrics['fuzz_executions']), 'honest_controls': int(metrics['paired_honest_controls']), 'false_accepts': int(metrics['false_accepts']), 'noncanonical_data_accepts': int(metrics['noncanonical_data_accepts']), 'metadata_policy_accepts': int(metrics['metadata_policy_accepts']), 'metadata_only_accepts': int(metrics['metadata_only_accepts']), 'accepted_canonical_metadata_valid_mutations': int(metrics['accepted_canonical_metadata_valid_mutations']), 'metric_definition': 'false_accepts counts accepted noncanonical block/root OR metadata mismatch; fuzz_executions includes benign mutations', 'false_rejects': int(metrics['false_rejects']), 'crashes': int(metrics['crashes']), 'accepted_mutations': int(metrics['accepted_mutations']), 'stage_counts': result['stage_counts'], 'reason_counts': result['reason_counts'], 'guard_coverage': result['covered_guards'], 'coverage_signatures': int(metrics['new_coverage_events']), 'corpus_size': int(metrics['corpus_size']), 'line_points_covered': int(metrics['line_points_covered']), 'line_points_total': int(metrics['line_points_total']), 'sampled_line_coverage': float(metrics['sampled_line_coverage']), 'semantic_guard_coverage': float(metrics['semantic_guard_coverage']), 'covered_line_points': result['covered_line_points'], 'line_universe': result['line_universe'], 'interesting_inputs': result['interesting_inputs'], 'resource_delta': _delta(before, after), 'runtime_ns': time.perf_counter_ns() - start, 'checks': {'all_honest_accepted': int(metrics['false_rejects']) == 0, 'no_false_accept': int(metrics['false_accepts']) == 0, 'no_crash': int(metrics['crashes']) == 0, 'budget_complete': bool(result['checks']['budget_complete'])}}
+ 
+ def _run_ablation(case: dict[str, Any]) -> dict[str, Any]:
+     start = time.perf_counter_ns()
+@@ -104,6 +108,7 @@
+     honest_q = (env.target.shard, env.target.epoch, env.position)
+     honest = honest_frame(env.target, env.position)
+     safe_accepts = unsafe_accepts = honest_false_rejects = crashes = 0
++    unsafe_noncanonical_data_accepts = unsafe_policy_only_accepts = 0
+     safe_stages: dict[str, int] = {}
+     unsafe_stages: dict[str, int] = {}
+     safe_reasons: dict[str, int] = {}
+@@ -134,11 +139,14 @@
+                 safe_accepts += 1
+             if unsafe.accepted:
+                 unsafe_accepts += 1
++                noncanonical = mutation.query[2] not in unsafe_fixture.blocks or unsafe.block != unsafe_fixture.blocks.get(mutation.query[2]) or unsafe.root_used != unsafe_fixture.entry.root
++                unsafe_noncanonical_data_accepts += int(noncanonical)
++                unsafe_policy_only_accepts += int(not noncanonical)
+             if safe.stage == 'Crash' or unsafe.stage == 'Crash':
+                 crashes += 1
+     expected_attack_responses = trials * len(mutation.frames)
+     after = _usage()
+-    return {'case_id': case['case_id'], 'kind': case['kind'], 'ablation': ablation, 'mutation_name': mutation.mutation_name, 'context': context, 'replicate': case['replicate'], 'seed': case['seed'], 'attack_scenarios': trials, 'malicious_responses': expected_attack_responses, 'honest_controls': trials, 'safe_accepts': safe_accepts, 'unsafe_accepts': unsafe_accepts, 'honest_false_rejects': honest_false_rejects, 'crashes': crashes, 'safe_stage_counts': safe_stages, 'unsafe_stage_counts': unsafe_stages, 'safe_reason_counts': safe_reasons, 'unsafe_reason_counts': unsafe_reasons, 'guard_coverage': sorted(guard_coverage), 'safe_latencies_ns': safe_latencies, 'unsafe_latencies_ns': unsafe_latencies, 'honest_latencies_ns': honest_latencies, 'resource_delta': _delta(before, after), 'runtime_ns': time.perf_counter_ns() - start, 'checks': {'safe_pipeline_rejects_attack': safe_accepts == 0, 'unsafe_ablation_accepts_attack': unsafe_accepts == expected_attack_responses, 'honest_control_accepts': honest_false_rejects == 0, 'no_crash': crashes == 0}}
++    return {'case_id': case['case_id'], 'kind': case['kind'], 'ablation': ablation, 'ablation_label': 'no_root_binding_or_anchor' if ablation == 'no_anchor' else ablation, 'disabled_checks': ['protected_root_binding', 'anchor_verification'] if ablation in {'no_anchor', 'no_root_binding_or_anchor'} else [ablation], 'mutation_name': mutation.mutation_name, 'context': context, 'replicate': case['replicate'], 'seed': case['seed'], 'attack_scenarios': trials, 'malicious_responses': expected_attack_responses, 'honest_controls': trials, 'safe_accepts': safe_accepts, 'unsafe_accepts': unsafe_accepts, 'unsafe_noncanonical_data_accepts': unsafe_noncanonical_data_accepts, 'unsafe_policy_only_accepts': unsafe_policy_only_accepts, 'honest_false_rejects': honest_false_rejects, 'crashes': crashes, 'safe_stage_counts': safe_stages, 'unsafe_stage_counts': unsafe_stages, 'safe_reason_counts': safe_reasons, 'unsafe_reason_counts': unsafe_reasons, 'guard_coverage': sorted(guard_coverage), 'safe_latencies_ns': safe_latencies, 'unsafe_latencies_ns': unsafe_latencies, 'honest_latencies_ns': honest_latencies, 'resource_delta': _delta(before, after), 'runtime_ns': time.perf_counter_ns() - start, 'checks': {'safe_pipeline_rejects_attack': safe_accepts == 0, 'unsafe_ablation_accepts_attack': unsafe_accepts == expected_attack_responses, 'honest_control_accepts': honest_false_rejects == 0, 'no_crash': crashes == 0}}
+ 
+ def run_case(case: dict[str, Any]) -> dict[str, Any]:
+     kind = case['kind']
+@@ -158,7 +166,7 @@
+     block = blocks[block_index]
+     started = time.time_ns()
+     results = [run_case(cases[case_id]) for case_id in block['case_ids']]
+-    payload = {'schema_version': 1, 'experiment': 'E7', 'block_id': block['block_id'], 'block_index': block_index, 'case_ids': block['case_ids'], 'started_unix_ns': started, 'finished_unix_ns': time.time_ns(), 'environment': system_info(), 'results': results, 'checks': {'case_count_matches': len(results) == len(block['case_ids']), 'case_ids_match': [row['case_id'] for row in results] == block['case_ids'], 'all_case_checks_pass': all((all((bool(v) for v in row['checks'].values())) for row in results))}}
++    payload = {'schema_version': 2, 'experiment': 'E7', 'block_id': block['block_id'], 'block_index': block_index, 'case_ids': block['case_ids'], 'started_unix_ns': started, 'finished_unix_ns': time.time_ns(), 'environment': system_info(), 'results': results, 'checks': {'case_count_matches': len(results) == len(block['case_ids']), 'case_ids_match': [row['case_id'] for row in results] == block['case_ids'], 'all_case_checks_pass': all((all((bool(v) for v in row['checks'].values())) for row in results))}}
+     path = raw_dir / f'e7-block-{block_index:06d}.json.gz'
+     atomic_write_gzip_json(path, payload)
+     return path
+--- a/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/fuzz.py
++++ b/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/fuzz.py
+@@ -107,6 +107,7 @@
+     line_coverage = LineCoverage(set())
+     executable = executable_lines()
+     false_accepts = 0
++    noncanonical_data_accepts = metadata_policy_accepts = metadata_only_accepts = 0
+     false_rejects = 0
+     crashes = 0
+     accepted_mutations = 0
+@@ -138,7 +139,11 @@
+         reason_counts[decision.reason] = reason_counts.get(decision.reason, 0) + 1
+         if decision.accepted:
+             accepted_mutations += 1
+-            if decision.block != fixture.blocks[position] or decision.root_used != fixture.entry.root or decision.metadata_violation:
++            noncanonical = decision.block != fixture.blocks[position] or decision.root_used != fixture.entry.root
++            noncanonical_data_accepts += int(noncanonical)
++            metadata_policy_accepts += int(decision.metadata_violation)
++            metadata_only_accepts += int(decision.metadata_violation and not noncanonical)
++            if noncanonical or decision.metadata_violation:
+                 false_accepts += 1
+         signature = (tuple(sorted(decision.guards)), decision.stage, decision.reason)
+         newly_covered = set(decision.guards) - covered_guards
+@@ -150,4 +155,4 @@
+                 corpus.append(mutated)
+             if len(interesting) < 256:
+                 interesting.append({'iteration': index, 'input_bytes': len(mutated), 'stage': decision.stage, 'reason': decision.reason, 'new_guards': sorted(newly_covered), 'input_sha256': __import__('hashlib').sha256(mutated).hexdigest()})
+-    return {'schema_version': 1, 'experiment': 'E7', 'trial_kind': 'fuzz', 'case': case, 'fixture': fixture.setup, 'system': system_info(), 'metrics': {'fuzz_executions': budget, 'paired_honest_controls': budget, 'false_accepts': false_accepts, 'false_rejects': false_rejects, 'crashes': crashes, 'accepted_mutations': accepted_mutations, 'corpus_size': len(corpus), 'new_coverage_events': new_coverage_events, 'semantic_guards_covered': len(covered_guards), 'semantic_guards_total': len(GUARD_IDS), 'semantic_guard_coverage': len(covered_guards) / len(GUARD_IDS), 'line_points_covered': len(line_coverage.lines & executable), 'line_points_total': len(executable), 'sampled_line_coverage': len(line_coverage.lines & executable) / len(executable) if executable else 0.0, 'max_input_bytes': max_input_bytes, 'peak_rss_kib': get_peak_rss_kib()}, 'stage_counts': stage_counts, 'reason_counts': reason_counts, 'covered_guards': sorted(covered_guards), 'covered_line_points': [f'{name}:{line}' for name, line in sorted(line_coverage.lines & executable)], 'line_universe': [f'{name}:{line}' for name, line in sorted(executable)], 'interesting_inputs': interesting, 'checks': {'zero_false_accepts': false_accepts == 0, 'zero_false_rejects': false_rejects == 0, 'zero_crashes': crashes == 0, 'budget_complete': sum(stage_counts.values()) == budget}}
++    return {'schema_version': 2, 'experiment': 'E7', 'trial_kind': 'fuzz', 'case': case, 'fixture': fixture.setup, 'system': system_info(), 'metrics': {'fuzz_executions': budget, 'paired_honest_controls': budget, 'false_accepts': false_accepts, 'noncanonical_data_accepts': noncanonical_data_accepts, 'metadata_policy_accepts': metadata_policy_accepts, 'metadata_only_accepts': metadata_only_accepts, 'accepted_canonical_metadata_valid_mutations': accepted_mutations - false_accepts, 'false_rejects': false_rejects, 'crashes': crashes, 'accepted_mutations': accepted_mutations, 'corpus_size': len(corpus), 'new_coverage_events': new_coverage_events, 'semantic_guards_covered': len(covered_guards), 'semantic_guards_total': len(GUARD_IDS), 'semantic_guard_coverage': len(covered_guards) / len(GUARD_IDS), 'line_points_covered': len(line_coverage.lines & executable), 'line_points_total': len(executable), 'sampled_line_coverage': len(line_coverage.lines & executable) / len(executable) if executable else 0.0, 'max_input_bytes': max_input_bytes, 'peak_rss_kib': get_peak_rss_kib()}, 'stage_counts': stage_counts, 'reason_counts': reason_counts, 'covered_guards': sorted(covered_guards), 'covered_line_points': [f'{name}:{line}' for name, line in sorted(line_coverage.lines & executable)], 'line_universe': [f'{name}:{line}' for name, line in sorted(executable)], 'interesting_inputs': interesting, 'checks': {'zero_false_accepts': false_accepts == 0, 'zero_false_rejects': false_rejects == 0, 'zero_crashes': crashes == 0, 'budget_complete': sum(stage_counts.values()) == budget}}
+--- a/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/pipeline.py
++++ b/experiment/experiments/e7_integrity_availability/src/msi_security_avail_exp/pipeline.py
+@@ -19,6 +19,9 @@
+     return left.n == right.n and left.k == right.k and (left.payload_ref == right.payload_ref) and (left.aux_ref == right.aux_ref) and (left.layout == right.layout) and (left.mode == right.mode) and (left.codec == right.codec) and (left.version == right.version)
+ 
+ def verify_frame(frame: bytes, query: tuple[int, int, int], fixture: Fixture, *, ablation: str='safe', openssl: Ed25519OpenSSL | None=None, coverage_sink: Callable[[str], None] | None=None) -> Decision:
++    # The legacy name removes BOTH root binding and anchor verification.
++    if ablation == 'no_anchor':
++        ablation = 'no_root_binding_or_anchor'
+     start = time.perf_counter_ns()
+     phase_ns = {STAGE_CHECK: 0, STAGE_RESOLVE: 0, STAGE_MEMBER: 0, STAGE_ANCHOR: 0}
+     counter = OperationCounter()
+@@ -54,7 +57,7 @@
+         root_violation = parsed.root != fixture.entry.root
+         metadata_violation = root_violation or meta_fields_violation
+         mark('meta.equal')
+-        if ablation == 'no_anchor':
++        if ablation == 'no_root_binding_or_anchor':
+             if meta_fields_violation:
+                 phase_ns[STAGE_CHECK] = time.perf_counter_ns() - t0
+                 return reject(STAGE_CHECK, 'metadata_mismatch', metadata_violation=True)
+@@ -131,7 +134,7 @@
+         phase_ns[STAGE_RESOLVE] = time.perf_counter_ns() - t0
+         t0 = time.perf_counter_ns()
+         counter.set_phase(STAGE_MEMBER)
+-        root_used = parsed.root if ablation == 'no_anchor' else fixture.entry.root
++        root_used = parsed.root if ablation == 'no_root_binding_or_anchor' else fixture.entry.root
+         mark('member.depth')
+         mark('member.digest_width')
+         mark('member.direction')
+@@ -142,11 +145,14 @@
+             return reject(STAGE_MEMBER, member_reason, block=block, root=root_used, metadata_violation=metadata_violation)
+         t0 = time.perf_counter_ns()
+         counter.set_phase(STAGE_ANCHOR)
+-        if ablation == 'no_anchor':
++        if ablation == 'no_root_binding_or_anchor':
+             anchor_ok = True
+         else:
+             backend = openssl or Ed25519OpenSSL()
+             certificate = parsed.certificate
++            protected = fixture.certificate
++            mark('anchor.mode')
++            mode_ok = (fixture.anchor_mode == 'direct' and isinstance(protected, DirectCertificate) and isinstance(certificate, DirectCertificate)) or (fixture.anchor_mode == 'aggregate' and isinstance(protected, AggregateCertificate) and isinstance(certificate, AggregateCertificate))
+             expected_k = fixture.entry.meta.k
+             expected_statement = root_statement(query[0], query[1], expected_k, fixture.entry.root)
+             mark('anchor.statement')
+@@ -155,8 +161,10 @@
+                 mark('anchor.public_key')
+                 key_ok = certificate.public_key == fixture.public_key
+                 mark('anchor.signature')
+-                anchor_ok = statement_ok and key_ok and backend.verify(certificate.public_key, certificate.statement, certificate.signature, counter)
++                anchor_ok = mode_ok and statement_ok and key_ok and backend.verify(certificate.public_key, certificate.statement, certificate.signature, counter)
+             else:
++                mark('anchor.current_checkpoint')
++                current_ok = isinstance(protected, AggregateCertificate) and certificate.shard == protected.shard and certificate.k_star == protected.k_star and certificate.accumulator_root == protected.accumulator_root and certificate.public_key == protected.public_key
+                 mark('anchor.prefix')
+                 prefix_ok = certificate.shard == query[0] and expected_k <= certificate.k_star and (certificate.statement_position == expected_k) and (certificate.statement == expected_statement)
+                 mark('anchor.public_key')
+@@ -165,7 +173,7 @@
+                 checkpoint_ok = key_ok and backend.verify(certificate.public_key, checkpoint_statement(certificate.shard, certificate.k_star, certificate.accumulator_root), certificate.checkpoint_signature, counter)
+                 mark('anchor.inclusion')
+                 inclusion_ok = verify_accumulator(certificate.statement, certificate.statement_position, certificate.k_star, certificate.inclusion_path, certificate.accumulator_root, counter)
+-                anchor_ok = prefix_ok and checkpoint_ok and inclusion_ok
++                anchor_ok = mode_ok and current_ok and prefix_ok and checkpoint_ok and inclusion_ok
+         phase_ns[STAGE_ANCHOR] = time.perf_counter_ns() - t0
+         if not anchor_ok:
+             return reject(STAGE_ANCHOR, 'anchor_invalid', block=block, root=root_used, metadata_violation=metadata_violation)
+--- /dev/null
++++ b/experiment/experiments/e7_integrity_availability/tests/test_checkpoint_policy.py
+@@ -0,0 +1,135 @@
++from __future__ import annotations
++
++import copy
++import hashlib
++import unittest
++from dataclasses import replace
++
++from msi_security_avail_exp.accumulator import build_accumulator, extract_accumulator_path
++from msi_security_avail_exp.crypto import Ed25519OpenSSL
++from msi_security_avail_exp.fixture import build_fixture, honest_frame
++from msi_security_avail_exp.models import AggregateCertificate, DirectCertificate, Response
++from msi_security_avail_exp.pipeline import checkpoint_statement, verify_frame
++from msi_security_avail_exp.protocol import decode_response, encode_response
++
++
++class CheckpointPolicyTests(unittest.TestCase):
++    def setUp(self) -> None:
++        self.fixture = build_fixture({'epoch_length': 8, 'block_bytes': 128,
++                                      'mode': 'full', 'anchor_mode': 'aggregate',
++                                      'anchor_prefix': 4, 'anchor_position': 1,
++                                      'query_position': 1, 'fixture_seed': 73})
++        self.backend = Ed25519OpenSSL()
++        self.query = (self.fixture.shard, self.fixture.epoch, 1)
++        self.parsed = decode_response(honest_frame(self.fixture, 1))
++        self.current = self.fixture.certificate
++        assert isinstance(self.current, AggregateCertificate)
++
++    def frame(self, certificate):
++        p = self.parsed
++        return encode_response(Response(p.q, p.root, p.meta, p.payload, p.witness, certificate))
++
++    def assert_rejected_without_state_change(self, certificate) -> None:
++        before = copy.deepcopy(self.fixture)
++        decision = verify_frame(self.frame(certificate), self.query, self.fixture,
++                                openssl=self.backend)
++        self.assertFalse(decision.accepted)
++        self.assertEqual(decision.stage, 'VerifyAnchor')
++        # The E7 verifier is read-only: a failed response cannot install a checkpoint.
++        self.assertEqual(self.fixture, before)
++
++    def older_valid_certificate(self):
++        accumulator = build_accumulator(self.fixture.accumulator_statements[:2])
++        return replace(self.current, k_star=2, accumulator_root=accumulator.root,
++                       checkpoint_signature=self.backend.sign(
++                           self.fixture.private_seed,
++                           checkpoint_statement(self.fixture.shard, 2, accumulator.root)),
++                       inclusion_path=extract_accumulator_path(accumulator.levels, 1))
++
++    def test_current_valid_checkpoint_accepts(self) -> None:
++        decision = verify_frame(self.frame(self.current), self.query, self.fixture,
++                                openssl=self.backend)
++        self.assertTrue(decision.accepted)
++        self.assertEqual(decision.block, self.fixture.blocks[1])
++
++    def test_authentic_old_covering_checkpoint_rejected(self) -> None:
++        old = self.older_valid_certificate()
++        self.assertGreaterEqual(old.k_star, self.fixture.entry.meta.k)
++        self.assertTrue(self.backend.verify(old.public_key,
++                                           checkpoint_statement(old.shard, old.k_star,
++                                                                old.accumulator_root),
++                                           old.checkpoint_signature))
++        # This is an authentic old checkpoint and still covers the queried statement.
++        old_state = copy.deepcopy(self.fixture)
++        old_state.certificate = old
++        self.assertTrue(verify_frame(self.frame(old), self.query, old_state,
++                                     openssl=self.backend).accepted)
++        self.assert_rejected_without_state_change(old)
++
++    def test_noncovering_prefix_rejected(self) -> None:
++        self.fixture = build_fixture({'epoch_length': 8, 'block_bytes': 128,
++                                      'mode': 'full', 'anchor_mode': 'aggregate',
++                                      'anchor_prefix': 4, 'anchor_position': 3,
++                                      'query_position': 1, 'fixture_seed': 73})
++        self.parsed = decode_response(honest_frame(self.fixture, 1))
++        self.current = self.fixture.certificate
++        accumulator = build_accumulator(self.fixture.accumulator_statements[:2])
++        certificate = replace(self.current, k_star=2, accumulator_root=accumulator.root,
++                              checkpoint_signature=self.backend.sign(self.fixture.private_seed,
++                                  checkpoint_statement(self.fixture.shard, 2, accumulator.root)),
++                              inclusion_path=extract_accumulator_path(accumulator.levels, 1))
++        self.assertTrue(self.backend.verify(certificate.public_key,
++            checkpoint_statement(certificate.shard, 2, certificate.accumulator_root),
++            certificate.checkpoint_signature))
++        self.assert_rejected_without_state_change(certificate)
++
++    def test_honest_modes_accept(self) -> None:
++        for mode in ('full', 'leaf', 'ext'):
++            for anchor_mode in ('direct', 'aggregate'):
++                with self.subTest(mode=mode, anchor_mode=anchor_mode):
++                    fixture = build_fixture({'epoch_length': 8, 'block_bytes': 128,
++                                             'mode': mode, 'anchor_mode': anchor_mode,
++                                             'anchor_prefix': 4, 'anchor_position': 1,
++                                             'query_position': 1, 'fixture_seed': 73})
++                    self.assertTrue(verify_frame(honest_frame(fixture, 1),
++                        (fixture.shard, fixture.epoch, 1), fixture,
++                        openssl=self.backend).accepted)
++
++    def test_wrong_position_rejected(self) -> None:
++        self.assert_rejected_without_state_change(replace(self.current, statement_position=2))
++
++    def test_wrong_statement_rejected(self) -> None:
++        self.assert_rejected_without_state_change(replace(self.current, statement=self.current.statement[:-1] + bytes([self.current.statement[-1] ^ 1])))
++
++    def test_signed_alternative_root_at_current_prefix_rejected(self) -> None:
++        statements = list(self.fixture.accumulator_statements)
++        statements[-1] = statements[-1][:-1] + bytes([statements[-1][-1] ^ 1])
++        other = build_accumulator(statements)
++        certificate = replace(self.current, accumulator_root=other.root,
++                              checkpoint_signature=self.backend.sign(self.fixture.private_seed,
++                                  checkpoint_statement(self.fixture.shard, 4, other.root)),
++                              inclusion_path=extract_accumulator_path(other.levels, 1))
++        self.assert_rejected_without_state_change(certificate)
++
++    def test_wrong_key_even_with_valid_signature_rejected(self) -> None:
++        seed = hashlib.sha256(b'other authorised-looking but untrusted key').digest()
++        certificate = replace(self.current, public_key=self.backend.public_from_seed(seed),
++                              checkpoint_signature=self.backend.sign(seed,
++                                  checkpoint_statement(self.current.shard, self.current.k_star,
++                                                       self.current.accumulator_root)))
++        self.assert_rejected_without_state_change(certificate)
++
++    def test_invalid_signature_rejected(self) -> None:
++        signature = bytes([self.current.checkpoint_signature[0] ^ 1]) + self.current.checkpoint_signature[1:]
++        self.assert_rejected_without_state_change(replace(self.current, checkpoint_signature=signature))
++
++    def test_current_checkpoint_cannot_be_bypassed_by_direct_certificate(self) -> None:
++        direct = DirectCertificate(public_key=self.fixture.public_key,
++                                   statement=self.current.statement,
++                                   signature=self.backend.sign(self.fixture.private_seed,
++                                                               self.current.statement))
++        self.assert_rejected_without_state_change(direct)
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- a/experiment/experiments/e7_integrity_availability/tests/test_core.py
++++ b/experiment/experiments/e7_integrity_availability/tests/test_core.py
+@@ -7,7 +7,7 @@
+ from msi_security_avail_exp.attacks import build_attack_environment, make_ablation_attack, make_attack
+ from msi_security_avail_exp.availability import build_fixture_audit, run_availability_case
+ from msi_security_avail_exp.constants import ATTACK_FAMILIES
+-from msi_security_avail_exp.e7_runner import run_block as run_e7_block
++from msi_security_avail_exp.e7_runner import run_block as run_e7_block, run_case
+ from msi_security_avail_exp.availability import run_block as run_e8_block
+ from msi_security_avail_exp.fixture import build_fixture, honest_frame
+ from msi_security_avail_exp.pipeline import verify_frame
+@@ -54,15 +54,30 @@
+                 if expected is not None:
+                     self.assertEqual(decision.stage, expected, family)
+ 
+-    def test_unsafe_ablations_are_causal(self) -> None:
++    def test_single_and_joint_ablation_controls(self) -> None:
+         case = {'epoch_length': 64, 'block_bytes': 512, 'mode': 'full', 'anchor_mode': 'direct', 'layout': 'per_block', 'codec': 'raw-v1', 'query_position': 32, 'fixture_seed': 5}
+         env = build_attack_environment(case)
+-        for ablation in ('no_ctx', 'no_anchor', 'no_meta'):
++        for ablation in ('no_ctx', 'no_anchor', 'no_root_binding_or_anchor', 'no_meta'):
+             mutation = make_ablation_attack(env, ablation)
+             fixture = mutation.unsafe_fixture or env.target
+             for frame in mutation.frames:
+                 self.assertFalse(verify_frame(frame, mutation.query, fixture, ablation='safe').accepted)
+                 self.assertTrue(verify_frame(frame, mutation.query, fixture, ablation=mutation.unsafe_ablation or ablation).accepted)
++
++    def test_ablation_metrics_separate_data_and_policy_acceptance(self) -> None:
++        context = {'epoch_length': 8, 'block_bytes': 128, 'mode': 'full',
++                   'anchor_mode': 'direct', 'layout': 'per_block', 'codec': 'raw-v1',
++                   'query_position': 1, 'fixture_seed': 5}
++        case = {'case_id': 'metric-regression', 'kind': 'unsafe_ablation',
++                'context': context, 'replicate': 0, 'seed': 19, 'trials': 1}
++        joint = run_case({**case, 'ablation': 'no_anchor'})
++        self.assertEqual(joint['ablation_label'], 'no_root_binding_or_anchor')
++        self.assertEqual(joint['disabled_checks'], ['protected_root_binding', 'anchor_verification'])
++        self.assertEqual(joint['unsafe_noncanonical_data_accepts'], 1)
++        self.assertEqual(joint['unsafe_policy_only_accepts'], 0)
++        metadata = run_case({**case, 'ablation': 'no_meta'})
++        self.assertEqual(metadata['unsafe_noncanonical_data_accepts'], 0)
++        self.assertEqual(metadata['unsafe_policy_only_accepts'], 1)
+ 
+     def test_availability_independent_matches_product(self) -> None:
+         config = {'verification_warmups': 1, 'verification_audit_queries': 2, 'bandwidth_mbps': 100.0, 'latency_cv': 0.0, 'correlated_fraction': 0.7, 'request_bytes_per_service_attempt': 32, 'retry_backoff_ms': 5.0, 'retry_first_attempt_fraction': 0.45, 'service_base_latency_ms': {}}
+@@ -108,6 +123,9 @@
+                 run_e8_block(run, index, run / 'raw_e8')
+             summary = analyze(run, run / 'raw_e7', run / 'raw_e8', run / 'results')
+             self.assertEqual(summary['status'], 'PASS')
++            self.assertNotIn('malicious_responses', summary['e7'])
++            self.assertEqual(summary['e7']['tested_inputs'], summary['e7']['deterministic_expected_reject_frames'] + summary['e7']['fuzz_executions'])
++            self.assertIsNone(summary['e7']['zero_event_95pct_upper_bound'])
+             ok, errors = validate_results(run / 'results')
+             self.assertTrue(ok, errors)
+ if __name__ == '__main__':

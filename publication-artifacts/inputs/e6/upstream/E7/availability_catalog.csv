@@ -1,0 +1,13 @@
+n,mode,success_probability,C_avail,variant,failure_probability,outage_model,deadline_ms,retry_policy,replicates,queries_total,source,publication_eligible
+64,full,0.9348,0.06520000000000004,full_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:full_colocated:p=0.05:deadline=500,True
+64,leaf,0.9337,0.06630000000000003,leaf_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:leaf_colocated:p=0.05:deadline=500,True
+64,ext,0.9218,0.07820000000000005,ext_split,0.05,correlated,500,no_retry,5,50000,E8:publication:ext_split:p=0.05:deadline=500,True
+512,full,0.9361,0.06389999999999996,full_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:full_colocated:p=0.05:deadline=500,True
+512,leaf,0.9356,0.06440000000000001,leaf_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:leaf_colocated:p=0.05:deadline=500,True
+512,ext,0.923,0.07699999999999996,ext_split,0.05,correlated,500,no_retry,5,50000,E8:publication:ext_split:p=0.05:deadline=500,True
+4096,full,0.9337,0.06630000000000003,full_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:full_colocated:p=0.05:deadline=500,True
+4096,leaf,0.9365,0.0635,leaf_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:leaf_colocated:p=0.05:deadline=500,True
+4096,ext,0.9177,0.08230000000000004,ext_split,0.05,correlated,500,no_retry,5,50000,E8:publication:ext_split:p=0.05:deadline=500,True
+16384,full,0.9375,0.0625,full_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:full_colocated:p=0.05:deadline=500,True
+16384,leaf,0.9355,0.0645,leaf_colocated,0.05,correlated,500,no_retry,5,50000,E8:publication:leaf_colocated:p=0.05:deadline=500,True
+16384,ext,0.919,0.08099999999999996,ext_split,0.05,correlated,500,no_retry,5,50000,E8:publication:ext_split:p=0.05:deadline=500,True

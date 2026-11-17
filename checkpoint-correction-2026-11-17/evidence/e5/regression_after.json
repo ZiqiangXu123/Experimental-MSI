@@ -1,0 +1,310 @@
+{
+  "purpose": "Targeted correctness regression; not a publication benchmark rerun",
+  "python": "3.12.14",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "crypto": {
+    "available": true,
+    "library": "<OPENSSL_LIBRARY_DIRECTORY>/libcrypto.dylib",
+    "version": "OpenSSL 3.6.2 7 Apr 2026"
+  },
+  "source_path": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e5_anchor_pruning/src/msi_anchor_exp/pruning.py",
+  "source_sha256": "4182d3bd2333ece4a050981bcc7a4f0b03430b89ae4d212cad24e4ad37ecd7b9",
+  "authentic_old_checkpoint_case": {
+    "query_position": 1,
+    "old_prefix": 2,
+    "protected_prefix": 4,
+    "old_proof_against_own_authentic_anchor": true,
+    "old_proof_against_current_anchor": false,
+    "current_proof_against_current_anchor": true,
+    "protected_state_accepts_old_candidate": false,
+    "protected_state_accepts_current_candidate": true,
+    "rollback_install_accepted": false,
+    "protected_prefix_after_rejected_inputs": 4
+  },
+  "pruning_regression": {
+    "valid_recovery_time_ms": 1060.0,
+    "prune_times_ms": [
+      1060.0,
+      1060.0,
+      1060.0,
+      1060.0
+    ],
+    "pruned_before_valid_recovery": false,
+    "result": {
+      "schema_version": 1,
+      "experiment": "E5",
+      "trial_kind": "pruning",
+      "case": {
+        "case_id": "active-checkpoint-regression",
+        "config_id": "regression",
+        "trial": 0,
+        "trial_kind": "pruning",
+        "policy": "safe",
+        "anchor_mode": "aggregate",
+        "checkpoint_interval": 4,
+        "seed": 1234,
+        "shard": 3,
+        "anchor_key_seed": 5052026,
+        "total_epochs": 4,
+        "blocks_per_epoch": 4,
+        "block_size": 128,
+        "arrival_rate_eps": 100,
+        "finality_delay_ms": 10.0,
+        "certificate_delay_ms": 20.0,
+        "retry_delay_ms": 1000.0,
+        "hot_window_epochs": 16,
+        "fault": "uncovered_prefix",
+        "fault_fraction": 1.0,
+        "timeline_sample_limit": 100
+      },
+      "policy": "safe",
+      "anchor_mode": "aggregate",
+      "fault": "uncovered_prefix",
+      "logical_time": {
+        "end_time_ms": 1060.0,
+        "arrival_rate_eps": 100.0,
+        "finality_delay_ms": 10.0,
+        "certificate_delay_ms": 20.0,
+        "retry_delay_ms": 1000.0
+      },
+      "counts": {
+        "total_epochs": 4,
+        "pruned_epochs": 4,
+        "pending_epochs": 0,
+        "selected_fault_epochs": 4,
+        "rejected_selected_epochs": 4,
+        "fault_injections": 1,
+        "fault_rejections": 3,
+        "anchor_attempts": 8,
+        "anchor_accepts": 4,
+        "anchor_rejects": 4,
+        "checkpoint_count": 1,
+        "checkpoint_dropped": 0,
+        "unsafe_prunes": 0
+      },
+      "safety": {
+        "pruned_before_finality": 0,
+        "pruned_without_local_root_match": 0,
+        "pruned_without_valid_anchor": 0,
+        "total_gate_violations": 0
+      },
+      "backlog": {
+        "hot_window_epochs": 16,
+        "max_retained_epochs": 4,
+        "final_retained_epochs": 0,
+        "max_retained_payload_bytes": 2048,
+        "final_retained_payload_bytes": 0,
+        "max_hot_window_overflow_epochs": 0,
+        "backlog_area_epoch_ms": 4180.0
+      },
+      "storage": {
+        "payload_bytes_per_epoch": 512,
+        "verifier_resident_anchor_bytes": 146,
+        "direct_certificate_bytes": 0,
+        "aggregate_checkpoint_bytes": 112,
+        "proof_bytes": {
+          "count": 5,
+          "min": 82.0,
+          "median": 147.0,
+          "p95": 147.0,
+          "p99": 147.0,
+          "max": 147.0,
+          "mean": 134.0
+        }
+      },
+      "latency": {
+        "root_recompute_ns": {
+          "count": 4,
+          "min": 6625.0,
+          "median": 8646.0,
+          "p95": 22671.349999999995,
+          "p99": 24501.469999999994,
+          "max": 24959.0,
+          "mean": 12219.0
+        },
+        "append_or_root_update_ns": {
+          "count": 5,
+          "min": 1208.0,
+          "median": 3292.0,
+          "p95": 3950.0,
+          "p99": 3990.0,
+          "max": 4000.0,
+          "mean": 3000.0
+        },
+        "checkpoint_sign_ns": {
+          "count": 1,
+          "min": 106041.0,
+          "median": 106041.0,
+          "p95": 106041.0,
+          "p99": 106041.0,
+          "max": 106041.0,
+          "mean": 106041.0
+        },
+        "verify_anchor_ns": {
+          "count": 5,
+          "min": 1333.0,
+          "median": 45292.0,
+          "p95": 51225.0,
+          "p99": 51845.0,
+          "max": 52000.0,
+          "mean": 37616.8
+        },
+        "time_to_prune_from_arrival_ms": {
+          "count": 4,
+          "min": 1030.0,
+          "median": 1045.0,
+          "p95": 1058.5,
+          "p99": 1059.7,
+          "max": 1060.0,
+          "mean": 1045.0
+        },
+        "time_to_prune_from_finality_ms": {
+          "count": 4,
+          "min": 1020.0,
+          "median": 1035.0,
+          "p95": 1048.5,
+          "p99": 1049.7,
+          "max": 1050.0,
+          "mean": 1035.0
+        },
+        "pending_duration_ms": {
+          "count": 0,
+          "min": null,
+          "median": null,
+          "p95": null,
+          "p99": null,
+          "max": null,
+          "mean": null
+        }
+      },
+      "root_recomputation": {
+        "hash_calls": 28,
+        "canonical_bytes": 2048
+      },
+      "timeline": [
+        {
+          "time_ms": 0.0,
+          "retained_epochs": 1,
+          "retained_payload_bytes": 512,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 1
+        },
+        {
+          "time_ms": 10.0,
+          "retained_epochs": 1,
+          "retained_payload_bytes": 512,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 2
+        },
+        {
+          "time_ms": 10.0,
+          "retained_epochs": 2,
+          "retained_payload_bytes": 1024,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 1
+        },
+        {
+          "time_ms": 20.0,
+          "retained_epochs": 2,
+          "retained_payload_bytes": 1024,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 2
+        },
+        {
+          "time_ms": 20.0,
+          "retained_epochs": 3,
+          "retained_payload_bytes": 1536,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 1
+        },
+        {
+          "time_ms": 30.0,
+          "retained_epochs": 3,
+          "retained_payload_bytes": 1536,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 2
+        },
+        {
+          "time_ms": 30.0,
+          "retained_epochs": 4,
+          "retained_payload_bytes": 2048,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 1
+        },
+        {
+          "time_ms": 40.0,
+          "retained_epochs": 4,
+          "retained_payload_bytes": 2048,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 2
+        },
+        {
+          "time_ms": 60.0,
+          "retained_epochs": 4,
+          "retained_payload_bytes": 2048,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 4
+        },
+        {
+          "time_ms": 1060.0,
+          "retained_epochs": 3,
+          "retained_payload_bytes": 1536,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 6
+        },
+        {
+          "time_ms": 1060.0,
+          "retained_epochs": 2,
+          "retained_payload_bytes": 1024,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 6
+        },
+        {
+          "time_ms": 1060.0,
+          "retained_epochs": 1,
+          "retained_payload_bytes": 512,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 6
+        },
+        {
+          "time_ms": 1060.0,
+          "retained_epochs": 0,
+          "retained_payload_bytes": 0,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 6
+        },
+        {
+          "time_ms": 1060.0,
+          "retained_epochs": 0,
+          "retained_payload_bytes": 0,
+          "hot_window_overflow_epochs": 0,
+          "reason_code": 5
+        }
+      ],
+      "samples": {
+        "verify_anchor_ns": [
+          1333,
+          52000,
+          48125,
+          45292,
+          41334
+        ],
+        "time_to_prune_from_finality_ms": [
+          1050.0,
+          1040.0,
+          1030.0,
+          1020.0
+        ],
+        "pending_duration_ms": []
+      },
+      "checks": {
+        "safe_policy_zero_gate_violations": true,
+        "unsafe_counterexample_exhibits_violation": true,
+        "all_pruned_epochs_have_nonnegative_latency": true,
+        "retained_count_consistent": true,
+        "fault_rejection_observed_when_applicable": true,
+        "all_internal_checks_pass": true
+      }
+    }
+  }
+}

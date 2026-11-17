@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-11-17T19:04:53.730742+11:00",
+  "scope": "targeted regression and existing unit/tiny smoke tests only; no publication-scale rerun",
+  "base_public_commit": "4789284b0c40d524c397a3093ca5747e932cb36a",
+  "crypto": "Real Ed25519 through bundled OpenSSL 3.6.2; only library search path changed",
+  "results": [
+    {
+      "source_version": "code_original",
+      "test_pattern": "test_checkpoint_policy.py",
+      "command": [
+        "<PYTHON_EXECUTABLE>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests",
+        "-p",
+        "test_checkpoint_policy.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONPATH": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_original/experiment/experiments/e7_integrity_availability/src",
+        "DYLD_LIBRARY_PATH": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/working/e7/lib"
+      },
+      "exit_code": 1,
+      "tests_run": 10,
+      "failures": [
+        "test_authentic_old_covering_checkpoint_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_authentic_old_covering_checkpoint_rejected)",
+        "test_current_checkpoint_cannot_be_bypassed_by_direct_certificate (test_checkpoint_policy.CheckpointPolicyTests.test_current_checkpoint_cannot_be_bypassed_by_direct_certificate)",
+        "test_signed_alternative_root_at_current_prefix_rejected (test_checkpoint_policy.CheckpointPolicyTests.test_signed_alternative_root_at_current_prefix_rejected)"
+      ],
+      "errors": [],
+      "log": "checkpoint_before.log",
+      "log_sha256": "9820a7d2ae37f4f1617c8170a53e1cbcd4aa309d515592ef93ed40be40d0342a"
+    },
+    {
+      "source_version": "code_revised",
+      "test_pattern": "test_checkpoint_policy.py",
+      "command": [
+        "<PYTHON_EXECUTABLE>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests",
+        "-p",
+        "test_checkpoint_policy.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONPATH": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/src",
+        "DYLD_LIBRARY_PATH": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/working/e7/lib"
+      },
+      "exit_code": 0,
+      "tests_run": 10,
+      "failures": [],
+      "errors": [],
+      "log": "checkpoint_after.log",
+      "log_sha256": "95acb0d0a58516d80d0c84bf536017b92227adcd4aa5ccd5707d93567679e939"
+    },
+    {
+      "source_version": "code_revised",
+      "test_pattern": "test_*.py",
+      "command": [
+        "<PYTHON_EXECUTABLE>",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "environment": {
+        "PYTHONPATH": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/code_revised/experiment/experiments/e7_integrity_availability/src",
+        "DYLD_LIBRARY_PATH": "<MANUSCRIPT_WORKSPACE>/Technical_Consistency_2026-11-17/working/e7/lib"
+      },
+      "exit_code": 0,
+      "tests_run": 19,
+      "failures": [],
+      "errors": [],
+      "log": "all_tests.log",
+      "log_sha256": "bdbed82d9fbe64778c6cc4d00c5dafbcce9e45dafbd636b42f4983c00584df9a"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+E7 technical consistency repair — 17 November 2026
+
+Scope and provenance
+The parent verified the original source against public commit 4789284b0c40d524c397a3093ca5747e932cb36a. Only source files and tests under code_revised/experiment/experiments/e7_integrity_availability were changed. No publication-scale experiment was rerun. The original .pyz and ARTIFACT_MANIFEST.sha256 in the copied directory have not been regenerated and MUST NOT be distributed as a rebuilt artifact. Deliver the source patch/tests or rebuild them separately.
+
+Protected-checkpoint repair
+verify_frame now obtains the trusted anchor mode and checkpoint from fixture.anchor_mode and fixture.certificate, not from the candidate. A candidate aggregate certificate must match the protected shard, prefix count, accumulator root and public key. The existing query/statement, signature and accumulator-inclusion checks remain. A candidate direct certificate cannot bypass an active aggregate mode. This verifier is read-only; tests also compare the full fixture before/after rejection.
+
+Executed validation
+checkpoint_before.log: the revised 10 checkpoint test methods run against the original source; 7 pass and 3 fail. The three failures are authentic old covering checkpoint, signed alternative accumulator root at the same prefix, and direct-certificate substitution under protected aggregate mode.
+checkpoint_after.log: all 10 checkpoint test methods pass against revised source. One method checks all six honest full/leaf/ext x direct/aggregate combinations. Negative checks also cover a validly signed non-covering checkpoint, wrong statement/position/key, and invalid signature.
+all_tests.log: all 19 test methods pass, including the existing suite, metric classification, legacy and explicit joint-ablation aliases, and tiny end-to-end result generation/manifest verification.
+validation_results.json records exact commands, environment, exit codes, failure names and log hashes. checkpoint_before.json and checkpoint_after.json record the exact prefix4/current versus authentic prefix2/old/query-position1 case. Ed25519 uses real bundled OpenSSL 3.6.2; no cryptographic verification is mocked. A macOS-only library-search symlink avoids the system libcrypto abort.
+
+Ablation interpretation
+The historical no_anchor mode disables both protected-root equality/binding and final anchor verification. It is retained as a backwards-compatible input alias; the explicit name and result label are no_root_binding_or_anchor. The attack repeats a constructed attacker-chosen root/payload response for each fixture. It is not a separately measured authentic-stale-checkpoint experiment. The safe and joint-ablation decisions use the same test frame.
+
+Metric definitions and compatibility
+- deterministic_expected_reject_accepts: accepted constructed frames whose expected outcome is rejection. This includes invalid evidence or representation checks even when the returned block/root are canonical.
+- noncanonical_data_accepts: accepted block or root differs from the fixture's canonical block/root. This matches the formal wrong-block/root event in this fixed-fixture harness, not a complete security proof.
+- deterministic_policy_only_accepts / unsafe_policy_only_accepts: accepted expected-reject frames with canonical block/root.
+- fuzz_detected_violations / legacy fuzz false_accepts: accepted noncanonical block/root OR metadata mismatch.
+- metadata_policy_accepts is an overlapping flag; metadata_only_accepts is the disjoint canonical-block/root part.
+- fuzz_accepted_canonical_metadata_valid_mutations: accepted fuzz mutations with no detected block/root/metadata violation. This label states what the oracle checks; it is not an independent certificate-validation proof.
+- tested_inputs: deterministic expected-reject frames plus ALL fuzz executions. Fuzz mutations can be benign, so the total is no longer called malicious_responses in the combined summary or fuzz rows. Deterministic/ablation malicious_responses fields remain because those frames are deliberately expected to be rejected.
+- false_accepts is retained as a documented legacy aggregate of different test oracles. New explicit counters accompany it. Existing historical rows without the new counters yield null/unknown, never fabricated category totals.
+- No pooled zero-event probability bound is generated across deterministic tests and adaptive fuzz executions, because they have different oracles and fuzz mutations need not be malicious. Existing per-family empirical output was not otherwise redesigned.
+Output schema version is 2 for changed E7 raw/fuzz and combined summaries. Internal guard count is now 42 due to the two explicit checkpoint/mode guards; old 40/40 and 338/652 coverage values describe the old publication version only.
+
+Minimal manuscript wording supported by code inspection
+"The reported E7 total combines expected-reject attack frames with greybox fuzz executions. The deterministic tests record any acceptance of an expected-reject frame, while the fuzz oracle records accepted noncanonical blocks or roots and metadata mismatches. These test outcomes are distinct from the formal wrong-block/root event. The no_anchor experiment jointly removes protected-root binding and anchor verification; its accepted attacker-chosen-root responses do not isolate the effect of anchor verification alone."
+Keep published numerical totals only with their historical provenance. The 19-test regression result does not revalidate the 1,164,000-input corpus, old coverage percentages or the full publication's timings. New corpus classifications, updated coverage and full-run validation require original raw evidence and/or an explicit rerun.

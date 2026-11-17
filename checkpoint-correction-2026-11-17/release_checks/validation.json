@@ -1,0 +1,38 @@
+{
+  "created_at_utc": "2026-11-17T12:28:55.753268+00:00",
+  "scope": "Fresh packaging verification and 20+19 correctness tests; no original benchmark or full integrity corpus rerun",
+  "base_public_commit": "4789284b0c40d524c397a3093ca5747e932cb36a",
+  "python": "3.12.14",
+  "system": "Darwin",
+  "machine": "arm64",
+  "openssl": "OpenSSL 3.6.2 7 Apr 2026",
+  "crypto_mocked": false,
+  "results": [
+    {
+      "experiment": "e5_anchor_pruning",
+      "command": "PYTHONPATH=experiment/experiments/e5_anchor_pruning/src python3 -m unittest discover -s experiment/experiments/e5_anchor_pruning/tests -p 'test_*.py' -v",
+      "tests_run": 20,
+      "expected_tests": 20,
+      "test_exit_code": 0,
+      "help_exit_code": 0,
+      "zipapp_source_bytes_match": true,
+      "zipapp": "experiment/experiments/e5_anchor_pruning/exp05_anchor.pyz",
+      "zipapp_sha256": "37efd00c390f5022ad4c6f36e042dae95d6642e343c2bc9ae90df49b88f16505",
+      "test_log": "release_checks/e5_anchor_pruning.tests.log",
+      "test_log_sha256": "1cd21422930631a6603013de25fe4d8a9538de848b838f2fa5cc0c342917fdb0"
+    },
+    {
+      "experiment": "e7_integrity_availability",
+      "command": "PYTHONPATH=experiment/experiments/e7_integrity_availability/src python3 -m unittest discover -s experiment/experiments/e7_integrity_availability/tests -p 'test_*.py' -v",
+      "tests_run": 19,
+      "expected_tests": 19,
+      "test_exit_code": 0,
+      "help_exit_code": 0,
+      "zipapp_source_bytes_match": true,
+      "zipapp": "experiment/experiments/e7_integrity_availability/exp07_security_availability.pyz",
+      "zipapp_sha256": "477034eb1785650a9df1173b463596e0112ab974eb91771e3842de5dad7e7983",
+      "test_log": "release_checks/e7_integrity_availability.tests.log",
+      "test_log_sha256": "e7306bc6bc4d35afa46c0cbd5cc9f060c5897a17210c1f4566ec5acd3f8a592a"
+    }
+  ]
+}
